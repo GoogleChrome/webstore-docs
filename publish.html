@@ -1,0 +1,427 @@
+{% include "chrome/web-store/_local_variables.html" %}
+<html devsite>
+  <head>
+    <title>Publishing Your App</title>
+    <meta name="project_path" value="/chrome/web-store/_project.yaml" />
+    <meta name="book_path" value="/chrome/web-store/_book.yaml" />
+  </head>
+  <body>
+
+<link rel="stylesheet" type="text/css" href="/chrome/web-store/css/local_extensions.css"/>
+
+
+<p>
+When your app is finished, if not before,
+you should upload it with the Chrome Developer Dashboard.
+Uploading it makes the dashboard generate an app ID,
+which you might need to complete your application's code.
+If you're using Chrome Web Store Payments,
+uploading also allows you to get the OAuth access token
+that you need to use the Licensing API.
+</p>
+
+<p>
+When your app, its Chrome Web Store listing,
+and all the sites it relies on are ready,
+you can publish your app.
+</p>
+
+{% comment %}
+PENDING: This page should probably have some screenshots.
+We might want to have explicit instructions on, for example,
+how to specify freemium.
+{% endcomment %}
+
+
+<h4>Contents</h4>
+
+<ol class="toc">
+  <li> <a href="#step1">Step 1: Choose a developer account</a> </li>
+  <li> <a href="#step2">Step 2: Create a ZIP file</a> </li>
+  <li> <a href="#step3">Step 3: Upload the app</a>
+  <li> <a href="#step4">Step 4: Specify the payment system</a> </li>
+  <li> <a href="#step5">Step 5: Get app constants</a>
+    <ol>
+      <li> <a href="#appId">Getting the app ID</a> </li>
+      <li> <a href="#oauth">Getting the OAuth token</a> </li>
+    </ol>
+    </li>
+  <li> <a href="#step6">Step 6: Finish the app</a> </li>
+  <li> <a href="#step7">Step 7: Provide store content</a> </li>
+  <li> <a href="#step8">Step 8: Pay the developer signup fee</a> </li>
+  <li> <a href="#step9">Step 9: Publish the app</a>
+    <ol>
+      <li> <a href="#testaccounts">Publishing to test accounts</a> </li>
+      <li> <a href="#world">Publishing to the world</a> </li>
+    </ol>
+    </li>
+</ol>
+
+
+<h2 id="step1"> Step 1: Choose a developer account </h2>
+
+<p>
+Before you upload your app,
+decide which Google Account
+you want to be your <b>developer account</b>.
+This account will own your app
+(or multiple apps, if you choose)
+and will receive any payments you get from
+Chrome Web Store Payments.
+Instead of your personal account,
+you might want to choose a dedicated account.
+</p>
+
+<p>
+If you're working on a hosted app,
+you'll need to prove that your developer account
+owns the URLs that comprise the app.
+For information on proving site ownership,
+see the Google Webmaster Tools help article
+<a href="http://www.google.com/support/webmasters/bin/answer.py?hl=en&answer=34592">Adding a site</a>.
+Once you upload your app,
+the Chrome Developer Dashboard will remind you if you need to verify
+ownership of any sites.
+</p>
+
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+<h2 id="step2"> Step 2: Create a ZIP file</h2>
+
+<p>
+To upload your app,
+you need to create a ZIP file
+that contains at least one file: your app's manifest.
+It should also contain a few images
+and any other files that the app requires.
+The contents of the ZIP file and manifest
+depend on the type of app you're writing
+and its capabilities.
+For details, see the documentation for the type of app you're writing:
+</p>
+
+<ul>
+  <li> <a href="/chrome/apps/docs/developers_guide">Hosted apps</a> </li>
+  <li> <a href="https://developer.chrome.com/apps/about_apps.html">Packaged apps</a> </li>
+  <li> <a href="https://developer.chrome.com/extensions/themes.html">Themes</a> </li>
+  <li> <a href="https://developer.chrome.com/extensions/index.html">Extensions</a> </li>
+</ul>
+
+<p>
+Also see
+<a href="https://developer.chrome.com/extensions/manifest.html">Formats: Manifest Files</a>.
+</p>
+
+<div class="note" style="margin-bottom: 1em;">
+<b>Tips:</b>
+<ul style="margin-bottom: 0.5em;">
+  <li>
+    Set the initial
+    <a href="https://developer.chrome.com/extensions/manifest.html#version">version number</a>
+    in the manifest to a low value,
+    such as 0.0.0.1.
+    That way, you have room to increase the version number
+    when you upload new versions of your app.
+    {% comment %}
+    PENDING: Check whether you really do have to increase the version #
+    even when the app is unpublished.
+    {% endcomment %}
+  </li>
+  <li>
+    If your packaged app or extension uses <a href="/native-client/">Native Client</a>, you can structure
+    your application directory hierarchy and ZIP file in a way that reduces the size of the user download package. For details, see
+    <a href="/native-client/dev/devguide/distributing#multi-platform-zip">Reducing the size of the user download package</a>.
+  </li>
+</ul>
+</div>
+
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+<h2 id="step3"> Step 3: Upload the app </h2>
+
+<p>
+If you need the app ID or an OAuth access token
+to complete your app's code,
+then you need to upload the app
+while you're still writing its code.
+Otherwise, you can wait until the app is finished.
+You can upload your app
+many times before publishing it.
+</p>
+
+<p>
+Here's how you upload your app:
+</p>
+
+<ol>
+  <li> Go to the <a href="{{ dashboardurl }}">Chrome Developer Dashboard</a>. </li>
+  <li> Sign into the developer account you chose in Step 1. </li>
+  <li> Click the <b>Add new item</b> button. <br />
+    If you've never uploaded an item before,
+    you need to accept the developer agreement before going on. </li>
+  <li> Click <b>Choose file</b>,
+    navigate to your ZIP file, and click <b>Upload</b>. </li>
+</ol>
+
+<p>
+If your app's manifest and ZIP file are valid,
+then within seconds you should see a page that lets you edit your app.
+{# PENDING: maybe show the edit page#}
+</p>
+
+
+{% comment %}
+PENDING: Push this when we publish the FAQ.
+For information about errors that you might run into when uploading,
+see the <a href="/chrome/web-store/faq">FAQ</a>.
+
+{% endcomment %}
+
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+<h2 id="step4"> Step 4: Specify the payment system</h2>
+
+<p>
+If you aren't going to use Chrome Web Store Payments,
+you can delay or (for free apps) omit this step.
+</p>
+
+<p>
+If you're charging for your app,
+you need to set its price and payment system
+through the dashboard's edit page for your app.
+To use Chrome Web Store Payments,
+you also need to sign up your developer account as a
+Google Checkout merchant,
+and you need to associate your merchant account
+with the store.
+For details, see
+<a href="http://www.google.com/support/chrome_webstore/bin/answer.py?answer=96832">Register for a Google Checkout Merchant account</a>.
+</p>
+
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+<h2 id="step5"> Step 5: Get app constants </h2>
+
+<p>
+In this step,
+you use the dashboard to get any constants
+that you need to use in your app's code.
+</p>
+
+<h3 id="appId">Getting the app ID</h3>
+
+<p>
+You can see the app ID in the URL of any dashboard or store page
+that's dedicated to your app.
+For example, the URL
+https://chrome.google.com/extensions/detail/aaaaaaaaaabbbbbbbbbbcccccccccc?hl=en
+has the app ID aaaaaaaaaabbbbbbbbbbcccccccccc.
+You might need the app ID for several reasons,
+such as if you use the Licensing API.
+</p>
+
+<p>
+You can also see the app ID
+when you get the OAuth token.
+The app ID is listed along with other information
+that you need when using the Licensing API.
+</p>
+
+
+<h3 id="oauth">Getting the OAuth token</h3>
+
+<p>
+If you support Chrome Web Store Payments,
+you need an OAuth access token and access token secret,
+as described in
+<a href="/chrome/web-store/docs/check_for_payment">Checking for Payment</a>.
+For detailed instructions,
+see that page's
+<a href="/chrome/web-store/docs/check_for_payment#token">Getting an OAuth access token and secret</a>
+section.
+</p>
+
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+<h2 id="step6"> Step 6: Finish the app</h2>
+
+<p>
+Now's the time to finish your app
+and add any code that refers to the app ID
+or OAuth access token.
+You can update your app as many times as you wish.
+Just remember to increase the version number each time,
+as mentioned in <a href="#step2">Step 2</a>.
+</p>
+
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+<h2 id="step7"> Step 7: Provide store content</h2>
+
+<p>
+Using the dashboard's edit page for your app,
+add the store listing information
+that isn't in the ZIP file,
+such as a long description, screenshots, videos,
+and links to related sites.
+See <a href="/chrome/web-store/docs/images">Supplying Images</a>
+for help on designing the images for your app,
+and <a href="/chrome/web-store/branding">Branding Guidelines</a>
+for information on how you can use Google brands.
+</p>
+
+{% comment %}
+PENDING:
+Go through what you need to enter.
+Similar to extensions gallery help?
+But there's more stuff now,
+such as the domain verification.
+This could go in its own page.
+{% endcomment %}
+
+{% comment %}
+PENDING: mention that you'll need to provide
+language, logo, screenshot/video before publishing the app.
+WHICH ONES ARE MANDATORY?
+{% endcomment %}
+
+{% comment %}
+PENDING:
+It'd be nice to be able to point to a document/FAQ
+that has information on ies for improving search results.
+{% endcomment %}
+
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+<h2 id="step8"> Step 8: Pay the developer signup fee</h2>
+
+<p>
+Before you publish your first app,
+you must pay a one-time $5 developer signup fee.
+You'll see a reminder in the dashboard
+until you pay the fee.
+For more information, including troubleshooting tips,
+see the <a href="http://www.google.com/support/chrome_webstore/bin/answer.py?answer=187591">Registration article</a>.
+</p>
+
+<p class="note">
+<b>Note:</b>
+If you used the Chrome Developer Dashboard before
+{{ grandfatherdate }}&mdash;to
+publish an extension, for example&mdash;you
+won't see a fee reminder,
+and you don't need to pay the fee.
+</p>
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+<h2 id="step9"> Step 9: Publish the app</h2>
+
+<p>
+Publishing your app usually involves a few steps:
+
+<ol>
+  <li>
+    <em>Optional.</em>
+    Publish your app to test accounts,
+    so a few trusted testers can try out the app and its install/payment flow.
+    For details, see
+    <a href="#testaccounts">Publishing to test accounts</a>. </li>
+
+    <p class="note">
+    <b>Note:</b>
+    If you support Chrome Web Store Payments,
+    you can't buy your own app using your developer account
+    due to Google Checkout restrictions.
+    You should first publish to test accounts
+    so that you can test the payment system.
+    </p>
+  <li>
+    Click the edit page's <b>Preview changes</b> button,
+    and verify that your app's listing looks great
+    and has all the information it should.
+{# Check the button text. I'm hoping "Preview changes" will change.#}
+    </li>
+  <li>
+    Verify that your app
+    and any websites and supporting pages
+    all work well and look as nice as possible. </li>
+  <li>
+    Publish any new websites and supporting pages
+    that your app requires. </li>
+  <li>
+    Publish your app.
+    For details, see
+    <a href="#world">Publishing to the world</a>. </li>
+</ol>
+
+
+<h3 id="testaccounts"> Publishing to test accounts </h3>
+
+<p>
+At the bottom of the edit page for your app
+is a <b>Publish to test accounts</b> button.
+Clicking this button publishes your app
+so that it's visible only to
+people who are signed in to
+one of a limited set of test accounts.
+To specify these test accounts,
+go to the bottom of the
+<a href="{{ dashboardurl }}">dashboard</a>
+and click "Edit your tester accounts".
+</p>
+
+<p>
+When you publish to test accounts,
+your app's store listing becomes visible only to you
+and to people who are logged into those accounts.
+Your app won't appear in search results,
+so you need to give testers a direct link
+to your app's store listing.
+{# PENDING how to get this link#}
+</p>
+
+<p>
+Publishing to test accounts is especially useful
+when you plan to charge for your app using Chrome Web Store Payments.
+You can buy the app using a test account,
+and then use that account to log into the app
+and see how the license server integrates with your app.
+</p>
+
+<p class="note">
+<b>Note:</b>
+To publish to the world after publishing to test accounts,
+you first need to <b>unpublish</b> the app.
+</p>
+
+<div id="intl">
+<h3 id="world"> Publishing to the world </h3>
+
+<p>
+Publishing your app is easy&mdash;just
+click the "Publish" link next to your app in the
+<a href="{{ dashboardurl }}">dashboard</a>.
+Or in the dashboard's edit page for your app,
+click the <b>Publish</b> button.
+</p>
+
+<p>
+Publishing an app makes it immediately visible to the world,
+and soon makes it visible in the store's search results.
+</p>
+
+<p>
+With the developer dashboard,
+you can choose the regions you wish to support,
+determine your app's <a href="/chrome/web-store/docs/pricing">price in each region</a>
+(if you use Chrome Web Store Payments),
+and <a href="/chrome/web-store/docs/i18n">internationalize</a> your app.
+</p>
+
+</div>
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+  </body>
+</html>
+

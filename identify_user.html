@@ -1,0 +1,285 @@
+{% include "chrome/web-store/_local_variables.html" %}
+<html devsite>
+  <head>
+    <title>Identifying the User</title>
+    <meta name="project_path" value="/chrome/web-store/_project.yaml" />
+    <meta name="book_path" value="/chrome/web-store/_book.yaml" />
+  </head>
+  <body>
+
+<link rel="stylesheet" type="text/css" href="/chrome/web-store/css/local_extensions.css"/>
+
+{% comment %}
+PENDING: Rahul says maybe we should add a section
+on identity from a packaged app or extension
+{% endcomment %}
+
+<p>
+This page tells you how to get the Google Account identity of a user,
+using Google's OpenID endpoint.
+You need this identity if you support Chrome Web Store Payments,
+because payment information is tied to the user's Google Account.
+</p>
+
+<p>
+Even if you don't use Chrome Web Store Payments,
+consider using Google Accounts
+if your app needs a login system.
+Google Accounts can help you provide a better user experience,
+since users of the Chrome Web Store are likely to be logged in already,
+and they won't have to set up and remember yet another username and password.
+</p>
+
+
+<h4> Contents </h4>
+
+<ol class="toc">
+  <li> <a href="#when">When to support Google Accounts</a> </li>
+  <li> <a href="#how">How to use OpenID with Google Accounts</a> </li>
+  <li> <a href="#realm">How to skip the OpenID approval screen</a> </li>
+  <li> <a href="#resources">OpenID resources</a> </li>
+  <li> <a href="#next">What next?</a> </li>
+</ol>
+
+
+<h2 id="when">When to support Google Accounts</h2>
+
+<p>
+The following table summarizes when you should
+support Google Account logins using OpenID.
+</p>
+
+<table>
+<tbody>
+<tr>
+  <th> App cost </th>
+  <th> Payment plan/system </th>
+  <th> Support for Google Accounts (using OpenID) </th>
+</tr>
+<tr>
+  <td> Paid </td>
+  <td> Chrome Web Store Payment System </td>
+  <td> <b>Required</b> <br />
+       The Licensing API relies on
+       Google Account user IDs. </td>
+</tr>
+<tr>
+  <td> Paid </td>
+  <td> Custom payment solution </td>
+  <td> <b>Recommended</b> <br />
+       Users from the Chrome Web Store
+       will have a better experience if you support the Google Account
+       that they're already logged into. </td>
+</tr>
+<tr>
+  <td> Free </td>
+  <td> You <b>might charge</b> for the app in the future </td>
+  <td> <b>Recommended</b> <br />
+       Supporting Google Accounts might make adding payments simpler. </td>
+</tr>
+<tr>
+  <td> Free </td>
+  <td> <b>No plans to charge</b> for the app in the future </td>
+  <td> <b>Optional</b> <br />
+       If you want to identify individual users,
+       Google Accounts are a reasonable way to do so. </td>
+</tr>
+</tbody>
+</table>
+
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+<h2 id="how">How to use OpenID with Google Accounts</h2>
+
+<p>
+To get the user's OpenID URL,
+you query Google's OpenID service.
+If the user isn't already logged in,
+the user will be prompted to sign in
+with a Google-provided login page or popup.
+</p>
+
+<p class="note">
+<strong>Note:</strong>
+The OpenID URL is unique for a specific Google Account
+<em>and a specific app</em>.
+If you publish multiple apps,
+the same user will have a different OpenID URL for each app.
+</p>
+
+<p>
+Here's what the login page looks like.
+Note that it has a Google URL,
+not a URL from the app's site:
+</p>
+
+<p>
+<img src="/chrome/web-store/images/openIdSignIn.png"
+  width="644" height="368" />
+</p>
+
+<p>
+If you're writing a hosted app
+with Google App Engine,
+supporting Google Accounts is easy.
+You just use the default
+Google Accounts API authentication
+and the Users service.
+For details, see the user authentication docs
+(for <a href="/appengine/docs/java/users/overview">Java</a> or
+<a href="/appengine/docs/python/users/overview">Python</a>).
+Here's an example
+(taken from the
+<a href="/chrome/web-store/docs/get_started">Licensing API</a> tutorial's
+<a href="http://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/apps/hello-java/HelloLicenseServlet.java" target="_blank">HelloLicenseServlet.java</a> file)
+of the code you use
+to get the current user's OpenID URL
+if you're implementing a Java app with
+Google App Engine:
+</p>
+
+<pre>
+UserService userService = UserServiceFactory.getUserService();
+
+if (userService.isUserLoggedIn()) {
+  User user = userService.getCurrentUser();
+  <em>/* ...Do something with</em> <b>user.getFederatedIdentity()</b><em>, which is the OpenID URL. */</em>
+}
+</pre>
+
+<p>
+If you aren't using Google App Engine,
+you can get the Google OpenID endpoint
+by sending a request to
+<code>https://www.google.com/accounts/o8/id</code>.
+See <a href="/accounts/docs/OpenID">Federated Login for Google Account Users</a>
+for details.
+</p>
+
+{% comment %}
+PENDING:
+In Best Practices we might want to say something about
+providing a UI for registering users
+directly on your hosted app's site,
+to support OpenID users who navigate to the site directly,
+rather than going through the store.
+{% endcomment %}
+
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+<h2 id="realm">How to skip the OpenID approval screen</h2>
+
+<p>
+<img src="/chrome/web-store/images/approval.png"
+  width="300" height="" align="right"
+  style="margin-left:0.5em; border:solid 1px"
+  alt="the Google Accounts approval page" />
+Normally, the first time your app uses the Google OpenID endpoint
+to authenticate a particular user,
+the user must approve your access
+to their account.
+To the right, you can see a typical OpenID approval screen.
+</p>
+
+<p>
+Your users will have a better experience
+if they never see the approval screen.
+The screen is skipped if <strong>both</strong> of the following are true:
+</p>
+
+<dl>
+  <dt> Your app requests only the OpenID URL </dt>
+  <dd> If your app requests something else&mdash;the
+    user's email address, for example&mdash;the
+    approval screen is shown. </dd>
+
+  <dt> You specify your app's OpenID realm in the Edit page </dt>
+  <dd> Here's how:
+
+    <ol>
+      <li> In the <a href="{{ dashboardurl }}">Chrome Developer Dashboard</a>,
+        go to the Edit page for your app. </li>
+      <li> In the <b>OpenID</b> section,
+        select the checkbox. </li>
+      <li> In the text field that appears,
+        enter the realm that your app will use to
+        query Google's OpenID service. <br />
+        This must be exactly the same as the value of
+        the <code>openid.realm</code> field in your authentication requests. </li>
+      <li> Save your changes. <br />
+        They'll take effect the next time you publish your app. </li>
+    </ol>
+  </dd>
+</dl>
+
+
+<p>
+If your app's code doesn't specify the value of
+the <code>openid.realm</code> parameter,
+look at your OpenID library
+to see how it sets that value.
+For details on how <code>openid.realm</code> is used, see
+<a href="/accounts/docs/OpenID#Parameters">Request parameters</a> in the Google OpenID documentation.
+</p>
+
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+<h2 id="resources">OpenID resources</h2>
+
+<p>
+You should use an existing OpenID library rather than implement your own.
+In addition to Google App Engine's Users service,
+you can find OpenID libraries in a number of languages.
+Here are a few libraries we've used:
+</p>
+
+<ul>
+  <li> Java:
+       <a href="http://code.google.com/p/openid4java/">OpenID4Java</a>
+       </li>
+  <li> Python:
+       <a href="http://code.google.com/p/google-app-engine-django-openid/">GAE Django OpenID</a>
+       </li>
+  <li> PHP:
+       <a href="http://gitorious.org/lightopenid">LightOpenID</a>
+       </li>
+  <li> Ruby:
+       <a href="http://rubyforge.org/projects/ruby-openid/">ruby-openid</a> and
+       <a href="http://github.com/josh/rack-openid">rack-openid</a>,
+       used together
+       </li>
+</ul>
+
+<p>
+You can find more libraries at Janrain's
+<a href="http://www.janrain.com/openid-enabled">OpenID Enabled</a>,
+and a full list at the
+<a href="http://openid.net/developers/libraries/">OpenID Foundation</a>.
+</p> 
+
+<p>
+The following pages have detailed explanations of how to
+use OpenID with Google Accounts:
+</p>
+
+<ul>
+  <li> <a href="/chrome/web-store/articles/authentication">Supporting Federated Login with Google Accounts for Chrome Web Store Apps</a> </li>
+  <li> <a href="/accounts/docs/OpenID">Federated Login for Google Account Users</a> </li>
+  <li> <a href="/appengine/articles/openid">Using Federated Authentication via OpenID in Google App Engine</a> </li>
+</ul>
+
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+<h2 id="next">What next?</h2>
+
+<p>
+If you're using the Licensing API,
+your next stop is
+<a href="/chrome/web-store/docs/check_for_payment">Checking for Payment</a>.
+Otherwise, go on to
+<a href="/chrome/web-store/docs/images">Supplying Images</a>.
+</p>
+
+  </body>
+</html>
+
