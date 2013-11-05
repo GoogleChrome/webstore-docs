@@ -1,0 +1,418 @@
+{% include "chrome/web-store/_local_variables.html" %}
+<html devsite>
+  <head>
+    <title>Internationalizing Your App</title>
+    <meta name="project_path" value="/chrome/web-store/_project.yaml" />
+    <meta name="book_path" value="/chrome/web-store/_book.yaml" />
+  </head>
+  <body>
+
+<link rel="stylesheet" type="text/css" href="/chrome/web-store/css/local_extensions.css"/>
+
+<p>
+Unless your app is strictly local in scope,
+you should <em>internationalize</em> it,
+making it easy to adapt to various languages and regions.
+You can then <em>localize</em> it&mdash;translate and otherwise adapt
+it so that it works well in a particular locale.
+</p>
+
+<p>
+You can internationalize your app even if it initially
+supports just one locale.
+For example, you might initially publish your app in
+English (locale code: "en").
+Then, after a few weeks or months,
+you might add support for additional locales
+such as French (locale code: "fr")
+and Arabic (locale code: "ar").
+</p>
+<p class="note">
+<b>Terminology note:</b>
+The word <em>internationalization</em> is
+often abbreviated to <em>i18n</em>,
+referring to the 18 letters between the letters
+<em>i</em> and <em>n</em>.
+<em>Localization</em> is sometimes abbreviated to
+<em>l10n</em>.
+</p>
+
+
+<h4>Contents</h4>
+
+<ol class="toc">
+  <li> <a href="#overview">Overview</a> </li>
+  <li> <a href="#localeTable">Choosing locales to support</a> </li>
+  <li> <a href="#details">Localizing your app listing</a>
+    <ul>
+      <li> <a href="#manifest">Name and description</a> </li>
+      <li> <a href="#longDescription">Detailed description</a> </li>
+      <li> <a href="#screenshots">Screenshots</a> </li>
+    </ul>
+  </li>
+  <li> <a href="#where">Specifying where to publish your app</a> </li>
+{#  <li> <a href="#view">Viewing your localized listing</a> </li> #}
+</ol>
+
+
+<h2 id="overview"> Overview </h2>
+
+<p>
+Here are the steps you need to follow when
+you internationalize and localize an app
+to be published in the Chrome Web Store:
+</p>
+
+<ol>
+  <li>
+    Decide which <a href="#localeTable">locales</a>
+    you want to support. </li>
+  <li> Internationalize and localize the app's UI. </li>
+  <li>
+    Localize your app's
+    <a href="#manifest">name and description</a>.
+  </li>
+  <li>
+    Upload your app
+    using the <a href="{{ dashboardurl }}">Chrome Developer Dashboard</a>.
+  </li>
+  <li>
+    Edit your listing,
+    providing localized versions of the
+    <a href="#longDescription">detailed description</a>
+    and <a href="#screenshots">screenshots</a>.
+  </li>
+  <li>
+    <a href="#where">Specify which regions</a>
+    you want to support</a>.
+  </li>
+{% comment %}
+
+  <li>
+    <a href="#view">View your listing</a>
+    for each locale you support,
+    making sure each version looks good and makes sense.
+  </li>
+
+{% endcomment %}
+</ol>
+
+<p>
+How you accomplish step 2
+depends on whether you're writing
+an extension, packaged app, or hosted app.
+<a href="http://code.google.com/chrome/extensions/overview.html">Extensions</a> and
+<a href="http://code.google.com/chrome/extensions/apps.html">packaged apps</a>
+can use the
+<a href="http://code.google.com/chrome/extensions/i18n.html">extension system i18n support</a>
+to provide the appropriate UI strings for each locale.
+<a href="/chrome/apps/docs/developers_guide">Hosted apps</a>
+don't have access to the extension i18n support for their main UIs,
+but they can use whatever other i18n
+techniques and libraries suit the app.
+</p>
+
+<p>
+In step 3 you localize the name and description by
+editing the manifest file
+and providing strings for your chosen locales.
+Once you've uploaded your app (step 4),
+you can finish your app's listing (step 5).
+</p>
+
+<p>
+If you provide strings for at least two locales in step 3,
+then you'll be able to provide locale-specific information in step 5.
+Otherwise, your listing will be the same in all locales.
+</p>
+
+<p class="note">
+<b>Note:</b>
+You can significantly <b>increase your app's ranking</b>
+in the locales that you support
+by localizing the name, description, and detailed description.
+</p>
+
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+<h2 id="localeTable"> Choosing locales to support </h2>
+
+<p>
+You can localize your app to any of the following locales.
+</p>
+
+{% include "chrome/web-store/docs/_i18n_table.html" %}
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+<h2 id="details"> Localizing your app listing </h2>
+
+<p>
+To localize your app's listing,
+you first localize the name and description.
+Then, after uploading your localized app,
+you can edit your app's listing
+to specify localized versions of
+your app's detailed description and screenshots.
+</p>
+
+
+<h3 id="manifest"> Name and description </h3>
+
+<p>
+You localize the name and description
+by modifying <code>manifest.json</code> and
+providing a <code>_locales</code> directory
+in your app's ZIP file.
+Specifically,
+you need to:
+</p>
+
+<ul>
+  <li> Modify the "name" and "description" manifest fields </li>
+  <li> Add a "default_locale" field </li>
+  <li> Provide at least one <code>_locales/<em>locale</em>/messages.json</code> file, where <em><code>locale</code></em> is a <a href="#localeTable">locale code</a>; each <code>messages.json</code> file contains the strings for one locale </li>
+</ul>
+
+<p>
+Here's an example of how you might specify the name and description
+of an internationalized hosted app
+that has English as its default language
+and British English as its secondary language:
+</p>
+
+<pre>
+<em>//in manifest.json:</em>
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+
+<em>//in _locales/en/messages.json:</em>
+{
+  "appName": {
+    "message": "My App",
+    "description": "The title of the application, displayed in the web store."
+  },
+  "appDesc": {
+    "message": "This app does something awesome.", 
+    "description":"The description of the application, displayed in the web store."
+  }
+}
+
+<em>//in _locales/en_GB/messages.json:</em>
+{
+  "appName": {
+    "message": "My Application"
+  },
+  "appDesc": {
+    "message": "This application does something brilliant."
+  }
+}
+</pre>
+
+<p>
+If you add a locale later,
+you just need to add a
+<code>_locales/<em>locale</em>/messages.json</code> file
+for that new locale.
+For example, if you add support for French and Arabic,
+you'll need to add two files:
+<code>_locales/fr/messages.json</code> and
+<code>_locales/ar/messages.json</code>.
+Each of those files can be a copy of <code>_locales/en_GB/messages.json</code>,
+but with translated versions of the "message" values.
+</p>
+
+<p>
+For more details, see the following examples and documentation.
+</p>
+
+<ul>
+  <li> Example: <a href="http://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/api/i18n/localizedHostedApp/">Minimal Localized Hosted App</a>
+    <ul>
+      <li> <a href="http://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/api/i18n/localizedHostedApp/manifest.json">manifest.json</a> </li>
+      <li> <a href="http://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/api/i18n/localizedHostedApp/_locales/en/messages.json">_locales/en/messages.json</a> </li>
+      <li> <a href="http://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/api/i18n/localizedHostedApp/_locales/de/messages.json">_locales/de/messages.json</a> </li>
+    </ul>
+  </li>
+  <li> Examples: <a href="http://code.google.com/chrome/extensions/samples.html#i18n">Extensions that use i18n APIs</a>
+  <li> Extensions documentation: <a href="http://code.google.com/chrome/extensions/i18n.html">Internationalization</a>
+    <ul>
+      <li> The <a href="http://code.google.com/chrome/extensions/i18n.html#locales-usage">How extensions find strings</a> section
+      shows how you can sometimes omit message strings.
+      For example, if the app's name isn't translated,
+      you can leave it out for non-default locales. </li>
+      <li> The <a href="http://code.google.com/chrome/extensions/i18n.html#locales-testing">How to set your browser's locale</a> section
+    is helpful when you test your translations. </li>
+    </ul>
+  </li>
+</ul>
+
+<p>
+Once you've completed this step,
+upload your app using the <a href="{{ dashboardurl }}">Developer Dashboard</a>,
+as described in
+<a href="/chrome/web-store/docs/publish#step3">Publishing Your App</a>.
+</p>
+
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+<h3 id="longDescription"> Detailed description </h3>
+
+<p>
+For each locale your app supports,
+edit your app's listing to
+provide a detailed description of your app.
+</p>
+
+<p>
+First, get to your app's Edit page,
+which you can do by going to the <a href="{{ dashboardurl }}">dashboard</a>
+and clicking the "Edit" link for the app.
+As the following figure shows,
+if you support multiple locales
+a pull-down list appears at the top of your app's Edit page.
+Each item in the list corresponds to one of the
+<code>_locales/<em>locale</em></code> directories that you uploaded.
+</p>
+
+<img src="/chrome/web-store/images/storeUi/chooseLanguage.png"
+  width="525" height="57"
+  style="border:1px solid lightgray; padding: 1px;"
+  class="topmargin"
+  alt="screenshot of the locale pull-down" />
+{# PENDING: update this screenshot!#}
+
+<p>
+Next, choose the locale that you want to edit.
+(Skip this if your app supports only one locale.)
+</p>
+
+<p>
+Now edit the detailed description,
+providing text for the currently selected locale
+(or for the default locale, if you support just one).
+</p>
+
+<img src="/chrome/web-store/images/storeUi/editDetailedDescription.jpg"
+  width="527" height="258"
+  style="border:1px solid lightgray; padding: 1px;"
+  class="topmargin"
+  alt="screenshot of the Detailed Description section for an app" />
+
+<p>
+If you support multiple locales,
+repeat the previous two steps until you've provided
+a detailed description for each supported locale.
+</p>
+
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+<h3 id="screenshots"> Screenshots </h3>
+
+<p>
+As the
+<a href="/chrome/web-store/docs/images#screenshots">screenshot guidelines</a> say,
+you should provide screenshots for your app.
+You can tailor these screenshots for each locale.
+</p>
+
+<p>
+To add a screenshot,
+click the <b>Choose File</b> button in the
+<b>Screenshots</b> section of the Edit page.
+</p>
+
+<p>
+If your app supports multiple locales,
+then after you upload each screenshot,
+you can specify whether it's for all locales
+or just for the one you're currently editing.
+</p>
+
+<img src="/chrome/web-store/images/storeUi/editScreenshot.png"
+  width="430" height="375"
+  style="border:1px solid lightgray; padding: 1px;"
+  class="topmargin"
+  alt="screenshot of screenshots with localization options" />
+
+<p>
+To change the locale information for a screenshot,
+first use the pull-down list at the top of the page
+to choose the locale where you want the screenshot to appear.
+(If you don't see the screenshot,
+go to the locale that it's restricted to
+and click "Show this item in <b>all</b> locales".)
+Click the thumbnail for the screenshot,
+so that it's displayed at full size above the thumbnails.
+Now you can change the locale for the screenshot.
+</p>
+
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+<h2 id="where"> Specifying where to publish your app</h2>
+
+<p>
+By default, your app is listed in all regions
+that can use the Chrome Web Store.
+If you don't want your app to be listed in a particular region,
+unselect that region from the following list
+in the <b>Regions</b> section of the Edit page.
+</p>
+
+<ul style="-webkit-column-count:4; -moz-column-count:4; column-count:4">
+  <li> Argentina </li>
+  <li> Australia  </li>
+  <li> Austria  </li>
+  <li> Belgium  </li>
+  <li> Brazil  </li>
+  <li> Canada  </li>
+  <li> China  </li>
+  <li> Czech Republic  </li>
+  <li> Denmark  </li>
+  <li> Finland  </li>
+  <li> France </li>
+  <li> Germany </li>
+  <li> Hong Kong  </li>
+  <li> India  </li>
+  <li> Indonesia  </li>
+  <li> Israel  </li>
+  <li> Italy </li>
+  <li> Japan </li>
+  <li> Mexico  </li>
+  <li> Netherlands </li>
+  <li> New Zealand  </li>
+  <li> Norway  </li>
+  <li> Philippines  </li>
+  <li> Poland  </li>
+  <li> Portugal </li>
+  <li> Russia  </li>
+  <li> Singapore  </li>
+  <li> Spain </li>
+  <li> Sweden  </li>
+  <li> Switzerland  </li>
+  <li> United Kingdom </li>
+  <li> United States </li>
+</ul>
+
+<p class="note">
+<b>Note:</b>
+Unselecting a region prevents your app from being listed in that region.
+</p>
+
+{% comment %}
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+<h2 id="view">Viewing your localized listing</h2>
+
+<p class="authornote">
+{PENDING: talk about how you view your localized listing,
+both text and images.}
+</p>
+
+{% endcomment %}
+
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+  </body>
+</html>
+
