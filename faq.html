@@ -1,8 +1,9 @@
 <head>
-  <h1>Frequently Asked Questions</h1>
+  <title>Frequently Asked Questions</title>
 </head>
 
 <body>
+<h1>Frequently Asked Questions</h1>
 
 <p>
 The <a href="http://chrome.google.com/webstore">Chrome Web Store</a>
@@ -14,128 +15,11 @@ check the <a href="http://code.google.com/chrome/extensions/faq.html">extension 
 <a href="http://groups.google.com/a/chromium.org/group/chromium-apps">chromium-apps group</a>.
 </p>
 
-<div id="faq-TOC">
-<h4>General</h4>
-<ul>
-  <li><a href="#faq-gen-01">What is the Chrome Web Store?</a></li>
-  <li><a href="#faq-gen-02">How many people use Chrome?</a></li>
-  <li><a href="#faq-gen-05">Is there a road map for Chrome?</a></li>
-  <li><a href="#faq-gen-06">Which version of Chrome should I target for my Chrome Web Store apps?</a></li>
-  <li><a href="#faq-gen-07">Why would someone install a web app instead of just using a bookmark or typing in a URL?</a></li>
-  <li><a href="#faq-gen-08">Is there an approval process for apps in the store?</a></li>
-  <li><a href="#faq-gen-09">How will users find my app?</a></li>
-  <li><a href="#faq-gen-11">Why am I being asked to pay a registration fee?</a></li>
-  <li><a href="#faq-gen-12">Why am I <em>not</em> being asked to pay a registration fee?</a></li>
-  {% comment %}
-  <li><a href="#faq-gen-13">Is the Chrome Developer Dashboard final?</a></li>
-  <li><a href="#faq-gen-14">Is the Chrome Web Store UI final?</a></li>
-  {% endcomment %}
-  <li><a href="#faq-gen-17">How can I sign up using my Google Apps email address (for example, admin@example.com)?</a></li>
-  <li><a href="#faq-gen-22">What types of apps or extensions are not allowed in the store?</a></li>
-  <li><a href="#faq-gen-23">How do I report an abusive app or extension?</a></li>
-  <li><a href="#faq-gen-24">How are items ranked in the store?</a></li>
-  <li><a href="#faq-gen-25">How are "Featured" items selected?</a></li>
-  <li><a href="#faq-gen-26">How can my app or extension be selected for a collection?</a></li>
-  <li><a href="#faq-gen-27">How can I provide support for users of my app or extension?</a></li>
-  <li><a href="#faq-gen-28">Can I remove comments from my listing if I believe they are unfair?</a></li>
-</ul>
-
-<h4>Development</h4>
-<ul>
-  <li><a href="#faq-dev-01">How do I write an app or extension?</a></li>
-  <li><a href="#faq-gen-04">What technologies can I use to build installable web apps?</a></li>
-  <li><a href="#faq-gen-10">Should I build a web app or an extension?</a></li>
-  <li><a href="#faq-dev-02">How can I push an update of my code to my users?</a></li>
-  <li><a href="#faq-dev-03">Can I host my own app or extension?</a></li>
-</ul>
-
-<h4>Creating a listing</h4>
-<ul>
-  <li><a href="#faq-listing-01">In what format should I upload my code?</a></li>
-  <li><a href="#faq-listing-02">How long will it take for my listing to appear in the store?</a></li>
-  <li><a href="#faq-listing-03">How can I remove my listing from the store?</a></li>
-  <li><a href="#faq-listing-04">What are the screenshot and text requirements for the store?</a></li>
-  <li><a href="#faq-listing-05">How can I import an existing app or extension into the store?</a></li>
-  <li><a href="#faq-listing-06">How can I export an app or extension from the store?</a></li>
-  <li><a href="#faq-listing-07">Why did I receive a "Cannot parse the manifest" error when uploading my app or extension?</a></li>
-  <li><a href="#faq-gen-15">I've verified my domain, and I have a wildcard app URL like *://example.com, but the Chrome Web Store is still asking me to verify my domain.  What gives?</a></li>
-  <li><a href="#faq-gen-16">When I try to upload my app to the Chrome Web Store, I get this error: "(Server rejected) An error occurred: please try again later." What gives?</a></li>
-  <li><a href="#faq-gen-18">Can I control the regions where my app is listed?</a></li>
-  <li><a href="#faq-gen-19">How do I localize my listing in the store?</a></li>
-  <li><a href="#faq-gen-20">How do I localize my detailed description?</a></li>
-  <li><a href="#faq-gen-21">How do I show different screenshot images per region?</a></li>
-  <li><a href="#faq-listing-08">My item's status says "pending review." What does this mean?</a></li>
-</ul>
-
-<h4>Payments and license server</h4>
-<ul>
-  <li><a href="#faq-payments-01">What technologies does the Chrome Web Store Payments system use?</a></li>
-  <li><a href="#faq-payments-02">How can I verify that a user has paid for my app?</a></li>
-  <li><a href="#faq-payments-03">What technologies are used to take payments?</a></li>
-  <li><a href="#faq-payments-04">I already have a credit card merchant account.  Do I really have to use Google Checkout?</a></li>
-  <li><a href="#faq-payments-05">I already use Paypal.  Do I have to use Google Checkout?</a></li>
-  <li><a href="#faq-payments-06">Does the Chrome Web Store have a preferred way to do in-app payments?</a></li>
-  <li><a href="#faq-payments-07">Is the Chrome Web Store Licensing API final?</a></li>
-  <li><a href="#faq-payments-08">How does the Licensing API use OAuth?</a></li>
-  <li><a href="#faq-payments-09">Does the free trial option provide time-limited trials?</a></li>
-  <li><a href="#faq-payments-10">Can a Chrome Web Store app be both paid and free trial?</a></li>
-  <li><a href="#faq-payments-11">I'm not based in the US. When will the Chrome Web Store let me sell my app?</a></li>
-  <li><a href="#faq-payments-12">I am a developer in region X, will I be able to sell in region Y?</a></li>
-  <li><a href="#faq-payments-13">Great, I can sell my apps in many regions.  How do I manage the pricing across all these currencies?</a></li>
-  <li><a href="#faq-payments-14">If pricing is set in tiers does that mean I am locked in to the same tier across all the regions I sell my app in?</a></li>
-  <li><a href="#faq-payments-15">Is there a big table that will tell me what I will receive from each region with the fees included?</a></li>
-  <li><a href="#faq-payments-16">If I list in all these regions, when and how do I get paid?</a></li>
-</ul>
-
-<h4>Installable web apps</h4>
-<ul>
-  <li><a href="#faq-app-01">What is the difference between packaged apps and hosted apps?</a></li>
-  <li><a href="#faq-app-02">Can I sell a packaged app?</a></li>
-  <li><a href="#faq-app-02.5">Why do you allow developers the option of paid packaged apps?</a></li>
-  <li><a href="#faq-app-03">Can installable web apps have page actions?</a></li>
-  <li><a href="#faq-app-04">Can installable web apps have browser actions?</a></li>
-  <li><a href="#faq-app-05">Can I use Google AdSense in my web app?</a></li>
-  <li><a href="#faq-app-06">Can I use Google Analytics?</a></li>
-  <li><a href="#faq-app-07">What is the size limit for apps in the store?</a></li>
-  <li><a href="#faq-app-08">I have a free Flash game, can I host it in the store?</a></li>
-  <li><a href="#faq-app-09">I have a Flash game that I would love to be able to take payments for, how can I do it?</a></li>
-  <li><a href="#faq-app-10">Do installable web apps run from the desktop, installed as separate apps, or otherwise operate independently of the browser?</a></li>
-  <li><a href="#faq-app-11">What is actually installed by an installable web app?</a></li>
-  <li><a href="#faq-app-12">Do Chrome Web Store apps work in browsers other than Chrome?</a></li>
-  <li><a href="#faq-app-13">Will users of other browsers be able to install apps directly from the Chrome Web Store?</a></li>
-  <li><a href="#faq-app-14">Do installable web apps work on different operating systems?</a></li>
-  <li><a href="#faq-app-15">How do I store my content for offline access?</a></li>
-  <li><a href="#faq-app-16">What makes a good web app?</a></li>
-  <li><a href="#faq-app-17">What is the screen resolution for Chrome Web Store apps?</a></li>
-  <li><a href="#faq-app-18">Do apps run in full screen?</a></li>
-  <li><a href="#faq-app-19">Will apps work on Android?</a></li>
-  <li><a href="#faq-app-20">Will apps work on Google TV?</a></li>
-  <li><a href="#faq-app-21">What can I do to protect the content of my web app?</a></li>
-  <li><a href="#faq-app-22">What happens when a user clicks an external link in my app?</a></li>
-  <li><a href="#faq-app-23">How should my app handle the back button?</a></li>
-  <li><a href="#faq-app-24">How can I detect whether my app is running as an installed web app and via the Chrome app launcher (and not just via a bookmark or link)?</a></li>
-  <li><a href="#faq-app-25">My app is available in multiple regions. Can I list it in different categories for each region?</a></li>
-  <li><a href="#faq-app-26">What is the difference between using inline installation and hosting a .crx file on my own site?</a></li>
-  <li><a href="#faq-app-27">Is inline installation supported with all items?</a></li>
-</ul>
-<h4>Extensions</h4>
-<ul>
-  <li><a href="#faq-extensions-01">Can I sell extensions in the store?</a></li>
-  <li><a href="#faq-extensions-02">Can I use the Licensing API with extensions?</a></li>
-</ul>
-<h4>Themes</h4>
-<ul>
-  <li><a href="#faq-themes-01">Can I sell themes in the store?</a></li>
-  <li><a href="#faq-themes-02">Can I use the Licensing API with themes?</a></li>
-</ul>
-</div>
-
-<p class="backtotop"><a href="#top">Back to top</a></p>
 <h2 id="general"> General </h2>
 
 <dl>
   <dt id="faq-gen-01">What is the Chrome Web Store?</dt>
-    <dd>The Chrome Web Store is an open marketplace for <a href="/chrome/apps/">web apps</a>, <a href="http://code.google.com/chrome/extensions/">Google Chrome Extensions</a>, and <a href="http://code.google.com/chrome/extensions/themes.html">Google Chrome Themes</a>, where consumers may browse, install, and purchase items and install them in their browser. These apps are built with web technologies and run inside of web browsers.</dd>
+    <dd>The Chrome Web Store is an open marketplace for <a href="/chrome/apps/">Chrome Apps</a>, <a href="http://code.google.com/chrome/extensions/">Google Chrome Extensions</a>, and <a href="http://code.google.com/chrome/extensions/themes.html">Google Chrome Themes</a>, where consumers may browse, install, and purchase items and install them in their browser. These apps are built with web technologies and run inside of web browsers.</dd>
   <dt id="faq-gen-02">How many people use Chrome?</dt>
     <dd>In October 2011, Google announced 200 million active users for Chrome. It's also important to note that Chrome Web Store apps can run in any browser that supports the web technologies used to build the app.</dd>
   <dt id="faq-gen-05">Is there a road map for Chrome?</dt>
