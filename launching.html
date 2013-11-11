@@ -57,7 +57,7 @@ executed design permeates every aspect of the web app development process.
 <p>
 We’ve written about design principles we think are important for well executed
 web apps.
-<a href="/chrome/apps/articles/thinking_in_web_apps">Thinking in Web Apps</a>
+<a href="https://developers.google.com/chrome/apps/articles/thinking_in_web_apps">Thinking in Web Apps</a>
 lists five design principles:
 </p>
 
@@ -137,7 +137,7 @@ available, and your initial set of users will be using Google Chrome.
 </p>
 
 <p>
-There are <a href="/chrome/web-store/articles/apps_vs_extensions#pkgVsHost">two
+There are <a href="apps_vs_extensions.html#pkgVsHost">two
 different types of installable web apps</a>: packaged and hosted.
 Hosted web apps are regular web apps, served from web servers.  Packaged web
 apps are bundled and are completely installed into the user’s browser.  You'll
@@ -148,21 +148,21 @@ extension APIs.  Regardless of type, you’ll still need a ZIP file that include
 a <a href="http://code.google.com/chrome/extensions/manifest.html">manifest file</a>
 and any icons required (always a 128x128; also a 16x16 for packaged web apps).  You can find
 more details in the documentation for
-<a href="/chrome/apps/docs/developers_guide">hosted apps</a> and
-<a href="http://code.google.com/chrome/extensions/apps.html">packaged apps</a>.
+<a href="https://developers.google.com/chrome/apps/docs/developers_guide">hosted apps</a> and
+<a href="http://developer.chrome.com/apps/">Chrome Apps</a>.
 </p>
 
 <p>
 If your web app is using the integrated payment system
 (Chrome Web Store Payments) you’ll need to build
-in support for both OpenID to <a href="/chrome/web-store/docs/identify_user">identify
+in support for both OpenID to <a href="identify_user.html">identify
 the user</a> and the Chrome Web Store Licensing API
-to <a href="/chrome/web-store/docs/check_for_payment">see if that user
+to <a href="check_for_payment.html">see if that user
 has successfully paid</a>.
 </p>
 
 <p>
-We also recommend that you <a href="/chrome/chrome-frame/">add support
+We also recommend that you <a href="https://developers.google.com/chrome/chrome-frame/">add support
 for Google Chrome Frame</a>, a plugin that adds Google Chrome's capabilities,
 including its HTML5 features, to legacy browsers such as IE6, IE7, and IE8.
 Enabling support is as simple as sending an HTTP header or adding a &lt;meta&gt; tag
@@ -211,9 +211,9 @@ web app's usage and growth.
 </p>
 
 <p>
-<a href="/chrome/web-store/docs/check_for_payment">Integrating with
+<a href="check_for_payment.html">Integrating with
 the Chrome Web Store Payments</a> system is easy, using a simple
-JSON (or Atom) REST-based service.  Requests are signed by OAuth, and you can <a href="/chrome/web-store/docs/check_for_payment#test">test
+JSON (or Atom) REST-based service.  Requests are signed by OAuth, and you can <a href="check_for_payment.html#test">test
 your integration with the Licensing API</a> using special user IDs and our
 <a href="http://googlecodesamples.com/oauth_playground/">OAuth Playground</a>.
 </p>
@@ -223,7 +223,7 @@ Step Four: Package and publish your app
 </h2>
 
 <p>
-Detailed documentation is available to help you <a href="/chrome/web-store/docs/publish">publish
+Detailed documentation is available to help you <a href="publish.html">publish
 your app into the Chrome Web Store</a>.  The steps involve writing a
 manifest file, zipping it up, uploading the ZIP file to the <a href="https://chrome.google.com/extensions/developer/dashboard">Chrome
 Developer Dashboard</a>, and providing configuration and content about your web app.
@@ -276,7 +276,7 @@ really highlights what the modern web is capable of.
 
 <p>
 The Chrome Web Store’s listing for your app allows you to display a few
-<a href="/chrome/web-store/docs/images#screenshots">screenshots</a> and
+<a href="images.html#screenshots">screenshots</a> and
 a YouTube video.  Use these opportunities to show off your app,
 and use the video to highlight key features and explain the use cases.
 </p>
@@ -357,7 +357,7 @@ The Chrome Web Store opens for consumers later this year.  Let's run through the
 	<li>Is your web app’s favicon configured?</li>
 	<li>Do you have the proper copyrights?</li>
 	<li>Is your web app’s 404 page configured?</li>
-	<li>Did you add support for <a href="/chrome/chrome-frame/">Chrome Frame</a>?</li>
+	<li>Did you add support for <a href="https://developers.google.com/chrome/chrome-frame/">Chrome Frame</a>?</li>
 </ul>
 
 <p>
@@ -376,9 +376,9 @@ to test and experiment before the consumer release.
 <p>
 We hope this post helps you get started with the Chrome Web Store.  For more
 information, read about
-<a href="/chrome/apps/articles/thinking_in_web_apps">web app design
-principles</a>, check out the <a href="/chrome/web-store/faq">Chrome
-Web Store FAQ</a>, and browse our <a href="/chrome/web-store/docs/">developer
+<a href="https://developers.google.com/chrome/apps/articles/thinking_in_web_apps">web app design
+principles</a>, check out the <a href="faq.html">Chrome
+Web Store FAQ</a>, and browse our <a href="overview.html">developer
 documentation</a>.  We look forward to seeing your app in the store!
 </p>
 

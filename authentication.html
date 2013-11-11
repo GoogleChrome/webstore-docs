@@ -53,7 +53,7 @@ You can further streamline the process for users by supporting a different authe
 
 <h4>Must users provide information in order to create a new account in your system?</h4>
 <p>
-With OpenID, you can request information such as first name, last name, email address, region, and language. You request this additional information by including <a href="/accounts/docs/OpenID#endpoint">attribute exchange parameters</a> in the authentication requests that you send to the Google OpenID endpoint. What if you require additional information such as settings related to your app, or if you require a user to accept your terms of service before creating an account? In those cases, you can prompt the user to provide additional information after they've opted to sign in with their Google Account. In the <a href="#examples">Examples</a> section below, you'll see a walk through of the account creation process for Manymoon, which demonstrates this process. If the extra information is optional, then you can also consider waiting until after a user has created their account to gather this information, in order to simplify the account creation process.
+With OpenID, you can request information such as first name, last name, email address, region, and language. You request this additional information by including <a href="https://developers.google.com/accounts/docs/OpenID#endpoint">attribute exchange parameters</a> in the authentication requests that you send to the Google OpenID endpoint. What if you require additional information such as settings related to your app, or if you require a user to accept your terms of service before creating an account? In those cases, you can prompt the user to provide additional information after they've opted to sign in with their Google Account. In the <a href="#examples">Examples</a> section below, you'll see a walk through of the account creation process for Manymoon, which demonstrates this process. If the extra information is optional, then you can also consider waiting until after a user has created their account to gather this information, in order to simplify the account creation process.
 </p>
 
 <h4>What authentication options will you present to your users?</h4>
@@ -63,7 +63,7 @@ The way you decide to design your user interface may be different if you only su
 
 <h4>Do you want to use a pop-up UI or a browser redirect flow for signing in?</h4>
 <p>
-You have a choice of how users will be prompted for their Google Account credentials. You can prompt them via a pop-up UI, or you can use a browser redirect flow. Our <a href="/chrome/web-store/docs/samples#php">PHP sample code</a> demonstrates how to use the pop-up UI, while the <a href="/chrome/web-store/docs/samples#java">Java</a> and <a href="/chrome/web-store/docs/samples#python">Python</a> sample code uses the browser redirect flow. To try the different styles of authentication yourself, see <a href="http://www.puffypoodles.com/">these examples</a>.
+You have a choice of how users will be prompted for their Google Account credentials. You can prompt them via a pop-up UI, or you can use a browser redirect flow. Our <a href="samples.html#php">PHP sample code</a> demonstrates how to use the pop-up UI, while the <a href="samples.html#java">Java</a> and <a href="samples.html#python">Python</a> sample code uses the browser redirect flow. To try the different styles of authentication yourself, see <a href="http://www.puffypoodles.com/">these examples</a>.
 </p>
 
 <h4>What if a user deletes their Google Account?</h4>
@@ -143,7 +143,7 @@ When a user is creating an account in your app, we recommend displaying a splash
 </p>
 
 <p>
-Make sure you're using the correct federated identity URL when you request the <a href="/accounts/docs/OpenID#endpoint">OpenID endpoint</a>. The URL you should use to get the Google OpenID endpoint is <code>https://www.google.com/accounts/o8/id</code>.
+Make sure you're using the correct federated identity URL when you request the <a href="https://developers.google.com/accounts/docs/OpenID#endpoint">OpenID endpoint</a>. The URL you should use to get the Google OpenID endpoint is <code>https://www.google.com/accounts/o8/id</code>.
 </p>
 
 <p>
@@ -151,9 +151,9 @@ Here are some places where you can find more information
 about OpenID and Federated Login for Google Accounts.
 </p>
 <ul>
-  <li>For technical guidance on using Federated Login for Google Accounts, see the documentation for <a href="/accounts/docs/OpenID#working">working with OpenID</a>.</li>
-  <li>The <a href="/chrome/web-store/docs/identify_user">Identifying the User</a> section of the Chrome Web Store Developer's Guide provides more details on when supporting Federated Login with Google Accounts is required and when it's optional, as well as a listing of OpenID libraries you can use.</li>
-  <li>For sample code that demonstrates how to obtain the OpenID identifier for a user and how to use the Chrome Web Store Licensing API, see these <a href="/chrome/web-store/docs/samples">samples</a> for Java, Python, and PHP.</li>
+  <li>For technical guidance on using Federated Login for Google Accounts, see the documentation for <a href="https://developers.google.com/accounts/docs/OpenID#working">working with OpenID</a>.</li>
+  <li>The <a href="identify_user.html">Identifying the User</a> section of the Chrome Web Store Developer's Guide provides more details on when supporting Federated Login with Google Accounts is required and when it's optional, as well as a listing of OpenID libraries you can use.</li>
+  <li>For sample code that demonstrates how to obtain the OpenID identifier for a user and how to use the Chrome Web Store Licensing API, see these <a href="samples.html">samples</a> for Java, Python, and PHP.</li>
   <li>Visit the <a href="http://groups.google.com/group/google-federated-login-api">Google Group on Federated Login</a> for discussion on using Google's OpenID API</a>.</li>
 </ul>
 
