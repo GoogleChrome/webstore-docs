@@ -40,12 +40,6 @@ build</a> of Chrome browser.</dd>
     <dd>The new registration fee helps to prevent fraud in the Chrome Web Store.</dd>
   <dt id="faq-gen-12">Why am I <em>not</em> being asked to pay a registration fee?</dt>
     <dd>The fee is waived for developers who signed up with the Chrome Extensions Gallery before August 19, 2010.</dd>
-    {% comment %}
-<dt id="faq-gen-13">Is the Chrome Developer Dashboard final?</dt>
-    <dd>No, we are in the developer preview phase of the project, where we will be taking feedback from developers to help us better tailor the user experience.</dd>
-  <dt id="faq-gen-14">Is the Chrome Web Store UI final?</dt>
-    <dd>No, we are in the developer preview phase of the project, and the Chrome Web Store UI will likely change considerably until the consumer launch.</dd>
-    {% endcomment %}
   <dt id="faq-gen-17">How can I sign up using my Google Apps email address (for example, admin@example.com)?</dt>
     <dd> If you can't sign into the Chrome Developer Dashboard
     with your Google Apps email address, you have two options:
@@ -280,7 +274,6 @@ build</a> of Chrome browser.</dd>
       Basically you need a real business presence inside the US
       in order to use Chrome Web Store Payments.
     </dd>
-    {% comment %}PENDING: update for post-J1 releases{% endcomment %}
     <dd>Later this year,
       if you are in a
       <a href="/chrome/web-store/docs/pricing#seller">supported region</a>,
@@ -431,21 +424,5 @@ if (window.chrome.app.isInstalled) {
 
 <p class="backtotop"><a href="#top">Back to top</a></p>
 
-
-
-{% comment %}
-PENDING: ASAP, add answers to the following question.
-(When we do, update the Publishing page
-to point the FAQ for these details;
-just search for FAQ and uncomment the text.)
-
-What errors can happen when uploading?
-
-* overlap in "urls" list for a hosted app (Note: internally, we call this list of URLs the "extent" of the app; not sure if it includes the browse_urls)
-* malformed URLs in the various "app" fields
-* invalid manifest (JSON errors such as excess or missing commas, e.g.)
-* all the other errors you can already get with extensions...
-
-{% endcomment %}
 </body>
 

@@ -1,8 +1,9 @@
-<head>
-  <h1>Checking for Payment</h1>
+<head>`
+  <title>Checking for Payment</title>
 </head>
 
 <body>
+<h1>Checking for Payment</h1>
 
 <p>
 If you plan to use Chrome Web Store Payments,
@@ -43,11 +44,6 @@ from the Chrome Developer Dashboard
 after you upload your app for the first time.
 </p>
 
-{% comment %}
-PENDING: Consider separating IDs from OAuth stuff in explanation.
-See's Munjal's 8/17 email for details.
-{% endcomment %}
-
 <p>
 Here's an overview of the process of
 writing code that uses the Licensing API:
@@ -60,8 +56,6 @@ writing code that uses the Licensing API:
   <li> Add code to handle the response from the license server. </li>
 </ul>
 
-{# PENDING: This list should really be parallel with the section heads.#}
-
 <p>
 Read the following sections for details about this process,
 with tips on testing your code.
@@ -70,11 +64,6 @@ with tips on testing your code.
 
 <p class="backtotop"><a href="#top">Back to top</a></p>
 <h2 id="setup"> Get access to the Licensing API </h2>
-
-{% comment %}
-PENDING: Munjal suggested combining this with the next section.
-Revisit...
-{% endcomment %}
 
 <p>
 Before you can use the Licensing API for a particular app,
@@ -437,19 +426,6 @@ specified by the <code>maxAgeSecs</code> field
 of the Cache-Control HTTP header).
 </p>
 
-{% comment %}
-PENDING: add details about how to use the timestamp.
-Possible cases:
-* The user has just bought the app
-  and still has 30 minutes to return it for no fee.
-* The user has bought the app over 30 minutes ago
-  but the credit card payment hasn't gone through,
-* The timestamp is a long way away,
-  as in when the user has recently bought a year-long subscription.
-
-{% endcomment %}
-
-
 <p class="backtotop"><a href="#top">Back to top</a></p>
 <h2 id="test"> Test your implementation </h2>
 
@@ -478,7 +454,6 @@ When you use the OAuth Playground,
 click the <b>execute</b> button to send the request.
 Pressing Enter doesn't work.
 
-{# PENDING: give directions for using the OP.#}
 </p>
 
 
@@ -535,12 +510,6 @@ For a detailed explanation of using OAuth, see
 <p>
 Read <a href="/chrome/web-store/docs/images">Supplying Images</a>.
 </p>
-
-
-{% comment %}
-PENDING: Rahul says maybe we should add a section
-on using the server from a packaged app or extension
-{% endcomment %}
 
 </body>
 
