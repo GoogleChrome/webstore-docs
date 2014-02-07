@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <title>InAppProducts: get</title>
+    <meta name="project_path" value="/_project.yaml" />
+    <meta name="book_path" value="/_book.yaml" />
+  </head>
+  <body class="docs">
+
+<p class="note">
+  <b>Requires <a href="#auth">authorization</a></b>
+</p>
+
+<p>Gets the in-app product information of an item.
+<a href="#try-it">Try it now</a>.
+</p>
+
+
+
+<section id="request" >
+  <h2>Request</h2>
+  <h3>HTTP request</h3>
+<pre>GET https://www.googleapis.com/chromewebstore/v1.1/items/<var class="apiparam">itemId</var>/skus/<var class="apiparam">sku</var></pre>
+
+  <h3>Parameters</h3>
+  <table class="matchpre">
+    <thead>
+      <tr>
+        <th>Parameter name</th>
+        <th>Value</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr id="required-parameters" class="alt">
+      <td colspan="3"><b>Path parameters</b></td>
+    </tr>
+      <tr id="itemId">
+        <td><code>itemId</code></td>
+        <td><code class="apitype">string</code></td>
+        <td>
+          The ID of the item to query for in-app products.
+
+
+        </td>
+      </tr>
+      <tr id="sku">
+        <td><code>sku</code></td>
+        <td><code class="apitype">string</code></td>
+        <td>
+          The in-app product ID.
+
+
+        </td>
+      </tr>
+    <tr id="optional-parameters" class="alt">
+      <td colspan="3"><b>Optional query parameters</b></td>
+    </tr>
+      <tr id="gl">
+        <td><code>gl</code></td>
+        <td><code class="apitype">string</code></td>
+        <td>
+          Specifies the region code of the IAP when projection is THIN.
+
+
+        </td>
+      </tr>
+      <tr id="hl">
+        <td><code>hl</code></td>
+        <td><code class="apitype">string</code></td>
+        <td>
+          Specifies the language code of the IAP when projection is THIN.
+
+
+        </td>
+      </tr>
+      <tr id="projection">
+        <td><code>projection</code></td>
+        <td><code class="apitype">string</code></td>
+        <td>
+          Whether to return a subset of the result
+
+          <br/><br/>Acceptable values are:
+          <ul>
+            <li>"<code>ALL</code>": Return IAP info for all available regions and languages
+            </li>
+            <li>"<code>THIN</code>": Return IAP info for only the requested region and language
+            </li>
+          </ul>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 id="auth">Authorization</h3>
+  <p>This request requires authorization with the following scope (<a href="">read more about authentication and authorization</a>).</p>
+  <table class="matchpre">
+    <thead><tr><th>Scope</th></tr></thead>
+    <tbody>
+      <tr><td><code>https://www.googleapis.com/auth/chromewebstore.readonly</code></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Request body</h3>
+
+  <p>Do not supply a request body with this method.</p>
+
+</section>
+
+<section id="response" >
+  <h2>Response</h2>
+
+  <p>If successful, this method returns an <a href="/inAppProducts#resource">InAppProducts resource</a> in the response body.</p>
+</section>
+
+
+
+
+<section id="try-it" >
+  <h2>Try it!</h2>
+
+
+
+  <p>
+    Use the APIs Explorer below to call this method on live data and see the response.
+  </p>
+  <div id="embedded-explorer" data-service="chromewebstore" data-version="v1.1"
+    data-method="chromewebstore.inAppProducts.get" data-params=""></div>
+</section>
+
+
+
+  </body>
+</html>
