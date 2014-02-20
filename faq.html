@@ -236,20 +236,33 @@ build</a> of Chrome browser.</dd>
 
 <dl>
   <dt id="faq-payments-01">What technologies does the Chrome Web Store Payments system use?</dt>
-    <dd>The Chrome Web Store Payments system uses Google Checkout.</dd>
+    <dd>
+      The Chrome Web Store Payments system uses 
+      <a href="//developers.google.com/wallet/digital/docs/">
+        Google Wallet for Digital Goods
+      </a>.
+    </dd>
   <dt id="faq-payments-02">How can I verify that a user has paid for my app?
     <dd>You can use the <a href="check_for_payment.html">Chrome Web Store Licensing API</a>.</dd>
   <dt id="faq-payments-03">What technologies are used to take payments?</dt>
     <dd>
       <ul>
-        <li>If you want to use the integrated experience available from the Chrome Web Store, then  the Chrome Web Store Payments system will be used.</li>
-        <li>Alternatively, you are free to integrate with any third party payment processor. Note however that these payments will not be integrated with the store experience.</li>
+        <li>
+          If you want to use the integrated experience available from 
+          the Chrome Web Store, then the Google Wallet for Digital Goods 
+          system will be used.
+        </li>
+        <li>
+          Alternatively, you are free to integrate with any third party 
+          payment processor. Note however that these payments will not be 
+          integrated with the store experience.
+        </li>
       </ul>
     </dd>
-  <dt id="faq-payments-04">I already have a credit card merchant account.  Do I really have to use Google Checkout?</dt>
-    <dd>No, not to be listed in the store.  Google Checkout is used to provide an intuitive, integrated experience for users of the Chrome Web Store.  You are free to use a third party payment processor.</dd>
-  <dt id="faq-payments-05">I already use Paypal.  Do I have to use Google Checkout?</dt>
-    <dd>No, not to be listed in the store.  Google Checkout is used to provide an intuitive, integrated experience for users of the Chrome Web Store.  However, you may list your app in the store and use any payment processor.</dd>
+  <dt id="faq-payments-04">I already have a credit card merchant account.  Do I really have to use Google Wallet for Digital Goods?</dt>
+    <dd>No, not to be listed in the store.  Google Wallet for Digital Goods is used to provide an intuitive, integrated experience for users of the Chrome Web Store.  You are free to use a third party payment processor.</dd>
+  <dt id="faq-payments-05">I already use Paypal.  Do I have to use Google Wallet for Digital Goods?</dt>
+    <dd>No, not to be listed in the store.  Google Wallet for Digital Goods is used to provide an intuitive, integrated experience for users of the Chrome Web Store.  However, you may list your app in the store and use any payment processor.</dd>
   <dt id="faq-payments-06">Does the Chrome Web Store have a preferred way to do in-app payments?</dt>
     <dd>We recommend the <a href="https://developers.google.com/commerce/wallet/digital/">Google In-App Payments API for the Web</a>, but you are free to use any in-app purchase system.</dd>
   <dt id="faq-payments-07">Is the Chrome Web Store Licensing API final?</dt>
@@ -258,33 +271,25 @@ build</a> of Chrome browser.</dd>
     <dd>Your app (the "Consumer" in OAuth terms) needs an OAuth access token so that it can use the Licensing API (the Service Provider). You (the User) can ask the Chrome Developer Dashboard to give you an access token for each app that you upload. When the dashboard generates this access token on your behalf, it uses "anonymous" for both the consumer key and secret. If you want to use your own consumer key and secret, you can use an OAuth tool such as the <a href="http://googlecodesamples.com/oauth_playground/">OAuth Playground</a> to get the access token.</dd>
   <dt id="faq-payments-09">Does the free trial option provide time-limited trials?</dt>
     <dd>
-      <ul>
-        <li>The Chrome Web Store does not currently provide any built-in support for time-limited free trials.  The free trial mode is meant to allow a user to access the web app without having to pay for the app directly.  Your server-side logic should handle any sort of restrictions, limitations, time limits, or other constraints imposed on the user if they did not pay for the app.  The user can then, at any time, pay for the web app and your server-side logic will query the License Server API and enable or turn on any additional features.</li>
-        <li>Think of free trial as being able to offer users access to the web app without forcing them to pay.  It's up to you to create a different user experience for paid or free users.</li>
-        </dd>
+      Yes, you can provide a time or feature limited trial of your application.
+      See the section on 
+      <a href="https://developers.google.com/chrome/web-store/docs/payments-otp#verifying-payment">
+        verifying payment and offering free trial
+      </a>.
+    </dd>
   <dt id="faq-payments-10">Can a Chrome Web Store app be both paid and free trial?</dt>
     <dd>Yes, you can mark your web app as both paid and free trial.</dd>
 </dl>
-  <dt id="faq-payments-11">I'm not based in the US. When will the Chrome Web Store let me sell my app?</dt>
-    <dd>Currently, you need a US bank account,
-      plus an address in the US and a US taxpayer ID.
-      Basically you need a real business presence inside the US
-      in order to use Chrome Web Store Payments.
-    </dd>
-    <dd>Later this year,
-      if you are in a
-      <a href="pricing.html#seller">supported region</a>,
-      you'll be able to sell apps using Chrome Web Store Payments.
-      You can already associate a Google Checkout merchant account
-      with your listing and publish your app,
-      but your app won't become visible until later.
+  <dt id="faq-payments-11">I'm not based in the US, can I still sell my app or extension?</dt>
+    <dd>Yes, if you are in a <a href="pricing.html#seller">supported region</a>,
+      you'll be able to sell apps and extensions.
     </dd>
   <dt id="faq-payments-12">I am a developer in region X, will I be able to sell my app in region Y?</dt>
     <dd>Yes. As long as you are a merchant in one of the listed <a
       href="pricing.html#seller">regions</a> you will be able to sell your app in the store to any user who is in a Google Checkout buyer supported region. If you're in an unsupported region, you can use a custom payment solution to sell your app.
     </dd>
   <dt id="faq-payments-13">Great, I can sell my app in many regions.  How do I manage the pricing across all these currencies?</dt>
-    <dd>Simple. You may have noticed that apps are placed into a tier for pricing. This allows us to select the most competitive price point for each currency, based on a variety of local factors.
+    <dd>You may have noticed that apps are placed into a tier for pricing. This allows us to select the most competitive price point for each currency, based on a variety of local factors.
    </dd>
   <dt id="faq-payments-14">If pricing is set in tiers, does that mean I am locked in to the same tier across all the regions I sell my app in?</dt>
     <dd>No. This is the really great part of the system: you can choose a price point for all the regions you want to sell in.  You have a local competitor in your region? Not a problem, you can price your app to be competitive in that market. Simply edit your app in the Chrome Web Store <a href="https://chrome.google.com/webstore/developer/dashboard">Developer Dashboard</a>, select the regions that you want to list your app in and the appropriate price tier.
@@ -403,9 +408,13 @@ if (window.chrome.app.isInstalled) {
 
 <dl>
   <dt id="faq-extensions-01">Can I sell extensions in the store?</dt>
-    <dd>Not yet, but this functionality is coming soon.</dd>
+    <dd>Yes! You can sell your Chrome Extension using 
+      <a href="https://developers.google.com/chrome/web-store/docs/payments-otp">one-time payments</a>.</dd>
   <dt id="faq-extensions-02">Can I use the Licensing API with extensions?</dt>
-    <dd>Not really. Extensions traditionally have no server-side code components, so you cannot easily secure access to the app.  It is possible to protect server-side assets using the Licensing API, but you would have to ensure that you obtain the user's OpenID information.</dd>
+    <dd>Yes, see the section on <a href="https://developers.google.com/chrome/web-store/docs/payments-otp#verifying-payment">
+        verifying payment and offering free trial
+      </a>.
+    </dd>
 </dl>
 
 <p class="backtotop"><a href="#top">Back to top</a></p>
@@ -413,7 +422,8 @@ if (window.chrome.app.isInstalled) {
 
 <dl>
   <dt id="faq-themes-01">Can I sell themes in the store?</dt>
-    <dd>Not yet. The Google Chrome Themes Gallery is part of the Chrome Web Store, and you will be able to sell your themes, but you can't yet.</dd>
+    <dd>Yes! You can sell your Chrome Theme using 
+      <a href="https://developers.google.com/chrome/web-store/docs/payments-otp">one-time payments</a>.</dd>
   <dt id="faq-themes-02">Can I use the Licensing API with themes?</dt>
     <dd>No, themes have no code or server-side components.</dd>
 </dl>
