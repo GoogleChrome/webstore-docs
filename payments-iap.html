@@ -1,5 +1,7 @@
+{{+bindTo:partials.standard_store_article}}
+
 <h1>Google Wallet for Digital Goods</h1>
-<p>
+<p id="overview">
   You can use Google Wallet for digital goods to sell digital and 
   virtual goods within your <b>Chrome App</b> or <b>Chrome Extension</b>. 
   The Google Wallet for digital goods client app, which is embedded in 
@@ -97,7 +99,7 @@
 </p>
 
 
-<h2 id="how-to-use">How to use Google Wallet for digital goods</h2>
+<h2 id="how-to-use">Using Google Wallet for digital goods</h2>
 <p>
   Using Google Wallet for digital goods is similar to using 
   the <a href="https://developers.google.com/commerce/wallet/digital/docs/">
@@ -304,7 +306,7 @@
   by Chrome.
 </p>
 
-<h3 id="handling-digial-goods">Handling digital goods</h3>
+<h3 id="handling-digital-goods">Handling digital goods</h3>
 
 <h4 id="query-items">Query what items are available</h4>
 <p>
@@ -316,10 +318,44 @@
 </p>
 
 <pre class="prettyprint">google.payments.inapp.getSkuDetails({
-  'parameters': {'env': 'sandbox'},
+  'parameters': {'env': 'prod'},
   'success': onSkuDetails,
   'failure': onSkuDetailsFail
 });</pre>
+
+<p>The response will look like:</p>
+<pre class="prettyprint">{
+  "response": {
+    "details": {
+      "kind": "chromewebstore#inAppProductList",
+      "inAppProducts": [
+        {
+          "kind": "chromewebstore#inAppProduct",
+          "sku": "70darkchocolate",
+          "item_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "state": "ACTIVE",
+          "prices": [
+            {
+              "valueMicros": "990000",
+              "currencyCode": "USD",
+              "regionCode": "US"
+            }
+          ],
+          "localeData": [
+            {
+              "title": "Dark Chocolate (70%)",
+              "description": "The best chocolate available.",
+              "languageCode": "all"
+            }
+          ]
+        },
+        {
+          ...
+        }
+      ]
+    }
+  }
+}</pre>
 
 <p>
   For example, you might want to list the details of each object you get 
@@ -327,10 +363,10 @@
 </p>
 
 <pre class="prettyprint">function onSkuDetails(skus) {
-  var count = skus.length;
+  var products = response.response.details.inAppProducts;
+  var count = products.length;
   for (var i = 0; i &lt; count; i++) {
-    var sku = skus[i];
-    /* Add each item to your app here */
+    addProductToUI(products[i]);
   }
 }</pre>
 
@@ -342,7 +378,7 @@
 </p>
 
 <pre class="prettyprint">google.payments.inapp.buy({
-  'parameters': {'env': 'sandbox'},
+  'parameters': {'env': 'prod'},
   'sku': sku,
   'success': onPurchase,
   'failure': onPurchaseFail
@@ -354,37 +390,33 @@
 </p>
 
 <pre class="prettyprint">google.payments.inapp.buy({
-  'parameters': {'env': 'sandbox'},
+  'parameters': {'env': 'prod'},
   'jwt': jwt,
   'success': onPurchase,
   'failure': onPurchaseFail
 });</pre>
 
-<p>
-  The <code>parameters</code> field is required and tells Chrome whether 
-  to use the <b>production</b> or <b>sandbox</b> instance of the API.  You 
-  can set this field to either <code>prod</code> (production server that 
-  accepts real credit cards), or <code>sandbox</code> (test server that 
-  accepts 
-  <a href="https://developers.google.com/commerce/wallet/instant-buy/test-flows#test_cards">
-  test credit cards</a> to simulate transactions). The default setting is 
-  <code>sandbox</code>.
-</p>
-
 <p class="note">
-  <b>Don't forget:</b> Change <code>{'env': 'sandbox'}</code> to 
-  <code>{'env': 'prod'}</code> once you've completed your testing and 
-  are ready to deploy to production.  Transactions targeted against 
-  <code>'sandbox'</code> are simulated.
+  <b>Note:</b> The parameters field in required and must be set to 
+  <code>{'env': 'prod'}</code> to tell Chrome to use the production
+  instance of the API.  Review the <a href="#testing">Testing your app</a>
+  section for details on how to test your app without incurring a charge.
 </p>
 
 <p>
-  When the purchase completes, the callback will return:
+  When the purchase completes, Chrome will call the defined callback with the
+  a parameter that looks like:
 </p>
 
-<pre class="prettyprint">function onPurchase(result) {
-  /* Update the purchased item */
-}</pre>
+<pre class="prettyprint">{
+  "jwt": "eyJhb...0oFuU",
+  "request": {
+    "cartId": "00000000000000000000.0000000000000000000"
+  },
+  "response": {
+    "orderId": "00000000000000000000.0000000000000000000"
+  }
+} </pre>
 
 <h4 id="get-purchases">Verifying what items the user has purchased</h4>
 
@@ -399,11 +431,49 @@
 <pre class="prettyprint">google.payments.inapp.getPurchases({
   'success': onLicenseUpdate,
   'failure': onLicenseUpdateFail
-});
+});</pre>
 
-function onLicenseUpdate(licenses) {
-  /* check the license status and update the app */
+<p>The Chrome Web Store will return the list of SKUs that the user has purchased:</p>
+
+<pre class="prettyprint">{
+  "response": {
+    "details": [
+      {
+        "kind": "chromewebstore#payment",
+        "itemId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sku": "70darkchocolate",
+        "createdTime": "1387221267248",
+        "state": "ACTIVE"
+      }
+    ]
+  }
+} </pre>
+
+<pre class="prettyprint">function onLicenseUpdate(licenses) {
+  var licenses = response.response.details;
+  var count = licenses.length;
+  for (var i = 0; i < count; i++) {
+    var license = licenses[i];
+    saveLicense(license);
+  }
 }</pre>
+
+<p>
+  In some cases, you may want to verify a users purchase outside of a Chrome
+  App, in this case, you can call the Chrome Web Store licensing server
+  directly.  For more information, see <a href="payments-otp.html#verify-code">
+  Verifying the license</a> in the One Time Payment documentation.  Note, 
+  you will need to enable the Chrome Web Store APIs in the Google APIs 
+  console to enable this scenario.
+</p>
+
+<h2 id="testing">Testing purchases</h2>
+<p>
+  Prior to publishing your app to the world, you can test the In App 
+  Payment experience by publishing it only to <b>trusted testers</b>.  When
+  your app is published to trusted testers, the purchase flow will proceed
+  normally, except they will not be charged.
+</p>
 
 <h2 id="sample-app">Sample Chrome App</h2>
 <p>
@@ -413,15 +483,11 @@ function onLicenseUpdate(licenses) {
 
 <ul>
   <li><a href="#">source code</a></li>
-  <li><a href="#">published app (requires Chrome 29 or higher)</a></li>
 </ul>
 
 <p>
-  You can install and run the published app from the Chrome Web 
-  Store to try out the in-app payment purchase flow. The app has 
-  options to use either the production server or the sandbox server. When 
-  testing with the sandbox server, use these 
-  <a href="https://developers.google.com/commerce/wallet/digital/docs/testing">
-  test credit card numbers</a>, which pass basic checks by the Google Wallet
-  for digital goods system.
+  Note, this app is not published in the Chrome Web Store to prevent accidental
+  purchases.
 </p>
+
+{{/partials.standard_store_article}}
