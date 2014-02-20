@@ -1,0 +1,553 @@
+<h1>Payments: Regions, Fees, and Tiers</h1>
+<p>
+  When you use Chrome Web Store Payments or created your digital goods 
+  through the Chrome Web Store interface, you need to choose from one of 
+  18 price tiers for each region that you publish to. This page shows those 
+  price tiers for all regions that the store supports. It also gives 
+  details about who can use Chrome Web Store Payments, and how much of the 
+  purchase price you can expect to receive.
+</p>
+
+<h2 id="trans-fees">Transaction fees</h2>
+<p>
+  When someone buys an item using Chrome Web Store Payments or the In-App 
+  Payments API, Google charges a 5% fee per transaction. For example, if you 
+  charge $1.99, you'll receive $1.89.
+</p>
+
+<h2 id="availability">Availability</h2>
+<h3 id="avail-dev">For developers/merchants</h3>
+<p>
+  Developers in <a href="https://support.google.com/payments/answer/1385282">
+  regions supported by Google Wallet</a> can sign up for a merchant account 
+  to sell their Chrome App, Extension, Theme, hosted web app or virtual goods
+  through in-app purchases.
+</p>
+
+<h3 id="avail-buy-cws">For buyers (one time payments &amp; Chrome Web Store managed in-app payments)</h3>
+<p>
+  You can make your item available for one time purchase or sell digital goods 
+  managed through the Chrome Web Store in the following countries:
+</p>
+
+<table style="width:100%">
+  <tbody>
+    <tr>
+      <td style="width:33%;">
+        Argentina<br>
+        Australia<br>
+        Austria<br>
+        Belgium<br>
+        Brazil<br>
+        Canada<br>
+        Denmark<br>
+        Finland<br>
+        France<br>
+      </td>
+      <td style="width:33%;">
+        Germany<br>
+        Hong Kong<br>
+        India<br>
+        Italy<br>
+        Japan<br>
+        Mexico<br>
+        Netherlands<br>
+        New Zealand<br>
+        Norway<br>
+      </td>
+      <td style="width:33%;">
+        Poland<br>
+        Portugal<br>
+        Singapore<br>
+        Spain<br>
+        Sweden<br>
+        Switzerland<br>
+        United Kingdom<br>
+        United States<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  In the future, we expect to support sales to all regions supported by 
+  Google Wallet.  Buyers in unsupported regions may be able to purchase 
+  apps, but they can't pay in their local currency and may have to pay 
+  international transaction fees.
+</p>
+
+<p class="note">
+  <strong>Note:</strong> some regions must include any applicable taxes in 
+  the the price charged to the user.  Refer to the Developer Dashboard for 
+  more information.
+</p>
+
+<h3 id="avail-buy-sm">For buyers (self managed in-app payments)</h3>
+<p>
+  If you self manage your digital goods inventory using JWTs, you can sell
+  your digital goods in any of the 140+ countries supported by Google Wallet.  
+  See the Buyer Availability section in 
+  <a href="https://support.google.com/payments/answer/1385282">regions 
+  supported by Google Wallet</a> for more information.
+</p>
+
+<h2 id="tiers">Tiers</h2>
+<p>
+  Tiers 0 starts at $0.99 (USD or equivalent) and goes up by $1 through tier 
+  9.  Tier 10 through 17 each go up by $5.  See the chart below for actual
+  prices according to each region.
+</p>
+
+<h4 id="tiers">Price tiers by region</h4>
+
+<style>
+  table.tiers {
+    font-size: small;
+  }
+  table.tiers tr:first-of-type {
+    font-weight: bold;
+  }
+  table.tiers tr td:first-of-type {
+    font-weight: bold;
+    white-space: nowrap;
+  }
+</style>
+
+<table class="tiers">
+  <tbody>
+    <tr>
+      <td>Buyer region<br>(currency)</td>
+      <td>Tier&nbsp;0</td>
+      <td>Tier&nbsp;1</td>
+      <td>Tier&nbsp;2</td>
+      <td>Tier&nbsp;3</td>
+      <td>Tier&nbsp;4</td>
+      <td>Tier&nbsp;5</td>
+      <td>Tier&nbsp;6</td>
+      <td>Tier&nbsp;7</td>
+      <td>Tier&nbsp;8</td>
+      <td>Tier&nbsp;9</td>
+      <td>Tier&nbsp;10</td>
+      <td>Tier&nbsp;11</td>
+      <td>Tier&nbsp;12</td>
+      <td>Tier&nbsp;13</td>
+      <td>Tier&nbsp;14</td>
+      <td>Tier&nbsp;15</td>
+      <td>Tier&nbsp;16</td>
+      <td>Tier&nbsp;17</td>
+      <td><em>Max</em></td>
+    </tr>
+    <tr>
+      <td>US<br>(USD)</td>
+      <td>0.99</td>
+      <td>1.99</td>
+      <td>2.99</td>
+      <td>3.99</td>
+      <td>4.99</td>
+      <td>5.99</td>
+      <td>6.99</td>
+      <td>7.99</td>
+      <td>8.99</td>
+      <td>9.99</td>
+      <td>14.99</td>
+      <td>19.99</td>
+      <td>24.99</td>
+      <td>29.99</td>
+      <td>34.99</td>
+      <td>39.99</td>
+      <td>44.99</td>
+      <td>49.99</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td>Argentina<br>(ARS)</td>
+      <td>6</td>
+      <td>11</td>
+      <td>17</td>
+      <td>22</td>
+      <td>28</td>
+      <td>33</td>
+      <td>39</td>
+      <td>45</td>
+      <td>50</td>
+      <td>56</td>
+      <td>83</td>
+      <td>111</td>
+      <td>139</td>
+      <td>169</td>
+      <td>195</td>
+      <td>223</td>
+      <td>251</td>
+      <td>278</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td>Australia<br>(AUD)</td>
+      <td>0.99</td>
+      <td>1.99</td>
+      <td>2.99</td>
+      <td>3.99</td>
+      <td>4.99</td>
+      <td>5.99</td>
+      <td>6.99</td>
+      <td>7.99</td>
+      <td>8.99</td>
+      <td>9.99</td>
+      <td>15.99</td>
+      <td>20.99</td>
+      <td>25.99</td>
+      <td>30.99</td>
+      <td>35.99</td>
+      <td>40.99</td>
+      <td>45.99</td>
+      <td>50.99</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td>Brazil<br>(BRL)</td>
+      <td>2</td>
+      <td>5</td>
+      <td>7</td>
+      <td>9</td>
+      <td>12</td>
+      <td>14</td>
+      <td>16</td>
+      <td>19</td>
+      <td>21</td>
+      <td>23</td>
+      <td>35</td>
+      <td>46</td>
+      <td>58</td>
+      <td>70</td>
+      <td>81</td>
+      <td>93</td>
+      <td>104</td>
+      <td>116</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td>Canada<br>(CAD)</td>
+      <td>0.99</td>
+      <td>1.99</td>
+      <td>2.99</td>
+      <td>3.99</td>
+      <td>4.99</td>
+      <td>5.99</td>
+      <td>6.99</td>
+      <td>7.99</td>
+      <td>8.99</td>
+      <td>9.99</td>
+      <td>14.99</td>
+      <td>19.99</td>
+      <td>24.99</td>
+      <td>29.99</td>
+      <td>34.99</td>
+      <td>39.99</td>
+      <td>44.99</td>
+      <td>49.99</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td>Denmark<br>(DKK)</td>
+      <td>6</td>
+      <td>11</td>
+      <td>16</td>
+      <td>21</td>
+      <td>26</td>
+      <td>32</td>
+      <td>37</td>
+      <td>42</td>
+      <td>48</td>
+      <td>53</td>
+      <td>80</td>
+      <td>106</td>
+      <td>133</td>
+      <td>159</td>
+      <td>186</td>
+      <td>212</td>
+      <td>239</td>
+      <td>265</td>
+      <td>6000</td>
+    </tr>
+    <tr>
+      <td><a href="#eu">EU</a><br>(EUR)</td>
+      <td>0.74</td>
+      <td>1.49</td>
+      <td>1.99</td>
+      <td>2.99</td>
+      <td>3.99</td>
+      <td>4.49</td>
+      <td>4.99</td>
+      <td>5.99</td>
+      <td>6.99</td>
+      <td>7.49</td>
+      <td>10.99</td>
+      <td>14.99</td>
+      <td>18.99</td>
+      <td>21.99</td>
+      <td>25.99</td>
+      <td>29.99</td>
+      <td>32.99</td>
+      <td>36.99</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td>Hong Kong<br>(HKD)</td>
+      <td>8</td>
+      <td>15</td>
+      <td>25</td>
+      <td>30</td>
+      <td>40</td>
+      <td>45</td>
+      <td>55</td>
+      <td>65</td>
+      <td>70</td>
+      <td>80</td>
+      <td>120</td>
+      <td>150</td>
+      <td>195</td>
+      <td>235</td>
+      <td>270</td>
+      <td>300</td>
+      <td>350</td>
+      <td>390</td>
+      <td>8000</td>
+    </tr>
+    <tr>
+      <td>India<br>(INR)</td>
+      <td>60</td>
+      <td>121</td>
+      <td>182</td>
+      <td>243</td>
+      <td>304</td>
+      <td>365</td>
+      <td>426</td>
+      <td>487</td>
+      <td>548</td>
+      <td>609</td>
+      <td>914</td>
+      <td>1219</td>
+      <td>1524</td>
+      <td>1829</td>
+      <td>2134</td>
+      <td>2439</td>
+      <td>2744</td>
+      <td>3049</td>
+      <td>5000</td>
+    </tr>
+    <tr>
+      <td>Japan<br>(JPY)</td>
+      <td>97</td>
+      <td>165</td>
+      <td>250</td>
+      <td>330</td>
+      <td>420</td>
+      <td>500</td>
+      <td>580</td>
+      <td>660</td>
+      <td>750</td>
+      <td>850</td>
+      <td>1250</td>
+      <td>1650</td>
+      <td>2100</td>
+      <td>2500</td>
+      <td>2900</td>
+      <td>3300</td>
+      <td>3750</td>
+      <td>4150</td>
+      <td>80000</td>
+    </tr>
+    <tr>
+      <td>Mexico<br>(MXN)</td>
+      <td>13</td>
+      <td>25</td>
+      <td>38</td>
+      <td>51</td>
+      <td>64</td>
+      <td>76</td>
+      <td>89</td>
+      <td>102</td>
+      <td>115</td>
+      <td>127</td>
+      <td>191</td>
+      <td>255</td>
+      <td>319</td>
+      <td>382</td>
+      <td>446</td>
+      <td>510</td>
+      <td>574</td>
+      <td>637</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td>New Zealand<br>(NZD)</td>
+      <td>1.19</td>
+      <td>2.49</td>
+      <td>3.99</td>
+      <td>4.99</td>
+      <td>5.99</td>
+      <td>6.99</td>
+      <td>8.99</td>
+      <td>9.99</td>
+      <td>10.99</td>
+      <td>11.99</td>
+      <td>17.99</td>
+      <td>23.99</td>
+      <td>29.99</td>
+      <td>35.99</td>
+      <td>41.99</td>
+      <td>47.99</td>
+      <td>53.99</td>
+      <td>59.99</td>
+      <td>1200</td>
+    </tr>
+    <tr>
+      <td>Norway<br>(NOK)</td>
+      <td>6</td>
+      <td>11</td>
+      <td>17</td>
+      <td>22</td>
+      <td>28</td>
+      <td>34</td>
+      <td>39</td>
+      <td>45</td>
+      <td>50</td>
+      <td>56</td>
+      <td>84</td>
+      <td>112</td>
+      <td>140</td>
+      <td>168</td>
+      <td>196</td>
+      <td>224</td>
+      <td>252</td>
+      <td>280</td>
+      <td>6000</td>
+    </tr>
+    <tr>
+      <td>Poland<br>(PLN)</td>
+      <td>3</td>
+      <td>6</td>
+      <td>9</td>
+      <td>13</td>
+      <td>16</td>
+      <td>19</td>
+      <td>22</td>
+      <td>25</td>
+      <td>28</td>
+      <td>32</td>
+      <td>48</td>
+      <td>63</td>
+      <td>79</td>
+      <td>95</td>
+      <td>111</td>
+      <td>127</td>
+      <td>143</td>
+      <td>158</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td>Singapore<br>(SGD)</td>
+      <td>1.29</td>
+      <td>2.49</td>
+      <td>3.99</td>
+      <td>4.99</td>
+      <td>5.99</td>
+      <td>6.99</td>
+      <td>8.99</td>
+      <td>9.99</td>
+      <td>10.99</td>
+      <td>11.99</td>
+      <td>17.99</td>
+      <td>23.99</td>
+      <td>30.99</td>
+      <td>36.99</td>
+      <td>42.99</td>
+      <td>48.99</td>
+      <td>54.99</td>
+      <td>60.99</td>
+      <td>1200</td>
+    </tr>
+    <tr>
+      <td>Sweden<br>(SEK)</td>
+      <td>6</td>
+      <td>13</td>
+      <td>20</td>
+      <td>26</td>
+      <td>33</td>
+      <td>40</td>
+      <td>46</td>
+      <td>53</td>
+      <td>59</td>
+      <td>66</td>
+      <td>99</td>
+      <td>132</td>
+      <td>165</td>
+      <td>198</td>
+      <td>231</td>
+      <td>264</td>
+      <td>297</td>
+      <td>330</td>
+      <td>7000</td>
+    </tr>
+    <tr>
+      <td>Switzerland<br>(CHF)</td>
+      <td>0.99</td>
+      <td>1.99</td>
+      <td>2.99</td>
+      <td>3.99</td>
+      <td>4.99</td>
+      <td>5.99</td>
+      <td>6.99</td>
+      <td>7.99</td>
+      <td>8.99</td>
+      <td>9.99</td>
+      <td>14.99</td>
+      <td>19.99</td>
+      <td>24.99</td>
+      <td>29.99</td>
+      <td>34.99</td>
+      <td>39.99</td>
+      <td>44.99</td>
+      <td>49.99</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td>UK<br>(GBP)</td>
+      <td>0.59</td>
+      <td>1.25</td>
+      <td>1.99</td>
+      <td>2.49</td>
+      <td>2.99</td>
+      <td>3.79</td>
+      <td>4.49</td>
+      <td>4.99</td>
+      <td>5.79</td>
+      <td>6.29</td>
+      <td>9.49</td>
+      <td>12.49</td>
+      <td>15.99</td>
+      <td>18.99</td>
+      <td>21.99</td>
+      <td>24.99</td>
+      <td>28.49</td>
+      <td>30.99</td>
+      <td>1000</td>
+    </tr>
+  </tbody>
+</table>
+
+<p id="eu" class="note"><strong>Note:</strong> The following EU regions are supported: 
+  Austria, Belgium, Finland, France, Germany, Italy, Netherlands, Portugal, 
+  Spain.
+</p>
+
+<h2 id="manage_transact">Managing transactions, refunding money</h2>
+<p>
+  You can see all transactions posted to your Google Wallet Merchant 
+  account by visiting the <a href="https://wallet.google.com/merchant/">
+  Google Wallet Merchant Center</a>.  Within the Merchant Center you can 
+  check the status of orders at a glance and respond to customer questions as 
+  quickly as possible.  Check the 
+  <a href="https://support.google.com/payments/?topic=3091397">
+  documentation</a> for further details about how to use the site.
+</p>
