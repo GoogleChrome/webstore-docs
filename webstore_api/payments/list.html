@@ -1,5 +1,7 @@
 {{+bindTo:partials.standard_store_article}}
 
+<h1>List</h1>
+
 <p class="note">
   <b>Requires <a href="#auth">authorization</a></b>
 </p>
@@ -9,8 +11,7 @@
 
 
 
-<section id="request" >
-  <h2>Request</h2>
+  <h2  id="request">Request</h2>
   <h3>HTTP request</h3>
 <pre>GET https://www.googleapis.com/chromewebstore/v1.1/items/<var class="apiparam">itemId</var>/payments</pre>
 
@@ -28,10 +29,8 @@
 
   <p>Do not supply a request body with this method.</p>
 
-</section>
 
-<section id="response" >
-  <h2>Response</h2>
+  <h2 id="response">Response</h2>
 
   <p>If successful, this method returns a response body with the following structure:</p>
   <section >
