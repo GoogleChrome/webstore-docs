@@ -1,15 +1,17 @@
 {{+bindTo:partials.standard_store_article}}
 
+<h1>InAppProducts</h1>
+
 <section id="overview" >
   <p></p>
   <p>For a list of <a href="#methods">methods</a> for this resource, see the end of this page.</p>
 </section>
 
-<section id="resource" >
-  <h2>Resource Representations</h2>
+
+  <h2 id="iaprepresentation">inAppProduct Representation</h2>
   <p></p>
 
-  <section >
+
     <pre id="alt-json" class="prettyprint" style="max-height: 500px; overflow: auto">&#123;
   &quot;kind&quot;: &quot;chromewebstore#inAppProduct&quot;,
   &quot;sku&quot;: <var class="apiparam">string</var>,
@@ -126,25 +128,18 @@
       </tr>
       </tbody>
     </table>
-  </section>
-</section>
-
-<section id="methods"  >
-  <h2>Methods</h2>
 
 
 
+  <h2 id="iapmethods">Methods</h2>
   <dl>
-
 
       <dt><a href="/webstore/webstore_api/inAppProducts/get.html">get</a></dt>
       <dd>Gets the in-app product information of an item.</dd>
-
-
 
       <dt><a href="/webstore/webstore_api/inAppProducts/list.html">list</a></dt>
       <dd>Lists the in-app product information of an item.</dd>
 
   </dl>
-</section>
+
 {{/partials.standard_store_article}}
