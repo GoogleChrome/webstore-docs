@@ -378,7 +378,8 @@
  for an item managed through the Chrome Web Store: 
 </p>
 
-<pre class="prettyprint">google.payments.inapp.buy({
+<pre class="prettyprint">var sku = "giant_tv";
+google.payments.inapp.buy({
   'parameters': {'env': 'prod'},
   'sku': sku,
   'success': onPurchase,
@@ -386,13 +387,14 @@
 });</pre>
 
 <p>
-  If you're managing your own JWTs, replace the sku parameter with the the 
+  If you're managing your own JWTs, replace the sku parameter with the 
   appropriate jwt parameter.  For example:
 </p>
 
-<pre class="prettyprint">google.payments.inapp.buy({
+<pre class="prettyprint">var jwt = /* huge ugly JWT string */;
+google.payments.inapp.buy({
   'parameters': {'env': 'prod'},
-  'jwt': jwt,
+  <strong>'jwt': jwt,</strong>
   'success': onPurchase,
   'failure': onPurchaseFail
 });</pre>
@@ -421,7 +423,8 @@
   current license, you can call 
   <code>google.payments.inapp.getPurchases</code>. The function will always 
   return the most up to date information, and will reflect if the purchase 
-  was refunded by you or if it was cancelled by the user.
+  was cancelled by the user, or refunded through the 
+  <a href="https://wallet.google.com/merchant/">Wallet Merchant console</a>.
 </p>
 
 <pre class="prettyprint">google.payments.inapp.getPurchases({
@@ -437,7 +440,7 @@
       {
         "kind": "chromewebstore#payment",
         "itemId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "sku": "70darkchocolate",
+        "sku": "giant_tv",
         "createdTime": "1387221267248",
         "state": "ACTIVE"
       }
