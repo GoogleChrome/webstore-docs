@@ -4,8 +4,7 @@
 <h1 id="mainheading">Verify</h1>
 <p>Verify whether items are hosted on Chrome Web Store.</p>
 
-<section id="request" >
-  <h2>Request</h2>
+  <h2  id="request">Request</h2>
   <h3>HTTP request</h3>
 <pre>POST https://www.googleapis.com/chromewebstore/v1.1/items/verify</pre>
 
@@ -14,7 +13,7 @@
   <h3>Request body</h3>
 
   <p>In the request body, supply data with the following structure:</p>
-  <section >
+
     <pre class="prettyprint">&#123;
   &quot;protocol_version&quot;: <var class="apiparam">integer</var>,
   &quot;hash&quot;: <var class="apiparam">string</var>,
@@ -55,14 +54,13 @@
       </tr>
       </tbody>
     </table>
-  </section>
-</section>
 
-<section id="response" >
-  <h2>Response</h2>
+
+
+  <h2 id="response">Response</h2>
 
   <p>If successful, this method returns a response body with the following structure:</p>
-  <section >
+
     <pre class="prettyprint">&#123;
   &quot;protocol_version&quot;: <var class="apiparam">integer</var>,
   &quot;invalid_ids&quot;: [
@@ -119,8 +117,5 @@
       </tr>
       </tbody>
     </table>
-  </section>
-</section>
-
 
 {{/partials.standard_store_article}}

@@ -1,6 +1,7 @@
 {{+bindTo:partials.standard_store_article}}
 
 <h1 id="mainheading">Update</h1>
+
 <p class="note">
   <b>Requires <a href="#auth">authorization</a></b>
 </p>
@@ -17,8 +18,8 @@
   </ul>
 
 
-<section id="request" >
-  <h2>Request</h2>
+
+  <h2 id="request">Request</h2>
   <h3>HTTP request</h3>
     <p>This method provides media upload functionality through two separate URIs. For more details, see the document on <a href="">media upload</a>.</p>
 <ul>
@@ -71,7 +72,7 @@
   </table>
 
   <h3 id="auth">Authorization</h3>
-  <p>This request requires authorization with the following scope (<a href="">read more about authentication and authorization</a>).</p>
+  <p>This request requires authorization with the following scope.</p>
   <table class="matchpre">
     <thead><tr><th>Scope</th></tr></thead>
     <tbody>
@@ -80,19 +81,14 @@
 
   <h3>Request body</h3>
 
-
-
-
   <p>In the request body, supply an Items resource as the metadata. For more information, see the document on <a href="">media upload</a>.
 
 
 
-</section>
 
-<section id="response" >
-  <h2>Response</h2>
+  <h2 id="response">Response</h2>
 
   <p>If successful, this method returns an <a href="/webstore/webstore_api/items.html#resource">Items resource</a> in the response body.</p>
-</section>
+
 
 {{/partials.standard_store_article}}

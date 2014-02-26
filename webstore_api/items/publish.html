@@ -11,8 +11,8 @@
 
 
 
-<section id="request" >
-  <h2>Request</h2>
+
+  <h2 id="request">Request</h2>
   <h3>HTTP request</h3>
 <pre>POST https://www.googleapis.com/chromewebstore/v1.1/items/<var class="apiparam">itemId</var>/publish</pre>
 
@@ -54,7 +54,7 @@
   </table>
 
   <h3 id="auth">Authorization</h3>
-  <p>This request requires authorization with the following scope (<a href="">read more about authentication and authorization</a>).</p>
+  <p>This request requires authorization with the following scope.</p>
   <table class="matchpre">
     <thead><tr><th>Scope</th></tr></thead>
     <tbody>
@@ -65,7 +65,7 @@
 
   <p>In the request body, supply data with the following structure:</p>
   <div class="data-sample">
-  <section >
+
     <h3>JSON</h3>
     <pre class="prettyprint">&#123;
   &quot;target&quot;: <var class="apiparam">string</var>
@@ -89,8 +89,7 @@
       </tr>
       </tbody>
     </table>
-  </section>
-  <section >
+
     <h3>Atom</h3>
     <pre class="prettyprint">&lt;entry gd:kind=&quot;chromewebstore#item&quot; xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:cws=&quot;http://schemas.google.com/chromewebstore/2010&quot; xmlns:gd=&quot;http://schemas.google.com/g/2005&quot;&gt;
   &lt;cws:target&gt;
@@ -158,16 +157,15 @@
       </tr>
       </tbody>
     </table>
-  </section>
-  </div>
-</section>
 
-<section id="response" >
-  <h2>Response</h2>
+  </div>
+
+
+  <h2 id="response">Response</h2>
 
   <p>If successful, this method returns a response body with the following structure:</p>
 <div class="data-sample">
-  <section >
+
     <h3>JSON</h3>
     <pre class="prettyprint">&#123;
   &quot;kind&quot;: &quot;chromewebstore#item&quot;,
@@ -219,8 +217,7 @@
       </tr>
       </tbody>
     </table>
-  </section>
-  <section >
+
     <h3>Atom</h3>
     <pre class="prettyprint">&lt;entry gd:kind=&quot;chromewebstore#item&quot; xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:cws=&quot;http://schemas.google.com/chromewebstore/2010&quot; xmlns:gd=&quot;http://schemas.google.com/g/2005&quot;&gt;
   &lt;cws:item_id&gt;
@@ -322,8 +319,8 @@
       </tr>
       </tbody>
     </table>
-  </section>
+
 </div>
-</section>
+
 {{/partials.standard_store_article}}
 

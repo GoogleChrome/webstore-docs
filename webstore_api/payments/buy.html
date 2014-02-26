@@ -16,14 +16,13 @@
 
 
 
-<section id="request" >
-  <h2>Request</h2>
+  <h2  id="request">Request</h2>
   <h3>HTTP request</h3>
 <pre>POST https://www.googleapis.com/chromewebstore/v1.1/payments/buy</pre>
 
 
   <h3 id="auth">Authorization</h3>
-  <p>This request requires authorization with the following scope (<a href="">read more about authentication and authorization</a>).</p>
+  <p>This request requires authorization with the following scope.</p>
   <table class="matchpre">
     <thead><tr><th>Scope</th></tr></thead>
     <tbody>
@@ -33,7 +32,7 @@
   <h3>Request body</h3>
 
   <p>In the request body, supply data with the following structure:</p>
-  <section >
+
     <pre class="prettyprint">&#123;
   &quot;itemId&quot;: <var class="apiparam">string</var>,
   &quot;sku&quot;: <var class="apiparam">string</var>,
@@ -80,14 +79,13 @@
       </tr>
       </tbody>
     </table>
-  </section>
-</section>
 
-<section id="response" >
-  <h2>Response</h2>
+
+
+  <h2 id="response">Response</h2>
 
   <p>If successful, this method returns a response body with the following structure:</p>
-  <section >
+
     <pre class="prettyprint">&#123;
   &quot;kind&quot;: &quot;chromewebstore#jwt&quot;,
   &quot;jwt&quot;: <var class="apiparam">string</var>
@@ -118,8 +116,7 @@
       </tr>
       </tbody>
     </table>
-  </section>
-</section>
+
 
 
 {{/partials.standard_store_article}}
