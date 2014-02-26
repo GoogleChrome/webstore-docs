@@ -43,12 +43,14 @@ You will see a page asking you to accept permission for the requested scope.
 NOTE: make sure you are requesting the token using the Google account which owns the Chrome Web Store apps you want to manage. This account can be different from the account you create the API Console project with. For example, you can create an application for other developers to manage their apps, in which case only you need to register an API Console project.
 </p>
 
+<img src="images/default_service_account.png"/>
+
+<p>Click the Accept button and you will see a code that looks something like this:</p>
 
 
-Click the Accept button and you will see a code that looks something like this:
+<img src="images/copy_code.png" />
 
-Use this value to request an access token. For example, using curl, you can get an access token by executing the following command (replacing the values of $CLIENT_ID, $CLIENT_SECRET, and $CODE with the values from above):
-
+<p>Use this value to request an access token. For example, using curl, you can get an access token by executing the following command (replacing the values of $CLIENT_ID, $CLIENT_SECRET, and $CODE with the values from above):</p>
 <pre>
 > curl "https://accounts.google.com/o/oauth2/token" -d \
 "client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET&code=$CODE&grant_type=authorization_code&redirect_uri=urn:ietf:wg:oauth:2.0:oob"
