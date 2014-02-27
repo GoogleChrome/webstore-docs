@@ -2,68 +2,68 @@
 
 <h1 id="mainheading">Patch</h1>
 <p class="note">
-  <b>Requires <a href="#auth">authorization</a></b>
+    <b>Requires <a href="#auth">authorization</a></b>
 </p>
 
 <p>Updates an existing item. This method supports patch semantics.
 </p>
 
 
+<h2 id="request">Request</h2>
+<h3>HTTP request</h3>
+<pre>PATCH https://www.googleapis.com/chromewebstore/v1.1/items/<var
+        class="apiparam">itemId</var></pre>
 
-<section id="request" >
-  <h2>Request</h2>
-  <h3>HTTP request</h3>
-<pre>PATCH https://www.googleapis.com/chromewebstore/v1.1/items/<var class="apiparam">itemId</var></pre>
-
-  <h3>Parameters</h3>
-  <table class="matchpre">
+<h3>Parameters</h3>
+<table class="matchpre">
     <thead>
-      <tr>
+    <tr>
         <th>Parameter name</th>
         <th>Value</th>
         <th>Description</th>
-      </tr>
+    </tr>
     </thead>
     <tbody>
     <tr id="required-parameters" class="alt">
-      <td colspan="3"><b>Path parameters</b></td>
+        <td colspan="3"><b>Path parameters</b></td>
     </tr>
-      <tr id="itemId">
+    <tr id="itemId">
         <td><code>itemId</code></td>
         <td><code class="apitype">string</code></td>
         <td>
-          The ID of the item to upload.
+            The ID of the item to upload.
 
 
         </td>
-      </tr>
+    </tr>
     </tbody>
-  </table>
+</table>
 
-  <h3 id="auth">Authorization</h3>
-  <p>This request requires authorization with the following scope (<a href="">read more about authentication and authorization</a>).</p>
-  <table class="matchpre">
-    <thead><tr><th>Scope</th></tr></thead>
+<h3 id="auth">Authorization</h3>
+<p>This request requires authorization with the following scope.</p>
+<table class="matchpre">
+    <thead>
+    <tr>
+        <th>Scope</th>
+    </tr>
+    </thead>
     <tbody>
     </tbody>
-  </table>
+</table>
 
-  <h3>Request body</h3>
-
-
+<h3>Request body</h3>
 
 
-  <p>In the request body, supply an <a href="/webstore/webstore_api/items.html#resource">Items resource</a>.</p>
+<p>In the request body, supply an <a
+        href="/webstore/webstore_api/items.html#resource">Items resource</a>.
+</p>
 
 
+<h2 id="response">Response</h2>
 
-</section>
-
-<section id="response" >
-  <h2>Response</h2>
-
-  <p>If successful, this method returns an <a href="/webstore/webstore_api/items.html#resource">Items resource</a> in the response body.</p>
-</section>
+<p>If successful, this method returns an <a
+        href="/webstore/webstore_api/items.html#resource">Items resource</a> in
+    the response body.</p>
 
 
 {{/partials.standard_store_article}}

@@ -1,98 +1,111 @@
 {{+bindTo:partials.standard_store_article}}
 
 <h1 id="mainheading">Update</h1>
+
 <p class="note">
-  <b>Requires <a href="#auth">authorization</a></b>
+    <b>Requires <a href="#auth">authorization</a></b>
 </p>
 
 <p>Updates an existing item.
 </p>
 
-  <p>This method supports an <strong>/upload</strong> URI and accepts uploaded media with the following characteristics:</p>
-  <ul>
+<p>This method supports an <strong>/upload</strong> URI and accepts uploaded
+    media with the following characteristics:</p>
+<ul>
     <li><strong>Maximum file size:</strong> 2GB</li>
     <li><strong>Accepted Media MIME types:</strong>
-                            <code>*/*</code>
-          </li>
-  </ul>
-
-
-<section id="request" >
-  <h2>Request</h2>
-  <h3>HTTP request</h3>
-    <p>This method provides media upload functionality through two separate URIs. For more details, see the document on <a href="">media upload</a>.</p>
-<ul>
-  <li>Upload URI, for media upload requests:
-    <pre>PUT https://www.googleapis.com/upload/chromewebstore/v1.1/items/<var class="apiparam">itemId</var></pre>
-  </li>
-  <li>Metadata URI, for metadata-only requests:
-    <pre>PUT https://www.googleapis.com/chromewebstore/v1.1/items/<var class="apiparam">itemId</var></pre>
-  </li>
+        <code>*/*</code>
+    </li>
 </ul>
-    
-  <h3>Parameters</h3>
-  <table class="matchpre">
+
+
+<h2 id="request">Request</h2>
+<h3>HTTP request</h3>
+<p>This method provides media upload functionality through two separate URIs.
+    For more details, see the document on <a href="">media upload</a>.</p>
+<ul>
+    <li>Upload URI, for media upload requests:
+        <pre>PUT https://www.googleapis.com/upload/chromewebstore/v1.1/items/<var
+                class="apiparam">itemId</var></pre>
+    </li>
+    <li>Metadata URI, for metadata-only requests:
+        <pre>PUT https://www.googleapis.com/chromewebstore/v1.1/items/<var
+                class="apiparam">itemId</var></pre>
+    </li>
+</ul>
+
+<h3>Parameters</h3>
+<table class="matchpre">
     <thead>
-      <tr>
+    <tr>
         <th>Parameter name</th>
         <th>Value</th>
         <th>Description</th>
-      </tr>
+    </tr>
     </thead>
     <tbody>
     <tr id="required-parameters" class="alt">
-      <td colspan="3"><b>Path parameters</b></td>
+        <td colspan="3"><b>Path parameters</b></td>
     </tr>
-      <tr id="itemId">
+    <tr id="itemId">
         <td><code>itemId</code></td>
         <td><code class="apitype">string</code></td>
         <td>
-          The ID of the item to upload.
+            The ID of the item to upload.
 
 
         </td>
-      </tr>
-    <tr id="required-parameters" class="alt">
-      <td colspan="3"><b>Required query parameters</b></td>
     </tr>
-      <tr id="uploadType_id">
+    <tr id="required-parameters" class="alt">
+        <td colspan="3"><b>Required query parameters</b></td>
+    </tr>
+    <tr id="uploadType_id">
         <td><code>uploadType</code></td>
         <td><code class="apitype">string</code></td>
         <td>The type of upload request to the <strong>/upload</strong> URI.
-                          Acceptable values are:
-          <ul>
-                                <li><code>media</code> - <a href="#simple">Simple upload</a>. Upload the media only, without any metadata.</li>
-            <li><code>multipart</code> - <a href="#multipart">Multipart upload</a>. Upload both the media and its metadata, in a single request.</li>
-            <li><code>resumable</code> - <a href="#resumable">Resumable upload</a>. Upload the file in a resumable fashion, using a series of at least two requests where the first request includes the metadata.</li>
-                              </ul>
-                </td>
-      </tr>
+            Acceptable values are:
+            <ul>
+                <li><code>media</code> - <a href="#simple">Simple upload</a>.
+                    Upload the media only, without any metadata.
+                </li>
+                <li><code>multipart</code> - <a href="#multipart">Multipart
+                    upload</a>. Upload both the media and its metadata, in a
+                    single request.
+                </li>
+                <li><code>resumable</code> - <a href="#resumable">Resumable
+                    upload</a>. Upload the file in a resumable fashion, using a
+                    series of at least two requests where the first request
+                    includes the metadata.
+                </li>
+            </ul>
+        </td>
+    </tr>
     </tbody>
-  </table>
+</table>
 
-  <h3 id="auth">Authorization</h3>
-  <p>This request requires authorization with the following scope (<a href="">read more about authentication and authorization</a>).</p>
-  <table class="matchpre">
-    <thead><tr><th>Scope</th></tr></thead>
+<h3 id="auth">Authorization</h3>
+<p>This request requires authorization with the following scope.</p>
+<table class="matchpre">
+    <thead>
+    <tr>
+        <th>Scope</th>
+    </tr>
+    </thead>
     <tbody>
     </tbody>
-  </table>
+</table>
 
-  <h3>Request body</h3>
+<h3>Request body</h3>
 
-
-
-
-  <p>In the request body, supply an Items resource as the metadata. For more information, see the document on <a href="">media upload</a>.
+<p>In the request body, supply an Items resource as the metadata. For more
+    information, see the document on <a href="">media upload</a>.
 
 
+<h2 id="response">Response</h2>
 
-</section>
+<p>If successful, this method returns an <a
+        href="/webstore/webstore_api/items.html#resource">Items resource</a> in
+    the response body.</p>
 
-<section id="response" >
-  <h2>Response</h2>
-
-  <p>If successful, this method returns an <a href="/webstore/webstore_api/items.html#resource">Items resource</a> in the response body.</p>
-</section>
 
 {{/partials.standard_store_article}}

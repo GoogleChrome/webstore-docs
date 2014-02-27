@@ -2,19 +2,20 @@
 
 <h1>Licenses</h1>
 
-<section id="overview" >
-  <p></p>
-  <p>For a list of <a href="#methods">methods</a> for this resource, see the end of this page.</p>
-</section>
+<h2 id="overview">Overview</h2>
+<p></p>
+<p>For a list of <a href="#methods">methods</a> for this resource, see the end
+    of this page.</p>
 
-<section id="resource" >
-  <h2>Licenses representations</h2>
-  <p></p>
+
+<h2 id="resource">Licenses representations</h2>
+<p></p>
 
 <div class="data-sample">
-  <section >
-    <h3>JSON</h3>
-    <pre id="alt-json" class="prettyprint" style="max-height: 500px; overflow: auto">&#123;
+
+<h3>JSON</h3>
+    <pre id="alt-json" class="prettyprint"
+         style="max-height: 500px; overflow: auto">&#123;
   &quot;kind&quot;: &quot;chromewebstore#license&quot;,
   &quot;id&quot;: <var class="apiparam">string</var>,
   &quot;appId&quot;: <var class="apiparam">string</var>,
@@ -23,83 +24,84 @@
   &quot;accessLevel&quot;: <var class="apiparam">string</var>,
   &quot;maxAgeSecs&quot;: <var class="apiparam">long</var>
 &#125;</pre>
-    <table class="matchpre" id="properties">
-      <thead>
-        <tr>
-          <th>Property name</th>
-          <th>Value</th>
-          <th>Description</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-      <tr id="accessLevel">
+<table class="matchpre" id="properties">
+    <thead>
+    <tr>
+        <th>Property name</th>
+        <th>Value</th>
+        <th>Description</th>
+        <th>Notes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr id="accessLevel">
         <td><code>accessLevel</code></td>
         <td><code class="apitype">string</code></td>
         <td>
-          <br/><br/>Acceptable values are:
-          <ul>
-            <li>"<code>FREE_TRIAL</code>": </li>
-            <li>"<code>FULL</code>": </li>
-          </ul>
+            <br/><br/>Acceptable values are:
+            <ul>
+                <li>"<code>FREE_TRIAL</code>":</li>
+                <li>"<code>FULL</code>":</li>
+            </ul>
         </td>
         <td>
         </td>
-      </tr>
-      <tr id="appId">
+    </tr>
+    <tr id="appId">
         <td><code>appId</code></td>
         <td><code class="apitype">string</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="id">
+    </tr>
+    <tr id="id">
         <td><code>id</code></td>
         <td><code class="apitype">string</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="kind">
+    </tr>
+    <tr id="kind">
         <td><code>kind</code></td>
         <td><code class="apitype">string</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="maxAgeSecs">
+    </tr>
+    <tr id="maxAgeSecs">
         <td><code>maxAgeSecs</code></td>
         <td><code class="apitype">long</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="result">
+    </tr>
+    <tr id="result">
         <td><code>result</code></td>
         <td><code class="apitype">string</code></td>
         <td>
-          <br/><br/>Acceptable values are:
-          <ul>
-            <li>"<code>NO</code>": </li>
-            <li>"<code>YES</code>": </li>
-          </ul>
+            <br/><br/>Acceptable values are:
+            <ul>
+                <li>"<code>NO</code>":</li>
+                <li>"<code>YES</code>":</li>
+            </ul>
         </td>
         <td>
         </td>
-      </tr>
-      <tr id="userId">
+    </tr>
+    <tr id="userId">
         <td><code>userId</code></td>
         <td><code class="apitype">string</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      </tbody>
-    </table>
-  </section>
-  <section >
-    <h3>Atom</h3>
-    <pre id="alt-atom.xml" class="prettyprint" style="max-height: 500px; overflow: auto">&lt;entry gd:kind=&quot;chromewebstore#license&quot; xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:cws=&quot;http://schemas.google.com/chromewebstore/2010&quot; xmlns:gd=&quot;http://schemas.google.com/g/2005&quot;&gt;
+    </tr>
+    </tbody>
+</table>
+
+
+<h3>Atom</h3>
+    <pre id="alt-atom.xml" class="prettyprint"
+         style="max-height: 500px; overflow: auto">&lt;entry gd:kind=&quot;chromewebstore#license&quot; xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:cws=&quot;http://schemas.google.com/chromewebstore/2010&quot; xmlns:gd=&quot;http://schemas.google.com/g/2005&quot;&gt;
   &lt;id&gt;
     <var class="apiparam">string</var>
   &lt;/id&gt;
@@ -119,169 +121,169 @@
     <var class="apiparam">long</var>
   &lt;/cws:maxAgeSecs&gt;
 &lt;/entry&gt;</pre>
-    <table class="matchpre" id="properties">
-      <thead>
-        <tr>
-          <th>Property name</th>
-          <th>Value</th>
-          <th>Description</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-      <tr id="entry">
+<table class="matchpre" id="properties">
+    <thead>
+    <tr>
+        <th>Property name</th>
+        <th>Value</th>
+        <th>Description</th>
+        <th>Notes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr id="entry">
         <td><code>entry</code></td>
         <td><code class="apitype">object</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="entry/cws:accesslevel">
+    </tr>
+    <tr id="entry/cws:accesslevel">
         <td><code><span class="quiet">entry/</span>cws:accesslevel</code></td>
         <td><code class="apitype">object</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="entry/cws:accesslevel/text()">
-        <td><code><span class="quiet">entry/cws:accesslevel/</span>text()</code></td>
+    </tr>
+    <tr id="entry/cws:accesslevel/text()">
+        <td><code><span class="quiet">entry/cws:accesslevel/</span>text()</code>
+        </td>
         <td><code class="apitype">string</code></td>
         <td>
-          <br/><br/>Acceptable values are:
-          <ul>
-            <li>"<code>FREE_TRIAL</code>": </li>
-            <li>"<code>FULL</code>": </li>
-          </ul>
+            <br/><br/>Acceptable values are:
+            <ul>
+                <li>"<code>FREE_TRIAL</code>":</li>
+                <li>"<code>FULL</code>":</li>
+            </ul>
         </td>
         <td>
         </td>
-      </tr>
-      <tr id="entry/cws:appid">
+    </tr>
+    <tr id="entry/cws:appid">
         <td><code><span class="quiet">entry/</span>cws:appid</code></td>
         <td><code class="apitype">object</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="entry/cws:appid/text()">
+    </tr>
+    <tr id="entry/cws:appid/text()">
         <td><code><span class="quiet">entry/cws:appid/</span>text()</code></td>
         <td><code class="apitype">string</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="entry/cws:maxAgeSecs">
+    </tr>
+    <tr id="entry/cws:maxAgeSecs">
         <td><code><span class="quiet">entry/</span>cws:maxAgeSecs</code></td>
         <td><code class="apitype">object</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="entry/cws:maxAgeSecs/text()">
-        <td><code><span class="quiet">entry/cws:maxAgeSecs/</span>text()</code></td>
+    </tr>
+    <tr id="entry/cws:maxAgeSecs/text()">
+        <td><code><span class="quiet">entry/cws:maxAgeSecs/</span>text()</code>
+        </td>
         <td><code class="apitype">long</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="entry/cws:result">
+    </tr>
+    <tr id="entry/cws:result">
         <td><code><span class="quiet">entry/</span>cws:result</code></td>
         <td><code class="apitype">object</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="entry/cws:result/text()">
+    </tr>
+    <tr id="entry/cws:result/text()">
         <td><code><span class="quiet">entry/cws:result/</span>text()</code></td>
         <td><code class="apitype">string</code></td>
         <td>
-          <br/><br/>Acceptable values are:
-          <ul>
-            <li>"<code>NO</code>": </li>
-            <li>"<code>YES</code>": </li>
-          </ul>
+            <br/><br/>Acceptable values are:
+            <ul>
+                <li>"<code>NO</code>":</li>
+                <li>"<code>YES</code>":</li>
+            </ul>
         </td>
         <td>
         </td>
-      </tr>
-      <tr id="entry/cws:userid">
+    </tr>
+    <tr id="entry/cws:userid">
         <td><code><span class="quiet">entry/</span>cws:userid</code></td>
         <td><code class="apitype">object</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="entry/cws:userid/text()">
+    </tr>
+    <tr id="entry/cws:userid/text()">
         <td><code><span class="quiet">entry/cws:userid/</span>text()</code></td>
         <td><code class="apitype">string</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="entry/gd:kind">
+    </tr>
+    <tr id="entry/gd:kind">
         <td><code><span class="quiet">entry/</span>gd:kind</code></td>
         <td><code class="apitype">string</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="entry/id">
+    </tr>
+    <tr id="entry/id">
         <td><code><span class="quiet">entry/</span>id</code></td>
         <td><code class="apitype">object</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="entry/id/text()">
+    </tr>
+    <tr id="entry/id/text()">
         <td><code><span class="quiet">entry/id/</span>text()</code></td>
         <td><code class="apitype">string</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="entry/xmlns">
+    </tr>
+    <tr id="entry/xmlns">
         <td><code><span class="quiet">entry/</span>xmlns</code></td>
         <td><code class="apitype">string</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="entry/xmlns:cws">
+    </tr>
+    <tr id="entry/xmlns:cws">
         <td><code><span class="quiet">entry/</span>xmlns:cws</code></td>
         <td><code class="apitype">string</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="entry/xmlns:gd">
+    </tr>
+    <tr id="entry/xmlns:gd">
         <td><code><span class="quiet">entry/</span>xmlns:gd</code></td>
         <td><code class="apitype">string</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      </tbody>
-    </table>
-  </section>
+    </tr>
+    </tbody>
+</table>
+
 </div>
-</section>
-
-<section id="methods"  >
-  <h2>Methods</h2>
 
 
-
-  <dl>
-
-
-      <dt><a href="/webstore/webstore_api/licenses/get.html">get</a></dt>
-      <dd>Gets the licenses for Chrome hosted apps.</dd>
+<h2 id="methods">Methods</h2>
 
 
+<dl>
 
-      <dt><a href="/webstore/webstore_api/licenses/getUserLicense.html">getUserLicense</a></dt>
-      <dd>Gets the licenses for Chrome packaged apps.</dd>
 
-  </dl>
-</section>
+    <dt><a href="/webstore/webstore_api/licenses/get.html">get</a></dt>
+    <dd>Gets the licenses for Chrome hosted apps.</dd>
+
+
+    <dt><a href="/webstore/webstore_api/licenses/getUserLicense.html">getUserLicense</a>
+    </dt>
+    <dd>Gets the licenses for Chrome packaged apps.</dd>
+
+</dl>
+
 {{/partials.standard_store_article}}
