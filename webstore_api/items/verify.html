@@ -4,64 +4,63 @@
 <h1 id="mainheading">Verify</h1>
 <p>Verify whether items are hosted on Chrome Web Store.</p>
 
-  <h2  id="request">Request</h2>
-  <h3>HTTP request</h3>
+<h2 id="request">Request</h2>
+<h3>HTTP request</h3>
 <pre>POST https://www.googleapis.com/chromewebstore/v1.1/items/verify</pre>
 
 
+<h3>Request body</h3>
 
-  <h3>Request body</h3>
+<p>In the request body, supply data with the following structure:</p>
 
-  <p>In the request body, supply data with the following structure:</p>
-
-    <pre class="prettyprint">&#123;
+<pre class="prettyprint">&#123;
   &quot;protocol_version&quot;: <var class="apiparam">integer</var>,
   &quot;hash&quot;: <var class="apiparam">string</var>,
   &quot;ids&quot;: [
     <var class="apiparam">string</var>
   ]
 &#125;</pre>
-    <table class="matchpre">
-      <thead>
-        <tr>
-          <th>Property name</th>
-          <th>Value</th>
-          <th>Description</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-      <tr id="protocol_version">
+<table class="matchpre">
+    <thead>
+    <tr>
+        <th>Property name</th>
+        <th>Value</th>
+        <th>Description</th>
+        <th>Notes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr id="protocol_version">
         <td><code>protocol_version</code></td>
         <td><code class="apitype">integer</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="hash">
+    </tr>
+    <tr id="hash">
         <td><code>hash</code></td>
         <td><code class="apitype">string</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="ids">
+    </tr>
+    <tr id="ids">
         <td><code>ids[]</code></td>
         <td><code class="apitype">list</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      </tbody>
-    </table>
+    </tr>
+    </tbody>
+</table>
 
 
+<h2 id="response">Response</h2>
 
-  <h2 id="response">Response</h2>
+<p>If successful, this method returns a response body with the following
+    structure:</p>
 
-  <p>If successful, this method returns a response body with the following structure:</p>
-
-    <pre class="prettyprint">&#123;
+<pre class="prettyprint">&#123;
   &quot;protocol_version&quot;: <var class="apiparam">integer</var>,
   &quot;invalid_ids&quot;: [
     <var class="apiparam">string</var>
@@ -70,52 +69,52 @@
   &quot;expiry&quot;: <var class="apiparam">string</var>,
   &quot;pubkey_sha1_hash&quot;: <var class="apiparam">string</var>
 &#125;</pre>
-    <table class="matchpre">
-      <thead>
-        <tr>
-          <th>Property name</th>
-          <th>Value</th>
-          <th>Description</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-      <tr id="protocol_version">
+<table class="matchpre">
+    <thead>
+    <tr>
+        <th>Property name</th>
+        <th>Value</th>
+        <th>Description</th>
+        <th>Notes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr id="protocol_version">
         <td><code>protocol_version</code></td>
         <td><code class="apitype">integer</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="invalid_ids">
+    </tr>
+    <tr id="invalid_ids">
         <td><code>invalid_ids[]</code></td>
         <td><code class="apitype">list</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="signature">
+    </tr>
+    <tr id="signature">
         <td><code>signature</code></td>
         <td><code class="apitype">string</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="expiry">
+    </tr>
+    <tr id="expiry">
         <td><code>expiry</code></td>
         <td><code class="apitype">string</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      <tr id="pubkey_sha1_hash">
+    </tr>
+    <tr id="pubkey_sha1_hash">
         <td><code>pubkey_sha1_hash</code></td>
         <td><code class="apitype">string</code></td>
         <td></td>
         <td>
         </td>
-      </tr>
-      </tbody>
-    </table>
+    </tr>
+    </tbody>
+</table>
 
 {{/partials.standard_store_article}}

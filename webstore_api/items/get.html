@@ -3,79 +3,90 @@
 <h1 id="mainheading">Get</h1>
 
 <p class="note">
-  <b>Requires <a href="#auth">authorization</a></b>
+    <b>Requires <a href="#auth">authorization</a></b>
 </p>
 
 <p>Gets your own Chrome Web Store item.
-<a href="#try-it">Try it now</a>.
+    <a href="#try-it">Try it now</a>.
 </p>
 
-  <h2 id="request" >Request</h2>
-  <h3>HTTP request</h3>
-<pre>GET https://www.googleapis.com/chromewebstore/v1.1/items/<var class="apiparam">itemId</var></pre>
+<h2 id="request">Request</h2>
+<h3>HTTP request</h3>
+<pre>GET https://www.googleapis.com/chromewebstore/v1.1/items/<var
+        class="apiparam">itemId</var></pre>
 
-  <h3>Parameters</h3>
-  <table class="matchpre">
+<h3>Parameters</h3>
+<table class="matchpre">
     <thead>
-      <tr>
+    <tr>
         <th>Parameter name</th>
         <th>Value</th>
         <th>Description</th>
-      </tr>
+    </tr>
     </thead>
     <tbody>
     <tr id="required-parameters" class="alt">
-      <td colspan="3"><b>Path parameters</b></td>
+        <td colspan="3"><b>Path parameters</b></td>
     </tr>
-      <tr id="itemId">
+    <tr id="itemId">
         <td><code>itemId</code></td>
         <td><code class="apitype">string</code></td>
         <td>
-          The ID of the item to get.
+            The ID of the item to get.
 
 
         </td>
-      </tr>
-    <tr id="optional-parameters" class="alt">
-      <td colspan="3"><b>Optional query parameters</b></td>
     </tr>
-      <tr id="projection">
+    <tr id="optional-parameters" class="alt">
+        <td colspan="3"><b>Optional query parameters</b></td>
+    </tr>
+    <tr id="projection">
         <td><code>projection</code></td>
         <td><code class="apitype">string</code></td>
         <td>
-          Which subset of the item information to return
+            Which subset of the item information to return
 
-          <br/><br/>Acceptable values are:
-          <ul>
-            <li>"<code>DRAFT</code>": Return information extracted from the current draft
-            </li>
-            <li>"<code>PUBLISHED</code>": Return information extracted from the published item draft
-            </li>
-          </ul>
+            <br/><br/>Acceptable values are:
+            <ul>
+                <li>"<code>DRAFT</code>": Return information extracted from the
+                    current draft
+                </li>
+                <li>"<code>PUBLISHED</code>": Return information extracted from
+                    the published item draft
+                </li>
+            </ul>
 
         </td>
-      </tr>
+    </tr>
     </tbody>
-  </table>
+</table>
 
-  <h3 id="auth">Authorization</h3>
-  <p>This request requires authorization with the following scope.</p>
-  <table class="matchpre">
-    <thead><tr><th>Scope</th></tr></thead>
+<h3 id="auth">Authorization</h3>
+<p>This request requires authorization with the following scope.</p>
+<table class="matchpre">
+    <thead>
+    <tr>
+        <th>Scope</th>
+    </tr>
+    </thead>
     <tbody>
-      <tr><td><code>https://www.googleapis.com/auth/chromewebstore.readonly</code></td></tr>
+    <tr>
+        <td><code>https://www.googleapis.com/auth/chromewebstore.readonly</code>
+        </td>
+    </tr>
     </tbody>
-  </table>
+</table>
 
-  <h3>Request body</h3>
+<h3>Request body</h3>
 
-  <p>Do not supply a request body with this method.</p>
+<p>Do not supply a request body with this method.</p>
 
 
-  <h2  id="response">Response</h2>
+<h2 id="response">Response</h2>
 
-  <p>If successful, this method returns an <a href="/webstore/webstore_api/items.html#resource">Items resource</a> in the response body.</p>
-
+<p>If successful, this method returns an <a
+        href="/webstore/webstore_api/items.html#resource">Items resource</a> in
+    the response body.</p>
 
 
 {{/partials.standard_store_article}}
