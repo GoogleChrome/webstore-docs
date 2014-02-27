@@ -3,94 +3,96 @@
 <h1 id="mainheading">Publish</h1>
 
 <p class="note">
-  <b>Requires <a href="#auth">authorization</a></b>
+    <b>Requires <a href="#auth">authorization</a></b>
 </p>
 
 <p>Publishes an item.
 </p>
 
 
+<h2 id="request">Request</h2>
+<h3>HTTP request</h3>
+<pre>POST https://www.googleapis.com/chromewebstore/v1.1/items/<var
+        class="apiparam">itemId</var>/publish</pre>
 
-<section id="request" >
-  <h2>Request</h2>
-  <h3>HTTP request</h3>
-<pre>POST https://www.googleapis.com/chromewebstore/v1.1/items/<var class="apiparam">itemId</var>/publish</pre>
-
-  <h3>Parameters</h3>
-  <table class="matchpre">
+<h3>Parameters</h3>
+<table class="matchpre">
     <thead>
-      <tr>
+    <tr>
         <th>Parameter name</th>
         <th>Value</th>
         <th>Description</th>
-      </tr>
+    </tr>
     </thead>
     <tbody>
     <tr id="required-parameters" class="alt">
-      <td colspan="3"><b>Path parameters</b></td>
+        <td colspan="3"><b>Path parameters</b></td>
     </tr>
-      <tr id="itemId">
+    <tr id="itemId">
         <td><code>itemId</code></td>
         <td><code class="apitype">string</code></td>
         <td>
-          The ID of the item to publish.
+            The ID of the item to publish.
 
 
         </td>
-      </tr>
-    <tr id="optional-parameters" class="alt">
-      <td colspan="3"><b>Optional query parameters</b></td>
     </tr>
-      <tr id="publishTarget">
+    <tr id="optional-parameters" class="alt">
+        <td colspan="3"><b>Optional query parameters</b></td>
+    </tr>
+    <tr id="publishTarget">
         <td><code>publishTarget</code></td>
         <td><code class="apitype">string</code></td>
         <td>
-          The target audience of this publish action.
+            The target audience of this publish action.
 
 
         </td>
-      </tr>
+    </tr>
     </tbody>
-  </table>
+</table>
 
-  <h3 id="auth">Authorization</h3>
-  <p>This request requires authorization with the following scope (<a href="">read more about authentication and authorization</a>).</p>
-  <table class="matchpre">
-    <thead><tr><th>Scope</th></tr></thead>
+<h3 id="auth">Authorization</h3>
+<p>This request requires authorization with the following scope.</p>
+<table class="matchpre">
+    <thead>
+    <tr>
+        <th>Scope</th>
+    </tr>
+    </thead>
     <tbody>
     </tbody>
-  </table>
+</table>
 
-  <h3>Request body</h3>
+<h3>Request body</h3>
 
-  <p>In the request body, supply data with the following structure:</p>
-  <div class="data-sample">
-  <section >
+<p>In the request body, supply data with the following structure:</p>
+<div class="data-sample">
+
     <h3>JSON</h3>
     <pre class="prettyprint">&#123;
   &quot;target&quot;: <var class="apiparam">string</var>
 &#125;</pre>
     <table class="matchpre">
-      <thead>
+        <thead>
         <tr>
-          <th>Property name</th>
-          <th>Value</th>
-          <th>Description</th>
-          <th>Notes</th>
+            <th>Property name</th>
+            <th>Value</th>
+            <th>Description</th>
+            <th>Notes</th>
         </tr>
-      </thead>
-      <tbody>
-      <tr id="target">
-        <td><code>target</code></td>
-        <td><code class="apitype">string</code></td>
-        <td>The publish target of this publish operation.</td>
-        <td>
-        </td>
-      </tr>
-      </tbody>
+        </thead>
+        <tbody>
+        <tr id="target">
+            <td><code>target</code></td>
+            <td><code class="apitype">string</code></td>
+            <td>The publish target of this publish operation.</td>
+            <td>
+            </td>
+        </tr>
+        </tbody>
     </table>
-  </section>
-  <section >
+
     <h3>Atom</h3>
     <pre class="prettyprint">&lt;entry gd:kind=&quot;chromewebstore#item&quot; xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:cws=&quot;http://schemas.google.com/chromewebstore/2010&quot; xmlns:gd=&quot;http://schemas.google.com/g/2005&quot;&gt;
   &lt;cws:target&gt;
@@ -98,76 +100,77 @@
   &lt;/cws:target&gt;
 &lt;/entry&gt;</pre>
     <table class="matchpre">
-      <thead>
+        <thead>
         <tr>
-          <th>Property name</th>
-          <th>Value</th>
-          <th>Description</th>
-          <th>Notes</th>
+            <th>Property name</th>
+            <th>Value</th>
+            <th>Description</th>
+            <th>Notes</th>
         </tr>
-      </thead>
-      <tbody>
-      <tr id="entry">
-        <td><code>entry</code></td>
-        <td><code class="apitype">object</code></td>
-        <td></td>
-        <td>
-        </td>
-      </tr>
-      <tr id="entry/gd:kind">
-        <td><code><span class="quiet">entry/</span>gd:kind</code></td>
-        <td><code class="apitype">string</code></td>
-        <td></td>
-        <td>
-        </td>
-      </tr>
-      <tr id="entry/xmlns">
-        <td><code><span class="quiet">entry/</span>xmlns</code></td>
-        <td><code class="apitype">string</code></td>
-        <td></td>
-        <td>
-        </td>
-      </tr>
-      <tr id="entry/xmlns:cws">
-        <td><code><span class="quiet">entry/</span>xmlns:cws</code></td>
-        <td><code class="apitype">string</code></td>
-        <td></td>
-        <td>
-        </td>
-      </tr>
-      <tr id="entry/xmlns:gd">
-        <td><code><span class="quiet">entry/</span>xmlns:gd</code></td>
-        <td><code class="apitype">string</code></td>
-        <td></td>
-        <td>
-        </td>
-      </tr>
-      <tr id="entry/cws:target">
-        <td><code><span class="quiet">entry/</span>cws:target</code></td>
-        <td><code class="apitype">object</code></td>
-        <td>The publish target of this publish operation.</td>
-        <td>
-        </td>
-      </tr>
-      <tr id="entry/cws:target/text()">
-        <td><code><span class="quiet">entry/cws:target/</span>text()</code></td>
-        <td><code class="apitype">string</code></td>
-        <td></td>
-        <td>
-        </td>
-      </tr>
-      </tbody>
+        </thead>
+        <tbody>
+        <tr id="entry">
+            <td><code>entry</code></td>
+            <td><code class="apitype">object</code></td>
+            <td></td>
+            <td>
+            </td>
+        </tr>
+        <tr id="entry/gd:kind">
+            <td><code><span class="quiet">entry/</span>gd:kind</code></td>
+            <td><code class="apitype">string</code></td>
+            <td></td>
+            <td>
+            </td>
+        </tr>
+        <tr id="entry/xmlns">
+            <td><code><span class="quiet">entry/</span>xmlns</code></td>
+            <td><code class="apitype">string</code></td>
+            <td></td>
+            <td>
+            </td>
+        </tr>
+        <tr id="entry/xmlns:cws">
+            <td><code><span class="quiet">entry/</span>xmlns:cws</code></td>
+            <td><code class="apitype">string</code></td>
+            <td></td>
+            <td>
+            </td>
+        </tr>
+        <tr id="entry/xmlns:gd">
+            <td><code><span class="quiet">entry/</span>xmlns:gd</code></td>
+            <td><code class="apitype">string</code></td>
+            <td></td>
+            <td>
+            </td>
+        </tr>
+        <tr id="entry/cws:target">
+            <td><code><span class="quiet">entry/</span>cws:target</code></td>
+            <td><code class="apitype">object</code></td>
+            <td>The publish target of this publish operation.</td>
+            <td>
+            </td>
+        </tr>
+        <tr id="entry/cws:target/text()">
+            <td><code><span class="quiet">entry/cws:target/</span>text()</code>
+            </td>
+            <td><code class="apitype">string</code></td>
+            <td></td>
+            <td>
+            </td>
+        </tr>
+        </tbody>
     </table>
-  </section>
-  </div>
-</section>
 
-<section id="response" >
-  <h2>Response</h2>
+</div>
 
-  <p>If successful, this method returns a response body with the following structure:</p>
+
+<h2 id="response">Response</h2>
+
+<p>If successful, this method returns a response body with the following
+    structure:</p>
 <div class="data-sample">
-  <section >
+
     <h3>JSON</h3>
     <pre class="prettyprint">&#123;
   &quot;kind&quot;: &quot;chromewebstore#item&quot;,
@@ -180,47 +183,48 @@
   ]
 &#125;</pre>
     <table class="matchpre">
-      <thead>
+        <thead>
         <tr>
-          <th>Property name</th>
-          <th>Value</th>
-          <th>Description</th>
-          <th>Notes</th>
+            <th>Property name</th>
+            <th>Value</th>
+            <th>Description</th>
+            <th>Notes</th>
         </tr>
-      </thead>
-      <tbody>
-      <tr id="kind">
-        <td><code>kind</code></td>
-        <td><code class="apitype">string</code></td>
-        <td>This response is about a Chrome Web Store item.</td>
-        <td>
-        </td>
-      </tr>
-      <tr id="item_id">
-        <td><code>item_id</code></td>
-        <td><code class="apitype">string</code></td>
-        <td>The id of this item.</td>
-        <td>
-        </td>
-      </tr>
-      <tr id="status">
-        <td><code>status[]</code></td>
-        <td><code class="apitype">list</code></td>
-        <td>The status of this publish operation. It may contain multiple elements.</td>
-        <td>
-        </td>
-      </tr>
-      <tr id="statusDetail">
-        <td><code>statusDetail[]</code></td>
-        <td><code class="apitype">list</code></td>
-        <td>Detailed human-readable explanation to the status.</td>
-        <td>
-        </td>
-      </tr>
-      </tbody>
+        </thead>
+        <tbody>
+        <tr id="kind">
+            <td><code>kind</code></td>
+            <td><code class="apitype">string</code></td>
+            <td>This response is about a Chrome Web Store item.</td>
+            <td>
+            </td>
+        </tr>
+        <tr id="item_id">
+            <td><code>item_id</code></td>
+            <td><code class="apitype">string</code></td>
+            <td>The id of this item.</td>
+            <td>
+            </td>
+        </tr>
+        <tr id="status">
+            <td><code>status[]</code></td>
+            <td><code class="apitype">list</code></td>
+            <td>The status of this publish operation. It may contain multiple
+                elements.
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr id="statusDetail">
+            <td><code>statusDetail[]</code></td>
+            <td><code class="apitype">list</code></td>
+            <td>Detailed human-readable explanation to the status.</td>
+            <td>
+            </td>
+        </tr>
+        </tbody>
     </table>
-  </section>
-  <section >
+
     <h3>Atom</h3>
     <pre class="prettyprint">&lt;entry gd:kind=&quot;chromewebstore#item&quot; xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:cws=&quot;http://schemas.google.com/chromewebstore/2010&quot; xmlns:gd=&quot;http://schemas.google.com/g/2005&quot;&gt;
   &lt;cws:item_id&gt;
@@ -234,96 +238,102 @@
   &lt;/cws:status_detail&gt;
 &lt;/entry&gt;</pre>
     <table class="matchpre">
-      <thead>
+        <thead>
         <tr>
-          <th>Property name</th>
-          <th>Value</th>
-          <th>Description</th>
-          <th>Notes</th>
+            <th>Property name</th>
+            <th>Value</th>
+            <th>Description</th>
+            <th>Notes</th>
         </tr>
-      </thead>
-      <tbody>
-      <tr id="entry">
-        <td><code>entry</code></td>
-        <td><code class="apitype">object</code></td>
-        <td></td>
-        <td>
-        </td>
-      </tr>
-      <tr id="entry/gd:kind">
-        <td><code><span class="quiet">entry/</span>gd:kind</code></td>
-        <td><code class="apitype">string</code></td>
-        <td></td>
-        <td>
-        </td>
-      </tr>
-      <tr id="entry/xmlns">
-        <td><code><span class="quiet">entry/</span>xmlns</code></td>
-        <td><code class="apitype">string</code></td>
-        <td></td>
-        <td>
-        </td>
-      </tr>
-      <tr id="entry/xmlns:cws">
-        <td><code><span class="quiet">entry/</span>xmlns:cws</code></td>
-        <td><code class="apitype">string</code></td>
-        <td></td>
-        <td>
-        </td>
-      </tr>
-      <tr id="entry/xmlns:gd">
-        <td><code><span class="quiet">entry/</span>xmlns:gd</code></td>
-        <td><code class="apitype">string</code></td>
-        <td></td>
-        <td>
-        </td>
-      </tr>
-      <tr id="entry/cws:item_id">
-        <td><code><span class="quiet">entry/</span>cws:item_id</code></td>
-        <td><code class="apitype">object</code></td>
-        <td>The id of this item.</td>
-        <td>
-        </td>
-      </tr>
-      <tr id="entry/cws:item_id/text()">
-        <td><code><span class="quiet">entry/cws:item_id/</span>text()</code></td>
-        <td><code class="apitype">string</code></td>
-        <td></td>
-        <td>
-        </td>
-      </tr>
-      <tr id="entry/cws:status">
-        <td><code><span class="quiet">entry/</span>cws:status</code></td>
-        <td><code class="apitype">object</code></td>
-        <td>The status of this publish operation. It may contain multiple elements.</td>
-        <td>
-        </td>
-      </tr>
-      <tr id="entry/cws:status/text()">
-        <td><code><span class="quiet">entry/cws:status/</span>text()</code></td>
-        <td><code class="apitype">string</code></td>
-        <td></td>
-        <td>
-        </td>
-      </tr>
-      <tr id="entry/cws:status_detail">
-        <td><code><span class="quiet">entry/</span>cws:status_detail</code></td>
-        <td><code class="apitype">object</code></td>
-        <td>Detailed human-readable explanation to the status.</td>
-        <td>
-        </td>
-      </tr>
-      <tr id="entry/cws:status_detail/text()">
-        <td><code><span class="quiet">entry/cws:status_detail/</span>text()</code></td>
-        <td><code class="apitype">string</code></td>
-        <td></td>
-        <td>
-        </td>
-      </tr>
-      </tbody>
+        </thead>
+        <tbody>
+        <tr id="entry">
+            <td><code>entry</code></td>
+            <td><code class="apitype">object</code></td>
+            <td></td>
+            <td>
+            </td>
+        </tr>
+        <tr id="entry/gd:kind">
+            <td><code><span class="quiet">entry/</span>gd:kind</code></td>
+            <td><code class="apitype">string</code></td>
+            <td></td>
+            <td>
+            </td>
+        </tr>
+        <tr id="entry/xmlns">
+            <td><code><span class="quiet">entry/</span>xmlns</code></td>
+            <td><code class="apitype">string</code></td>
+            <td></td>
+            <td>
+            </td>
+        </tr>
+        <tr id="entry/xmlns:cws">
+            <td><code><span class="quiet">entry/</span>xmlns:cws</code></td>
+            <td><code class="apitype">string</code></td>
+            <td></td>
+            <td>
+            </td>
+        </tr>
+        <tr id="entry/xmlns:gd">
+            <td><code><span class="quiet">entry/</span>xmlns:gd</code></td>
+            <td><code class="apitype">string</code></td>
+            <td></td>
+            <td>
+            </td>
+        </tr>
+        <tr id="entry/cws:item_id">
+            <td><code><span class="quiet">entry/</span>cws:item_id</code></td>
+            <td><code class="apitype">object</code></td>
+            <td>The id of this item.</td>
+            <td>
+            </td>
+        </tr>
+        <tr id="entry/cws:item_id/text()">
+            <td><code><span class="quiet">entry/cws:item_id/</span>text()</code>
+            </td>
+            <td><code class="apitype">string</code></td>
+            <td></td>
+            <td>
+            </td>
+        </tr>
+        <tr id="entry/cws:status">
+            <td><code><span class="quiet">entry/</span>cws:status</code></td>
+            <td><code class="apitype">object</code></td>
+            <td>The status of this publish operation. It may contain multiple
+                elements.
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr id="entry/cws:status/text()">
+            <td><code><span class="quiet">entry/cws:status/</span>text()</code>
+            </td>
+            <td><code class="apitype">string</code></td>
+            <td></td>
+            <td>
+            </td>
+        </tr>
+        <tr id="entry/cws:status_detail">
+            <td><code><span class="quiet">entry/</span>cws:status_detail</code>
+            </td>
+            <td><code class="apitype">object</code></td>
+            <td>Detailed human-readable explanation to the status.</td>
+            <td>
+            </td>
+        </tr>
+        <tr id="entry/cws:status_detail/text()">
+            <td><code><span class="quiet">entry/cws:status_detail/</span>text()</code>
+            </td>
+            <td><code class="apitype">string</code></td>
+            <td></td>
+            <td>
+            </td>
+        </tr>
+        </tbody>
     </table>
-  </section>
+
 </div>
-</section>
+
 {{/partials.standard_store_article}}
 
