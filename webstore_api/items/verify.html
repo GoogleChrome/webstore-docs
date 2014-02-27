@@ -13,14 +13,14 @@
 
 <p>In the request body, supply data with the following structure:</p>
 
-<pre class="prettyprint">&#123;
-  &quot;protocol_version&quot;: <var class="apiparam">integer</var>,
-  &quot;hash&quot;: <var class="apiparam">string</var>,
+<pre>&#123;
+  &quot;protocol_version&quot;: <var>integer</var>,
+  &quot;hash&quot;: <var>string</var>,
   &quot;ids&quot;: [
-    <var class="apiparam">string</var>
+    <var>string</var>
   ]
 &#125;</pre>
-<table class="matchpre">
+<table>
     <thead>
     <tr>
         <th>Property name</th>
@@ -32,21 +32,21 @@
     <tbody>
     <tr id="protocol_version">
         <td><code>protocol_version</code></td>
-        <td><code class="apitype">integer</code></td>
+        <td><code >integer</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr id="hash">
         <td><code>hash</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr id="ids">
         <td><code>ids[]</code></td>
-        <td><code class="apitype">list</code></td>
+        <td><code >list</code></td>
         <td></td>
         <td>
         </td>
@@ -60,16 +60,16 @@
 <p>If successful, this method returns a response body with the following
     structure:</p>
 
-<pre class="prettyprint">&#123;
-  &quot;protocol_version&quot;: <var class="apiparam">integer</var>,
+<pre>&#123;
+  &quot;protocol_version&quot;: <var>integer</var>,
   &quot;invalid_ids&quot;: [
-    <var class="apiparam">string</var>
+    <var>string</var>
   ],
-  &quot;signature&quot;: <var class="apiparam">string</var>,
-  &quot;expiry&quot;: <var class="apiparam">string</var>,
-  &quot;pubkey_sha1_hash&quot;: <var class="apiparam">string</var>
+  &quot;signature&quot;: <var>string</var>,
+  &quot;expiry&quot;: <var>string</var>,
+  &quot;pubkey_sha1_hash&quot;: <var>string</var>
 &#125;</pre>
-<table class="matchpre">
+<table>
     <thead>
     <tr>
         <th>Property name</th>
@@ -81,35 +81,35 @@
     <tbody>
     <tr id="protocol_version">
         <td><code>protocol_version</code></td>
-        <td><code class="apitype">integer</code></td>
+        <td><code >integer</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr id="invalid_ids">
         <td><code>invalid_ids[]</code></td>
-        <td><code class="apitype">list</code></td>
+        <td><code >list</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr id="signature">
         <td><code>signature</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr id="expiry">
         <td><code>expiry</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr id="pubkey_sha1_hash">
         <td><code>pubkey_sha1_hash</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>

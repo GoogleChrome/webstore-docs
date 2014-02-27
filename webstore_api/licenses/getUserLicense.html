@@ -13,12 +13,12 @@
 <h2 id="request">Request</h2>
 <h3>HTTP request</h3>
 <pre>GET https://www.googleapis.com/chromewebstore/v1.1/userlicenses/<var
-        class="apiparam">appId</var></pre>
+       >appId</var></pre>
 
 
 <h3 id="auth">Authorization</h3>
 <p>This request requires authorization with the following scope.</p>
-<table class="matchpre">
+<table>
     <thead>
     <tr>
         <th>Scope</th>
@@ -43,15 +43,15 @@
 <div class="data-sample">
 
 <h3>JSON</h3>
-    <pre class="prettyprint">&#123;
+    <pre>&#123;
   &quot;kind&quot;: &quot;chromewebstore#userLicense&quot;,
-  &quot;itemId&quot;: <var class="apiparam">string</var>,
-  &quot;createdTime&quot;: <var class="apiparam">long</var>,
-  &quot;result&quot;: <var class="apiparam">boolean</var>,
-  &quot;accessLevel&quot;: <var class="apiparam">string</var>,
-  &quot;maxAgeSecs&quot;: <var class="apiparam">long</var>
+  &quot;itemId&quot;: <var>string</var>,
+  &quot;createdTime&quot;: <var>long</var>,
+  &quot;result&quot;: <var>boolean</var>,
+  &quot;accessLevel&quot;: <var>string</var>,
+  &quot;maxAgeSecs&quot;: <var>long</var>
 &#125;</pre>
-<table class="matchpre">
+<table>
     <thead>
     <tr>
         <th>Property name</th>
@@ -63,35 +63,35 @@
     <tbody>
     <tr id="kind">
         <td><code>kind</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr id="itemId">
         <td><code>itemId</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr id="createdTime">
         <td><code>createdTime</code></td>
-        <td><code class="apitype">long</code></td>
+        <td><code >long</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr id="result">
         <td><code>result</code></td>
-        <td><code class="apitype">boolean</code></td>
+        <td><code >boolean</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr id="accessLevel">
         <td><code>accessLevel</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td>
             <br/><br/>Acceptable values are:
             <ul>
@@ -104,7 +104,7 @@
     </tr>
     <tr id="maxAgeSecs">
         <td><code>maxAgeSecs</code></td>
-        <td><code class="apitype">long</code></td>
+        <td><code >long</code></td>
         <td></td>
         <td>
         </td>
@@ -113,24 +113,24 @@
 </table>
 
 <h3>Atom</h3>
-    <pre class="prettyprint">&lt;entry gd:kind=&quot;chromewebstore#license&quot; xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:cws=&quot;http://schemas.google.com/chromewebstore/2010&quot; xmlns:gd=&quot;http://schemas.google.com/g/2005&quot;&gt;
+    <pre>&lt;entry gd:kind=&quot;chromewebstore#license&quot; xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:cws=&quot;http://schemas.google.com/chromewebstore/2010&quot; xmlns:gd=&quot;http://schemas.google.com/g/2005&quot;&gt;
   &lt;cws:itemId&gt;
-    <var class="apiparam">string</var>
+    <var>string</var>
   &lt;/cws:itemId&gt;
   &lt;cws:createdTime&gt;
-    <var class="apiparam">long</var>
+    <var>long</var>
   &lt;/cws:createdTime&gt;
   &lt;cws:result&gt;
-    <var class="apiparam">boolean</var>
+    <var>boolean</var>
   &lt;/cws:result&gt;
   &lt;cws:accessLevel&gt;
-    <var class="apiparam">string</var>
+    <var>string</var>
   &lt;/cws:accessLevel&gt;
   &lt;cws:maxAgeSecs&gt;
-    <var class="apiparam">long</var>
+    <var>long</var>
   &lt;/cws:maxAgeSecs&gt;
 &lt;/entry&gt;</pre>
-<table class="matchpre">
+<table>
     <thead>
     <tr>
         <th>Property name</th>
@@ -142,56 +142,56 @@
     <tbody>
     <tr>
         <td><code>entry</code></td>
-        <td><code class="apitype">object</code></td>
+        <td><code >object</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/</span>gd:kind</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/</span>xmlns</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/</span>xmlns:cws</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/</span>xmlns:gd</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/</span>cws:itemId</code></td>
-        <td><code class="apitype">object</code></td>
+        <td><code >object</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/cws:itemId/</span>text()</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/</span>cws:createdTime</code></td>
-        <td><code class="apitype">object</code></td>
+        <td><code >object</code></td>
         <td></td>
         <td>
         </td>
@@ -199,28 +199,28 @@
     <tr>
         <td><code><span >entry/cws:createdTime/</span>text()</code>
         </td>
-        <td><code class="apitype">long</code></td>
+        <td><code >long</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/</span>cws:result</code></td>
-        <td><code class="apitype">object</code></td>
+        <td><code >object</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/cws:result/</span>text()</code></td>
-        <td><code class="apitype">boolean</code></td>
+        <td><code >boolean</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/</span>cws:accessLevel</code></td>
-        <td><code class="apitype">object</code></td>
+        <td><code >object</code></td>
         <td></td>
         <td>
         </td>
@@ -228,7 +228,7 @@
     <tr>
         <td><code><span >entry/cws:accessLevel/</span>text()</code>
         </td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td>
             <br/><br/>Acceptable values are:
             <ul>
@@ -241,7 +241,7 @@
     </tr>
     <tr>
         <td><code><span >entry/</span>cws:maxAgeSecs</code></td>
-        <td><code class="apitype">object</code></td>
+        <td><code >object</code></td>
         <td></td>
         <td>
         </td>
@@ -249,7 +249,7 @@
     <tr>
         <td><code><span >entry/cws:maxAgeSecs/</span>text()</code>
         </td>
-        <td><code class="apitype">long</code></td>
+        <td><code >long</code></td>
         <td></td>
         <td>
         </td>

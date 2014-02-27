@@ -14,17 +14,17 @@
 <div class="data-sample">
 
     <h3>JSON</h3>
-    <pre id="alt-json" class="prettyprint"
+    <pre id="alt-json"
          style="max-height: 500px; overflow: auto">&#123;
   &quot;kind&quot;: &quot;chromewebstore#item&quot;,
-  &quot;id&quot;: <var class="apiparam">string</var>,
-  &quot;publicKey&quot;: <var class="apiparam">string</var>,
-  &quot;uploadState&quot;: <var class="apiparam">string</var>,
+  &quot;id&quot;: <var>string</var>,
+  &quot;publicKey&quot;: <var>string</var>,
+  &quot;uploadState&quot;: <var>string</var>,
   &quot;itemError&quot;: [
-    <var class="apiparam">(value)</var>
+    <var>(value)</var>
   ]
 &#125;</pre>
-    <table class="matchpre" id="properties">
+    <table id="properties">
         <thead>
         <tr>
             <th>Property name</th>
@@ -36,35 +36,35 @@
         <tbody>
         <tr id="id">
             <td><code>id</code></td>
-            <td><code class="apitype">string</code></td>
+            <td><code >string</code></td>
             <td>the unique id of the item.</td>
             <td>
             </td>
         </tr>
         <tr id="itemError">
             <td><code>itemError[]</code></td>
-            <td><code class="apitype">list</code></td>
+            <td><code >list</code></td>
             <td>The detail human-readable status of the operation.</td>
             <td>
             </td>
         </tr>
         <tr id="kind">
             <td><code>kind</code></td>
-            <td><code class="apitype">string</code></td>
+            <td><code >string</code></td>
             <td>This is an item in the chrome webstore.</td>
             <td>
             </td>
         </tr>
         <tr id="publicKey">
             <td><code>publicKey</code></td>
-            <td><code class="apitype">string</code></td>
+            <td><code >string</code></td>
             <td>the public key of this item.</td>
             <td>
             </td>
         </tr>
         <tr id="uploadState">
             <td><code>uploadState</code></td>
-            <td><code class="apitype">string</code></td>
+            <td><code >string</code></td>
             <td>The status of the operation.
                 <br/><br/>Acceptable values are:
                 <ul>
@@ -81,22 +81,22 @@
     </table>
 
     <h3>Atom</h3>
-    <pre id="alt-atom.xml" class="prettyprint"
+    <pre id="alt-atom.xml"
          style="max-height: 500px; overflow: auto">&lt;entry gd:kind=&quot;chromewebstore#item&quot; xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:cws=&quot;http://schemas.google.com/chromewebstore/2010&quot; xmlns:gd=&quot;http://schemas.google.com/g/2005&quot;&gt;
   &lt;cws:item_id&gt;
-    <var class="apiparam">string</var>
+    <var>string</var>
   &lt;/cws:item_id&gt;
   &lt;cws:public_key&gt;
-    <var class="apiparam">string</var>
+    <var>string</var>
   &lt;/cws:public_key&gt;
   &lt;cws:upload_state&gt;
-    <var class="apiparam">string</var>
+    <var>string</var>
   &lt;/cws:upload_state&gt;
   &lt;cws:item_error&gt;
-    <var class="apiparam">(value)</var>
+    <var>(value)</var>
   &lt;/cws:item_error&gt;
 &lt;/entry&gt;</pre>
-    <table class="matchpre" id="properties">
+    <table id="properties">
 
         <thead>
         <tr>
@@ -110,7 +110,7 @@
         <tbody>
         <tr>
             <td><code>entry</code></td>
-            <td><code class="apitype">object</code></td>
+            <td><code >object</code></td>
             <td></td>
             <td>
             </td>
@@ -118,7 +118,7 @@
         <tr>
             <td><code><span >entry/</span>cws:item_error</code>
             </td>
-            <td><code class="apitype">object</code></td>
+            <td><code >object</code></td>
             <td>The detail human-readable status of the operation.</td>
             <td>
             </td>
@@ -126,14 +126,14 @@
         <tr>
             <td><code><span
                     >entry/cws:item_error/</span>text()</code></td>
-            <td><code class="apitype">any value</code></td>
+            <td><code >any value</code></td>
             <td></td>
             <td>
             </td>
         </tr>
         <tr>
             <td><code><span >entry/</span>cws:item_id</code></td>
-            <td><code class="apitype">object</code></td>
+            <td><code >object</code></td>
             <td>the unique id of the item.</td>
             <td>
             </td>
@@ -141,7 +141,7 @@
         <tr>
             <td><code><span >entry/cws:item_id/</span>text()</code>
             </td>
-            <td><code class="apitype">string</code></td>
+            <td><code >string</code></td>
             <td></td>
             <td>
             </td>
@@ -149,7 +149,7 @@
         <tr>
             <td><code><span >entry/</span>cws:public_key</code>
             </td>
-            <td><code class="apitype">object</code></td>
+            <td><code >object</code></td>
             <td>the public key of this item.</td>
             <td>
             </td>
@@ -157,7 +157,7 @@
         <tr>
             <td><code><span
                     >entry/cws:public_key/</span>text()</code></td>
-            <td><code class="apitype">string</code></td>
+            <td><code >string</code></td>
             <td></td>
             <td>
             </td>
@@ -165,7 +165,7 @@
         <tr>
             <td><code><span >entry/</span>cws:upload_state</code>
             </td>
-            <td><code class="apitype">object</code></td>
+            <td><code >object</code></td>
             <td>The status of the operation.</td>
             <td>
             </td>
@@ -174,7 +174,7 @@
             <td><code><span
                     >entry/cws:upload_state/</span>text()</code>
             </td>
-            <td><code class="apitype">string</code></td>
+            <td><code >string</code></td>
             <td>
                 <br/><br/>Acceptable values are:
                 <ul>
@@ -189,28 +189,28 @@
         </tr>
         <tr>
             <td><code><span >entry/</span>gd:kind</code></td>
-            <td><code class="apitype">string</code></td>
+            <td><code >string</code></td>
             <td></td>
             <td>
             </td>
         </tr>
         <tr>
             <td><code><span >entry/</span>xmlns</code></td>
-            <td><code class="apitype">string</code></td>
+            <td><code >string</code></td>
             <td></td>
             <td>
             </td>
         </tr>
         <tr>
             <td><code><span >entry/</span>xmlns:cws</code></td>
-            <td><code class="apitype">string</code></td>
+            <td><code >string</code></td>
             <td></td>
             <td>
             </td>
         </tr>
         <tr>
             <td><code><span >entry/</span>xmlns:gd</code></td>
-            <td><code class="apitype">string</code></td>
+            <td><code >string</code></td>
             <td></td>
             <td>
             </td>

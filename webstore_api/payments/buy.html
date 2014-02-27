@@ -21,7 +21,7 @@
 
 <h3 id="auth">Authorization</h3>
 <p>This request requires authorization with the following scope.</p>
-<table class="matchpre">
+<table>
     <thead>
     <tr>
         <th>Scope</th>
@@ -35,13 +35,13 @@
 
 <p>In the request body, supply data with the following structure:</p>
 
-<pre class="prettyprint">&#123;
-  &quot;itemId&quot;: <var class="apiparam">string</var>,
-  &quot;sku&quot;: <var class="apiparam">string</var>,
-  &quot;hl&quot;: <var class="apiparam">string</var>,
-  &quot;gl&quot;: <var class="apiparam">string</var>
+<pre>&#123;
+  &quot;itemId&quot;: <var>string</var>,
+  &quot;sku&quot;: <var>string</var>,
+  &quot;hl&quot;: <var>string</var>,
+  &quot;gl&quot;: <var>string</var>
 &#125;</pre>
-<table class="matchpre">
+<table>
     <thead>
     <tr>
         <th>Property name</th>
@@ -53,28 +53,28 @@
     <tbody>
     <tr id="itemId">
         <td><code>itemId</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr id="sku">
         <td><code>sku</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr id="hl">
         <td><code>hl</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr id="gl">
         <td><code>gl</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
@@ -88,11 +88,11 @@
 <p>If successful, this method returns a response body with the following
     structure:</p>
 
-<pre class="prettyprint">&#123;
+<pre>&#123;
   &quot;kind&quot;: &quot;chromewebstore#jwt&quot;,
-  &quot;jwt&quot;: <var class="apiparam">string</var>
+  &quot;jwt&quot;: <var>string</var>
 &#125;</pre>
-<table class="matchpre">
+<table>
     <thead>
     <tr>
         <th>Property name</th>
@@ -104,14 +104,14 @@
     <tbody>
     <tr id="kind">
         <td><code>kind</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr id="jwt">
         <td><code>jwt</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>

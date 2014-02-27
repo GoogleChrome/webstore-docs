@@ -14,17 +14,17 @@
 <div class="data-sample">
 
 <h3>JSON</h3>
-    <pre id="alt-json" class="prettyprint"
+    <pre id="alt-json"
          style="max-height: 500px; overflow: auto">&#123;
   &quot;kind&quot;: &quot;chromewebstore#license&quot;,
-  &quot;id&quot;: <var class="apiparam">string</var>,
-  &quot;appId&quot;: <var class="apiparam">string</var>,
-  &quot;userId&quot;: <var class="apiparam">string</var>,
-  &quot;result&quot;: <var class="apiparam">string</var>,
-  &quot;accessLevel&quot;: <var class="apiparam">string</var>,
-  &quot;maxAgeSecs&quot;: <var class="apiparam">long</var>
+  &quot;id&quot;: <var>string</var>,
+  &quot;appId&quot;: <var>string</var>,
+  &quot;userId&quot;: <var>string</var>,
+  &quot;result&quot;: <var>string</var>,
+  &quot;accessLevel&quot;: <var>string</var>,
+  &quot;maxAgeSecs&quot;: <var>long</var>
 &#125;</pre>
-<table class="matchpre" id="properties">
+<table id="properties">
     <thead>
     <tr>
         <th>Property name</th>
@@ -36,7 +36,7 @@
     <tbody>
     <tr id="accessLevel">
         <td><code>accessLevel</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td>
             <br/><br/>Acceptable values are:
             <ul>
@@ -49,35 +49,35 @@
     </tr>
     <tr id="appId">
         <td><code>appId</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr id="id">
         <td><code>id</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr id="kind">
         <td><code>kind</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr id="maxAgeSecs">
         <td><code>maxAgeSecs</code></td>
-        <td><code class="apitype">long</code></td>
+        <td><code >long</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr id="result">
         <td><code>result</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td>
             <br/><br/>Acceptable values are:
             <ul>
@@ -90,7 +90,7 @@
     </tr>
     <tr id="userId">
         <td><code>userId</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
@@ -100,28 +100,28 @@
 
 
 <h3>Atom</h3>
-    <pre id="alt-atom.xml" class="prettyprint"
+    <pre id="alt-atom.xml"
          style="max-height: 500px; overflow: auto">&lt;entry gd:kind=&quot;chromewebstore#license&quot; xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:cws=&quot;http://schemas.google.com/chromewebstore/2010&quot; xmlns:gd=&quot;http://schemas.google.com/g/2005&quot;&gt;
   &lt;id&gt;
-    <var class="apiparam">string</var>
+    <var>string</var>
   &lt;/id&gt;
   &lt;cws:appid&gt;
-    <var class="apiparam">string</var>
+    <var>string</var>
   &lt;/cws:appid&gt;
   &lt;cws:userid&gt;
-    <var class="apiparam">string</var>
+    <var>string</var>
   &lt;/cws:userid&gt;
   &lt;cws:result&gt;
-    <var class="apiparam">string</var>
+    <var>string</var>
   &lt;/cws:result&gt;
   &lt;cws:accesslevel&gt;
-    <var class="apiparam">string</var>
+    <var>string</var>
   &lt;/cws:accesslevel&gt;
   &lt;cws:maxAgeSecs&gt;
-    <var class="apiparam">long</var>
+    <var>long</var>
   &lt;/cws:maxAgeSecs&gt;
 &lt;/entry&gt;</pre>
-<table class="matchpre" id="properties">
+<table id="properties">
     <thead>
     <tr>
         <th>Property name</th>
@@ -133,14 +133,14 @@
     <tbody>
     <tr>
         <td><code>entry</code></td>
-        <td><code class="apitype">object</code></td>
+        <td><code >object</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/</span>cws:accesslevel</code></td>
-        <td><code class="apitype">object</code></td>
+        <td><code >object</code></td>
         <td></td>
         <td>
         </td>
@@ -148,7 +148,7 @@
     <tr>
         <td><code><span >entry/cws:accesslevel/</span>text()</code>
         </td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td>
             <br/><br/>Acceptable values are:
             <ul>
@@ -161,21 +161,21 @@
     </tr>
     <tr>
         <td><code><span >entry/</span>cws:appid</code></td>
-        <td><code class="apitype">object</code></td>
+        <td><code >object</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/cws:appid/</span>text()</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/</span>cws:maxAgeSecs</code></td>
-        <td><code class="apitype">object</code></td>
+        <td><code >object</code></td>
         <td></td>
         <td>
         </td>
@@ -183,21 +183,21 @@
     <tr>
         <td><code><span >entry/cws:maxAgeSecs/</span>text()</code>
         </td>
-        <td><code class="apitype">long</code></td>
+        <td><code >long</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/</span>cws:result</code></td>
-        <td><code class="apitype">object</code></td>
+        <td><code >object</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/cws:result/</span>text()</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td>
             <br/><br/>Acceptable values are:
             <ul>
@@ -210,56 +210,56 @@
     </tr>
     <tr>
         <td><code><span >entry/</span>cws:userid</code></td>
-        <td><code class="apitype">object</code></td>
+        <td><code >object</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/cws:userid/</span>text()</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/</span>gd:kind</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/</span>id</code></td>
-        <td><code class="apitype">object</code></td>
+        <td><code >object</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/id/</span>text()</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/</span>xmlns</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/</span>xmlns:cws</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
     </tr>
     <tr>
         <td><code><span >entry/</span>xmlns:gd</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
         <td>
         </td>
