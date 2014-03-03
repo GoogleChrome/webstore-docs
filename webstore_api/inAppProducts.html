@@ -4,7 +4,7 @@
 
 <h2 id="overview">Overview</h2>
 <p></p>
-<p>For a list of <a href="#methods">methods</a> for this resource, see the end
+<p>For a list of <a href="#iapmethods">methods</a> for this resource, see the end
     of this page.</p>
 
 
@@ -12,122 +12,108 @@
 <p></p>
 
 
-<pre id="alt-json" class="prettyprint"
+<pre id="alt-json"
      style="max-height: 500px; overflow: auto">&#123;
   &quot;kind&quot;: &quot;chromewebstore#inAppProduct&quot;,
-  &quot;sku&quot;: <var class="apiparam">string</var>,
-  &quot;item_id&quot;: <var class="apiparam">string</var>,
-  &quot;state&quot;: <var class="apiparam">string</var>,
+  &quot;sku&quot;: <var>string</var>,
+  &quot;item_id&quot;: <var>string</var>,
+  &quot;state&quot;: <var>string</var>,
   &quot;prices&quot;: [
     &#123;
-      &quot;valueMicros&quot;: <var class="apiparam">long</var>,
-      &quot;currencyCode&quot;: <var class="apiparam">string</var>,
-      &quot;regionCode&quot;: <var class="apiparam">string</var>
+      &quot;valueMicros&quot;: <var>long</var>,
+      &quot;currencyCode&quot;: <var>string</var>,
+      &quot;regionCode&quot;: <var>string</var>
     &#125;
   ],
   &quot;localeData&quot;: [
     &#123;
-      &quot;title&quot;: <var class="apiparam">string</var>,
-      &quot;description&quot;: <var class="apiparam">string</var>,
-      &quot;languageCode&quot;: <var class="apiparam">string</var>
+      &quot;title&quot;: <var>string</var>,
+      &quot;description&quot;: <var>string</var>,
+      &quot;languageCode&quot;: <var>string</var>
     &#125;
   ]
 &#125;</pre>
-<table class="matchpre" id="properties">
+<table id="properties">
     <thead>
     <tr>
         <th>Property name</th>
         <th>Value</th>
         <th>Description</th>
-        <th>Notes</th>
     </tr>
     </thead>
     <tbody>
     <tr id="item_id">
         <td><code>item_id</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td>The id of this item.</td>
-        <td>
-        </td>
     </tr>
     <tr id="kind">
         <td><code>kind</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td>This response is about a Chrome Web Store item.</td>
-        <td>
-        </td>
+
     </tr>
     <tr id="localeData">
         <td><code>localeData[]</code></td>
-        <td><code class="apitype">list</code></td>
+        <td><code >list</code></td>
         <td>The locale data of the IAP.</td>
-        <td>
-        </td>
+
     </tr>
     <tr id="localeData.description">
-        <td><code><span class="quiet">localeData[].</span>description</code>
+        <td><code><span >localeData[].</span>description</code>
         </td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
-        <td>
-        </td>
+
     </tr>
     <tr id="localeData.languageCode">
-        <td><code><span class="quiet">localeData[].</span>languageCode</code>
+        <td><code><span >localeData[].</span>languageCode</code>
         </td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td></td>
-        <td>
-        </td>
+
     </tr>
     <tr id="localeData.title">
-        <td><code><span class="quiet">localeData[].</span>title</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code><span >localeData[].</span>title</code></td>
+        <td><code >string</code></td>
         <td></td>
-        <td>
-        </td>
+
     </tr>
     <tr id="prices">
         <td><code>prices[]</code></td>
-        <td><code class="apitype">list</code></td>
+        <td><code >list</code></td>
         <td>The price of the IAP.</td>
-        <td>
-        </td>
+
     </tr>
     <tr id="prices.currencyCode">
-        <td><code><span class="quiet">prices[].</span>currencyCode</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code><span >prices[].</span>currencyCode</code></td>
+        <td><code >string</code></td>
         <td></td>
-        <td>
-        </td>
+
     </tr>
     <tr id="prices.regionCode">
-        <td><code><span class="quiet">prices[].</span>regionCode</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code><span >prices[].</span>regionCode</code></td>
+        <td><code >string</code></td>
         <td></td>
-        <td>
-        </td>
+
     </tr>
     <tr id="prices.valueMicros">
-        <td><code><span class="quiet">prices[].</span>valueMicros</code></td>
-        <td><code class="apitype">long</code></td>
+        <td><code><span >prices[].</span>valueMicros</code></td>
+        <td><code >long</code></td>
         <td></td>
-        <td>
-        </td>
+
     </tr>
     <tr id="sku">
         <td><code>sku</code></td>
-        <td><code class="apitype">string</code></td>
-        <td>The unique ID of the IAP.</td>
-        <td>
-        </td>
+        <td><code >string</code></td>
+        <td>The unique ID of the In-App Product (IAP).</td>
+
     </tr>
     <tr id="state">
         <td><code>state</code></td>
-        <td><code class="apitype">string</code></td>
+        <td><code >string</code></td>
         <td>The state of this in-app product.</td>
-        <td>
-        </td>
+
     </tr>
     </tbody>
 </table>

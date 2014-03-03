@@ -191,7 +191,7 @@
     </li>
 </ol>
 
-<pre class="prettyprint" data-filename="manifest.json">{
+<pre data-filename="manifest.json">{
   "permissions": [
     "storage",
     "identity",
@@ -226,7 +226,7 @@
     </li>
 </ol>
 
-<pre class="prettyprint">var CWS_LICENSE_API_URL = 'https://www.googleapis.com/chromewebstore/v1.1/userlicenses/';
+<pre>var CWS_LICENSE_API_URL = 'https://www.googleapis.com/chromewebstore/v1.1/userlicenses/';
 var req = new XMLHttpRequest();
 req.open('GET', CWS_LICENSE_API_URL + chrome.runtime.id);
 req.setRequestHeader('Authorization', 'Bearer ' + token);
@@ -255,7 +255,7 @@ themes do not execute any JavaScript and cannot verify a license.
 </p>
 
 <p>Sample JSON license object</p>
-<pre class="prettyprint">{
+<pre>{
   "kind": "chromewebstore#license",
   "itemId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
   "createdTime": "1377660091254",
@@ -356,7 +356,7 @@ themes do not execute any JavaScript and cannot verify a license.
     user has been using the free trial.
 </p>
 
-<pre class="prettyprint">var licenseStatus;
+<pre>var licenseStatus;
 if (license.result &amp;&amp; license.accessLevel == "FULL") {
   console.log("Fully paid &amp; properly licensed.");
   licenseStatus = "FULL";

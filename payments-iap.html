@@ -311,7 +311,7 @@
   return only the details for that specific item.
 </p>
 
-<pre class="prettyprint">google.payments.inapp.getSkuDetails({
+<pre>google.payments.inapp.getSkuDetails({
   'parameters': {'env': 'prod'},
   'success': onSkuDetails,
   'failure': onSkuDetailsFail
@@ -325,7 +325,7 @@
 </p>
 
 <p>The response will look like:</p>
-<pre class="prettyprint">{
+<pre>{
   "response": {
     "details": {
       "kind": "chromewebstore#inAppProductList",
@@ -363,7 +363,7 @@
   back from the function:
 </p>
 
-<pre class="prettyprint">function onSkuDetails(skus) {
+<pre>function onSkuDetails(skus) {
   var products = response.response.details.inAppProducts;
   var count = products.length;
   for (var i = 0; i &lt; count; i++) {
@@ -378,7 +378,7 @@
  for an item managed through the Chrome Web Store: 
 </p>
 
-<pre class="prettyprint">var sku = "giant_tv";
+<pre>var sku = "giant_tv";
 google.payments.inapp.buy({
   'parameters': {'env': 'prod'},
   'sku': sku,
@@ -391,7 +391,7 @@ google.payments.inapp.buy({
   appropriate jwt parameter.  For example:
 </p>
 
-<pre class="prettyprint">var jwt = /* huge ugly JWT string */;
+<pre>var jwt = /* huge ugly JWT string */;
 google.payments.inapp.buy({
   'parameters': {'env': 'prod'},
   <strong>'jwt': jwt,</strong>
@@ -406,7 +406,7 @@ google.payments.inapp.buy({
   a parameter that looks like:
 </p>
 
-<pre class="prettyprint">{
+<pre>{
   "jwt": "eyJhb...0oFuU",
   "request": {
     "cartId": "00000000000000000000.0000000000000000000"
@@ -427,14 +427,14 @@ google.payments.inapp.buy({
   <a href="https://wallet.google.com/merchant/">Wallet Merchant console</a>.
 </p>
 
-<pre class="prettyprint">google.payments.inapp.getPurchases({
+<pre>google.payments.inapp.getPurchases({
   'success': onLicenseUpdate,
   'failure': onLicenseUpdateFail
 });</pre>
 
 <p>The Chrome Web Store will return the list of SKUs that the user has purchased:</p>
 
-<pre class="prettyprint">{
+<pre>{
   "response": {
     "details": [
       {
@@ -448,7 +448,7 @@ google.payments.inapp.buy({
   }
 } </pre>
 
-<pre class="prettyprint">function onLicenseUpdate(licenses) {
+<pre>function onLicenseUpdate(licenses) {
   var licenses = response.response.details;
   var count = licenses.length;
   for (var i = 0; i < count; i++) {
