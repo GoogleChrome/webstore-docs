@@ -37,16 +37,15 @@
 
         </td>
     </tr>
-    <tr id="optional-parameters" class="alt">
+    <tr>
         <td colspan="3"><b>Optional query parameters</b></td>
     </tr>
     <tr id="publishTarget">
         <td><code>publishTarget</code></td>
         <td><code >string</code></td>
         <td>
-            The target audience of this publish action.
-
-
+            The target audience of this publish action. Either
+            "trustedTesters" or "default".
         </td>
     </tr>
     </tbody>
@@ -67,6 +66,7 @@
 <h3>Request body</h3>
 
 <p>In the request body, supply data with the following structure:</p>
+
 <div class="data-sample">
 
     <h3>JSON</h3>
@@ -79,7 +79,7 @@
             <th>Property name</th>
             <th>Value</th>
             <th>Description</th>
-            <th>Notes</th>
+
         </tr>
         </thead>
         <tbody>
@@ -87,77 +87,7 @@
             <td><code>target</code></td>
             <td><code >string</code></td>
             <td>The publish target of this publish operation.</td>
-            <td>
-            </td>
-        </tr>
-        </tbody>
-    </table>
 
-    <h3>Atom</h3>
-    <pre>&lt;entry gd:kind=&quot;chromewebstore#item&quot; xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:cws=&quot;http://schemas.google.com/chromewebstore/2010&quot; xmlns:gd=&quot;http://schemas.google.com/g/2005&quot;&gt;
-  &lt;cws:target&gt;
-    <var>string</var>
-  &lt;/cws:target&gt;
-&lt;/entry&gt;</pre>
-    <table>
-        <thead>
-        <tr>
-            <th>Property name</th>
-            <th>Value</th>
-            <th>Description</th>
-            <th>Notes</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td><code>entry</code></td>
-            <td><code >object</code></td>
-            <td></td>
-            <td>
-            </td>
-        </tr>
-        <tr>
-            <td><code><span >entry/</span>gd:kind</code></td>
-            <td><code >string</code></td>
-            <td></td>
-            <td>
-            </td>
-        </tr>
-        <tr>
-            <td><code><span >entry/</span>xmlns</code></td>
-            <td><code >string</code></td>
-            <td></td>
-            <td>
-            </td>
-        </tr>
-        <tr>
-            <td><code><span >entry/</span>xmlns:cws</code></td>
-            <td><code >string</code></td>
-            <td></td>
-            <td>
-            </td>
-        </tr>
-        <tr>
-            <td><code><span >entry/</span>xmlns:gd</code></td>
-            <td><code >string</code></td>
-            <td></td>
-            <td>
-            </td>
-        </tr>
-        <tr>
-            <td><code><span >entry/</span>cws:target</code></td>
-            <td><code >object</code></td>
-            <td>The publish target of this publish operation.</td>
-            <td>
-            </td>
-        </tr>
-        <tr>
-            <td><code><span >entry/cws:target/</span>text()</code>
-            </td>
-            <td><code >string</code></td>
-            <td></td>
-            <td>
-            </td>
         </tr>
         </tbody>
     </table>
@@ -188,7 +118,6 @@
             <th>Property name</th>
             <th>Value</th>
             <th>Description</th>
-            <th>Notes</th>
         </tr>
         </thead>
         <tbody>
@@ -196,15 +125,13 @@
             <td><code>kind</code></td>
             <td><code >string</code></td>
             <td>This response is about a Chrome Web Store item.</td>
-            <td>
-            </td>
+
         </tr>
         <tr id="item_id">
             <td><code>item_id</code></td>
             <td><code >string</code></td>
             <td>The id of this item.</td>
-            <td>
-            </td>
+
         </tr>
         <tr id="status">
             <td><code>status[]</code></td>
@@ -212,15 +139,13 @@
             <td>The status of this publish operation. It may contain multiple
                 elements.
             </td>
-            <td>
-            </td>
+
         </tr>
         <tr id="statusDetail">
             <td><code>statusDetail[]</code></td>
             <td><code >list</code></td>
             <td>Detailed human-readable explanation to the status.</td>
-            <td>
-            </td>
+
         </tr>
         </tbody>
     </table>
@@ -243,7 +168,7 @@
             <th>Property name</th>
             <th>Value</th>
             <th>Description</th>
-            <th>Notes</th>
+
         </tr>
         </thead>
         <tbody>
@@ -251,51 +176,44 @@
             <td><code>entry</code></td>
             <td><code >object</code></td>
             <td></td>
-            <td>
-            </td>
+
         </tr>
         <tr>
             <td><code><span >entry/</span>gd:kind</code></td>
             <td><code >string</code></td>
             <td></td>
-            <td>
-            </td>
+
         </tr>
         <tr >
             <td><code><span >entry/</span>xmlns</code></td>
             <td><code >string</code></td>
             <td></td>
-            <td>
-            </td>
+
         </tr>
         <tr >
             <td><code><span >entry/</span>xmlns:cws</code></td>
             <td><code >string</code></td>
             <td></td>
-            <td>
-            </td>
+
         </tr>
         <tr >
             <td><code><span >entry/</span>xmlns:gd</code></td>
             <td><code >string</code></td>
             <td></td>
-            <td>
-            </td>
+
         </tr>
         <tr >
             <td><code><span >entry/</span>cws:item_id</code></td>
             <td><code >object</code></td>
             <td>The id of this item.</td>
-            <td>
-            </td>
+
         </tr>
         <tr>
             <td><code><span >entry/cws:item_id/</span>text()</code>
             </td>
             <td><code >string</code></td>
             <td></td>
-            <td>
-            </td>
+
         </tr>
         <tr>
             <td><code><span >entry/</span>cws:status</code></td>
@@ -303,32 +221,28 @@
             <td>The status of this publish operation. It may contain multiple
                 elements.
             </td>
-            <td>
-            </td>
+
         </tr>
         <tr >
             <td><code><span >entry/cws:status/</span>text()</code>
             </td>
             <td><code >string</code></td>
             <td></td>
-            <td>
-            </td>
+
         </tr>
         <tr >
             <td><code><span >entry/</span>cws:status_detail</code>
             </td>
             <td><code >object</code></td>
             <td>Detailed human-readable explanation to the status.</td>
-            <td>
-            </td>
+
         </tr>
         <tr >
             <td><code><span >entry/cws:status_detail/</span>text()</code>
             </td>
             <td><code >string</code></td>
             <td></td>
-            <td>
-            </td>
+
         </tr>
         </tbody>
     </table>
