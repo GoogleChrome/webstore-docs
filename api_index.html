@@ -87,16 +87,14 @@
     </thead>
     <tbody>
     <tr class="alt">
-      <td colspan="3">URIs relative to https://www.googleapis.com/chromewebstore/v1.1, unless otherwise noted</td>
+      <td colspan="3">URIs relative to https://www.googleapis.com, unless otherwise noted</td>
     </tr>
       <tr>
         <td>
-
           <a href="/webstore/webstore_api/items/get.html">get</a>
-
         </td>
         <td>
-          <code>GET&nbsp; /items/<var>itemId</var></code>
+          <code>GET<br />/chromewebstore/v1.1/items/<var>itemId</var></code>
         </td>
         <td>
           Gets your own Chrome Web Store item.
@@ -109,8 +107,7 @@
 
         </td>
         <td>
-          <code>POST<br/>https://www.googleapis.com/upload <br/>
-              /chromewebstore/v1.1/items</code>
+          <code>POST<br /> /upload/chromewebstore/v1.1/items</code>
         </td>
         <td>
           Inserts a new item.
@@ -124,7 +121,7 @@
 
         </td>
         <td>
-          <code>POST&nbsp; /items/<var>itemId</var>/publish</code>
+          <code>POST&nbsp; /chromewebstore/v1.1/items/<var>itemId</var>/publish</code>
         </td>
         <td>
           Publishes an item.
@@ -137,9 +134,10 @@
 
         </td>
         <td>
-          <code>PUT<br/>https://www.googleapis.com/upload <br/>
-              /chromewebstore/v1.1/items/<var>itemId</var></code>
-          <br/>and<br/>
+          <code>PUT<br/>/upload/chromewebstore/v1.1/items/<var>itemId</var></code>
+          <br/>&nbsp;<br />
+            and
+          <br/>&nbsp;<br />
           <code>PUT&nbsp; /items/<var>itemId</var></code>
         </td>
         <td>
