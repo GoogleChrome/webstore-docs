@@ -1,88 +1,132 @@
 {{+bindTo:partials.standard_store_article}}
 
-<h1>Monetizing Your App</h1>
+<h1>Monetizing Your Chrome Web Store Item</h1>
 
 <p>
-You have many choices when it comes to making money from apps
-that you publish in the Chrome Web Store.
-This page covers just a few:
+    You can publish Hosted Apps, Packaged Apps, Extensions and Themes in the
+    Chrome Web Store. Collectively these are called simply "Items".
+
+    You have many choices when it comes to making money from items
+    that you publish in the Chrome Web Store.
+
+    This page covers just a few ways to monetize your store item:
 </p>
 
 <ul>
-  <li> In-app payments </li>
-  <li> One-time charge </li>
-  <li> Subscription </li>
+    <li> In-app payments</li>
+    <li> One-time charge (with optional free trial)</li>
+    <li> Subscription</li>
 </ul>
 
 <p>
-Although this page features Google APIs,
-the store allows you to use any payment system you like.
+    Keep in mind that although this page features Google APIs,
+    the store allows you to use any payment system you like.
 </p>
-
 
 <h2 id="inapp">In-app payments</h2>
 
 <p>
-Apps that use in-app payments are usually
-<em>hosted apps</em> that are <em>free to try</em>.
-For example, you might provide a free game
-that offers additional levels or avatars for a small price.
+    Items that use in-app payments are usually
+    free to try. For example, you might provide a free game
+    that offers additional levels or avatars for a small price.
 </p>
 
 <p>
-Hosted apps can use the
-<a href="https://developers.google.com/commerce/wallet/digital/">Google In-App Payments API for the Web</a>
-to charge for features or virtual goods.
-The fee for using this API is just 5% per transaction.
-For example, if you charge $1.99,
-you'll receive $1.89;
-if you charge $9.99,
-you'll receive $9.49.
+    Generally, Chrome Apps and extensions can use <a
+        href="http://developer.chrome.com/webstore/payments-iap">In-App Payments
+    for Google Wallet with Digital Goods</a>, and hosted apps can use the
+    <a href="https://developers.google.com/commerce/wallet/digital/">Google
+        In-App Payments API for the Web</a>
+    to charge for features or virtual goods.
+    The fee for using the latter API is just 5% per transaction.
+    For example, if you charge $1.99,
+    you'll receive $1.89;
+    if you charge $9.99,
+    you'll receive $9.49.
 </p>
 
 
 <h2 id="onetime"> One-time charge </h2>
 
 <p>
-<a href="overview.html#builtin">Chrome Web Store Payments</a>
-is a payment system
-that is especially well integrated with the store.
-With it, you can either charge to download the app
-or provide a <a href="overview.html#freevnot">free trial</a>
-that lets users try out the app before purchasing it.
+    <a href="overview.html#builtin">Chrome Web Store Payments</a>
+    is a payment system
+    that is especially well integrated with the store.
+    With it, you can either charge to download the item
+    or provide a <a href="overview.html#freevnot">free trial</a>
+    that lets users try out the item before purchasing it.
 </p>
 
 <p>
-The charge for using Chrome Web Store Payments is 5%.
-For example,
-if you charge $1.99,
-you'll receive $1.89.
-See
-<a href="pricing.html">Payments: Regions, Fees, and Tiers</a>
-for details.
+    The charge for using Chrome Web Store Payments is 5%.
+    For example,
+    if you charge $1.99,
+    you'll receive $1.89.
+    See
+    <a href="pricing.html">Payments: Regions, Fees, and Tiers</a>
+    for details.
 </p>
 
 
 <h2 id="subscription"> Subscription </h2>
 
 <p>
-Chrome Web Store Payments supports both monthly and yearly
-subscription models.
-As with one-time Chrome Web Store payments,
-you have the option of providing a free trial.
+    Chrome Web Store Payments supports both monthly and yearly
+    subscription models.
+    As with one-time Chrome Web Store payments,
+    you have the option of providing a free trial.
 </p>
 
 <h2 id="more"> More information </h2>
 
+
+<table>
+    <tr>
+        <th></th>
+        <th>Hosted Apps</th>
+        <th>Packaged Apps</th>
+        <th>Extensions</th>
+        <th>Themes</th>
+    </tr>
+    <tr>
+        <th>Free Trial</th>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>x</td>
+    </tr>
+    <tr>
+        <th>Paid Up-Front</th>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+    </tr>
+    <tr>
+        <th>Subscription</th>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>x</td>
+    </tr>
+    <tr>
+        <th>In-App Payments (IAP)</th>
+        <td>Google Wallet for Digital Goods</td>
+        <td>CWS Managed IAP</td>
+        <td>CWS Managed IAP</td>
+        <td>x</td>
+    </tr>
+</table>
+
+
 <p>
-For details about app payment options, see
-<a href="overview.html#charging">Charging for your app</a>
-in the Overview.
+    For details about app payment options, see
+    <a href="overview.html#charging">Charging for your app</a>
+    in the Overview.
 </p>
 
 
 <p class="backtotop"><a href="#top">Back to top</a></p>
- 
 
 
 {{/partials.standard_store_article}}
