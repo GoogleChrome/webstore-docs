@@ -15,12 +15,23 @@
 
 <p>
     To use the Chrome Web Store Publish API, you need to enable the API for your
-    project in the Google API Console.
+    project in the <a href="=https://console.developers.google.com">Google
+    Developer's Console</a>.
 </p>
 
-<ul>
+<ol>
     <li>Visit the Google APIs console.</li>
     <li>Create a new project or select an existing one.</li>
+
+    <li>In the sidebar on the left, select <b>APIs & auth</b></li>
+    <li>In the displayed list of available APIs, set the status of the Chrome
+        Web Store API to <b>ON</b>.</li>
+    <li>Accept the Terms of Service.</li>
+    <li>In the sidebar on the left, select <b>Credentials</b>.</li>
+    <li>Find the lines labeled <b>Client ID</b> and <b>Client secret</b>. Note
+    that there may be a client ID without a client secret, for use with
+        Compute Engine and App Engine; in that case, create a new client ID
+        and client secret by selecting <b>Create New Client ID</b>.</li>
     <li>Scroll down to and enable the Chrome Web Store API in the “APIs & Auth”
         section.
     </li>
@@ -53,9 +64,11 @@ https://accounts.google.com/o/oauth2/auth?response_type=code&scope=https://www.g
     <p>
         NOTE: make sure you are requesting the token using the Google account
         which owns the Chrome Web Store apps you want to manage. This account
-        can be different from the account you create the API Console project
+        can be different from the account you create the Developer's Console
+        project
         with. For example, you can create an application for other developers to
-        manage their apps, in which case only you need to register an API
+        manage their apps, in which case only you need to register an
+        Developer's
         Console project.
     </p>
 
@@ -94,10 +107,11 @@ https://accounts.google.com/o/oauth2/auth?response_type=code&scope=https://www.g
         use the refresh token to get future access tokens. Note that tokens
         expire after 40 minutes.
 
-        NOTE: For more information about getting OAuth2 access tokens, see <a href="https://developers.google.com/accounts/docs/OAuth2">Using OAuth 2.0 to Access Google APIs</a>
+        NOTE: For more information about getting OAuth 2.0 access tokens, see <
+        a href="https://developers.google.com/accounts/docs/OAuth2">Using OAuth 2.0 to Access Google APIs</a>
     </p>
 
-</ul>
+</ol>
 
 
 <h2 id="usingtheapi">Using the API</h2>
@@ -147,7 +161,7 @@ Body content: the file to upload
 </pre>
 
 <p>
-    $APP_ID should be the ID of the existing item
+    $APP_ID is the ID of the existing item.
 
 <pre>
 > curl \
