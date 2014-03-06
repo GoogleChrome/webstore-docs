@@ -3,12 +3,11 @@
 <h1>Licenses</h1>
 
 <h2 id="overview">Overview</h2>
-<p></p>
-<p>For a list of <a href="#methods">methods</a> for this resource, see the end
-    of this page.</p>
+
+<p>For a list of <a href="#methods">methods</a> for this resource,
+see the end of this page.</p>
 
 <h2 id="resource">Licenses representations</h2>
-<p></p>
 
 <div class="data-sample">
 
@@ -46,25 +45,28 @@
     <tr id="appId">
         <td><code>appId</code></td>
         <td><code >string</code></td>
-        <td></td>
+        <td> Chrome Web Store app ID.
+        Get the app ID from the Chrome Developer Dashboard
+        after you upload your app for the first time.</td>
 
     </tr>
     <tr id="id">
         <td><code>id</code></td>
         <td><code >string</code></td>
-        <td></td>
+        <td>App ID/ user ID that you can use in URL to query.</td>
 
     </tr>
     <tr id="kind">
         <td><code>kind</code></td>
         <td><code >string</code></td>
-        <td></td>
+        <td>License type, <code>"chromewebstore#license"</code>.</td>
 
     </tr>
     <tr id="maxAgeSecs">
         <td><code>maxAgeSecs</code></td>
         <td><code >long</code></td>
-        <td></td>
+        <td>Once you've got the response, cache is only valid
+        for the specified max number of seconds.</td>
 
     </tr>
     <tr id="result">
@@ -82,7 +84,7 @@
     <tr id="userId">
         <td><code>userId</code></td>
         <td><code >string</code></td>
-        <td></td>
+        <td>OpenID URL for the user's Google Account.</td>
 
     </tr>
     </tbody>
