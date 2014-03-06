@@ -4,21 +4,22 @@
 <p>
     If you choose to charge users for your Chrome App, Extension, Theme or web
     app hosted in the Chrome Web Store, there are several options available to
-    you.  The Chrome Web Store has a built-in one-time payment system called
+    you. The Chrome Web Store has a built-in one-time payment system called
     Chrome Web Store Payments.
 </p>
 
 <p>
     Alternatively for Chrome Apps, you have the option of
     selling digital or virtual goods using the
-    <a href="http://developer.chrome.com/apps/google_wallet.html">Google Wallet for Digital Goods</a> in Chrome.
+    <a href="http://developer.chrome.com/apps/google_wallet.html">Google Wallet
+        for Digital Goods</a> in Chrome.
 </p>
 
 <h3 id="offering-free-trial">Offering a free trial</h3>
 <p>
     For Chrome Apps or hosted web apps, you can provide a free trial
     version that either gives the user full access for a limited period of
-    time or restricts which features are available.  You can enable the free
+    time or restricts which features are available. You can enable the free
     trial by checking the appropriate box in the Developer Dashboard, then
     using the Licensing API to confirm what kind of license the user has and
     how long they've had it, with an upgrade path to the paid version.
@@ -40,25 +41,27 @@
 
 <h4> Contents </h4>
 <ol class="toc">
-    <li> <a href="#before-starting">Before you get started</a> </li>
-    <li> <a href="#using-otps">Using one-time payments</a> </li>
-    <li> <a href="#verifying-payment">Verifying payment and offering free trial</a> </li>
-    <li> <a href="#free2paid">Migrating from a free to a paid experience</a> </li>
-    <li> <a href="#sample-app">Sample Chrome App</a> </li>
+    <li><a href="#before-starting">Before you get started</a></li>
+    <li><a href="#using-otps">Using one-time payments</a></li>
+    <li><a href="#verifying-payment">Verifying payment and offering free
+        trial</a></li>
+    <li><a href="#free2paid">Migrating from a free to a paid experience</a></li>
+    <li><a href="#sample-app">Sample Chrome App</a></li>
 </ol>
 
 <h2 id="before-starting">Before you get started</h2>
 <p>
     The Chrome Web Store handles the transaction using Google Wallet to
-    complete the transaction with the user.  If you don't have one already,
+    complete the transaction with the user. If you don't have one already,
     you must open a Google Wallet Merchant account, and associate that account
     with the store. For details, see
     <a href="http://www.google.com/support/chrome_webstore/bin/answer.py?answer=96832">
         Register for a Google Wallet Merchant account</a>.
 </p>
 
-<p class="note">                       
-    <strong>Note:</strong> See <a href="//developer.chrome.com/webstore/pricing">Payments: Regions,
+<p class="note">
+    <strong>Note:</strong> See <a
+        href="//developer.chrome.com/webstore/pricing">Payments: Regions,
     fees and tiers</a> for more information about fees and locations where
     you can sell your app.
 </p>
@@ -68,7 +71,7 @@
     You can set up the one-time payment and offer a free trial option on the
     listing page of the
     <a href="https://chrome.google.com/webstore/developer/dashboard">Chrome
-        Web Store Developer Dashboard</a>.  The Chrome Web Store manages the
+        Web Store Developer Dashboard</a>. The Chrome Web Store manages the
     licenses for each user and exposes that information through a REST API.
 </p>
 
@@ -116,9 +119,13 @@
     </li>
 </ol>
 
-<img src="images/cws-dd-payment.png"
-     width="95%"
-     height="95%"/>
+<p>
+    <img src="images/cws-dd-payment.png"
+         width="95%"
+         height="95%"/>
+
+</p>
+
 
 <h4 id="choosing-a-price">Choosing a price</h4>
 <p>
@@ -130,13 +137,14 @@
 
 <p>
     To change the price of your item, select the tier you'd like in the
-    Pricing and payments section of the listing.  You can also set a custom
+    Pricing and payments section of the listing. You can also set a custom
     price for each region, by choosing Mixed, and then select the price for
     each region in the Regions section.
 </p>
 
 <p class="note">
-    See <a href="//developer.chrome.com/webstore/pricing">Payments: Regions, fees and tiers</a> for more
+    See <a href="//developer.chrome.com/webstore/pricing">Payments: Regions,
+    fees and tiers</a> for more
     information about the different tiers and prices in local currencies.
 </p>
 
@@ -322,7 +330,8 @@ themes do not execute any JavaScript and cannot verify a license.
     To improve the performance and avoid running into rate limits,
     you should cache the license data locally using the
     <code><a href="http://developer.chrome.com/apps/storage.html">
-        chrome.storage.sync</a></code> API and only refresh it on a periodic basis.
+        chrome.storage.sync</a></code> API and only refresh it on a periodic
+    basis.
     By storing the license data in the sync data, it will be synced across all
     machines that the users is logged into.
 </p>
@@ -331,7 +340,7 @@ themes do not execute any JavaScript and cannot verify a license.
     In addition, do not block the user interface or lock the user out of your
     Chrome App or Extension while waiting for the licensing server to respond,
     but instead, allow the user to continue for a limited grace period until a
-    response is received.  Providing a grace period of at least a day or two
+    response is received. Providing a grace period of at least a day or two
     will ensure that your Chrome App or Extension continues to work properly in
     an offline situation where the user may not be connected to the network.
 </p>
@@ -341,9 +350,9 @@ themes do not execute any JavaScript and cannot verify a license.
 <h2 id="handling-trial">Handling the free trial experience</h2>
 <p>
     If you decide to offer a free trial to users, there are several ways that
-    you can allow users to try before they make the purchase.  The two
+    you can allow users to try before they make the purchase. The two
     most common ways are providing full access for a limited time, or offering
-    a limited feature set.  Of course, you can also combine these two, or
+    a limited feature set. Of course, you can also combine these two, or
     provide your own incentives to encourage users to upgrade to the paid
     version.
 </p>
@@ -351,7 +360,7 @@ themes do not execute any JavaScript and cannot verify a license.
 <h3 id="trial-limited-time">Limited time access</h3>
 <p>
     The license API makes it easy to provide a limited time trial experience by
-    including the date the license was first issued to the user.  Comparing the
+    including the date the license was first issued to the user. Comparing the
     <code>createdDate</code> to the current date will tell you how long the
     user has been using the free trial.
 </p>
@@ -394,14 +403,14 @@ if (license.result &amp;&amp; license.accessLevel == "FULL") {
 <p>
     If you decide to migrate from a free experience to a paid experience, you
     should consider what experience you want to provide for any user who
-    installed your item prior to the change.  We strongly recommend
+    installed your item prior to the change. We strongly recommend
     grandfathering these users into the full, paid experience though the
     decision is yours.
 </p>
 
 <p>
     Users who installed your item prior to the change will have a
-    <code>FREE_TRIAL</code> license.  To determine if a user installed your
+    <code>FREE_TRIAL</code> license. To determine if a user installed your
     item prior to the price change, you can check the <code>createdTime</code>
     value in the license to determine when they first installed it.
 </p>
