@@ -15,12 +15,25 @@
 
 <p>
     To use the Chrome Web Store Publish API, you need to enable the API for your
-    project in the Google API Console.
+    project in the <a href="=https://console.developers.google.com">Google
+    Developer's Console</a>.
 </p>
 
-<ul>
+<ol>
     <li>Visit the Google APIs console.</li>
     <li>Create a new project or select an existing one.</li>
+
+    <li>In the sidebar on the left, select <b>APIs & auth</b></li>
+    <li>In the displayed list of available APIs, set the status of the Chrome
+        Web Store API to <b>ON</b>.
+    </li>
+    <li>Accept the Terms of Service.</li>
+    <li>In the sidebar on the left, select <b>Credentials</b>.</li>
+    <li>Find the lines labeled <b>Client ID</b> and <b>Client secret</b>. Note
+        that there may be a client ID without a client secret, for use with
+        Compute Engine and App Engine; in that case, create a new client ID
+        and client secret by selecting <b>Create New Client ID</b>.
+    </li>
     <li>Scroll down to and enable the Chrome Web Store API in the “APIs & Auth”
         section.
     </li>
@@ -51,11 +64,13 @@ https://accounts.google.com/o/oauth2/auth?response_type=code&scope=https://www.g
     </p>
 
     <p>
-        NOTE: make sure you are requesting the token using the Google account
+        NOTE: Make sure you are requesting the token using the Google Account
         which owns the Chrome Web Store apps you want to manage. This account
-        can be different from the account you create the API Console project
+        can be different from the account you create the Developer's Console
+        project
         with. For example, you can create an application for other developers to
-        manage their apps, in which case only you need to register an API
+        manage their apps, in which case only you need to register an
+        Developer's
         Console project.
     </p>
 
@@ -67,7 +82,9 @@ https://accounts.google.com/o/oauth2/auth?response_type=code&scope=https://www.g
 
     <img src="images/copy_code.png"/>
 
-    <p>Use this value to request an access token. For example, using curl, you
+    <p>Use this value to request an access token. For example, using
+        <code>curl</code>,
+        you
         can get an access token by executing the following command (replacing
         the values of $CLIENT_ID, $CLIENT_SECRET, and $CODE with the values from
         above):</p>
@@ -82,22 +99,26 @@ https://accounts.google.com/o/oauth2/auth?response_type=code&scope=https://www.g
 
 <pre>
 {
-"access_token" : "ya29...",
-"token_type" : "Bearer",
-"expires_in" : 3600,
-"refresh_token" : "1/rwn..."
+  "access_token" : "ya29...",
+  "token_type" : "Bearer",
+  "expires_in" : 3600,
+  "refresh_token" : "1/rwn..."
 }
 </pre>
 
     <p>
-        You can now use the access_token to call the developer API. You can also
+        You can now use the access_token to call the API. You can also
         use the refresh token to get future access tokens. Note that tokens
         expire after 40 minutes.
-
-        NOTE: For more information about getting OAuth2 access tokens, see <a href="https://developers.google.com/accounts/docs/OAuth2">Using OAuth 2.0 to Access Google APIs</a>
     </p>
 
-</ul>
+    <p>
+        NOTE: For more information about getting OAuth 2.0 access tokens, see <
+        a href="https://developers.google.com/accounts/docs/OAuth2">Using OAuth
+        2.0 to Access Google APIs</a>
+    </p>
+
+</ol>
 
 
 <h2 id="usingtheapi">Using the API</h2>
@@ -110,8 +131,11 @@ https://accounts.google.com/o/oauth2/auth?response_type=code&scope=https://www.g
 
 <p>
     NOTE: Currently, there is no API for setting an item’s metadata, such as
-    description. This has to be done manually in the Chrome Web Store developer
-    dashboard.
+    description. This has to be done manually in the <a
+        href="https://chrome.google.com/webstore/developer/dashboard">Chrome
+    Web Store developer dashboard.</a> More detail about the Web Store API
+    can be found <a
+        href="http://developer.chrome.com/webstore/api_index">here</a>.
 </p>
 
 <h3 id="uploadnew">Uploading a package to create a new store item</h3>
@@ -123,7 +147,7 @@ Header Parameters: $TOKEN: the access token
 Body content: the file to upload
 </pre>
 
-Example:
+Type the following example on the command line:
 
 <pre>
 > curl \
@@ -143,11 +167,11 @@ https://www.googleapis.com/upload/chromewebstore/v1.1/items
 Endpoint: https://www.googleapis.com/upload/chromewebstore/v1.1/items/$APP_ID
 Type: PUT
 Header Parameters: $TOKEN: the access token
-Body content: the file to upload
+Body content: the package file to upload
 </pre>
 
 <p>
-    $APP_ID should be the ID of the existing item
+    $APP_ID is the ID of the existing Web Store item.
 
 <pre>
 > curl \
