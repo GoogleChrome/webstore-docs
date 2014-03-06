@@ -32,7 +32,9 @@
         Chrome Web Store
     </li>
     <li>
-        Include the appropriate <code><a href="https://github.com/petele/IAPDemo/blob/master/scripts/buy.js">buy.js</a></code> file
+        Include the appropriate <code><a
+            href="https://github.com/petele/IAPDemo/blob/master/scripts/buy.js">buy.js</a></code>
+        file
         in your package.
     </li>
     <li>
@@ -41,23 +43,33 @@
 </ol>
 
 <p>
-    The <code><a href="https://github.com/petele/IAPDemo/blob/master/scripts/buy.js">buy.js</a></code> file provides three functions:
+    The <code><a
+        href="https://github.com/petele/IAPDemo/blob/master/scripts/buy.js">buy.js</a></code>
+    file provides three functions:
 </p>
 <dl>
     <dt><code><a
             href="#query-items">google.payments.inapp.getSkuDetails</a></code>
     </dt>
     <dd>returns an array of active items provided by your product from the
-        Chrome Web Store.
+        Chrome Web Store. Maps to the
+        Web Store API <a
+                href="http://developer.chrome.com/webstore/webstore_api/inAppProducts#resource">In-App Products List Method</a>
     </dd>
     <dt><code><a
             href="#get-purchases">google.payments.inapp.getPurchases</a></code>
     </dt>
-    <dd>returns an array of items purchased by the user.</dd>
+    <dd>returns an array of items purchased by the user. Maps to the
+        Web Store API <a
+                href="http://developer.chrome.com/webstore/webstore_api/payments/list">Payments
+            List Method</a></dd>
     <dt><code><a
             href="#respond-to-purchase">google.payments.inapp.buy</a></code>
     </dt>
-    <dd>initiates the purchase flow for a particular item.</dd>
+    <dd>initiates the purchase flow for a particular item. Maps to the
+        Web Store API <a
+                href="http://developer.chrome.com/webstore/webstore_api/payments/buy">Payments
+            Buy Method</a></dd>
 </dl>
 
 
@@ -124,7 +136,9 @@
         <code>getSkuDetails</code> function.
     </li>
     <li>
-        You must include the <code><a href="https://github.com/petele/IAPDemo/blob/master/scripts/buy.js">buy.js</a></code> library with your package, and
+        You must include the <code><a
+            href="https://github.com/petele/IAPDemo/blob/master/scripts/buy.js">buy.js</a></code>
+        library with your package, and
         load the library from its location in your package.
     </li>
     <li>
@@ -319,7 +333,8 @@
 <p>
     If you manage your own digital goods, you'll need to manage your own
     inventory and licensing for those items and will not be able to use
-    the <code>getSkuDetails</code> or <code>getPurchases</code> functions
+    the <code>getSkuDetails</code> or <code>getPurchases</code>
+    functions
     provided
     by Chrome.
 </p>
@@ -343,7 +358,8 @@
 <p class="note">
     <b>Note:</b> The parameters field is required and must be set to
     <code>{'env': 'prod'}</code> to tell Chrome to use the production
-    instance of the API. Review the <a href="payments-iap#testing">Testing your app</a>
+    instance of the API. Review the <a href="payments-iap#testing">Testing your
+    app</a>
     section for details on how to test your app without incurring a charge.
 </p>
 
@@ -381,7 +397,18 @@
   }
 }</pre>
 
+<p class="note">
+    You can find the full description of In-App Products Representation and
+    Methods in the
+    <a
+        href="http://developer.chrome.com/webstore/webstore_api/inAppProducts#resource">Web
+    Store API Reference</a>
+</p>
+
+</note>
 <p>
+
+
     For example, you might want to list the details of each object you get
     back from the function:
 </p>
@@ -470,6 +497,16 @@ google.payments.inapp.buy({
     ]
   }
 } </pre>
+
+
+<p class="note">
+    <strong>Note:</strong> See the <a
+        href="http://localhost:8080/webstore/webstore_api/payments/list">Web
+    Store API Reference</a> for more details on the payment methods. </a>
+
+</p>
+
+
 
 <pre>function onLicenseUpdate(licenses) {
   var licenses = response.response.details;
