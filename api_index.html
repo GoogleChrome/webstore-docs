@@ -125,6 +125,9 @@
         </td>
         <td>
           Publishes an item.
+          Provide defined <code>publishTarget</code> in URL (case sensitive):
+          <code>publishTarget="trustedTesters"</code> or
+          <code>publishTarget="default"</code>.
         </td>
       </tr>
       <tr>
@@ -188,7 +191,7 @@
           <code>GET&nbsp; /userlicenses/<var>appId</var></code>
         </td>
         <td>
-          Gets the licenses for Chrome packaged apps.
+          Gets the licenses for Chrome Apps.
         </td>
       </tr>
     </tbody>
@@ -221,7 +224,10 @@
           <code>POST&nbsp; /payments/buy</code>
         </td>
         <td>
-          Inserts a cart and returns the JWT.
+          Call this method to put an item in a Google Wallet cart,
+          and return the cart ID.
+          Later the app can pay for the cart,
+          and complete the purchase.
         </td>
       </tr>
       <tr>
