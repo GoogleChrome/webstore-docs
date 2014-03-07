@@ -3,249 +3,269 @@
 <h1>Chrome Web Store API Reference</h1>
 
 
-<p>This API reference is organized by resource type. Each resource type has one or more data representations and one or more methods.</p>
+<p>This API reference is organized by resource type. Each resource type has one
+    or more data representations and one or more methods.</p>
 
-  <h2>Resource types</h2>
-  <ol class="toc">
+<h2>Resource types</h2>
+<ol class="toc">
     <li><a href="#InAppProducts">
         InAppProducts
-        </a>
+    </a>
     </li>
     <li><a href="#Items">
         Items
-        </a>
+    </a>
     </li>
     <li><a href="#Licenses">
         Licenses
-        </a>
+    </a>
     </li>
     <li><a href="#Payments">
         Payments
-        </a>
+    </a>
     </li>
-  </ol>
+</ol>
 
-  <h2 id="InAppProducts">
-      InAppProducts
-  </h2>
-  <p>For InAppProducts Resource details, see the <a href="/webstore/webstore_api/inAppProducts.html#resource">resource representation</a> page.</p>
+<h2 id="InAppProducts">
+    InAppProducts
+</h2>
+<p>For InAppProducts Resource details, see the <a
+        href="/webstore/webstore_api/inAppProducts.html#resource">resource
+    representation</a> page.</p>
 
-  <table>
+<table>
     <thead>
-      <tr>
+    <tr>
         <th>Method</th>
         <th>HTTP request</th>
         <th>Description</th>
-      </tr>
+    </tr>
     </thead>
     <tbody>
     <tr class="alt">
-      <td colspan="3">URIs relative to https://www.googleapis.com/chromewebstore/v1.1, unless otherwise noted</td>
+        <td colspan="3">URIs relative to
+            https://www.googleapis.com/chromewebstore/v1.1, unless otherwise
+            noted
+        </td>
     </tr>
-      <tr>
+    <tr>
         <td>
 
-          <a href="/webstore/webstore_api/inAppProducts/get.html">get</a>
-
-        </td>
-        <td>
-          <code>GET&nbsp; /items/<var>itemId</var>/skus/<var>sku</var></code>
-        </td>
-        <td>
-          Gets the in-app product information of an item.
-        </td>
-      </tr>
-      <tr>
-        <td>
-
-          <a href="/webstore/webstore_api/inAppProducts/list.html">list</a>
+            <a href="/webstore/webstore_api/inAppProducts/get.html">get</a>
 
         </td>
         <td>
-          <code>GET&nbsp; /items/<var>itemId</var>/skus</code>
+            <code>GET&nbsp; /items/<var>itemId</var>/skus/<var>sku</var></code>
         </td>
         <td>
-          Lists the in-app product information of an item.
+            Gets the in-app product information of an item.
         </td>
-      </tr>
+    </tr>
+    <tr>
+        <td>
+
+            <a href="/webstore/webstore_api/inAppProducts/list.html">list</a>
+
+        </td>
+        <td>
+            <code>GET&nbsp; /items/<var>itemId</var>/skus</code>
+        </td>
+        <td>
+            Lists the in-app product information of an item.
+        </td>
+    </tr>
     </tbody>
-  </table>
+</table>
 
 
-  <h2 id="Items">Items</h2>
+<h2 id="Items">Items</h2>
 
 
-  <p>For Items Resource details, see the <a href="/webstore/webstore_api/items.html#resource">resource representation</a> page.</p>
+<p>For Items Resource details, see the <a
+        href="/webstore/webstore_api/items.html#resource">resource
+    representation</a> page.</p>
 
-  <table>
+<table>
     <thead>
-      <tr>
+    <tr>
         <th>Method</th>
         <th>HTTP request</th>
         <th>Description</th>
-      </tr>
+    </tr>
     </thead>
     <tbody>
     <tr class="alt">
-      <td colspan="3">URIs relative to https://www.googleapis.com, unless otherwise noted</td>
+        <td colspan="3">URIs relative to https://www.googleapis.com, unless
+            otherwise noted
+        </td>
     </tr>
-      <tr>
+    <tr>
         <td>
-          <a href="/webstore/webstore_api/items/get.html">get</a>
+            <a href="/webstore/webstore_api/items/get.html">get</a>
         </td>
         <td>
-          <code>GET<br />/chromewebstore/v1.1/items/<var>itemId</var></code>
+            <code>GET<br/>/chromewebstore/v1.1/items/<var>itemId</var></code>
         </td>
         <td>
-          Gets your own Chrome Web Store item.
+            Gets your own Chrome Web Store item.
         </td>
-      </tr>
-      <tr>
+    </tr>
+    <tr>
         <td>
 
-          <a href="/webstore/webstore_api/items/insert.html">insert</a>
-
-        </td>
-        <td>
-          <code>POST<br /> /upload/chromewebstore/v1.1/items</code>
-        </td>
-        <td>
-          Inserts a new item.
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-
-          <a href="/webstore/webstore_api/items/publish.html">publish</a>
+            <a href="/webstore/webstore_api/items/insert.html">insert</a>
 
         </td>
         <td>
-          <code>POST&nbsp; /chromewebstore/v1.1/items/<var>itemId</var>/publish</code>
+            <code>POST<br/> /upload/chromewebstore/v1.1/items</code>
         </td>
         <td>
-          Publishes an item.
-          Provide defined <code>publishTarget</code> in URL (case sensitive):
-          <code>publishTarget="trustedTesters"</code> or
-          <code>publishTarget="default"</code>.
+            Inserts a new item.
         </td>
-      </tr>
-      <tr>
+    </tr>
+
+    <tr>
         <td>
 
-          <a href="/webstore/webstore_api/items/update.html">update</a>
+            <a href="/webstore/webstore_api/items/publish.html">publish</a>
 
         </td>
         <td>
-          <code>PUT<br/>/upload/chromewebstore/v1.1/items/<var>itemId</var></code>
-          <br/>&nbsp;<br />
+            <code>POST&nbsp; /chromewebstore/v1.1/<br/>
+                items/<var>itemId</var>/publish</code>
+        </td>
+        <td>
+            Publishes an item.
+            Provide defined <code>publishTarget</code> in URL (case sensitive):
+            <code>publishTarget = "trustedTesters"</code> or
+            <code>publishTarget = "default"</code>.
+        </td>
+    </tr>
+    <tr>
+        <td>
+
+            <a href="/webstore/webstore_api/items/update.html">update</a>
+
+        </td>
+        <td>
+            <code>PUT<br/>/upload/chromewebstore/v1.1/<br/>items/<var>itemId</var></code>
+            <br/>&nbsp;<br/>
             and
-          <br/>&nbsp;<br />
-          <code>PUT&nbsp; /items/<var>itemId</var></code>
+            <br/>&nbsp;<br/>
+            <code>PUT&nbsp; /items/<var>itemId</var></code>
         </td>
         <td>
-          Updates an existing item.
+            Updates an existing item.
         </td>
-      </tr>
+    </tr>
 
     </tbody>
-  </table>
+</table>
 
-  <h2 id="Licenses">
-      Licenses
-  </h2>
-  <p>For Licenses Resource details, see the <a href="/webstore/webstore_api/licenses.html#resource">resource representation</a> page.</p>
+<h2 id="Licenses">
+    Licenses
+</h2>
+<p>For Licenses Resource details, see the <a
+        href="/webstore/webstore_api/licenses.html#resource">resource
+    representation</a> page.</p>
 
-  <table>
+<table>
     <thead>
-      <tr>
+    <tr>
         <th>Method</th>
         <th>HTTP request</th>
         <th>Description</th>
-      </tr>
+    </tr>
     </thead>
     <tbody>
     <tr class="alt">
-      <td colspan="3">URIs relative to https://www.googleapis.com/chromewebstore/v1.1, unless otherwise noted</td>
+        <td colspan="3">URIs relative to
+            https://www.googleapis.com/chromewebstore/v1.1, unless otherwise
+            noted
+        </td>
     </tr>
-      <tr>
+    <tr>
         <td>
 
-          <a href="/webstore/webstore_api/licenses/get.html">get</a>
-
-        </td>
-        <td>
-          <code>GET&nbsp; /licenses/<var>appId</var>/<var>userId</var></code>
-        </td>
-        <td>
-          Gets the licenses for Chrome hosted apps.
-        </td>
-      </tr>
-      <tr>
-        <td>
-
-          <a href="/webstore/webstore_api/licenses/getUserLicense.html">getUserLicense</a>
+            <a href="/webstore/webstore_api/licenses/get.html">get</a>
 
         </td>
         <td>
-          <code>GET&nbsp; /userlicenses/<var>appId</var></code>
+            <code>GET&nbsp; /licenses/<var>appId</var>/<var>userId</var></code>
         </td>
         <td>
-          Gets the licenses for Chrome Apps.
+            Gets the licenses for Chrome hosted apps.
         </td>
-      </tr>
+    </tr>
+    <tr>
+        <td>
+
+            <a href="/webstore/webstore_api/licenses/getUserLicense.html">getUserLicense</a>
+
+        </td>
+        <td>
+            <code>GET&nbsp; /userlicenses/<var>appId</var></code>
+        </td>
+        <td>
+            Gets the licenses for Chrome Apps.
+        </td>
+    </tr>
     </tbody>
-  </table>
+</table>
 
-  <h2 id="Payments">
-      Payments
-  </h2>
-  <p>For Payments Resource details, see the <a href="/webstore/webstore_api/payments.html#resource">resource representation</a> page.</p>
+<h2 id="Payments">
+    Payments
+</h2>
+<p>For Payments Resource details, see the <a
+        href="/webstore/webstore_api/payments.html#resource">resource
+    representation</a> page.</p>
 
-  <table>
+<table>
     <thead>
-      <tr>
+    <tr>
         <th>Method</th>
         <th>HTTP request</th>
         <th>Description</th>
-      </tr>
+    </tr>
     </thead>
     <tbody>
     <tr class="alt">
-      <td colspan="3">URIs relative to https://www.googleapis.com/chromewebstore/v1.1, unless otherwise noted</td>
+        <td colspan="3">URIs relative to
+            https://www.googleapis.com/chromewebstore/v1.1, unless otherwise
+            noted
+        </td>
     </tr>
-      <tr>
+    <tr>
         <td>
 
-          <a href="/webstore/webstore_api/payments/buy.html">buy</a>
-
-        </td>
-        <td>
-          <code>POST&nbsp; /payments/buy</code>
-        </td>
-        <td>
-          Call this method to put an item in a Google Wallet cart,
-          and return the cart ID.
-          Later the app can pay for the cart,
-          and complete the purchase.
-        </td>
-      </tr>
-      <tr>
-        <td>
-
-          <a href="/webstore/webstore_api/payments/list.html">list</a>
+            <a href="/webstore/webstore_api/payments/buy.html">buy</a>
 
         </td>
         <td>
-          <code>GET&nbsp; /items/<var>itemId</var>/payments</code>
+            <code>POST&nbsp; /payments/buy</code>
         </td>
         <td>
-          Lists the in-app products that the user has purchased.
+            Call this method to put an item in a Google Wallet cart,
+            and return the cart ID.
+            Later the app can pay for the cart,
+            and complete the purchase.
         </td>
-      </tr>
+    </tr>
+    <tr>
+        <td>
+
+            <a href="/webstore/webstore_api/payments/list.html">list</a>
+
+        </td>
+        <td>
+            <code>GET&nbsp; /items/<var>itemId</var>/payments</code>
+        </td>
+        <td>
+            Lists the in-app products that the user has purchased.
+        </td>
+    </tr>
     </tbody>
-  </table>
-
+</table>
 
 
 {{/partials.standard_store_article}}
