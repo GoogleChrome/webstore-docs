@@ -6,7 +6,7 @@
 
 <div class="data-sample">
 
-<h3>JSON</h3>
+    <h3>JSON</h3>
     <pre id="alt-json"
          style="max-height: 500px; overflow: auto">&#123;
   &quot;kind&quot;: &quot;chromewebstore#item&quot;,
@@ -17,7 +17,7 @@
     <var>(value)</var>
   ]
 &#125;</pre>
-    
+
     <table id="properties">
         <thead>
         <tr>
@@ -30,34 +30,34 @@
         <tbody>
         <tr id="id">
             <td><code>id</code></td>
-            <td><code >string</code></td>
+            <td><code>string</code></td>
             <td>Unique ID of the item.</td>
 
         </tr>
         <tr id="itemError">
             <td><code>itemError[]</code></td>
-            <td><code >list</code></td>
+            <td><code>list</code></td>
             <td>Detail human-readable status of the operation,
-            in English only.
-            Same error messages are displayed when you upload
-            your app to the Chrome Web Store.
-	    </td>
+                in English only.
+                Same error messages are displayed when you upload
+                your app to the Chrome Web Store.
+            </td>
 
         </tr>
         <tr id="kind">
             <td><code>kind</code></td>
-            <td><code >string</code></td>
+            <td><code>string</code></td>
             <td>Item in the Chrome Web Store.</td>
 
         </tr>
         <tr id="publicKey">
             <td><code>publicKey</code></td>
-            <td><code >string</code></td>
+            <td><code>string</code></td>
             <td>Public key of this item.</td>
         </tr>
         <tr id="uploadState">
             <td><code>uploadState</code></td>
-            <td><code >string</code></td>
+            <td><code>string</code></td>
             <td>Status of the operation.
                 <br/><br/>Acceptable values are:
                 <ul>
@@ -89,11 +89,10 @@
     <dd>Inserts a new item.</dd>
 
 
-
     <dt><a href="/webstore/webstore_api/items/publish.html">publish</a></dt>
     <dd>Publishes an item. Please provide defined <code>publishTarget</code>
-    in the URL, either <code>publishTarget="trustedTesters"</code> or
-    <code>publishTarget="default"</code> (case sensitive).
+        in the URL, either <code>publishTarget="trustedTesters"</code> or
+        <code>publishTarget="default"</code> (case sensitive).
     </dd>
 
 

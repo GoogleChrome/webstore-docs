@@ -6,7 +6,7 @@
 
 <div class="data-sample">
 
-<h3>JSON</h3>
+    <h3>JSON</h3>
     <pre id="alt-json"
          style="max-height: 500px; overflow: auto">&#123;
   &quot;kind&quot;: &quot;chromewebstore#license&quot;,
@@ -17,73 +17,75 @@
   &quot;accessLevel&quot;: <var>string</var>,
   &quot;maxAgeSecs&quot;: <var>long</var>
 &#125;</pre>
-<table id="properties">
-    <thead>
-    <tr>
-        <th>Property name</th>
-        <th>Value</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr id="accessLevel">
-        <td><code>accessLevel</code></td>
-        <td><code >string</code></td>
-        <td>
-            <br/><br/>Acceptable values are:
-            <ul>
-                <li>"<code>FREE_TRIAL</code>":</li>
-                <li>"<code>FULL</code>":</li>
-            </ul>
-        </td>
-    </tr>
-    <tr id="appId">
-        <td><code>appId</code></td>
-        <td><code >string</code></td>
-        <td> Chrome Web Store app ID.
-        Get the app ID from the Chrome Developer Dashboard
-        after you upload your app for the first time.</td>
+    <table id="properties">
+        <thead>
+        <tr>
+            <th>Property name</th>
+            <th>Value</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr id="accessLevel">
+            <td><code>accessLevel</code></td>
+            <td><code>string</code></td>
+            <td>
+                <br/><br/>Acceptable values are:
+                <ul>
+                    <li>"<code>FREE_TRIAL</code>":</li>
+                    <li>"<code>FULL</code>":</li>
+                </ul>
+            </td>
+        </tr>
+        <tr id="appId">
+            <td><code>appId</code></td>
+            <td><code>string</code></td>
+            <td> Chrome Web Store app ID.
+                Get the app ID from the Chrome Developer Dashboard
+                after you upload your app for the first time.
+            </td>
 
-    </tr>
-    <tr id="id">
-        <td><code>id</code></td>
-        <td><code >string</code></td>
-        <td>App ID/ user ID that you can use in URL to query.</td>
+        </tr>
+        <tr id="id">
+            <td><code>id</code></td>
+            <td><code>string</code></td>
+            <td>App ID/ user ID that you can use in URL to query.</td>
 
-    </tr>
-    <tr id="kind">
-        <td><code>kind</code></td>
-        <td><code >string</code></td>
-        <td>License type, <code>"chromewebstore#license"</code>.</td>
+        </tr>
+        <tr id="kind">
+            <td><code>kind</code></td>
+            <td><code>string</code></td>
+            <td>License type, <code>"chromewebstore#license"</code>.</td>
 
-    </tr>
-    <tr id="maxAgeSecs">
-        <td><code>maxAgeSecs</code></td>
-        <td><code >long</code></td>
-        <td>Once you've got the response, cache is only valid
-        for the max number of seconds.</td>
+        </tr>
+        <tr id="maxAgeSecs">
+            <td><code>maxAgeSecs</code></td>
+            <td><code>long</code></td>
+            <td>Once you've got the response, cache is only valid
+                for the max number of seconds.
+            </td>
 
-    </tr>
-    <tr id="result">
-        <td><code>result</code></td>
-        <td><code >string</code></td>
-        <td>
-            <br/>Acceptable values are:
-            <ul>
-                <li>"<code>NO</code>":</li>
-                <li>"<code>YES</code>":</li>
-            </ul>
-        </td>
+        </tr>
+        <tr id="result">
+            <td><code>result</code></td>
+            <td><code>string</code></td>
+            <td>
+                <br/>Acceptable values are:
+                <ul>
+                    <li>"<code>NO</code>":</li>
+                    <li>"<code>YES</code>":</li>
+                </ul>
+            </td>
 
-    </tr>
-    <tr id="userId">
-        <td><code>userId</code></td>
-        <td><code >string</code></td>
-        <td>OpenID URL for the user's Google Account.</td>
+        </tr>
+        <tr id="userId">
+            <td><code>userId</code></td>
+            <td><code>string</code></td>
+            <td>OpenID URL for the user's Google Account.</td>
 
-    </tr>
-    </tbody>
-</table>
+        </tr>
+        </tbody>
+    </table>
 
 </div>
 
