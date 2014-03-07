@@ -1,7 +1,7 @@
 {{+bindTo:partials.standard_store_article}}
 
-<h1 id="mainheading"><a href="/webstore/webstore_api/payments">Payments</a>
-    :List</h1>
+<h1 id="mainheading"><a href="/webstore/webstore_api/payments">Payments</a>:List
+</h1>
 
 <p>Lists the <a href="/webstore/webstore_api/inAppProducts">in-app
     products</a>
@@ -34,21 +34,6 @@
 
 <p>Do not supply a request body with this method.</p>
 
-<h3 id="auth">Authorization</h3>
-<p>This request requires authorization with the following scope.</p>
-<table>
-    <thead>
-    <tr>
-        <th>Scope</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td><code></code>
-        </td>
-    </tr>
-    </tbody>
-</table>
 
 <h2 id="response">Response</h2>
 
@@ -77,31 +62,35 @@
     <tr id="kind">
         <td><code>kind</code></td>
         <td><code>string</code></td>
-        <td></td>
+        <td>Static value. Always "chromewebstore#payment"</td>
 
     </tr>
     <tr id="itemId">
         <td><code>itemId</code></td>
         <td><code>string</code></td>
-        <td></td>
+        <td>The ID of the item to query for in-app products.</td>
 
     </tr>
     <tr id="sku">
         <td><code>sku</code></td>
         <td><code>string</code></td>
-        <td></td>
+        <td>The in-app product ID.</td>
     </tr>
     <tr id="createdTime">
         <td><code>createdTime</code></td>
         <td><code>long</code></td>
-        <td></td>
+        <td>Time of the creation of the payment.</td>
 
     </tr>
     <tr id="state">
         <td><code>state</code></td>
         <td><code>string</code></td>
-        <td></td>
-
+        <td>Will be one of the following payment states: [ACTIVE,
+            PAYMENT_DECLINED, EXPIRED, CANCELLED,
+            REJECTED,
+            PENDING, CANCELLED_BY_DEVELOPER,
+            DISABLED]
+        </td>
     </tr>
     </tbody>
 </table>
