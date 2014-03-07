@@ -54,7 +54,7 @@
     <dd>returns an array of active items provided by your product from the
         Chrome Web Store. Maps to the
         Web Store API <a
-                href="http://developer.chrome.com/webstore/webstore_api/inAppProducts#resource">In-App
+                href="/webstore/webstore_api/inAppProducts#resource">In-App
             Products List Method</a>
     </dd>
     <dt><code><a
@@ -62,21 +62,21 @@
     </dt>
     <dd>returns an array of items purchased by the user. Maps to the
         Web Store API <a
-                href="http://developer.chrome.com/webstore/webstore_api/payments/list">Payments
+                href="/webstore/webstore_api/payments/list">Payments
             List Method</a></dd>
     <dt><code><a
             href="#respond-to-purchase">google.payments.inapp.buy</a></code>
     </dt>
     <dd>initiates the purchase flow for a particular item. Maps to the
         Web Store API <a
-                href="http://developer.chrome.com/webstore/webstore_api/payments/buy">Payments
+                href="/webstore/webstore_api/payments/buy">Payments
             Buy Method</a></dd>
 </dl>
 
 
 <p class="note">
     <strong>Note:</strong> See <a
-        href="//developer.chrome.com/webstore/pricing">Payments: Regions,
+        href="/webstore/pricing">Payments: Regions,
     fees and tiers</a> for more information about fees and locations where you
     can sell your digital goods.
 </p>
@@ -201,7 +201,7 @@
     Developer Dashboard simplifies this process for us by providing an
     interface for creating digital goods and license management. This means
     in addition to the <code>buy()</code> function, you can also query to
-    determine what items are available for sale, and what items the users has
+    determine what items are available for sale, and what items the user has
     purchased.
 </p>
 
@@ -308,8 +308,8 @@
     JWT is a Base64 encoded, signed JSON object. Since each JWT is signed with
     your seller secret, you should always generate the JWT outside of your
     Chrome App or Extension and include only the generated token. If a
-    dynamically generated token is required, you should create on your server
-    and serve it to the app via an XHR.
+    dynamically generated token is required, you should create it on the
+    server and serve it to the app via an XHR.
 </p>
 
 <p>
@@ -402,7 +402,7 @@
     You can find the full description of In-App Products Representation and
     Methods in the
     <a
-            href="http://developer.chrome.com/webstore/webstore_api/inAppProducts#resource">Web
+            href="/webstore/webstore_api/inAppProducts#resource">Web
         Store API Reference</a>
 </p>
 
@@ -502,7 +502,7 @@ google.payments.inapp.buy({
 
 <p class="note">
     <strong>Note:</strong> See the <a
-        href="http://localhost:8080/webstore/webstore_api/payments/list">Web
+        href="webstore/webstore_api/payments/list">Web
     Store API Reference</a> for more details on the payment methods. </a>
 
 </p>
