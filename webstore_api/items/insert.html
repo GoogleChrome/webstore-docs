@@ -7,12 +7,6 @@
 
 <p>This method supports an <strong>/upload</strong> URI and accepts uploaded
     media with the following characteristics:</p>
-<ul>
-    <li><strong>Maximum file size:</strong> 2GB</li>
-    <li><strong>Accepted Media MIME types:</strong>
-        <code>*/*</code>
-    </li>
-</ul>
 
 
 <h2 id="request">Request</h2>
@@ -36,15 +30,12 @@
         <td><code>uploadType</code></td>
         <td><code>string</code></td>
         <td>The type of upload request to the <strong>/upload</strong> URI.
-            Acceptable values are:
+            Acceptable values:
             <ul>
-                <li><code>media</code> - <a href="#simple">Simple upload</a>.
+                <li><code>media</code> - Simple upload.
                     Upload the media data.
                 </li>
-                <li><code>resumable</code> - <a href="#resumable">Resumable
-                    upload</a>. Upload the file in a resumable fashion, using a
-                    series of at least two requests.
-                </li>
+\
             </ul>
         </td>
     </tr>
