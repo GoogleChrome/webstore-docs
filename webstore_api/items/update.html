@@ -6,20 +6,13 @@
 <p>Updates an existing <a href="/webstore/webstore_api/items">item</a>.
 </p>
 
-<p>This method supports an <strong>/upload</strong> URI and accepts uploaded
-    media with the following characteristics:</p>
-<ul>
-    <li><strong>Maximum file size:</strong> 2GB</li>
-    <li><strong>Accepted Media MIME types:</strong>
-        <code>*/*</code>
-    </li>
-</ul>
+<p>This method supports an upload URI and accepts uploaded media.</p>
 
 
 <h2 id="request">Request</h2>
 <h3>HTTP request</h3>
-<p>This method provides media upload functionality through two separate URIs.
-    For more details, see the document on <a href="">media upload</a>.</p>
+<p>This method provides media upload functionality through two separate
+    URIs.</p>
 <ul>
     <li>Upload URI, for media upload requests:
         <pre>PUT https://www.googleapis.com/upload/chromewebstore/v1.1/items/<var
@@ -65,15 +58,7 @@
                 <li><code>media</code> - <a href="#simple">Simple upload</a>.
                     Upload the media only, without any metadata.
                 </li>
-                <li><code>multipart</code> - <a href="#multipart">Multipart
-                    upload</a>. Upload both the media and its metadata, in a
-                    single request.
-                </li>
-                <li><code>resumable</code> - <a href="#resumable">Resumable
-                    upload</a>. Upload the file in a resumable fashion, using a
-                    series of at least two requests where the first request
-                    includes the metadata.
-                </li>
+
             </ul>
         </td>
     </tr>
@@ -83,8 +68,7 @@
 
 <h3>Request body</h3>
 
-<p>In the request body, supply an Items resource as the metadata. For more
-    information, see the document on <a href="">media upload</a>.
+<p>In the request body, supply an Items resource as the metadata. </p>
 
 <h3 id="auth">Authorization</h3>
 <p>This request requires authorization with the following scope.</p>
@@ -96,12 +80,21 @@
     </thead>
     <tbody>
     <tr>
-        <td>
+        <td><code>https://www.googleapis.com/auth/chromewebstore</code>
         </td>
     </tr>
+
+
+    <tr>
+        <td>For more details on API authorization and authentication, please
+            consult the <a
+                    href="https://developers.google.com/accounts/docs/OAuth2">OAuth
+                2.0 documentation</a>.
+        </td>
+    </tr>
+
     </tbody>
 </table>
-
 
 
 <h2 id="response">Response</h2>

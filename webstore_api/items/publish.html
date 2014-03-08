@@ -40,8 +40,8 @@
         <td><code>publishTarget</code></td>
         <td><code>string</code></td>
         <td>
-            The target audience of this publish action. Either
-            "trustedTesters" or "default".
+            Provide defined publishTarget in URL (case sensitive): publishTarget
+            = "trustedTesters"or publishTarget = "default"
         </td>
     </tr>
     </tbody>
@@ -88,7 +88,14 @@
     </thead>
     <tbody>
     <tr>
-        <td>
+        <td><code>https://www.googleapis.com/auth/chromewebstore</code>
+        </td>
+    </tr>
+    <tr>
+        <td>For more details on API authorization and authentication, please
+            consult the <a
+                    href="https://developers.google.com/accounts/docs/OAuth2">OAuth
+                2.0 documentation</a>.
         </td>
     </tr>
     </tbody>
@@ -123,7 +130,9 @@
         <tr id="kind">
             <td><code>kind</code></td>
             <td><code>string</code></td>
-            <td>This response is about a Chrome Web Store item.</td>
+            <td>This response is about a Chrome Web Store item. Static
+                string value is always "chromewebstore#item"
+            </td>
 
         </tr>
         <tr id="item_id">
@@ -144,7 +153,6 @@
             <td><code>statusDetail[]</code></td>
             <td><code>list</code></td>
             <td>Detailed human-readable explanation to the status.</td>
-
         </tr>
         </tbody>
     </table>

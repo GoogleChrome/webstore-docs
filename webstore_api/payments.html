@@ -2,6 +2,79 @@
 
 <h1><a href="/webstore/api_index">Web Store API</a>:Payments</h1>
 
+<h2 id="paymentrepresentation">Payment Representation</h2>
+
+<pre class="prettyprint">{
+  "response": {
+    "details": [
+      {
+        "kind": "chromewebstore#payment",
+        "itemId": "hgmipfdefoffjahnoanffggdklnoojan",
+        "sku": "giant_tv",
+        "createdTime": "1387221267248",
+        "state": "ACTIVE"
+      }
+    ]
+  }
+} </pre>
+
+<table id="properties">
+    <thead>
+    <tr>
+        <th>Property name</th>
+        <th>Value</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr id="kind">
+        <td><code>kind</code></td>
+        <td><code>string</code></td>
+        <td>Static value
+            always returns a string of "chromewebstore#payment"
+        </td>
+
+    </tr>
+    <tr id="item_id">
+        <td><code>item_id</code></td>
+        <td><code>string</code></td>
+        <td>Unique identifier for a Chrome App, Chrome Extension
+            or Chrome Theme.
+        </td>
+    </tr>
+
+
+    <tr id="sku">
+        <td><code>sku</code></td>
+        <td><code>string</code></td>
+        <td>Unique identifer (Product ID) for an individual In-App
+            Product (IAP). Product IDs must start with a lower-case letter or
+            number and can only contain lower-case letters(a-z), numbers(0-9),
+            dots(.) and underscores(_).
+        </td>
+    </tr>
+    <tr id="createdTime">
+        <td><code>Created</code></td>
+        <td><code>long</code></td>
+        <td>Creation time of the payment in Unix time stamp format.
+        </td>
+    </tr>
+    <tr id="state">
+
+        <td><code>state</code></td>
+        <td><code>string</code></td>
+        <td>Will be one of the following payment states: [ACTIVE,
+            PAYMENT_DECLINED, EXPIRED, CANCELLED,
+            REJECTED,
+            PENDING, CANCELLED_BY_DEVELOPER,
+            DISABLED]
+        </td>
+
+    </tr>
+    </tbody>
+</table>
+
+
 <h2 id="methods">Methods</h2>
 <dl>
 

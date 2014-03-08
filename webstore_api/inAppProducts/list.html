@@ -41,7 +41,8 @@
         <td><code>gl</code></td>
         <td><code>string</code></td>
         <td>
-            Specifies the region code of the IAP when projection is THIN.
+            Specifies the region code of the In-App Product (IAP) when
+            projection is <code>THIN</code>.
 
 
         </td>
@@ -50,7 +51,8 @@
         <td><code>hl</code></td>
         <td><code>string</code></td>
         <td>
-            Specifies the language code of the IAP when projection is THIN.
+            Specifies the language code of the In-App Product (IAP) when
+            projection is <code>THIN</code>.
 
 
         </td>
@@ -63,10 +65,12 @@
 
             <br/><br/>Acceptable values are:
             <ul>
-                <li>"<code>ALL</code>": Return IAP info for all available
+                <li>"<code>ALL</code>": Return In-App Product (IAP) info for al
+                    l available
                     regions and languages
                 </li>
-                <li>"<code>THIN</code>": Return IAP info for only the requested
+                <li>"<code>THIN</code>": Return In-App Product (IAP) info for
+                    only the requested
                     region and language
                 </li>
             </ul>
@@ -89,6 +93,14 @@
         <td><code>https://www.googleapis.com/auth/chromewebstore.readonly</code>
         </td>
     </tr>
+
+    <tr>
+        <td>For more details on API authorization and authentication, please
+            consult the <a
+                    href="https://developers.google.com/accounts/docs/OAuth2">OAuth
+                2.0 documentation</a>.
+        </td>
+    </tr>
     </tbody>
 </table>
 
@@ -107,8 +119,7 @@
   &quot;inAppProducts&quot;: [
     <a href="/webstore/webstore_api/inAppProducts.html#resource">inAppProducts
         Resource</a>
-  ]
-&#125;</pre>
+  ]&#123;</pre>
 <table>
     <thead>
     <tr>
@@ -122,14 +133,17 @@
     <tr id="kind">
         <td><code>kind</code></td>
         <td><code>string</code></td>
-        <td>This response is about all SKUs of a Chrome Web Store item.</td>
+        <td>This response is about all SKUs of a Chrome Web Store item.
+            Always returns a static value of
+            "chromewebstore#inAppProductList"
+        </td>
         <td>
         </td>
     </tr>
     <tr id="inAppProducts">
         <td><code>inAppProducts[]</code></td>
         <td><code>list</code></td>
-        <td></td>
+        <td>Returns a list of In-App Product objects</td>
         <td>
         </td>
     </tr>

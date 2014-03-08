@@ -21,22 +21,27 @@
 
 <ol>
     <li>Visit the
-    <a href="https://console.developers.google.com">Google Developers Console</a>.</li>
+        <a href="https://console.developers.google.com">Google Developers
+            Console</a>.
+    </li>
     <li>Create a new project or select an existing one.</li>
     <li>In the sidebar on the left, select <b>APIs & auth</b>.</li>
     <li>In the displayed list of available APIs,
-	set the status of the Chrome Web Store API to <b>ON</b>.</li>
+        set the status of the Chrome Web Store API to <b>ON</b>.
+    </li>
     <li>Accept the Terms of Service.</li>
     <li>In the sidebar on the left, select <b>Credentials</b>.</li>
     <li>Find the lines labeled <b>Client ID</b> and <b>Client secret</b>.
-	Note that there may be a client ID without a client secret
-	for use with Compute Engine and App Engine.
-	In that case,
-	create a new client ID and client secret.</li>
+        Note that there may be a client ID without a client secret
+        for use with Compute Engine and App Engine.
+        In that case,
+        create a new client ID and client secret.
+    </li>
     <li>To create the client ID and client secret,
-	click on <b>Create New Client ID</b>,
+        click on <b>Create New Client ID</b>,
         select <b>Installed Application</b>,
-	and <b>Other</b> under <b>Installed application type</b>.</li>
+        and <b>Other</b> under <b>Installed application type</b>.
+    </li>
 
     <li>Get an access token:</li>
 
@@ -58,10 +63,11 @@ https://accounts.google.com/o/oauth2/auth?response_type=code&scope=https://www.g
     <p>
         NOTE: Make sure you are requesting the token using the Google Account
         which owns the Chrome Web Store apps you want to manage. This account
-        can be different from the account you create the Google Developers Console
+        can be different from the account you create the Google Developers
+        Console
         project with. For example, you can create an application for other
-	developers to manage their apps, in which case you only need to register
-	a Google Developers Console project.
+        developers to manage their apps, in which case you only need to register
+        a Google Developers Console project.
     </p>
 
     <img src="images/default_service_account.png"/>
@@ -73,10 +79,11 @@ https://accounts.google.com/o/oauth2/auth?response_type=code&scope=https://www.g
     <img src="images/copy_code.png"/>
 
     <p>Use this value to request an access token.
-       For example, using <code>curl</code>,
-       you can get an access token by executing the following command (replacing
-       the values of $CLIENT_ID, $CLIENT_SECRET, and $CODE with the values from
-       above):</p>
+        For example, using <code>curl</code>,
+        you can get an access token by executing the following command
+        (replacing
+        the values of $CLIENT_ID, $CLIENT_SECRET, and $CODE with the values from
+        above):</p>
 <pre>
 > curl "https://accounts.google.com/o/oauth2/token" -d \
 "client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET&code=$CODE&grant_type=authorization_code&redirect_uri=urn:ietf:wg:oauth:2.0:oob"
@@ -103,7 +110,8 @@ https://accounts.google.com/o/oauth2/auth?response_type=code&scope=https://www.g
 
     <p>
         NOTE: For more information about getting OAuth 2.0 access tokens,
-	see <a href="https://developers.google.com/accounts/docs/OAuth2">Using OAuth
+        see <a href="https://developers.google.com/accounts/docs/OAuth2">Using
+        OAuth
         2.0 to Access Google APIs</a>.
     </p>
 
@@ -148,6 +156,9 @@ Type the following example on the command line:
 https://www.googleapis.com/upload/chromewebstore/v1.1/items
 </pre>
 
+<p class="note">For a full description of the insert method see the <a
+        href="/webstore/webstore_api/items/insert">Items Representation
+    documentation</a>.</p>
 
 <h3 id="uploadexisitng">Uploading a package to update an existing store
     item</h3>
@@ -172,6 +183,9 @@ Body content: the package file to upload
 https://www.googleapis.com/upload/chromewebstore/v1.1/items/$APP_ID
 </pre>
 
+<p class="note">For a full description of the publish method see the <a
+        href="/webstore/webstore_api/items/update">Items Representation
+    documentation</a>.</p>
 
 <h3 id="publishpublic">Publishing an item to the public</h3>
 
@@ -191,6 +205,10 @@ Header Parameters: $TOKEN: the access token
 -v \
 https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish
 </pre>
+
+<p class="note">For a full description of publish method the see the<a
+        href="/webstore/webstore_api/items/publish">Items Representation
+    documentation</a>.</p>
 
 <h3 id="trustedtesters">Publishing an item to trusted testers</h3>
 
@@ -230,5 +248,9 @@ curl \
 -v \
 https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID?projection=draft
 </pre>
+
+<p class="note">For a full description of get method the see the<a
+        href="/webstore/webstore_api/items/get">Items Representation
+    documentation</a>.</p>
 
 {{/partials.standard_store_article}}

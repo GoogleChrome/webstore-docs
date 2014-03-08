@@ -47,7 +47,9 @@
         <tr id="kind">
             <td><code>kind</code></td>
             <td><code>string</code></td>
-            <td>Item in the Chrome Web Store.</td>
+            <td>Item in the Chrome Web Store. Static string value, always
+                "chromewebstore#item"
+            </td>
 
         </tr>
         <tr id="publicKey">
@@ -82,7 +84,9 @@
 
 
     <dt><a href="/webstore/webstore_api/items/get.html">get</a></dt>
-    <dd>Gets your own Chrome Web Store item.</dd>
+    <dd>Gets your own Chrome Web Store item. Please provide
+        projection=”DRAFT” as a URL parameter (case sensitive)
+    </dd>
 
 
     <dt><a href="/webstore/webstore_api/items/insert.html">insert</a></dt>

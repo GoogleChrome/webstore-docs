@@ -35,24 +35,34 @@
     <tr id="itemId">
         <td><code>itemId</code></td>
         <td><code>string</code></td>
-        <td>The ID of the item to query for in-app products.</td>
+        <td>Unique identifier for a Chrome App, Chrome Extension or Chrome
+            Theme.
+        </td>
 
     </tr>
     <tr id="sku">
         <td><code>sku</code></td>
         <td><code>string</code></td>
-        <td>The in-app product ID.</td>
+        <td>Unique identifer (Product ID) for an individual In-App Product
+            (IAP). Product IDs must start with a lower-case letter or number and
+            can only contain lower-case letters(a-z), numbers(0-9), dots(.) and
+            underscores(_).
+        </td>
     </tr>
     <tr id="hl">
         <td><code>hl</code></td>
         <td><code>string</code></td>
-        <td>Specifies the language code of the IAP when projection is THIN.</td>
+        <td>Specifies the language code of the In-App Product (IAP) when
+            projection is <code>THIN</code>.
+        </td>
 
     </tr>
     <tr id="gl">
         <td><code>gl</code></td>
         <td><code>string</code></td>
-        <td>Specifies the region code of the IAP when projection is THIN.
+        <td>Specifies the region code of the In-App Product (IAP) when
+            projection is
+            <code>THIN</code>.
         </td>
     </tr>
     </tbody>
@@ -69,6 +79,14 @@
     <tbody>
     <tr>
         <td><code>https://www.googleapis.com/auth/chromewebstore</code>
+        </td>
+    </tr>
+
+    <tr>
+        <td>For more details on API authorization and authentication, please
+            consult the <a
+                    href="https://developers.google.com/accounts/docs/OAuth2">OAuth
+                2.0 documentation</a>.
         </td>
     </tr>
     </tbody>
@@ -96,14 +114,14 @@
     <tr id="kind">
         <td><code>kind</code></td>
         <td><code>string</code></td>
-        <td>Static string value of "chromewebstore#jwt"</td>
+        <td>Always a static string value of "chromewebstore#jwt"</td>
 
     </tr>
     <tr id="jwt">
         <td><code>jwt</code></td>
         <td><code>string</code></td>
         <td>JSON web token. Consumed by the Chrome Script and
-            passed to the
+            passed to
             <a href="https://developers.google.com/wallet/digital/docs/?hl=en
 ">Google Wallet</a>.
         </td>
