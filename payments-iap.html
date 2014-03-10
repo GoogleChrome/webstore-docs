@@ -25,11 +25,11 @@
 </p>
 <ol>
     <li>
-        Create a <a href="#setup-account">Google Wallet Merchant account</a>
+        Create a <a href="#setup-account">Google Wallet Merchant account</a>.
     </li>
     <li>
         Create the items you wish to sell via the Developer Dashboard in the
-        Chrome Web Store
+        Chrome Web Store.
     </li>
     <li>
         Include the appropriate <code><a
@@ -38,7 +38,7 @@
         in your package.
     </li>
     <li>
-        Wire up the sales flow
+        Wire up the sales flow.
     </li>
 </ol>
 
@@ -51,7 +51,7 @@
     <dt><code><a
             href="#query-items">google.payments.inapp.getSkuDetails</a></code>
     </dt>
-    <dd>returns an array of active items provided by your product from the
+    <dd>Returns an array of active items provided by your product from the
         Chrome Web Store. Maps to the
         Web Store API <a
                 href="/webstore/webstore_api/inAppProducts#resource">In-App
@@ -60,7 +60,7 @@
     <dt><code><a
             href="#get-purchases">google.payments.inapp.getPurchases</a></code>
     </dt>
-    <dd>returns an array of items purchased by the user. Maps to the
+    <dd>Returns an array of items purchased by the user. Maps to the
         Web Store API <a
                 href="/webstore/webstore_api/payments/list">Payments
             List Method</a>.
@@ -68,7 +68,7 @@
     <dt><code><a
             href="#respond-to-purchase">google.payments.inapp.buy</a></code>
     </dt>
-    <dd>initiates the purchase flow for a particular item. Maps to the
+    <dd>Initiates the purchase flow for a particular item. Maps to the
         Web Store API <a
                 href="/webstore/webstore_api/payments/buy">Payments
             Buy Method</a>.
@@ -156,7 +156,7 @@
     <li>
         The Chrome Web Store manages the list of purchased digital goods
         (licenses) for each user and exposes that list to you through
-        the <code>getPurchases()</code> function
+        the <code>getPurchases()</code> function.
     </li>
 </ul>
 
@@ -240,7 +240,7 @@
         Provide the necessary information:
         <dl>
             <dt>Product ID</dt>
-            <dd>an identifier (SKU) you'll use to
+            <dd>An identifier (SKU) you'll use to
                 identify that specific product. Product IDs must start with a
                 lower-case letter or number and can only contain lower-case
                 letters(a-z), numbers(0-9), dots(.) and underscores(_).
@@ -259,7 +259,7 @@
         Choose the price tier that you wish to sell the item for.
     </li>
     <li>
-        Click <strong>Save</strong> to save the item
+        Click <strong>Save</strong> to save the item.
     </li>
     <li>
         Activate by changing the state to <strong>Active</strong>.
@@ -280,7 +280,7 @@
         archived) at any given time.
     </li>
     <li>
-        You should move older items that are no longer for sale to archived
+        You should move older items that are no longer for sale to archived.
     </li>
     <li>
         Be careful when deleting items as users may already have purchased
@@ -517,7 +517,8 @@ google.payments.inapp.buy({
     var license = licenses[i];
     saveLicense(license);
   }
-}</pre>
+}
+</pre>
 
 <p>
     In some cases, you may want to verify a user's purchase outside of a Chrome
