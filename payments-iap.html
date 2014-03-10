@@ -95,7 +95,7 @@
     <strong>Best Practice:</strong> Before showing the user all of the items
     that are available, compare the list of items that they've already purchased
     (using <code>google.payments.inapp.getPurchases</code>) and provide some
-    indication that the they've already been purchased.
+    indication that the items have already been purchased.
 </p>
 
 <p>
@@ -108,7 +108,8 @@
 <img src="purchase-flow-2.png">
 
 <p>
-    When the user clicks the "Buy" button in the payment processing window,
+    When the user clicks the <b>"Accept and Buy"</b> button in the payment
+    processing window,
     the Google Wallet server processes the payment and displays a purchase
     confirmation dialog to the user, as shown below. The <code>success</code>
     or <code>failure</code> callback is invoked appropriately.
@@ -132,7 +133,7 @@
 <ul>
     <li>
         The Chrome Web Store handles the list of digital goods available for
-        sale, eliminating the need to create, store or manage JSON Web Tokens.
+        sale, eliminating the need to create, store, or manage JSON Web Tokens.
     </li>
     <li>
         You can get the list of available digital goods through the
@@ -191,9 +192,10 @@
 
 <p class="note">
     <b>Note:</b> You can always update your Google Wallet Merchant account
-    by visiting the
+    by following the steps in the
     <a href="https://wallet.google.com/merchant">Google
-        Wallet</a> and selecting the Merchant settings.
+        Wallet for
+        Digital Goods Web Tutorial</a>.
 </p>
 
 <h3 id="create-digital-goods">Create the digital goods</h3>
@@ -526,7 +528,7 @@ google.payments.inapp.buy({
     directly. For more information, see <a href="one_time_payments#verify-code">
     Verifying the license</a> in the One Time Payment documentation. Note that
     you will need to enable the Chrome Web Store APIs in the <a
-        href="https://cloud.google.com/console">
+        href="https://console.developers.google.com">
     Google Developers Console</a> to enable this scenario.
 </p>
 
@@ -541,12 +543,9 @@ google.payments.inapp.buy({
 <h2 id="sample-app">Sample Chrome App</h2>
 <p>
     For a simple app that demonstrates how to use Google Wallet for
-    digital goods, see:
-</p>
+    digital goods, you can download the <a href="https://github.com/petele/IAPDemo">source code</a> here.
 
-<ul>
-    <li><a href="https://github.com/petele/IAPDemo">source code</a></li>
-</ul>
+s</p>
 
 <p>
     Note, this app is not published in the Chrome Web Store to prevent
