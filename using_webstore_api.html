@@ -156,9 +156,8 @@ Type the following example on the command line:
 https://www.googleapis.com/upload/chromewebstore/v1.1/items
 </pre>
 
-<p class="note">For a full description of the insert method see the <a
-        href="/webstore/webstore_api/items/insert">Items Representation
-    documentation</a>.</p>
+<p class="note">For a full description of the insert method, see
+<a href="/webstore/webstore_api/items/insert">Items:Insert</a>.</p>
 
 <h3 id="uploadexisitng">Uploading a package to update an existing store
     item</h3>
@@ -172,6 +171,7 @@ Body content: the package file to upload
 
 <p>
     $APP_ID is the ID of the existing Web Store item.
+</p>
 
 <pre>
 > curl \
@@ -183,9 +183,8 @@ Body content: the package file to upload
 https://www.googleapis.com/upload/chromewebstore/v1.1/items/$APP_ID
 </pre>
 
-<p class="note">For a full description of the publish method see the <a
-        href="/webstore/webstore_api/items/update">Items Representation
-    documentation</a>.</p>
+<p class="note">For a full description of the update method, see
+<a href="/webstore/webstore_api/items/update">Items:Update</a>.</p>
 
 <h3 id="publishpublic">Publishing an item to the public</h3>
 
@@ -206,9 +205,8 @@ Header Parameters: $TOKEN: the access token
 https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish
 </pre>
 
-<p class="note">For a full description of publish method the see the<a
-        href="/webstore/webstore_api/items/publish">Items Representation
-    documentation</a>.</p>
+<p class="note">For a full description of publish method, see
+<a href="/webstore/webstore_api/items/publish">Items:Publish</a>.</p>
 
 <h3 id="trustedtesters">Publishing an item to trusted testers</h3>
 
@@ -228,6 +226,9 @@ Header Parameters: $TOKEN: the access token, publishTarget: trustedTesters
 -v \
 https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish
 </pre>
+
+<p class="note">For a full description of the publish method, see
+<a href="/webstore/webstore_api/items/publish">Items:Publish</a>.</p>
 
 <h3 id="checkstatus">Checking the upload status of an item</h3>
 
@@ -249,8 +250,7 @@ curl \
 https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID?projection=draft
 </pre>
 
-<p class="note">For a full description of get method the see the<a
-        href="/webstore/webstore_api/items/get">Items Representation
-    documentation</a>.</p>
+<p class="note">For a full description of the get method, see
+<a href="/webstore/webstore_api/items/get">Items:Get</a>.</p>
 
 {{/partials.standard_store_article}}

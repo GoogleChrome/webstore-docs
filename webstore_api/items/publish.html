@@ -1,8 +1,6 @@
 {{+bindTo:partials.standard_store_article}}
 
-<h1
-        id="mainheading"><a href="/webstore/webstore_api/items">Items</a>:
-    Publish</h1>
+<h1 id="mainheading"><a href="/webstore/webstore_api/items">Items</a>:Publish</h1>
 
 <p>Publishes an <a href="/webstore/webstore_api/items">item</a>.</p>
 
@@ -40,8 +38,9 @@
         <td><code>publishTarget</code></td>
         <td><code>string</code></td>
         <td>
-            Provide defined publishTarget in URL (case sensitive): publishTarget
-            = "trustedTesters"or publishTarget = "default"
+            Provide defined <code>publishTarget</code> in URL (case sensitive):
+	    <code>publishTarget="trustedTesters"</code> or
+            <code>publishTarget="default"</code>.
         </td>
     </tr>
     </tbody>
@@ -130,15 +129,14 @@
         <tr id="kind">
             <td><code>kind</code></td>
             <td><code>string</code></td>
-            <td>This response is about a Chrome Web Store item. Static
-                string value is always "chromewebstore#item"
+            <td>Static string value is always <code>"chromewebstore#item"</code>.
             </td>
 
         </tr>
         <tr id="item_id">
             <td><code>item_id</code></td>
             <td><code>string</code></td>
-            <td>The id of this item.</td>
+            <td>The ID of this item.</td>
 
         </tr>
         <tr id="status">
