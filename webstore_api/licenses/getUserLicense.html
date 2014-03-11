@@ -29,7 +29,7 @@
 
 
     <tr>
-        <td>For more details on API authorization and authentication, please
+        <td>For more details on API authorization and authentication,
             consult the <a
                     href="https://developers.google.com/accounts/docs/OAuth2">OAuth
                 2.0 documentation</a>.
@@ -83,7 +83,9 @@
         <tr id="createdTime">
             <td><code>createdTime</code></td>
             <td><code>long</code></td>
-            <td>Creation time of license. Number of milliseconds.</td>
+            <td>Creation time of license, formatted as a
+                <a href="http://en.wikipedia.org/wiki/Unix_time">Unix timestamp
+                </a>.</td>
 
         </tr>
         <tr id="result">
@@ -99,8 +101,8 @@
             <td>
                 <br/><br/>Acceptable values are:
                 <ul>
-                    <li>"<code>FREE_TRIAL</code>":</li>
-                    <li>"<code>FULL</code>":</li>
+                    <li>"<code>FREE_TRIAL</code>"</li>
+                    <li>"<code>FULL</code>"</li>
                 </ul>
             </td>
         </tr>

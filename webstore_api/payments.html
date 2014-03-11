@@ -30,7 +30,8 @@
     <tr id="kind">
         <td><code>kind</code></td>
         <td><code>string</code></td>
-        <td>Static string value always returns
+        <td>Identifies this resource as a payment. Value: the fixed
+            string
             <code>"chromewebstore#payment"</code>.
         </td>
 
@@ -38,7 +39,7 @@
     <tr id="item_id">
         <td><code>item_id</code></td>
         <td><code>string</code></td>
-        <td>Unique identifier for a Chrome App, Chrome Extension
+        <td>Unique identifier for a Chrome App, Chrome Extension,
             or Chrome Theme.
         </td>
     </tr>
@@ -48,8 +49,8 @@
         <td><code>sku</code></td>
         <td><code>string</code></td>
         <td>Unique identifer (Product ID) for an individual In-App
-            Product (IAP). Product IDs must start with a lower-case letter or
-            number and can only contain lower-case letters(a-z), numbers(0-9),
+            Product (IAP). Product IDs must start with a lowercase letter or
+            number and can only contain lowercase letters(a-z), numbers(0-9),
             dots(.) and underscores(_).
         </td>
     </tr>
@@ -63,11 +64,11 @@
 
         <td><code>state</code></td>
         <td><code>string</code></td>
-        <td>Will be one of the following payment states: [ACTIVE,
-            PAYMENT_DECLINED, EXPIRED, CANCELLED,
-            REJECTED,
-            PENDING, CANCELLED_BY_DEVELOPER,
-            DISABLED]
+        <td>Will be one of the following payment states: <code>ACTIVE</code>,
+            <code>PAYMENT_DECLINED</code>, <code>EXPIRED</code>, <code>CANCELLED</code>,
+            <code>REJECTED</code>,
+            <code>PENDING</code>, <code>CANCELLED_BY_DEVELOPER</code>,
+            <code>DISABLED</code>
         </td>
 
     </tr>

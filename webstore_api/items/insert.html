@@ -29,12 +29,11 @@
         <td><code>uploadType</code></td>
         <td><code>string</code></td>
         <td>The type of upload request to the <strong>/upload</strong> URI.
-            Acceptable values:
+            At the time of writing the only accepted value is:
             <ul>
                 <li><code>media</code> - Simple upload.
                     Upload the media data.
                 </li>
-                \
             </ul>
         </td>
     </tr>
@@ -45,10 +44,8 @@
         <td><code>publisherEmail</code></td>
         <td><code>string</code></td>
         <td>
-            The email of the publisher who owns the items. Default to be the
-            same email of the caller.
-
-
+            The email of the publisher who owns the items. Defaults to the
+            caller's email.
         </td>
     </tr>
     </tbody>
@@ -68,7 +65,7 @@
         </td>
     </tr>
     <tr>
-        <td>For more details on API authorization and authentication, please
+        <td>For more details on API authorization and authentication,
             consult the <a
                     href="https://developers.google.com/accounts/docs/OAuth2">OAuth
                 2.0 documentation</a>.

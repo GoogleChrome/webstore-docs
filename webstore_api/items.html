@@ -47,7 +47,8 @@
         <tr id="kind">
             <td><code>kind</code></td>
             <td><code>string</code></td>
-            <td>Static value always returns a string of
+            <td>Identifies this resource as an Item. Value: the fixed
+                string
                 <code>"chromewebstore#item"</code>.
             </td>
 
@@ -63,10 +64,10 @@
             <td>Status of the operation.
                 <br/><br/>Acceptable values are:
                 <ul>
-                    <li>"<code>FAILURE</code>":</li>
-                    <li>"<code>IN_PROGRESS</code>":</li>
-                    <li>"<code>NOT_FOUND</code>":</li>
-                    <li>"<code>SUCCESS</code>":</li>
+                    <li>"<code>FAILURE</code>"</li>
+                    <li>"<code>IN_PROGRESS</code>"</li>
+                    <li>"<code>NOT_FOUND</code>"</li>
+                    <li>"<code>SUCCESS</code>"</li>
                 </ul>
             </td>
 
@@ -82,7 +83,7 @@
 
 <dl>
     <dt><a href="/webstore/webstore_api/items/get.html">get</a></dt>
-    <dd>Gets your own Chrome Web Store item. Please provide
+    <dd>Gets your own Chrome Web Store item. Provide
         <code>projection="DRAFT"</code> as a URL parameter (case sensitive).
     </dd>
 
@@ -90,9 +91,10 @@
     <dd>Inserts a new item.</dd>
 
     <dt><a href="/webstore/webstore_api/items/publish.html">publish</a></dt>
-    <dd>Publishes an item. Please provide defined <code>publishTarget</code>
-        in the URL, either <code>publishTarget="trustedTesters"</code> or
-        <code>publishTarget="default"</code> (case sensitive).
+    <dd>Publishes an item. Add the <code>publishTarget</code>
+        URL parameter to the end of the URL with either <code>publishTarget
+            ="trustedTesters"</code> or
+        <code>publishTarget="default"</code> (case sensitive) as the value.
     </dd>
 
 
