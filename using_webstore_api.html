@@ -130,7 +130,7 @@ https://accounts.google.com/o/oauth2/auth?response_type=code&scope=https://www.g
     NOTE: Currently, there is no API for setting an item’s metadata, such as
     description. This has to be done manually in the <a
         href="https://chrome.google.com/webstore/developer/dashboard">Chrome
-    Web Store developer dashboard.</a> More detail about the Web Store API
+    Web Store Developer Dashboard.</a> More detail about the Web Store API
     can be found <a
         href="/webstore/api_index">here</a>.
 </p>
@@ -156,8 +156,8 @@ Type the following example on the command line:
 https://www.googleapis.com/upload/chromewebstore/v1.1/items
 </pre>
 
-<p class="note">For a full description of the insert method, see
-<a href="/webstore/webstore_api/items/insert">Items:Insert</a>.</p>
+<p class="note"><b>Note</b>: For a full description of the insert method, see
+    <a href="/webstore/webstore_api/items/insert">Items:Insert</a>.</p>
 
 <h3 id="uploadexisitng">Uploading a package to update an existing store
     item</h3>
@@ -183,8 +183,9 @@ Body content: the package file to upload
 https://www.googleapis.com/upload/chromewebstore/v1.1/items/$APP_ID
 </pre>
 
-<p class="note">For a full description of the update method, see
-<a href="/webstore/webstore_api/items/update">Items:Update</a>.</p>
+<p class="note">
+    <b>Note</b>: For a full description of the update method, see
+    <a href="/webstore/webstore_api/items/update">Items:Update</a>.</p>
 
 <h3 id="publishpublic">Publishing an item to the public</h3>
 
@@ -205,8 +206,8 @@ Header Parameters: $TOKEN: the access token
 https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish
 </pre>
 
-<p class="note">For a full description of publish method, see
-<a href="/webstore/webstore_api/items/publish">Items:Publish</a>.</p>
+<p class="note"><b>Note</b>: For a full description of publish method, see
+    <a href="/webstore/webstore_api/items/publish">Items:Publish</a>.</p>
 
 <h3 id="trustedtesters">Publishing an item to trusted testers</h3>
 
@@ -227,8 +228,8 @@ Header Parameters: $TOKEN: the access token, publishTarget: trustedTesters
 https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish
 </pre>
 
-<p class="note">For a full description of the publish method, see
-<a href="/webstore/webstore_api/items/publish">Items:Publish</a>.</p>
+<p class="note"><b>Note</b>: For a full description of the publish method, see
+    <a href="/webstore/webstore_api/items/publish">Items:Publish</a>.</p>
 
 <h3 id="checkstatus">Checking the upload status of an item</h3>
 
@@ -249,7 +250,7 @@ curl \
 https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID?projection=draft
 </pre>
 
-<p class="note">For a full description of the get method, see
-<a href="/webstore/webstore_api/items/get">Items:Get</a>.</p>
+<p class="note"><b>Note</b>: For a full description of the get method, see
+    <a href="/webstore/webstore_api/items/get">Items:Get</a>.</p>
 
 {{/partials.standard_store_article}}
