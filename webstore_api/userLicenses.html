@@ -1,51 +1,13 @@
 {{+bindTo:partials.standard_store_article}}
 
-<h1
-        id="mainheading"><a href="/webstore/webstore_api/licenses">
-    Licenses</a>:getUserLicence</h1>
+<h1><a href="/webstore/api_index">Web Store API</a>:UserLicenses</h1>
 
-<p>Gets the licenses for Chrome Apps.
-</p>
-
-<h2 id="request">Request</h2>
-<h3>HTTP request</h3>
-<pre>GET https://www.googleapis.com/chromewebstore/v1.1/userlicenses/<var
-        >appId</var></pre>
+<p>An UserLicence resource represents a UserLicense purchased by the user to
+    use a Chrome App or Chrome Extension.</p>
 
 
-<h3 id="auth">Authorization</h3>
-<p>This request requires authorization with the following scope.</p>
-<table>
-    <thead>
-    <tr>
-        <th>Scope</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td><code>https://www.googleapis.com/auth/chromewebstore.readonly</code>
-        </td>
-    </tr>
+<h2 id="resource">UserLicenses representation</h2>
 
-
-    <tr>
-        <td>For more details on API authorization and authentication,
-            consult the <a
-                    href="https://developers.google.com/accounts/docs/OAuth2">OAuth
-                2.0 documentation</a>.
-        </td>
-    </tr>
-    </tbody>
-</table>
-
-<h3>Request body</h3>
-
-<p>Do not supply a request body with this method.</p>
-
-<h2 id="response">Response</h2>
-
-<p>If successful, this method returns a response body with the following
-    structure:</p>
 <div class="data-sample">
 
     <h3>JSON</h3>
@@ -57,6 +19,7 @@
   &quot;accessLevel&quot;: <var>string</var>,
   &quot;maxAgeSecs&quot;: <var>long</var>
 &#125;</pre>
+
     <table>
         <thead>
         <tr>
@@ -83,16 +46,14 @@
         <tr id="createdTime">
             <td><code>createdTime</code></td>
             <td><code>long</code></td>
-            <td>Creation time of license, formatted as a
-                <a href="http://en.wikipedia.org/wiki/Unix_time">Unix timestamp
-                </a>.</td>
+            <td>Creation time of license. Number of milliseconds.</td>
 
         </tr>
         <tr id="result">
             <td><code>result</code></td>
             <td><code>boolean</code></td>
             <td><code>TRUE</code> = User has license.
-		<code>FALSE</code> = User does not have license.</td>
+                <code>FALSE</code> = User does not have license.</td>
 
         </tr>
         <tr id="accessLevel">
@@ -101,8 +62,8 @@
             <td>
                 <br/><br/>Acceptable values are:
                 <ul>
-                    <li>"<code>FREE_TRIAL</code>"</li>
-                    <li>"<code>FULL</code>"</li>
+                    <li>"<code>FREE_TRIAL</code>":</li>
+                    <li>"<code>FULL</code>":</li>
                 </ul>
             </td>
         </tr>
@@ -116,7 +77,17 @@
     </table>
 
 
+
 </div>
 
+
+<h2 id="methods">Methods</h2>
+
+<dl>
+    <dt><a href="/webstore/webstore_api/userLicenses/getUserLicense.html">
+        getUserLicense</a>
+    </dt>
+    <dd>Gets the licenses for Chrome Apps.</dd>
+</dl>
 
 {{/partials.standard_store_article}}

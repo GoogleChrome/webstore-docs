@@ -1,0 +1,122 @@
+{{+bindTo:partials.standard_store_article}}
+
+<h1
+        id="mainheading"><a href="/webstore/webstore_api/licenses">
+    UserLicenses</a>:getUserLicence</h1>
+
+<p>Gets the userLicenses for Chrome Apps and Chrome Extensions.
+</p>
+
+<h2 id="request">Request</h2>
+<h3>HTTP request</h3>
+<pre>GET https://www.googleapis.com/chromewebstore/v1.1/userlicenses/<var
+        >appId</var></pre>
+
+
+<h3 id="auth">Authorization</h3>
+<p>This request requires authorization with the following scope.</p>
+<table>
+    <thead>
+    <tr>
+        <th>Scope</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><code>https://www.googleapis.com/auth/chromewebstore.readonly</code>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td>For more details on API authorization and authentication,
+            consult the <a
+                    href="https://developers.google.com/accounts/docs/OAuth2">OAuth
+                2.0 documentation</a>.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>Request body</h3>
+
+<p>Do not supply a request body with this method.</p>
+
+<h2 id="response">Response</h2>
+
+<p>If successful, this method returns a response body with the following
+    structure:</p>
+<div class="data-sample">
+
+    <h3>JSON</h3>
+    <pre>&#123;
+  &quot;kind&quot;: &quot;chromewebstore#userLicense&quot;,
+  &quot;itemId&quot;: <var>string</var>,
+  &quot;createdTime&quot;: <var>long</var>,
+  &quot;result&quot;: <var>boolean</var>,
+  &quot;accessLevel&quot;: <var>string</var>,
+  &quot;maxAgeSecs&quot;: <var>long</var>
+&#125;</pre>
+    <table>
+        <thead>
+        <tr>
+            <th>Property name</th>
+            <th>Value</th>
+            <th>Description</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr id="kind">
+            <td><code>kind</code></td>
+            <td><code>string</code></td>
+            <td>Static string value is always
+                <code>"chromewebstore#userLicense"</code>.</td>
+
+        </tr>
+        <tr id="itemId">
+            <td><code>itemId</code></td>
+            <td><code>string</code></td>
+            <td>The ID of the item to query for in-app products.</td>
+
+        </tr>
+        <tr id="createdTime">
+            <td><code>createdTime</code></td>
+            <td><code>long</code></td>
+            <td>Creation time of license, formatted as a
+                <a href="http://en.wikipedia.org/wiki/Unix_time">Unix timestamp
+                </a>.</td>
+
+        </tr>
+        <tr id="result">
+            <td><code>result</code></td>
+            <td><code>boolean</code></td>
+            <td><code>TRUE</code> = User has license.
+		<code>FALSE</code> = User does not have license.</td>
+
+        </tr>
+        <tr id="accessLevel">
+            <td><code>accessLevel</code></td>
+            <td><code>string</code></td>
+            <td>
+                <br/><br/>Acceptable values are:
+                <ul>
+                    <li>"<code>FREE_TRIAL</code>"</li>
+                    <li>"<code>FULL</code>"</li>
+                </ul>
+            </td>
+        </tr>
+        <tr id="maxAgeSecs">
+            <td><code>maxAgeSecs</code></td>
+            <td><code>long</code></td>
+            <td>Time that results can be cached.</td>
+
+        </tr>
+        </tbody>
+    </table>
+
+
+</div>
+
+
+{{/partials.standard_store_article}}
