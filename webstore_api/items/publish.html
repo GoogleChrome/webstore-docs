@@ -142,15 +142,26 @@
         <tr id="status">
             <td><code>status[]</code></td>
             <td><code>list</code></td>
-            <td>The status of this publish operation. It may contain multiple
-                elements.
+            <td>The status code of this publish operation. It may contain
+                multiple
+                elements from the following list: <code
+                        >NOT_AUTHORIZED</code>,
+                <code>INVALID_DEVELOPER</code>,
+                <code>DEVELOPER_NO_OWNERSHIP</code>,
+                <code>DEVELOPER_SUSPENDED</code>,
+                <code>ITEM_NOT_FOUND</code>,
+                <code>ITEM_PENDING_REVIEW</code>,
+                <code>ITEM_TAKEN_DOWN</code>,
+                <code>PUBLISHER_SUSPENDED</code>.
             </td>
 
         </tr>
         <tr id="statusDetail">
             <td><code>statusDetail[]</code></td>
             <td><code>list</code></td>
-            <td>Detailed human-readable explanation to the status.</td>
+            <td>Detailed human-comprehensible explanation of the status code
+                above.
+            </td>
         </tr>
         </tbody>
     </table>
