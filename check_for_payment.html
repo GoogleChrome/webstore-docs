@@ -91,10 +91,12 @@ you need to do some one-time preparation:
   </li>
 </ol>
 
-<h3 id="token"> Getting an OAuth access token and token secret </h3>
+<h3 id="token"> Getting an OAuth access token and token secret (hosted
+    apps only)</h3>
 
 <p>
-You get the access token and access token secret for your app
+For hosted apps, you can get the access token and access token secret for your
+    app
 from a special page in the Chrome Developer Dashboard.
 Here's how.
 </p>
@@ -105,7 +107,7 @@ Here's how.
     Go to the
     <a href="{{ dashboardurl }}">Chrome Developer Dashboard</a>.
     As the following screenshot shows,
-    each app that you've uploaded
+    each hosted app that you've uploaded
     and that uses Chrome Web Store Payments
     has an <b>OAuth setup</b> link
     that lets you get OAuth information for that app.
@@ -121,8 +123,9 @@ Here's how.
     </p>
 
     <p class="note">
-    <b>Note</b>:
-    If you don't see the <b>OAuth setup</b> link for your app,
+    <b>Note</b>: The <b>OAuth
+        setup</b> link is only shown for hosted apps. If you don't see the
+        <b>OAuth setup</b> link for your hosted app,
     click the <b>Edit</b> link
     and use the <b>Change pricing</b> button
     to specify that your app uses Chrome Web Store Payments.
