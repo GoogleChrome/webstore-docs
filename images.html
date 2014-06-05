@@ -1,46 +1,47 @@
 {{+bindTo:partials.standard_store_article}}
- 
+
 <h1>Supplying Images</h1>
 
 <p>
-You need to supply several kinds of images
-to be used in the Chrome Web Store
-and the Google Chrome browser:
+    You need to supply several kinds of images
+    to be used in the Chrome Web Store
+    and the Google Chrome browser:
 </p>
 
 <ul>
-  <li> <a href="#icons">App icon</a> </li>
-  <li> <a href="#promo">Promotional images</a> </li>
-  <li> <a href="#screenshots">Screenshots</a> </li>
+    <li><a href="#icons">App icon</a></li>
+    <li><a href="#promo">Promotional images</a></li>
+    <li><a href="#screenshots">Screenshots</a></li>
 </ul>
 
 <p>
-Only the app icon,
-a small promotional image,
-and a screenshot are mandatory.
-However, providing attractive versions
-of both required and optional images
-increases your app's chances of getting noticed.
-For example, your app can't be featured
-unless you provide a large or marquee promotional image.
+    Only the app icon,
+    a small promotional image,
+    and a screenshot are mandatory.
+    However, providing attractive versions
+    of both required and optional images
+    increases your app's chances of getting noticed.
+    For example, your app can't be featured
+    unless you provide a large or marquee promotional image.
 </p>
 
 <h2 id="icons"> App icon </h2>
 
 <p>
-You must provide a 128x128-pixel app icon image in the
-<a href="publish.html#step2">ZIP file of your app</a>.
-Some requirements for the image:
+    You must provide a 128x128-pixel app icon image in the
+    <a href="publish.html#step2">ZIP file of your app</a>.
+    Some requirements for the image:
 </p>
 
 <ul>
-  <li> The actual icon size should be <b>96x96</b> (for square icons);
-    an additional 16 pixels per side
-    should be transparent padding,
-    adding up to 128x128 total image size.
-    For details, see <a href="#iconsize">Icon size</a>. </li>
-  <li> The image must be in PNG format. </li>
-  <li> The image should work well on both light and dark backgrounds. </li>
+    <li> The actual icon size should be <b>96x96</b> (for square icons);
+        an additional 16 pixels per side
+        should be transparent padding,
+        adding up to 128x128 total image size.
+        For details, see <a href="#iconsize">Icon size</a>.
+    </li>
+    <li> The image must be in PNG format.</li>
+    <li> The image should work well on both light and dark backgrounds.</li>
 </ul>
 
 <p>
@@ -49,472 +50,503 @@ Some requirements for the image:
 </p>
 
 <p class="note">
-<b>Note</b>:
-To make sure your icon looks good,
-preview your app's listing in the Chrome Web Store.
-If you're working on an installable web app,
-you also need to view your icon in the New Tab page.
-To do so, you can
-<a href="https://developers.google.com/chrome/apps/docs/developers_guide#installing">load the unpacked app</a>,
-bring up the New Tab page,
-and then look at the icon against a variety of backgrounds
-by applying a few
-<a href="https://tools.google.com/chrome/intl/en/themes/">themes</a>.
+    <b>Note</b>:
+    To make sure your icon looks good,
+    preview your app's listing in the Chrome Web Store.
+    If you're working on an installable web app,
+    you also need to view your icon in the New Tab page.
+    To do so, you can
+    <a href="https://developers.google.com/chrome/apps/docs/developers_guide#installing">load
+        the unpacked app</a>,
+    bring up the New Tab page,
+    and then look at the icon against a variety of backgrounds
+    by applying a few
+    <a href="https://tools.google.com/chrome/intl/en/themes/">themes</a>.
 </p>
 
 <p>
-When you design the icon,
-keep the following advice in mind:
+    When you design the icon,
+    keep the following advice in mind:
 </p>
 
 <ul>
-  <li> Don't put an edge around the 128x128 image;
-    the UI might add edges. </li>
-  <li> If your icon is mostly dark,
-    consider adding a subtle white outer glow
-    so it'll look good against dark backgrounds. </li>
-  <li> Avoid large drop shadows;
-    the UI might add shadows.
-    It's OK to use small shadows for contrast. </li>
-  <li> If you have a bevel at the bottom of your icon,
-    we recommend 4 pixels of depth. </li>
-  <li> Make the icon face the viewer,
-    rather than having built-in perspective.
-    See <a href="#perspective">Perspective</a> for details. </li>
+    <li> Don't put an edge around the 128x128 image;
+        the UI might add edges.
+    </li>
+    <li> If your icon is mostly dark,
+        consider adding a subtle white outer glow
+        so it'll look good against dark backgrounds.
+    </li>
+    <li> Avoid large drop shadows;
+        the UI might add shadows.
+        It's OK to use small shadows for contrast.
+    </li>
+    <li> If you have a bevel at the bottom of your icon,
+        we recommend 4 pixels of depth.
+    </li>
+    <li> Make the icon face the viewer,
+        rather than having built-in perspective.
+        See <a href="#perspective">Perspective</a> for details.
+    </li>
 </ul>
 
 <p>
-Here are some icons that follow these guidelines.
+    Here are some icons that follow these guidelines.
 </p>
 
 <p>
-<a href="images/calendar.png"><img src="images/calendar.png"
-    width="128" height="128"
-    class="noborder"
-    alt="Google Calendar icon (square)" /></a>
-<a href="images/reader.png"><img src="images/reader.png"
-    width="128" height="128"
-    class="noborder"
-    alt="Google Reader icon (irregular)" /></a>
-<a href="images/mysteryicon.png"><img src="images/mysteryicon.png"
-    width="128" height="128"
-    class="noborder"
-    alt="bowling ball-like icon (round)" /></a>
+    <a href="images/calendar.png"><img src="images/calendar.png"
+                                       width="128" height="128"
+                                       class="noborder"
+                                       alt="Google Calendar icon (square)"/></a>
+    <a href="images/reader.png"><img src="images/reader.png"
+                                     width="128" height="128"
+                                     class="noborder"
+                                     alt="Google Reader icon (irregular)"/></a>
+    <a href="images/mysteryicon.png"><img src="images/mysteryicon.png"
+                                          width="128" height="128"
+                                          class="noborder"
+                                          alt="bowling ball-like icon (round)"/></a>
 </p>
 
 <p class="note">
-<b>Note</b>:
-If you upload an image that has no alpha,
-it will be placed in a frame with rounded corners
-(12-pixel corner radius).
+    <b>Note</b>:
+    If you upload an image that has no alpha,
+    it will be placed in a frame with rounded corners
+    (12-pixel corner radius).
 </p>
 
 
 <h3 id="iconsize">Icon size</h3>
 
 <p>
-All app icons should have the same visual weight,
-occupying roughly the same area.
-As the following figure shows,
-when you size an icon to fill the available area,
-square and circular icons are significantly larger
-than they should be,
-compared to icons with other shapes.
+    All app icons should have the same visual weight,
+    occupying roughly the same area.
+    As the following figure shows,
+    when you size an icon to fill the available area,
+    square and circular icons are significantly larger
+    than they should be,
+    compared to icons with other shapes.
 </p>
 
 <p>
-<img src="images/visual_weight_1.png"
-    width="562" height="98"
-    class="noborder"
-    alt="icons filling all available space" />
+    <img src="images/visual_weight_1.png"
+         width="562" height="98"
+         class="noborder"
+         alt="icons filling all available space"/>
 </p>
 
 <p>
-Normalizing the icon sizes,
-as the next figure shows,
-gives the icons roughly even area and visual weight.
+    Normalizing the icon sizes,
+    as the next figure shows,
+    gives the icons roughly even area and visual weight.
 </p>
 
 <p>
-<img src="images/visual_weight_2.png"
-    width="563" height="99"
-    class="noborder"
-    alt="most of the icons are smaller, and they have equal visual weight" />
+    <img src="images/visual_weight_2.png"
+         width="563" height="99"
+         class="noborder"
+         alt="most of the icons are smaller, and they have equal visual weight"/>
 </p>
 
 <p>
-You can use the following template images
-to help you judge how large your image's artwork should be.
-The templates show the correct size for a square and a circle,
-but these are merely guides;
-icons that have pointy bits might stray outside these areas.
-If an irregularly shaped icon takes up very little area
-and is mostly negative space,
-using the entire 128x128 area might be acceptable.
+    You can use the following template images
+    to help you judge how large your image's artwork should be.
+    The templates show the correct size for a square and a circle,
+    but these are merely guides;
+    icons that have pointy bits might stray outside these areas.
+    If an irregularly shaped icon takes up very little area
+    and is mostly negative space,
+    using the entire 128x128 area might be acceptable.
 </p>
 
 <table class="columns">
-<tr>
-  <td style="text-align:center"> <a href="images/128-square.png"><img src="images/128-square.png"
-    width="128" height="128"
-    class="noborder"
-    alt="square template" /></a></td>
-  <td style="text-align:center"> <a href="images/128-circle.png"><img src="images/128-circle.png"
-    width="128" height="128"
-    class="noborder"
-    alt="circle template" /></a></td>
-  <td style="text-align:center"> <a href="images/128-irregular.png"><img src="images/128-irregular.png"
-    width="128" height="128"
-    class="noborder"
-    alt="irregular template" /></a></td>
-</tr>
-<tr>
-  <td style="text-align:center"> <b>Template for square icons</b> </td>
-  <td style="text-align:center"> <b>Template for circular icons</b> </td>
-  <td style="text-align:center"> <b>Template for irregular icons</b> </td>
-</tr>
+    <tr>
+        <td style="text-align:center"><a href="images/128-square.png"><img
+                src="images/128-square.png"
+                width="128" height="128"
+                class="noborder"
+                alt="square template"/></a></td>
+        <td style="text-align:center"><a href="images/128-circle.png"><img
+                src="images/128-circle.png"
+                width="128" height="128"
+                class="noborder"
+                alt="circle template"/></a></td>
+        <td style="text-align:center"><a href="images/128-irregular.png"><img
+                src="images/128-irregular.png"
+                width="128" height="128"
+                class="noborder"
+                alt="irregular template"/></a></td>
+    </tr>
+    <tr>
+        <td style="text-align:center"><b>Template for square icons</b></td>
+        <td style="text-align:center"><b>Template for circular icons</b></td>
+        <td style="text-align:center"><b>Template for irregular icons</b></td>
+    </tr>
 </table>
 
 <p>
-You can follow some rules of thumb for artwork size.
-For a square icon, make the artwork 96x96 pixels.
-For other icons that are squarish,
-make the artwork's width 75-80% of the total width of the image.
-A circular icon should have a diameter of approximately 112 pixels,
-or 85% to 90% of the image width.
-Icons with irregular shapes should have similar weights.
+    You can follow some rules of thumb for artwork size.
+    For a square icon, make the artwork 96x96 pixels.
+    For other icons that are squarish,
+    make the artwork's width 75-80% of the total width of the image.
+    A circular icon should have a diameter of approximately 112 pixels,
+    or 85% to 90% of the image width.
+    Icons with irregular shapes should have similar weights.
 </p>
 
 <p>
-The following figures show square and circular icons,
-comparing them with the templates.
+    The following figures show square and circular icons,
+    comparing them with the templates.
 </p>
 
 <p>
-<img src="images/128-square.png"
-    width="128" height="128"
-    class="noborder"
-    alt="square template" />
-<img src="images/calendar_bounded.png"
-  width="128" height="128"
-  class="noborder"
-  alt="Google Calendar icon on top of square template" />
-<img src="images/calendar.png"
-  width="128" height="128"
-  class="noborder"
-  alt="Google Calendar icon" />
-<br />
-<img src="images/128-circle.png"
-    width="128" height="128"
-    class="noborder"
-    alt="circle template" />
-<img src="images/mysteryicon_bounded.png"
-    width="128" height="128"
-    class="noborder"
-    alt="bowling ball-like icon on top of circle template" />
-<img src="images/mysteryicon.png"
-    width="128" height="128"
-    class="noborder"
-    alt="bowling ball-like icon" />
+    <img src="images/128-square.png"
+         width="128" height="128"
+         class="noborder"
+         alt="square template"/>
+    <img src="images/calendar_bounded.png"
+         width="128" height="128"
+         class="noborder"
+         alt="Google Calendar icon on top of square template"/>
+    <img src="images/calendar.png"
+         width="128" height="128"
+         class="noborder"
+         alt="Google Calendar icon"/>
+    <br/>
+    <img src="images/128-circle.png"
+         width="128" height="128"
+         class="noborder"
+         alt="circle template"/>
+    <img src="images/mysteryicon_bounded.png"
+         width="128" height="128"
+         class="noborder"
+         alt="bowling ball-like icon on top of circle template"/>
+    <img src="images/mysteryicon.png"
+         width="128" height="128"
+         class="noborder"
+         alt="bowling ball-like icon"/>
 </p>
 
 <p>
-Here's an example of an irregularly shaped icon.
-In this case, the icon follows neither the square nor circular guidelines,
-but it fits near them both.
+    Here's an example of an irregularly shaped icon.
+    In this case, the icon follows neither the square nor circular guidelines,
+    but it fits near them both.
 </p>
 
 <p>
-<img src="images/128-irregular.png"
-    width="128" height="128"
-    class="noborder"
-    alt="irregular template" /></a></td>
-<img src="images/reader_bounded.png"
-  width="128" height="128"
-  class="noborder"
-  alt="Google Reader icon on top of irregular template" />
-<img src="images/reader.png"
-  width="128" height="128"
-  class="noborder"
-  alt="Google Reader icon on top of irregular template" />
+    <img src="images/128-irregular.png"
+         width="128" height="128"
+         class="noborder"
+         alt="irregular template"/></a></td>
+    <img src="images/reader_bounded.png"
+         width="128" height="128"
+         class="noborder"
+         alt="Google Reader icon on top of irregular template"/>
+    <img src="images/reader.png"
+         width="128" height="128"
+         class="noborder"
+         alt="Google Reader icon on top of irregular template"/>
 </p>
 
 
 <h3 id="perspective">Perspective</h3>
 
 <p>
-For flexibility and consistency, app icons should be front-facing.
-Subtle tweaks of perspective that give a sense of tangibility are OK,
-but avoid dramatic angles.
+    For flexibility and consistency, app icons should be front-facing.
+    Subtle tweaks of perspective that give a sense of tangibility are OK,
+    but avoid dramatic angles.
 </p>
 
 <table class="columns">
-<tr>
-  <td style="text-align:center">
-    <img src="images/calendar-small.png" />
-  </td>
-  <td style="text-align:center">
-    <img src="images/calendar_perspective.png" />
-  </td>
-</tr>
-<tr>
-  <td style="text-align:center">
-    <img src="images/youtube.png" />
-  </td>
-  <td style="text-align:center">
-    <img src="images/youtube_perspective.png" />
-  </td>
-</tr>
-<tr>
-  <td style="text-align:center; font-weight:bold">Good icons (front facing)</td> <td style="text-align:center; font-weight:bold">Bad icons (too-drastic perspective)</td>
-</tr>
+    <tr>
+        <td style="text-align:center">
+            <img src="images/calendar-small.png"/>
+        </td>
+        <td style="text-align:center">
+            <img src="images/calendar_perspective.png"/>
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align:center">
+            <img src="images/youtube.png"/>
+        </td>
+        <td style="text-align:center">
+            <img src="images/youtube_perspective.png"/>
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align:center; font-weight:bold">Good icons (front
+            facing)
+        </td>
+        <td style="text-align:center; font-weight:bold">Bad icons (too-drastic
+            perspective)
+        </td>
+    </tr>
 </table>
 
 
 <p class="backtotop"><a href="#top">Back to top</a></p>
 
 <section id="newpromo">
-<h2 id="promo"> Promotional images </h2>
+    <h2 id="promo"> Promotional images </h2>
 
-<p>
-You must provide at least a small, 440x280-pixel promotional image.
-You can also provide other images
-that the store can use to promote your app.
-</p>
+    <p>
+        You must provide at least a small, 440x280-pixel promotional image.
+        You can also provide other images
+        that the store can use to promote your app.
+    </p>
 
-<p class="note">
-<b>Note</b>:
-Unlike <a href="#screenshots">screenshots</a>,
-promotional images are not currently locale-specific.
-If your app supports multiple locales,
-we recommend either avoiding text by focusing on
-graphical representations of the app's capabilities,
-or targeting the promo images to
-the locale in which you have the most users.
-</p>
+    <p class="note">
+        <b>Note</b>:
+        Unlike <a href="#screenshots">screenshots</a>,
+        promotional images are not currently locale-specific.
+        If your app supports multiple locales,
+        we recommend either avoiding text by focusing on
+        graphical representations of the app's capabilities,
+        or targeting the promo images to
+        the locale in which you have the most users.
+    </p>
 
-<p class="caution">
-<b>Note</b>:
-If your images refer to Google brands, follow the
-<a href="branding.html">Branding Guidelines</a>.
-</p>
+    <p class="caution">
+        <b>Note</b>:
+        If your images refer to Google brands, follow the
+        <a href="branding.html">Branding Guidelines</a>.
+    </p>
 
-<p>
-Although only a small promotional image is required,
-you can also supply larger promotional images
-if you'd like your app to be featured more prominently
-in the Chrome Web Store.
-Here are the image sizes you can provide:
-</p>
+    <p>
+        Although only a small promotional image is required,
+        you can also supply larger promotional images
+        if you'd like your app to be featured more prominently
+        in the Chrome Web Store.
+        Here are the image sizes you can provide:
+    </p>
 
-<ul>
-  <li> Small: 440x280 pixels <strong>(required)</strong> </li>
-  <li> Large: 920x680 pixels </li>
-  <li> Marquee: 1400x560 pixels </li>
-</ul>
+    <ul>
+        <li> Small: 440x280 pixels <strong>(required)</strong></li>
+        <li> Large: 920x680 pixels</li>
+        <li> Marquee: 1400x560 pixels</li>
+    </ul>
 
-<p class="note">
-<b>Note</b>:
-Apps that don't have a small promotional image
-will be shown <b>after</b> apps that do have that image.
-If your app was published before the small promotional image was required,
-you should add that image
-so your app can be displayed more prominently.
-</p>
+    <p class="note">
+        <b>Note</b>:
+        Apps that don't have a small promotional image
+        will be shown <b>after</b> apps that do have that image.
+        If your app was published before the small promotional image was
+        required,
+        you should add that image
+        so your app can be displayed more prominently.
+    </p>
 
-<p>
-Promotional images are your chance to capture users' attention
-and entice them to learn more.
-Don't just use a screenshot;
-your images should primarily communicate the brand.
-Here are some rules of thumb for designing your images:
-</p>
+    <p>
+        Promotional images are your chance to capture users' attention
+        and entice them to learn more.
+        Don't just use a screenshot;
+        your images should primarily communicate the brand.
+        Here are some rules of thumb for designing your images:
+    </p>
 
-<ul>
-  <li> Avoid text. </li>
-  <li> Make sure your image works even when shrunk to half size. </li>
-  <li> Assume the image will be on a light gray background. </li>
-  <li> Use saturated colors if possible; they tend to work well. </li>
-  <li> Avoid using a lot of white and light gray. </li>
-  <li> Fill the entire region. </li>
-  <li> Make sure the edges are well defined. </li>
-</ul>
+    <ul>
+        <li> Avoid text.</li>
+        <li> Make sure your image works even when shrunk to half size.</li>
+        <li> Assume the image will be on a light gray background.</li>
+        <li> Use saturated colors if possible; they tend to work well.</li>
+        <li> Avoid using a lot of white and light gray.</li>
+        <li> Fill the entire region.</li>
+        <li> Make sure the edges are well defined.</li>
+    </ul>
 
-<p>
-The following graphics are examples of the promotional images for an app:
-</p>
+    <p>
+        The following graphics are examples of the promotional images for an
+        app:
+    </p>
 
-<table class="columns">
-<tr>
-  <td style="vertical-align: bottom;">
-    <a href="images/440x280_small-tile.jpg"><img src="images/440x280_small-tile-halfsize.jpg"
-    width="220" height="140"
-    class="noborder"
-    alt="a small promotional image (440x280 pixels)" /></a>
-  </td>
-  <td>
-    <a href="images/920x680_large-tile.jpg"><img src="images/920x680_large-tile-halfsize.jpg"
-    width="460" height="340"
-    class="noborder"
-    alt="a large promotional tile image (920x680 pixels)" /></a>
-  </td>
-</tr>
-<tr>
-  <td> <b>Small promo image (440x280)</b>
-    (<a href="images/440x280_small-tile.jpg"><a href="images/440x280_small-tile.jpg">full size</a>) </td>
-  <td> <b>Large promo image (920x680)</b>
-    (<a href="images/920x680_large-tile.jpg"><a href="images/920x680_large-tile.jpg">full size</a>) </td>
-</tr>
-</table>
+    <table class="columns">
+        <tr>
+            <td style="vertical-align: middle;">
+                <a href="images/440x280_small-tile.jpg"><img
+                        src="images/440x280_small-tile-halfsize.jpg"
 
-<table class="columns">
-<tr>
-  <td> <a href="images/1400x560_Marquee.jpg"><img src="images/1400x560_Marquee-halfsize.jpg"
-    width="700" height="280"
-    class="noborder"
-    alt="a marquee image (1400x560)" /></a>
-  </td>
-</tr>
-<tr>
-  <td> <b>Marquee (1400x560)</b>
-    (<a href="images/1400x560_Marquee.jpg">full size</a>) </td>
-</table>
+                        class="noborder"
+                        alt="a small promotional image (440x280 pixels)"/></a>
+            </td>
+            <td>
+                <a href="images/920x680_large-tile.jpg"><img
+                        src="images/920x680_large-tile-halfsize.jpg"
 
-<p class="note">
-<b>Note</b>:
-You can find the review status of your promo image
-in each item's listing within your developer dashboard.
-Click on 'Edit' on the item's listing,
-and scroll down to the Promotional Images section.
-If you have questions about the status of your promo images,
-contact
-<a href="mailto:cws-assets@google.com">cws-assets@google.com</a>.
-</p>
+                        class="noborder"
+                        alt="a large promotional tile image (920x680 pixels)"/></a>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Small promo image (440x280)</b>
+                (<a href="images/440x280_small-tile.jpg"><a
+                        href="images/440x280_small-tile.jpg">full size</a>)</td>
+            <td><b>Large promo image (920x680)</b>
+                (<a href="images/920x680_large-tile.jpg"><a
+                        href="images/920x680_large-tile.jpg">full size</a>)</td>
+        </tr>
+    </table>
 
-<p>Here is a description of the review statuses:
-<ul>
-  <li>Pending Review status:
-  The image has not yet been reviewed,
-  and is not being displayed in the store.
-  Images should be reviewed within one week from submission.
-  </li>
-  <li>No status:
-  The image has been approved,
-  and is being displayed in the store.
-  [*Images from 'Draft' or 'Trusted testers' items
-  will not show an image status.
-  You will need to publish the item
-  in order to get your promo image approved.]
-  </li>
-  <li>Rejected:
-  The image has been reviewed and rejected,
-  and is not being displayed in the store.
-  The reason(s) for rejection will be displayed
-  in the Promotional Images section of the item's Edit page.
-  We encourage you to review the reasons,
-  and to make the necessary changes
-  before re-uploading new improved images.
-  New uploaded images will immediately have a Pending Review status.
-  </li>
-</ul>
-</p>
+    <table class="columns">
+        <tr>
+            <td><a href="images/1400x560_Marquee.jpg"><img
+                    src="images/1400x560_Marquee-halfsize.jpg"
+
+                    class="noborder"
+                    alt="a marquee image (1400x560)"/></a>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Marquee (1400x560)</b>
+                (<a href="images/1400x560_Marquee.jpg">full size</a>)
+            </td>
+    </table>
+
+    <p class="note">
+        <b>Note</b>:
+        You can find the review status of your promo image
+        in each item's listing within your developer dashboard.
+        Click on 'Edit' on the item's listing,
+        and scroll down to the Promotional Images section.
+        If you have questions about the status of your promo images,
+        contact
+        <a href="mailto:cws-assets@google.com">cws-assets@google.com</a>.
+    </p>
+
+    <p>Here is a description of the review statuses:
+    <ul>
+        <li>Pending Review status:
+            The image has not yet been reviewed,
+            and is not being displayed in the store.
+            Images should be reviewed within one week from submission.
+        </li>
+        <li>No status:
+            The image has been approved,
+            and is being displayed in the store.
+            [*Images from 'Draft' or 'Trusted testers' items
+            will not show an image status.
+            You will need to publish the item
+            in order to get your promo image approved.]
+        </li>
+        <li>Rejected:
+            The image has been reviewed and rejected,
+            and is not being displayed in the store.
+            The reason(s) for rejection will be displayed
+            in the Promotional Images section of the item's Edit page.
+            We encourage you to review the reasons,
+            and to make the necessary changes
+            before re-uploading new improved images.
+            New uploaded images will immediately have a Pending Review status.
+        </li>
+    </ul>
+    </p>
 
 </section>
 
 <p class="backtotop"><a href="#top">Back to top</a></p>
 
 <section id="newscreenshots">
-<h2 id="screenshots"> Screenshots </h2>
+    <h2 id="screenshots"> Screenshots </h2>
 
-<p>
-You must provide at least 1&mdash;and
-preferably 4 or 5&mdash;screenshots of your app
-to be displayed in the app's store listing.
-If your app supports multiple locales,
-you can provide locale-specific screenshots
-as described in
-<a href="i18n.html">Internationalizing Your App</a>.
-</p>
+    <p>
+        You must provide at least 1&mdash;and
+        preferably 4 or 5&mdash;screenshots of your app
+        to be displayed in the app's store listing.
+        If your app supports multiple locales,
+        you can provide locale-specific screenshots
+        as described in
+        <a href="i18n.html">Internationalizing Your App</a>.
+    </p>
 
-<p>
-When you edit your app's listing,
-mousing over a screenshot's thumbnail brings up controls
-that let you delete the screenshot or change its position.
-</p>
+    <p>
+        When you edit your app's listing,
+        mousing over a screenshot's thumbnail brings up controls
+        that let you delete the screenshot or change its position.
+    </p>
 
 
+    <p>
+        Each screenshot should be as follows:
+    </p>
 
-<p>
-Each screenshot should be as follows:
-</p>
+    <ul>
+        <li> Square corners, no padding (full bleed)</li>
+        <li> 1280x800 or 640x400 pixels</li>
+    </ul>
 
-<ul>
-  <li> Square corners, no padding (full bleed) </li>
-    <li> 1280x800 or 640x400 pixels </li>
-</ul>
+    <p class="note">
+        <b>Note</b>:
+        1280x800 screenshots are preferrable,
+        as larger screenshots look better on high-resolution displays.
+        Currently, all screenshots are downscaled to 640x400 pixels.
+        If your screenshots do not look good when downscaled
+        (for example, they have a lot of text)
+        or if 1280x800 is too big for your app
+        (for example, screenshots for a low-resolution game),
+        you can upload 640x400 screenshots.
+    </p>
 
-<p class="note">
-<b>Note</b>:
-1280x800 screenshots are preferrable,
-as larger screenshots look better on high-resolution displays.
-Currently, all screenshots are downscaled to 640x400 pixels.
-If your screenshots do not look good when downscaled
-(for example, they have a lot of text)
-or if 1280x800 is too big for your app
-(for example, screenshots for a low-resolution game),
-you can upload 640x400 screenshots.
-</p>
+    <p>
+        As an example, here are five screenshot images for an app:
+    </p>
 
-<p>
-As an example, here are five screenshot images for an app:
-</p>
+    <table class="columns">
+        <tr>
+            <td><a href="images/1280x800_screenshot-1.jpeg"><img
+                    src="images/1280x800_screenshot-1-quartersize.png"
 
-<table class="columns">
-<tr>
-  <td> <a href="images/1280x800_screenshot-1.jpeg"><img src="images/1280x800_screenshot-1-quartersize.png"
-    width="320" height="200"
-    class="noborder"
-    alt="Picnik screenshot #1" /></a>
-  </td>
-  <td> <a href="images/1280x800_screenshot-2.jpeg"><img src="images/1280x800_screenshot-2-quartersize.png"
-    width="320" height="200"
-    class="noborder"
-    alt="Picnik screenshot #2" /></a>
-  </td>
-</tr>
-<tr>
-  <td> <b>Screenshot #1</b>
-    (<a href="images/1280x800_screenshot-1.jpeg">full size</a>) </td>
-  <td> <b>Screenshot #2</b>
-    (<a href="images/1280x800_screenshot-2.jpeg">full size</a>) </td>
-</table>
+                    class="noborder"
+                    alt="Picnik screenshot #1"/></a>
+            </td>
+            <td><a href="images/1280x800_screenshot-2.jpeg"><img
+                    src="images/1280x800_screenshot-2-quartersize.png"
 
-<table class="columns">
-<tr>
-  <td> <a href="images/1280x800_screenshot-3.jpeg"><img src="images/1280x800_screenshot-3-quartersize.png"
-    width="320" height="200"
-    class="noborder"
-    alt="Picnik screenshot #3" /></a>
-  </td>
-  <td> <a href="images/1280x800_screenshot-4.jpeg"><img src="images/1280x800_screenshot-4-quartersize.png"
-    width="320" height="200"
-    class="noborder"
-    alt="Picnik screenshot #4" /></a>
-  </td>
-  <td> <a href="images/1280x800_screenshot-5.jpeg"><img src="images/1280x800_screenshot-5-quartersize.png"
-    width="320" height="200"
-    class="noborder"
-    alt="Picnik screenshot #5" /></a>
-  </td>
-</tr>
-<tr>
-  <td> <b>Screenshot #3</b>
-    (<a href="images/1280x800_screenshot-3.jpeg">full size</a>) </td>
-  <td> <b>Screenshot #4</b>
-    (<a href="images/1280x800_screenshot-4.jpeg">full size</a>) </td>
-  <td> <b>Screenshot #5</b>
-    (<a href="images/1280x800_screenshot-5.jpeg">full size</a>) </td>
-</table>
+                    class="noborder"
+                    alt="Picnik screenshot #2"/></a>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Screenshot #1</b>
+                (<a href="images/1280x800_screenshot-1.jpeg">full size</a>)
+            </td>
+            <td><b>Screenshot #2</b>
+                (<a href="images/1280x800_screenshot-2.jpeg">full size</a>)
+            </td>
+    </table>
+
+    <table class="columns">
+        <tr>
+            <td><a href="images/1280x800_screenshot-3.jpeg"><img
+                    src="images/1280x800_screenshot-3-quartersize.png"
+
+                    class="noborder"
+                    alt="Picnik screenshot #3"/></a>
+            </td>
+            <td><a href="images/1280x800_screenshot-4.jpeg"><img
+                    src="images/1280x800_screenshot-4-quartersize.png"
+
+                    class="noborder"
+                    alt="Picnik screenshot #4"/></a>
+            </td>
+            <td><a href="images/1280x800_screenshot-5.jpeg"><img
+                    src="images/1280x800_screenshot-5-quartersize.png"
+
+                    class="noborder"
+                    alt="Picnik screenshot #5"/></a>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Screenshot #3</b>
+                (<a href="images/1280x800_screenshot-3.jpeg">full size</a>)
+            </td>
+            <td><b>Screenshot #4</b>
+                (<a href="images/1280x800_screenshot-4.jpeg">full size</a>)
+            </td>
+            <td><b>Screenshot #5</b>
+                (<a href="images/1280x800_screenshot-5.jpeg">full size</a>)
+            </td>
+    </table>
 
 </section>
 
@@ -523,8 +555,8 @@ As an example, here are five screenshot images for an app:
 <h2 id="next">What next?</h2>
 
 <p>
-Next,
-read <a href="publish.html">Publishing Your App</a>.
+    Next,
+    read <a href="publish.html">Publishing Your App</a>.
 </p>
 
 
