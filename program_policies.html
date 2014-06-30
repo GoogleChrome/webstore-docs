@@ -83,6 +83,8 @@ should be marked "Mature" on the Developer Dashboard.
   Don't misrepresent the functionality of your app
   or include non-obvious functionality that doesn't serve the primary purpose
   of the app without clear notification to the user.
+  If your app has a blank description field and appears to be suspicious,
+  we may remove it.
 </dd>
 
 <dt>Personal and Confidential Information:</dt>
@@ -248,6 +250,14 @@ For example, functionality that displays product ratings and reviews,
 but also injects ads into web pages, should not be bundled into a single extension.
 Similarly, toolbars that provide a broad array of functionality or entry points into services
 are better delivered as separate extensions, so that users can select the services they want.
+Please see this
+<a href="https://developer.chrome.com/extensions/single_purpose">FAQ</a> for more information.
+</p>
+
+<p>
+Starting with Chrome Release 36,
+extensions that change Chrome settings on Windows must do so
+via the Settings Override API. 
 </p>
 
 <h2 id="packaged_apps">Chrome Apps Quality Guidelines</h2>
@@ -277,6 +287,7 @@ Chrome Apps should not:
 </p>
 
 <ul>
+  <li> Require a local executable, other than the Chrome runtime, to run.</li>
   <li> Provide a webview of a website that is not owned or administered by you.
   </li>
   <li> Download or execute scripts dynamically outside a sandboxed environment
