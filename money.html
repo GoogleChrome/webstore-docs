@@ -1,9 +1,11 @@
 {{+bindTo:partials.standard_store_article}}
 
-<h1>Monetizing Your Chrome Web Store Item</h1>
+<h1 xmlns="http://www.w3.org/1999/html">Monetizing Your Chrome Web Store
+    Item</h1>
 
 <p>
-    You can publish Hosted Apps, Packaged Apps, Extensions and Themes in the
+    You can publish Hosted Apps, Chrome Apps, Chrome Extensions and Themes
+    in the
     Chrome Web Store. Collectively these are called simply "Items".
 
     You have many choices when it comes to making money from items
@@ -14,8 +16,9 @@
 
 <ul>
     <li> In-app payments</li>
-    <li> One-time charge (with optional free trial)</li>
+    <li> One-time charge</li>
     <li> Subscription</li>
+    <li> Offering a limited trial version of your item</li>
 </ul>
 
 <p>
@@ -68,7 +71,7 @@
 </p>
 
 
-<h2 id="subscription"> Subscription </h2>
+<h2 id="subscription">Subscription</h2>
 
 <p>
     Chrome Web Store Payments supports both monthly and yearly
@@ -76,6 +79,52 @@
     As with one-time Chrome Web Store payments,
     you have the option of providing a free trial.
 </p>
+
+
+<h2 id="free_trial"> Offering a Free Trial Version of your
+    Item </h2>
+
+<p>
+    The Chrome Web Store helps you to easily offer a limited-time trial version
+    of
+    your
+    app to help you attract new customers.
+
+<p>Whether your item is a hosted web app, a Chrome App, or a Chrome extension,
+    you
+    can
+    use the Licensing API to check to see if the user has paid for your app
+    to your users.</p>
+
+<p>
+    If your item is a is a <b>Hosted App</b>, you will use the
+    a <a
+        href="https://developer.chrome.com/webstore/check_for_payment">server-based
+    flow</a> to check to
+    see if user has purchased a license for your app. If the trial has expired,
+    you can direct the user to the web store listing to purchase the app.
+
+</p>
+<p>
+
+    If your store item is a <b>Chrome App</b> or <b>Chrome
+    Extension</b>, you will
+    use a
+    slightly different <a
+        href="https://developer.chrome.com/webstore/one_time_payments#verifying-payment">javascript-based
+    flow</a>, that also uses the
+    Licensing API along with functions built into Chrome to check the status of
+    the
+    downloaded trial
+    app. Again if the
+    trial is expired, you can the direct the user to the web store listing to
+    purchase the app.
+
+</p>
+
+
+</p>
+
 
 <h2 id="more"> More information </h2>
 
