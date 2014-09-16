@@ -94,6 +94,10 @@
         region?</a></li>
     <li><a href="faq#faq-listing-08">My item’s status says "pending review."
         What does this mean?</a></li>
+    <li><a href ="faq#faq-listing-09">Why isn’t my app showing up on search?</a>
+    </li>
+    <li><a href ="faq#faq-listing-10">My app has been removed from the Chrome Web Store. 
+        What should I do?</a></li>
 </ul>
 
 
@@ -660,7 +664,60 @@
             agreement from you. Check your email account associated with the
             item for an agreement notification from our abuse team.
         </li>
+    </ul>
     </p>
+
+    <h5 id="faq-listing-09">Why isn’t my app showing up on search?</h5>
+
+    <p>It depends. There are several reasons why your item may not be showing 
+        up in search.
+    <ul>
+        <li>You just published your app. It might take a few hours before 
+            we index it.
+        </li>
+        <li>Your app manifest is version 1.  We have upgraded to manifest version 
+            2, therefore all manifest v1 apps are unlisted.  Please upgrade your 
+            item to manifest v2. See more details <a
+            href="http://blog.chromium.org/2013/09/saying-goodbye-to-our-old-friend-npapi.html">here</a>.
+        </li>
+        <li>Your app is a Google Application Marketplace app. All Google Application 
+            Marketplace apps will only be visible on the corresponding management page 
+            for Google Application Marketplace, not on chrome.google.com/webstore
+        </li>
+        <li>Your app is not listed in the region you are searching in. 
+            See more details <a
+            href="https://support.google.com/chrome_webstore/answer/1254182?hl=en&ref_topic=1734051">here</a>
+        </li>
+    </ul>
+    </p>
+
+    <h5 id="faq-listing-10">My app has been removed from the Chrome Web Store. What 
+        should I do?</h5>
+    
+    <p>Application removals count as strikes against the good standing of your 
+        developer account. Multiple or egregious policy violations may result in 
+        termination of your developer account.
+    <ul>
+        <li>For all policy violation app removals, you will receive a removal 
+            notification email with more details in the developer account listed as 
+            the owner of the app.  Please make the appropriate changes so your app 
+            complies with all <a
+            href="https://developer.chrome.com/webstore/program_policies">Developer 
+            Program Policies</a>, 
+            <a href="https://developer.chrome.com/webstore/branding">Branding Guidelines</a> and 
+            <a href="https://developer.chrome.com/webstore/terms">Terms of Services</a>.  
+            Once you have remedied the violation you can resubmit via your developer dashboard.
+        </li>
+        <li>Please do not re-publish a removed application until the policy violation 
+            has been remedied. If you have additional questions or feel your item was wrongly 
+            removed, you can reply directly to the removal email and appeal.
+        </li>
+        <li>If you believe your developer account was wrongly terminated, you can appeal 
+            <a href="https://support.google.com/chrome_webstore/contact/cws_dev_appeals">here</a>. We will only reinstate accounts if an error was made, and a re-review finds that your account does not violate the developer terms.
+        </li>
+    </ul>
+    </p>
+    
 </dl>
 
 <p class="backtotop"><a href="#top">Back to top</a></p>
@@ -1120,6 +1177,19 @@ if (window.chrome.app.isInstalled) {
     <h5 id="faq-themes-02">Can I use the Licensing API with themes?</h5>
 
     <p>No, themes have no code or server-side components.</p>
+</dl>
+
+<p class="backtotop"><a href="#top">Back to top</a></p>
+
+<h2 id="troubleshooting"> Additional Troubleshooting </h2>
+
+<dl>
+
+<p>If you’ve fixed all errors produced by the tools and continue experiencing issues, please 
+   <a href="https://support.google.com/chrome_webstore/contact/developer_support/?hl=en">
+    contact us</a> with any additional details regarding the problem. Please send us a screenshot
+    of the problem and include your .crx file.</p>    
+    
 </dl>
 
 <p class="backtotop"><a href="#top">Back to top</a></p>
