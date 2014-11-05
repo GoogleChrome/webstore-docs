@@ -1,14 +1,9 @@
 {{+bindTo:partials.standard_store_article}}
 
-<h1>In-App Payments with Google Wallet for Digital Goods</h1>
+<h1>In-App Payments with Google Wallet and the Chrome Web Store API</h1>
 <p id="overview">
-    You can use Google Wallet for Digital Goods to sell digital and
-    virtual goods within your <b>Chrome App</b> or <b>Chrome Extension</b>.
-    The Google Wallet for Digital Goods client app, which is embedded in
-    Chrome, communicates with the
-    <a href="https://support.google.com/chrome_webstore/answer/1053354">
-        Google Wallet</a> servers and handles all of the financial transactions,
-    including charging the buyer and distributing the proceeds to you.
+    You can use Google Wallet and the Chrome Web Store API to sell virtual
+    goods within your Chrome App or Chrome Extension.
 </p>
 
 <p>
@@ -17,11 +12,11 @@
     Chrome Web Store Developer Dashboard</a> makes it easy to easy to create
     and manage virtual goods. You can provide localized descriptions for each
     product and offer items in local currencies. It also can help you to
-    verify and manage licenses for the digital goods purchased by each user.
+    verify and manage licenses for the virtual goods purchased by each user.
 </p>
 
 <p>
-    In order to sell digital goods, you'll need to:
+    In order to sell virtual goods, you'll need to:
 </p>
 <ol>
     <li>
@@ -57,6 +52,15 @@
                 href="/webstore/webstore_api/inAppProducts/list">In-App
             Products List Method</a>.
     </dd>
+
+
+    <dt><code><a
+            href="#inapp-buy">google.payments.inapp.buy</a></code>
+    </dt>
+    <dd>Purchases an item.
+    </dd>
+
+
     <dt><code><a
             href="#get-purchases">google.payments.inapp.getPurchases</a></code>
     </dt>
@@ -65,6 +69,13 @@
                 href="/webstore/webstore_api/payments/list">Payments
             List Method</a>.
     </dd>
+
+
+
+    <dt><code><a
+            href="#inapp.consumePurchase">google.payments.inapp
+        .consumePurchase</a></code>
+    </dt>
 </dl>
 
 
@@ -72,8 +83,9 @@
     <b>Note</b>: See <a
         href="/webstore/pricing">Payments: Regions,
     fees and tiers</a> for more information about fees and locations where you
-    can sell your digital goods.
+    can sell your virtual goods.
 </p>
+
 <h2 id="purchase-flow">Purchase flow</h2>
 <p>
     You can use <code>google.payments.inapp.getSkuDetails</code> to get the list
@@ -93,7 +105,7 @@
 <p>
     When a customer clicks a <b>Purchase</b> button within your Chrome App or
     Extension, Chrome uses the Google Wallet account of the user
-    signed into Chrome to display the Google Wallet for Digital Goods payment
+    signed into Chrome to display the Google Wallet payment
     processing window:
 </p>
 
@@ -109,26 +121,25 @@
 
 <p class="note">
     <b>Note</b>: if the user is not signed up for Google Wallet,
-    Google Wallet for Digital Goods takes the user through the sign-up flow.
+    Google Wallet takes the user through the sign-up flow.
 </p>
 
 
-<h2 id="how-to-use">Using Google Wallet for Digital Goods</h2>
+<h2 id="how-to-use">Using Google Wallet and the Chrome Web Store API for
+    In-App Purchases</h2>
 <p>
-    Using Google Wallet for Digital Goods is similar to using
-    the <a href="https://developers.google.com/commerce/wallet/digital/docs/">
-    Google Wallet for Digital Goods API</a> in a website, except no server
-    side code is needed. The differences are summarized below and described
-    in detail in the integration steps.
+    The Chrome Web Store (CWS) API can be used to handle in-app purchases wit
+    hout the use of any server-side coding as was previously required by the
+    deprecated Google Wallets for Digital Goods API.
 </p>
 
 <ul>
     <li>
-        The Chrome Web Store handles the list of digital goods available for
+        The Chrome Web Store handles the list of virtual goods available for
         sale, eliminating the need to create, store, or manage JSON Web Tokens.
     </li>
     <li>
-        You can get the list of available digital goods through the
+        You can get the list of available virtual goods through the
         <code>getSkuDetails</code> function.
     </li>
     <li>
@@ -147,7 +158,7 @@
         in an iframe.
     </li>
     <li>
-        The Chrome Web Store manages the list of purchased digital goods
+        The Chrome Web Store manages the list of purchased virtual goods
         (licenses) for each user and exposes that list to you through
         the <code>getPurchases()</code> function.
     </li>
@@ -155,13 +166,10 @@
 
 <h3 id="setup-account">Setting up your account</h3>
 <p>
-    In order to use Google Wallet for Digital Goods, you'll need to visit the
-    <a href="https://wallet.google.com/inapp/merchant/signup.html">Google
-        Wallet for digital goods signup</a> page and create a merchant account.
-    For more information on creating your Wallet Merchant account, along with
-    step by step instructions, see the
-    <a href="https://support.google.com/payments/answer/1619772">help page
-        for signup for Google Wallet for Digital Goods</a>.
+    In order to use the Chrome Web Store API to handle in-app purchases, you'll
+    need to create a
+    <a
+            href="https://developer.chrome.com/webstore/payments-iap#setup-account">Google Wallet Merchant account</a>.
 </p>
 
 <p>
@@ -182,34 +190,17 @@
     </li>
 </ol>
 
-<p class="note">
-    <b>Note</b>: You can always update your Google Wallet Merchant account
-    by following the steps in the
-    <a href="https://wallet.google.com/merchant">Google
-        Wallet for
-        Digital Goods Web Tutorial</a>.
-</p>
 
-<h3 id="create-digital-goods">Create the digital goods</h3>
-<p>
-    Before you can sell any digital goods, you need to create the list of
-    items that are available for purchase. The Chrome Web Store
-    Developer Dashboard simplifies this process for us by providing an
-    interface for creating digital goods and license management. This means
-    in addition to the <code>buy()</code> function, you can also query to
-    determine what items are available for sale, and what items the user has
-    purchased.
-</p>
 
+<h3 id="create-digital-goods">Creating and Managing your virtual goods</h3>
 <p>
-    You can also choose to create your own digital goods, though you'll need to
-    manage your own inventory and licensing service.
-</p>
-
-<h4 id="create-in-cws">Through the Chrome Web Store</h4>
-<p>
-    You can manage your digital goods through the <b>In-app Products</b> tab
-    in the listing page of the Chrome Web Store Developer Dashboard.
+    Before you can sell any virtual goods, you need to create the list of
+    in-app products that are available for purchase. The Chrome Web Store
+     simplifies this process for us by providing an
+    interface for creating in-app products and licenses. This interface can
+    be found in the In-app Products tab in the Chrome app listing page of the
+    Chrome Web Store Developer Dashboard. Once you have created your in-app
+    products, you can continue to use this interface to manage them.
 </p>
 
 <p>
@@ -222,7 +213,8 @@
     <li>
         Open the <a
             href="https://chrome.google.com/webstore/developer/dashboard">
-        Chrome Web Store Developer Dashboard</a> and edit the listing.
+        Chrome Web Store Developer Dashboard</a> and edit the listing for
+        your app.
     </li>
     <li>
         Switch to the <b>In-app Products</b> tab at the top of the page.
@@ -288,58 +280,14 @@
 
 <p class="note">
     <b>Note</b>: Recurring payments are not currently supported through the
-    Chrome Web Store interface; instead you'll need to manually create and
-    sign a <a
-        href="https://developers.google.com/commerce/wallet/digital/docs/jsreference#sub">
-    Subscription JWT</a> and use that in your app instead.
+    Chrome Web Store interface.
 </p>
-<p>&nbsp;</p>
 
-<h4 id="create-manual">Manually managing your own digital good</h4>
+
+<h4 id="query-items">Querying available items</h4>
 <p>
-    Each item is identified by a <em>
-    <a href="https://developers.google.com/commerce/wallet/digital/docs/jsreference">
-        JSON Web Token</a></em> or JWT, pronounced like the English word jot.
-    The
-    JWT is a Base64 encoded, signed JSON object. Since each JWT is signed with
-    your seller secret, you should always generate the JWT outside of your
-    Chrome App or Extension and include only the generated token. If a
-    dynamically generated token is required, you should create it on the
-    server and serve it to the app via an XHR.
-</p>
-
-<p>
-    You can generate JWTs using a server, or you can pre-generate JWTs for
-    use in your Chrome App or Extension. See the
-    <a href="https://developers.google.com/commerce/wallet/digital/training/getting-started/order-setup">
-        Create an order</a> step of the
-    <a href="https://developers.google.com/commerce/wallet/digital/training/">
-        Wallet for Digital Goods Tutorial</a> for more information about how to
-    create your own JWTs.
-</p>
-
-<p class="warning">
-    <strong>Remember:</strong> If you use JWTs, you should generate the JWTs
-    outside of your Chrome App or Extension and include the generated tokens
-    in your package. If you need to generate JWTs dynamically or at run time,
-    you should use a server. <strong>NEVER</strong> include the Seller
-    secret you use to generate tokens in your app.
-</p>
-
-
-<p>
-    If you manage your own digital goods, you'll need to manage your own
-    inventory and licensing for those items and will not be able to use
-    the <code>getSkuDetails</code> or <code>getPurchases</code>
-    functions
-    provided
-    by Chrome.
-</p>
-
-
-<h4 id="query-items">Query what items are available</h4>
-<p>
-    The <code>getSkuDetails</code> function returns a list of all active digital
+    The <code>getSkuDetails</code> function returns a list of all active
+    virtual
     goods available from the Chrome Web Store available for purchase by the
     user, including the product ID (SKU), title, description, and price.
     You can provide an optional SKU argument to the function, which will then
@@ -436,20 +384,6 @@ google.payments.inapp.buy({
 });</pre>
 
 <p>
-    If you're managing your own JWTs, replace the sku parameter with the
-    appropriate jwt parameter. For example:
-</p>
-
-<pre>var jwt = /* huge ugly JWT string */;
-google.payments.inapp.buy({
-  'parameters': {'env': 'prod'},
-  <strong>'jwt': jwt,</strong>
-  'success': onPurchase,
-  'failure': onPurchaseFail
-});</pre>
-
-
-<p>
     When the purchase completes, Chrome will call the defined callback with the
     a parameter that looks like:
 </p>
@@ -511,20 +445,10 @@ google.payments.inapp.buy({
   var count = licenses.length;
   for (var i = 0; i < count; i++) {
     var license = licenses[i];
-    saveLicense(license);
+    saveLicense(license);pay
   }
 }
 </pre>
-
-<p>
-    In some cases, you may want to verify a user's purchase outside of a Chrome
-    App, in this case, you can call the Chrome Web Store licensing server
-    directly. For more information, see <a href="one_time_payments#verify-code">
-    Verifying the license</a> in the One Time Payment documentation. Note that
-    you will need to enable the Chrome Web Store APIs in the <a
-        href="https://console.developers.google.com">
-    Google Developers Console</a> to enable this scenario.
-</p>
 
 <h2 id="testing">Testing purchases</h2>
 <p>
@@ -536,8 +460,8 @@ google.payments.inapp.buy({
 
 <h2 id="sample-app">Sample Chrome App</h2>
 <p>
-    For a simple app that demonstrates how to use Google Wallet for
-    Digital Goods, you can download the <a
+    For a simple app that demonstrates how to use CWS API for in-app products,
+    you can download the <a
         href="https://github.com/petele/IAPDemo">source code</a> here.
 </p>
 
