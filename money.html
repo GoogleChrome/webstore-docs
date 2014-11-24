@@ -26,6 +26,13 @@
     the store allows you to use any payment system you like.
 </p>
 
+        <p class="note">
+Note: Chrome Web Store Payments are not available for hosted apps. To learn
+            more about how to monetize hosted apps, check out our <a
+                href="https://docs.google.com/document/d/1BW1Zz7nief-UAiCHIn3CFnlr_I0_AomnYKngDHm7ZoA/edit">help
+                article</a>.
+        </p>
+
 <h2 id="inapp">In-app payments</h2>
 
 <p>
@@ -80,35 +87,22 @@
     your
     app to help you attract new customers.
 
-<p>Whether your item is a hosted web app, a Chrome App, or a Chrome extension,
+<p>Whether your item is a Chrome App or a Chrome extension,
     you
     can
-    use the Licensing API to check to see if the user has paid for your app
-    to your users.</p>
-
-<p>
-    If your item is a is a <b>Hosted App</b>, you will use the
-    a <a
-        href="https://developer.chrome.com/webstore/check_for_payment">server-based
-    flow</a> to check to
-    see if user has purchased a license for your app. If the trial has expired,
-    you can direct the user to the web store listing to purchase the app.
-
-</p>
+    use the Licensing API to check to see if the user has paid for your
+    item.</p>
 <p>
 
-    If your store item is a <b>Chrome App</b> or <b>Chrome
-    Extension</b>, you will
-    use a
-    slightly different <a
+    To perform this check, you will use a <a
         href="https://developer.chrome.com/webstore/one_time_payments#verifying-payment">javascript-based
     flow</a>, that also uses the
     Licensing API along with functions built into Chrome to check the status of
     the
     downloaded trial
-    app. Again, if the
+    app. If the
     trial is expired, you can direct the user to the web store listing to
-    purchase the app.
+    purchase the item.
 
 </p>
 
@@ -122,35 +116,33 @@
 <table>
     <tr>
         <th></th>
-        <th>Hosted Apps</th>
         <th>Packaged Apps</th>
         <th>Extensions</th>
         <th>Themes</th>
     </tr>
     <tr>
         <th>Free Trial</th>
-        <td>✓</td>
+
         <td>✓</td>
         <td>✓</td>
         <td>x</td>
     </tr>
     <tr>
         <th>Paid Up-Front</th>
-        <td>✓</td>
+
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
     </tr>
     <tr>
         <th>Subscription</th>
-        <td>✓</td>
+
         <td>✓</td>
         <td>✓</td>
         <td>x</td>
     </tr>
     <tr>
         <th>In-App Payments (IAP)</th>
-        <td>CWS Managed IAP</td>
         <td>CWS Managed IAP</td>
         <td>CWS Managed IAP</td>
         <td>x</td>
