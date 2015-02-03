@@ -1,171 +1,84 @@
 {{+bindTo:partials.standard_store_article}}
 
-<h1 xmlns="http://www.w3.org/1999/html">Monetizing Your Chrome Web Store
-    Item</h1>
+<h1 class="page-title">Monetizing Your Products</h1>
 
 <p>
-    You can publish Hosted Apps, Chrome Apps, Chrome Extensions and Themes
-    in the
-    Chrome Web Store. Collectively these are called simply "Items".
-
-    You have many choices when it comes to making money from items
-    that you publish in the Chrome Web Store.
-
-    This page covers just a few ways to monetize your store item:
+    You have many choices when it comes to making money from products that you <a href="index.html">distribute on Chrome</a>.
 </p>
 
+<h2 id="making-money">Making Money</h2>
+
+<p>
+    To help meet your business needs, Chrome supports a variety of monetization models.
+</p>
+
+<h3 id="ads">Free with ads</h3>
+<p>
+    <a href="https://developers.google.com/web/fundamentals/monetization/ads/">Ads</a> are a great option for monetizing your product without charging your users. For Chrome-integrated websites, consider using <a href="http://www.google.com/adsense/start/">Google AdSense</a>. 
+</p>
+
+<h3 id="freemium">Freemium</h3>
+<p>
+    If you charge for your product, we encourage you to provide a free trial version, sometimes called <em>freemium</em>. A free trial should provide a basic level of functionality that lets the user gauge the usefulness of the product. Time-limited trials can prompt users for one-time payment after expiration. Feature-limited trials can offer additional features using in-app payments. 
+</p>
+
+<p class="note">
+    <b>Note</b>: If you list your product as free, it must perform its function without asking for payment from the user. See the <a href="program_policies.html">policy document</a> for details.
+</p>
+
+<h3 id="one-time-payments">One-time payments</h3>
+<p>
+    Users buy your product by providing a one-time payment upfront. For more information, see <a href="one_time_payments.html">one-time payments</a>.
+</p>
+
+<p class="note">
+    <b>Note</b>: This is the only monetization option for themes.
+</p>
+
+<h3 id="subscription">Subscription</h3>
+<p>
+    Users purchase access to your product on a subscription basis. The Chrome Web Store payment solutions support both monthly and yearly subscription models.
+</p>
+
+<h3 id="custom">Custom</h3>
+<p>
+    The options above are just a few suggestions for monetization. You are also free to implement a custom model that works best for you. For in-app payments, consider using <a href="payments-iap.html">Chrome Web Store API</a>.
+</p>
+
+<h2 id="payment-system">Choosing a payment system</h2>
+
+<p>
+    If you’re distributing your product through the <a href="index.html#distribution-options">Chrome Web Store</a>, you can use Chrome Web Store Payments, a built-in payment system powered by Google Wallet for Digital Goods. Even if you don’t distribute through the Chrome Web Store, you can still use the <a href="payments-iap.html">Chrome Web Store API</a> to manage in-app payments.
+</p>
+
+<p class="note">
+    <b>Note</b>: Chrome merchants who currently manage their own digital inventories and use Google Wallet for Digital Goods API need to migrate to the <a href="payments-iap.html">Chrome Web Store API</a> or another payment solution before March 2, 2015.
+</p>
+
+<p>
+    Using a Chrome Web Store payment solution is recommended, because:
+</p>
 <ul>
-    <li> In-app payments</li>
-    <li> One-time charge</li>
-    <li> Subscription</li>
-    <li> Offering a limited trial version of your item</li>
+    <li>It provides an integrated experience for users.</li>
+    <li>It is competitively priced for merchants (5% + a small per transaction fee). See <a href="pricing.html">Payments: Regions, Fees, and Tiers</a> for details.</li>
+    <li>You can use the <a href="get_started.html">Chrome Web Store Licensing API</a> to check on user payments.</li>
 </ul>
 
 <p>
-    Keep in mind that although this page features Google APIs,
-    the store allows you to use any payment system you like.
+    Alternatively, you can choose to use any other payment service provider that you prefer. However, these payments will not be integrated with the Chrome Web Store experience.
 </p>
 
-<h2 id="inapp">In-app payments</h2>
+<h2 id="best-practices">Best Practices</h2>
 
 <p>
-    Items that use in-app payments are usually
-    free to try. For example, you might provide a free game
-    that offers additional levels or avatars for a small price.
+    From first-time users to loyal fans, these best practices can help you earn more revenue by providing great user experiences across the board.
 </p>
+<ul>
+    <li><b>Don't put any roadblocks in front of users.</b> Freshly installed products should always provide something useful or interesting, even if the user hasn't paid yet. If the first page the user sees is useless—nothing but a payment or login wall, for example—the user is likely to uninstall your product, and you might get some scathing reviews.</li>
+    <li><b>Make signup and purchasing easy.</b> If you do require login or payment at some point, use trusted third party services, such as Google Accounts and Chrome Web Payments. These services are convenient, secure, and save your users’ the trouble of remembering yet another username and password.</li>
+    <li><b>Update often.</b> Increase user engagement by keeping your content fresh and actively maintaining your product. Chrome's support for auto-update makes distributing updates easy.</li>
+</ul>
 
-<p>
-    Generally, Chrome Apps and extensions can use the Chrome Web Store API
-    to charge for features or virtual goods. The fee for using this API is
-    just 5% per transaction. For example, if you charge $1.99, you'll receive $1.89; if you charge $9.99, you'll receive $9.49.
-
-</p>
-
-<h2 id="onetime"> One-time Payments </h2>
-
-<p>
-    <a href="overview.html#builtin">Chrome Web Store Payments</a>
-    is a payment system
-    that is especially well integrated with the store.
-    With it, you can either charge to download the item
-    or provide a <a href="overview.html#freevnot">free trial</a>
-    that lets users try out the item before purchasing it.
-</p>
-
-<p>
-    The charge for using Chrome Web Store Payments is 5%.
-    For example,
-    if you charge $1.99,
-    you'll receive $1.89.
-    See
-    <a href="pricing.html">Payments: Regions, Fees, and Tiers</a>
-    for details.
-</p>
-
-<h2 id="subscription">Subscriptions</h2>
-
-<p>
-    Chrome Web Store Payments supports both monthly and yearly
-    subscription models.
-    As with one-time Chrome Web Store payments,
-    you have the option of providing a free trial.
-</p>
-
-
-<h2 id="free_trial">Free Trials </h2>
-
-<p>
-    The Chrome Web Store helps you to easily offer a limited-time trial version
-    of
-    your
-    app to help you attract new customers.
-
-<p>Whether your item is a hosted web app, a Chrome App, or a Chrome extension,
-    you
-    can
-    use the Licensing API to check to see if the user has paid for your app
-    to your users.</p>
-
-<p>
-    If your item is a is a <b>Hosted App</b>, you will use the
-    a <a
-        href="https://developer.chrome.com/webstore/check_for_payment">server-based
-    flow</a> to check to
-    see if user has purchased a license for your app. If the trial has expired,
-    you can direct the user to the web store listing to purchase the app.
-
-</p>
-<p>
-
-    If your store item is a <b>Chrome App</b> or <b>Chrome
-    Extension</b>, you will
-    use a
-    slightly different <a
-        href="https://developer.chrome.com/webstore/one_time_payments#verifying-payment">javascript-based
-    flow</a>, that also uses the
-    Licensing API along with functions built into Chrome to check the status of
-    the
-    downloaded trial
-    app. Again, if the
-    trial is expired, you can direct the user to the web store listing to
-    purchase the app.
-
-</p>
-
-
-</p>
-
-
-<h2 id="more"> More information </h2>
-
-
-<table>
-    <tr>
-        <th></th>
-        <th>Hosted Apps</th>
-        <th>Packaged Apps</th>
-        <th>Extensions</th>
-        <th>Themes</th>
-    </tr>
-    <tr>
-        <th>Free Trial</th>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td>x</td>
-    </tr>
-    <tr>
-        <th>Paid Up-Front</th>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
-    </tr>
-    <tr>
-        <th>Subscription</th>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td>x</td>
-    </tr>
-    <tr>
-        <th>In-App Payments (IAP)</th>
-        <td>CWS Managed IAP</td>
-        <td>CWS Managed IAP</td>
-        <td>CWS Managed IAP</td>
-        <td>x</td>
-    </tr>
-</table>
-
-
-<p>
-    For details about app payment options, see
-    <a href="overview.html#charging">Charging for your app</a>
-    in the Overview.
-</p>
-
-
-<p class="backtotop"><a href="#top">Back to top</a></p>
-
+<p>For more best practices, see the <a href="https://developers.google.com/web/fundamentals/monetization/principles/">Key Principles</a> of monetization on Web Fundamentals.</p>
 
 {{/partials.standard_store_article}}
