@@ -3,7 +3,7 @@
 <h1>One-Time Payments</h1>
 
 <p>
-    If you choose to charge users for your Chrome App, Chrome Extension or Chrome Theme
+    If you choose to charge users for your Chrome App, Chrome Extension, or Chrome Theme
     in the Chrome Web Store, there are several options available to you.
     The Chrome Web Store has a built-in one-time payment system called
     Chrome Web Store Payments.
@@ -17,18 +17,19 @@
     Chrome Web Store API.
 </p>
 
+<p class="note">
+     <strong>Note: </strong>Chrome Web Store payment methods are not available
+     for hosted apps.
+</p>
+
 <h3 id="offering-free-trial">Offering a free trial</h3>
 <p>
-    For Chrome Apps or hosted web apps, you can provide a free trial
+    For Chrome Apps and Chrome Extensions, you can provide a free trial
     version that either gives the user full access for a limited period of
     time or restricts which features are available. You can enable the free
     trial by checking the appropriate box in the Developer Dashboard, then
     using the Licensing API to confirm what kind of license the user has and
     how long they've had it, with an upgrade path to the paid version.
-</p>
-
-<p class="note">
-    <b>Note</b>: Free trial capabilities are not available for Themes.
 </p>
 
 <h3 id="cws-licensing-api">Chrome Web Store Licensing API</h3>
@@ -71,9 +72,8 @@
 <p>
     You can set up the one-time payment and offer a free trial option on the
     listing page of the
-    <a href="https://chrome.google.com/webstore/developer/dashboard">Chrome
-        Web Store Developer Dashboard</a>. The Chrome Web Store manages the
-    licenses for each user and exposes that information through a REST API.
+    <a href="https://chrome.google.com/webstore/developer/dashboard">Chrome Web Store Developer Dashboard</a>.
+    The Chrome Web Store manages the licenses for each user and exposes that information through a REST API.
 </p>
 
 <p>
@@ -217,8 +217,8 @@
 
 <h3 id="verify-code">Verifying the license</h3>
 <p>
-    To verify the user has purchased your Chrome App, Extension or hosted web
-    app, or if they are using a free trial experience:
+    To verify the user has either purchased your Web Store item or
+    are using a free trial, do the following:
 </p>
 
 <ol>
@@ -259,8 +259,7 @@ themes do not execute any JavaScript and cannot verify a license.
     should have, and how much longer the response is valid. If you just want
     to know whether the user has access, check the value of the
     <code>result</code> field. If you want to know whether the user should
-    get a free trial version, check the value of the
-    <code>accessLevel</code> field.
+    get a free trial version, check the value of the <code>accessLevel</code> field.
 </p>
 
 <p>Sample JSON license object</p>
