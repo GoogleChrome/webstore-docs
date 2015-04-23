@@ -426,14 +426,11 @@ google.payments.inapp.buy({
   }
 } </pre>
 
-
 <p class="note">
     <b>Note</b>: See the <a
         href="webstore/webstore_api/payments/list">Web
     Store API Reference</a> for more details on the payment methods. </a>
-
 </p>
-
 
 <pre>function onLicenseUpdate(licenses) {
   var licenses = response.response.details;
@@ -445,7 +442,46 @@ google.payments.inapp.buy({
 }
 </pre>
 
-<h2 id="subscription">Consumable Items</h2>
+<h4 id="consume-purchase">Consume purchase item</h4>
+
+<p>
+    If you want to consume an item that a user has purchased,
+    so that the user can purchase again,
+    you can call
+    <code>google.payments.inapp.consumePurchase</code>.
+    The function will change the license status
+    from "active" to "cancelled_by_developer".
+</p>
+
+<pre></pre>google.payments.inapp.consumePurchase({
+  ‘parameters’: {‘env’: ‘prod’},
+  ‘sku’: sku,
+  ‘success’: onConsume,
+  ‘failure’: onConsumeFail
+});</pre>
+
+<p>After consuming a license, if you make a <code>getPurchase</code> call,
+you'll get:</p>
+
+<pre>{
+  "response": {
+    "details": [
+      {
+        "kind":"chromewebstore#payment",
+        "itemId":"bgjmpalnjpigmmelcdiakkfofbofhege",
+        "sku":"bullet",
+        "createdTime":"1424800615789",
+        "state":"CANCELLED_BY_DEVELOPER"
+      }
+    ]
+  }
+} </pre>
+
+<p class="note">
+    <b>Note</b>: The <code>consumePurchase API won't work with in-app subscriptions.</code>
+</p>
+
+<h2 id="subscription">Subscriptions</h2>
 
 <p>Developers can also offer in-app subscriptions.</p>
 
