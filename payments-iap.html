@@ -40,7 +40,7 @@
 <p>
     The <code><a
         href="https://github.com/GoogleChrome/chrome-app-samples/blob/master/samples/managed-in-app-payments/scripts/buy.js">buy.js</a></code>
-    file provides three functions:
+    file provides four functions:
 </p>
 <dl>
     <dt><code><a
@@ -68,6 +68,12 @@
         Web Store API <a
                 href="/webstore/webstore_api/payments/list">Payments
             List Method</a>.
+    </dd>
+    
+    <dt><code><a
+            href="#consume-purchase">google.payments.inapp.consumePurchase</a></code>
+    </dt>
+    <dd>Consumes an item.
     </dd>
 
 </dl>
@@ -122,8 +128,8 @@
 <h2 id="how-to-use">Using Google Wallet and the Chrome Web Store API for
     In-App Purchases</h2>
 <p>
-    The Chrome Web Store (CWS) API can be used to handle in-app purchases wit
-    hout the use of any server-side coding as was previously required by the
+    The Chrome Web Store (CWS) API can be used to handle in-app purchases
+    without the use of any server-side coding as was previously required by the
     deprecated Google Wallets for Digital Goods API.
 </p>
 
@@ -272,12 +278,6 @@
     </li>
 </ul>
 
-<p class="note">
-    <b>Note</b>: Recurring payments are not currently supported through the
-    Chrome Web Store interface.
-</p>
-
-
 <h4 id="query-items">Querying available items</h4>
 <p>
     The <code>getSkuDetails</code> function returns a list of all active
@@ -314,6 +314,7 @@
           "kind": "chromewebstore#inAppProduct",
           "sku": "70darkchocolate",
           "item_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "type": "inapp",
           "state": "ACTIVE",
           "prices": [
             {
@@ -442,6 +443,32 @@ google.payments.inapp.buy({
     saveLicense(license);pay
   }
 }
+</pre>
+
+<h2 id="subscription">Consumable Items</h2>
+
+<p>Developers can also offer in-app subscriptions.</p>
+
+<p>If a free trial is specified,
+users will go through the purchase flow for a 0 amount,
+and the first recurring order will occur automatically
+as soon as the free trial period expires.
+Note that once a subscription item is activated,
+developers can no longer inactivate it or change the price or period.
+However, the free trial period can be changed at any time.
+While non-subscription items will have the type “inapp”,
+subscription items will have the type “subs”.
+For example,
+getSkuDetails will return a result for a subscription item that resembles:</p>
+
+<pre>
+{
+"kind":"chromewebstore#inAppProduct",
+"sku":"bullet",
+"item_id":"bgjmpalnjpigmmelcdiakkfofbofhege",
+"type":"subs",
+"state":"ACTIVE",
+"prices":[{"valueMicros":"990000","currencyCode":"USD","regionCode":"US"}],"localeData":[{"title":"Bullet","description":"a bullet","languageCode":"en-US"}
 </pre>
 
 <h2 id="testing">Testing purchases</h2>
