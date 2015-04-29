@@ -173,24 +173,9 @@
 </p>
 
 <p>
-    Once you've created the Merchant account, you'll need to associate it
+    Once you’ve created the Merchant account, it will be automatically associated
     with your Chrome App or Extension listing in the Chrome Web Store.
 </p>
-
-<ol>
-    <li>
-        Open the <a
-            href="https://chrome.google.com/webstore/developer/dashboard">
-        Chrome Web Store Developer Dashboard</a> and edit the listing for your
-        Chrome App or Extension.
-    </li>
-    <li>
-        Under the In-app Products tab, click <strong>link a Google Checkout
-        merchant account</strong> and complete the process.
-    </li>
-</ol>
-
-
 
 <h3 id="create-digital-goods">Creating and Managing your virtual goods</h3>
 <p>
@@ -442,7 +427,7 @@ google.payments.inapp.buy({
 }
 </pre>
 
-<h4 id="consume-purchase">Consume purchase item</h4>
+<h4 id="consume-purchase">Consume purchased item</h4>
 
 <p>
     If you want to consume an item that a user has purchased,
@@ -500,7 +485,7 @@ getSkuDetails will return a result for a subscription item that resembles:</p>
 <pre>
 {
 "kind":"chromewebstore#inAppProduct",
-"sku":"bullet",
+"sku":"banana",
 "item_id":"bgjmpalnjpigmmelcdiakkfofbofhege",
 "type":"subs",
 "state":"ACTIVE",
