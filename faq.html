@@ -145,11 +145,9 @@
 
 <h5>Installable web apps</h5>
 <ul>
-    <li><a href="faq#faq-app-01">What is the difference between packaged apps
-        and hosted apps?</a></li>
-    <li><a href="faq#faq-app-02">Can I sell a packaged app?</a></li>
-    <li><a href="faq#faq-app-02.5">Why do you allow developers the option of
-        paid packaged apps?</a></li>
+    <li><a href="faq#faq-app-01">What is the difference between hosted apps
+        and Chrome apps?</a></li>
+    <li><a href="faq#faq-app-02">Can I sell a hosted app?</a></li>
     <li><a href="faq#faq-app-03">Can installable web apps have page actions?</a>
     </li>
     <li><a href="faq#faq-app-04">Can installable web apps have browser
@@ -917,48 +915,29 @@
 <h2 id="apps"> Installable web apps </h2>
 
 <dl>
-<h5 id="faq-app-01">What is the difference between packaged apps and hosted
+<h5 id="faq-app-01">What is the difference between hosted apps and Chrome
     apps?</h5>
 
 <p>Hosted apps operate as traditional web apps (served via web servers and
     running inside of web browsers) and do not have access to the extended
-    Chrome APIs that extensions can use. Packaged apps are bundled into the
-    <code>.crx</code> file and can use the extensions APIs.</p>
-<h5 id="faq-app-02">Can I sell a packaged app?</h5>
+    Chrome APIs that extensions can use. Chrome apps are launched in an
+    own window without omnibox and can access
+    <a href="/apps/api_index">powerful app APIs</a>.</p>
+<h5 id="faq-app-02">Can I sell a hosted app?</h5>
 
-<p>Yes, but there are risks in doing so. Specifically, it is easy for
-    motivated people to bypass payments for packaged apps. This holds true
-    even if you have used our Licensing API in your locally stored packaged
-    app, since locally stored content is not secure and can be modified
-    (including calls to the Licensing API). If you’d like to have the option
-    of blocking access to your app by unauthorized users, selling a packaged
-    app may not be the right solution for you. An alternative to consider is
-    moving to a hosted app model with a server-side licensing check. </p>
-<h5 id="faq-app-02.5">Why do you allow developers the option of paid
-    packaged apps?</h5>
-
-<p>There are good reasons to offer a paid packaged app, even with the <a
-        href="#faq-app-02">limitations explained above</a>. Packaged apps
-    let you easily provide functionality to your users without the overhead
-    of managing a hosted service. Charging for a packaged app is a quick and
-    simple way to enable a low-friction transaction if the app provides
-    clear user value. However, it is up to the developer to decide which
-    solution is right for him or her.
-</p>
+<p>Yes, see the <a href="#payments">payments FAQ</a> for more details.</p>
 <h5 id="faq-app-03">Can installable web apps have page actions?</h5>
 
-<p>No. Although packaged apps get most of the functionality of extensions,
-    they can't have page actions.</p>
+<p>No. Hosted apps cannot use any extension APIs, including page actions.</p>
 <h5 id="faq-app-04">Can installable web apps have browser actions?</h5>
 
-<p>No. Although packaged apps get most of the functionality of extensions,
-    they can't have browser actions.</p>
+<p>No. Hosted apps cannot use any extension APIs, including browser actions.</p>
 <h5 id="faq-app-05">Can I use Google AdSense in my Chrome product?</h5>
 
 <p>According to the Google AdSense <a href="https://support.google.com/adsense/answer/48182?hl=en&ref_topic=1261918">program policies</a>, Chrome-integrated websites ('hosted apps') may use AdSense; Chrome apps ('packaged apps'), extensions, and themes may not.</p>
 <h5 id="faq-app-06">Can I use Google Analytics?</h5>
 
-<p>Yes. Packaged apps and extensions can use the <a
+<p>Yes. Extensions can use the <a
         href="/apps/analytics.html">Chrome Platform Analytics</a>
     library. Hosted apps can use one of the Google Analytics libraries for
     standard websites (e.g.,
@@ -971,8 +950,7 @@
     store?</h5>
 
 <p>Yes. If you want to host it on your server, it is exactly the same as
-    hosting a Flash file on your site. If you create a packaged app, you
-    must include the complete app (with Flash file) in your ZIP file.</p>
+    hosting a Flash file on your site.</p>
 <h5 id="faq-app-09">I have a Flash game that I would love to be able to take
     payments for, how can I do it?</h5>
 
@@ -1002,9 +980,7 @@
     The <code>.crx</code> package information you create to list the app in
     the store will not work with other browsers, but users do not need the
     <code>.crx</code> package to access a hosted web app in other browsers.
-    (They can always directly access the app.) Packaged apps, because they
-    are packaged in <code>.crx</code> files and might access the Google
-    Chrome Extension APIs, will not work in other browsers.</p>
+    (They can always directly access the app.)</p>
 <h5 id="faq-app-13">Will users of other browsers be able to install apps
     directly from the Chrome Web Store?</h5>
 
@@ -1023,7 +999,7 @@
 <p>This answer to this depends on the type of content and the storage
     requirements.
 <ul>
-    <li>For a packaged app or extension, you can put all HTML, CSS,
+    <li>For an extension, you can put all HTML, CSS,
         JavaScript, images, and other assets into your <code>.crx</code>
         file. This embeds everything you need into the installable
         <code>.crx</code>
@@ -1093,7 +1069,7 @@
 
 <p>If your app is pure HTML, CSS3, and JavaScript and is hosted on your
     servers there is a good chance that it will work in the browser on
-    Android. However, <code>.crx</code> files (including packaged apps) are
+    Android. However, <code>.crx</code> files are
     not supported on Android. Users cannot install their apps onto the
     Android browser, but they can most likely use those apps by directly
     accessing the app's URL.</p>

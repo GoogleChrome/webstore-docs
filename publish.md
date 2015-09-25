@@ -69,7 +69,7 @@ It should also contain a few images and any other files that the app requires. T
 **Tips:**
 
 * Set the initial [version number](https://developer.chrome.com/extensions/manifest.html#version) in the manifest to a low value, such as 0.0.0.1. That way, you have room to increase the version number when you upload new versions of your app.
-* If your packaged app or extension uses [Native Client](https://developers.google.com/native-client/), you can structure your application directory hierarchy and ZIP file in a way that reduces the size of the user download package. For details, see [Reducing the size of the user download package](https://developer.chrome.com/native-client/devguide/distributing#reducing-the-size-of-the-user-download-package).
+* If your extension uses [Native Client](https://developers.google.com/native-client/), you can structure your application directory hierarchy and ZIP file in a way that reduces the size of the user download package. For details, see [Reducing the size of the user download package](https://developer.chrome.com/native-client/devguide/distributing#reducing-the-size-of-the-user-download-package).
 
 Before you upload your app, you’ll be asked to pick a developer account to both own your apps and receive payments. Instead of your personal account, we suggest using a dedicated account.
 
