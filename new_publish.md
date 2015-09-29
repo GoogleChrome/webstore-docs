@@ -29,8 +29,9 @@ We’ll go into detail about each step below.
 
 ## Create your app’s zip file
 
-To upload your app, you need to create a ZIP file
-that contains at least one file: your app's manifest.
+To upload your app,
+you need to create a ZIP file that contains at least one file:
+your app's manifest.
 
 Manifest files are .json files that contain important information
 about your app. They contain the following:
