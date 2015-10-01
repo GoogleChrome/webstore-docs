@@ -4,25 +4,15 @@
 To publish your app to the Chrome Web Store, follow these steps:
 
 1. Create your app’s zip file
-
 2. Create a developer account
-
 3. Upload your app
-
 4. Pick a payments system
-
 5. Get app constraints and finish your app’s code
-
 6. Get the app ID
-
 7. Get the OAuth token
-
 8. Finish the app
-
 9. Provide store content
-
 10. Pay the developer signup fee
-
 11. Publish your app
 
 We’ll go into detail about each step below.
@@ -30,8 +20,8 @@ We’ll go into detail about each step below.
 ## Create your app’s zip file
 
 To upload your app,
-you need to create a ZIP file that contains at least one file:
-your app's manifest.
+you need to create a ZIP file that contains
+at least one file: your app's manifest.
 
 Manifest files are .json files that contain important information
 about your app. They contain the following:
@@ -84,12 +74,13 @@ For details, see the documentation for the type of app you're writing:
 
 **Tips:**
 
-* Set the initial
-[version number](https://developer.chrome.com/extensions/manifest.html#version)
+* Set the
+initial [version number](https://developer.chrome.com/extensions/manifest.html#version)
 in the manifest to a low value, such as 0.0.0.1.
 That way, you have room to increase the version number
 when you upload new versions of your app.
-* If your packaged app or extension uses
+* If your packaged app or extension
+uses
 [Native Client](https://developers.google.com/native-client/),
 you can structure your application directory hierarchy and ZIP file
 in a way that reduces the size of the user download package.
