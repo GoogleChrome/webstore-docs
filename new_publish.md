@@ -84,8 +84,8 @@ uses
 [Native Client](https://developers.google.com/native-client/),
 you can structure your application directory hierarchy and ZIP file
 in a way that reduces the size of the user download package.
-For details, see
-[Reducing the size of the user download package](https://developer.chrome.com/native-client/devguide/distributing#reducing-the-size-of-the-user-download-package).
+For details,
+see [Reducing the size of the user download package](https://developer.chrome.com/native-client/devguide/distributing#reducing-the-size-of-the-user-download-package).
 
 Before you upload your app,
 you’ll be asked to pick a developer account
@@ -100,8 +100,8 @@ instead of your personal account.
 If you want to publish a hosted app,
 you'll need to prove that your developer account owns the URLs
 that comprise the app.
-Visit the Google Webmaster Tools Help Center for information on
-[proving site ownership](http://www.google.com/support/webmasters/bin/answer.py?hl=en&answer=34592).
+Visit the Google Webmaster Tools Help Center
+for information on [proving site ownership](http://www.google.com/support/webmasters/bin/answer.py?hl=en&answer=34592).
 
 If you already host your app in Google Play and you want
 your Chrome Web Store app listing to show an "Available for Android" link,
@@ -272,4 +272,44 @@ Google Play for Education is a separate store
 that lets educators find, buy, and deploy apps to their students with just a few clicks.
 Learn more about publishing in
 [Google Play for Education](http://developer.android.com/distribute/googleplay/edu/start.html).
+
+## Control how fast your app reaches users
+
+You can control how fast a new version of your app
+reaches existing users with Controlled Rollout.
+By using the “max deploy percentage” control,
+you can limit the percentage of existing users
+that are updated to the latest version of the app
+through the Chrome auto-update mechanism.
+
+Example:
+
+If your app has 20,000 users and
+the current version of the app is 1.0,
+you may want to test how the new version 2.0
+of your app works for a small portion
+of users before you deploy it to all of them.
+You can set the “max deploy percentage” control
+for the new package to say, 10%, then publish the package.
+This way, a maximum of 2,000 users will be updated to version 2.0 of the app.
+If you’re happy with the test, you can gradually increase
+the max deploy percentage and republish the app,
+eventually turning off the max deploy percentage control
+to roll out to all users.
+
+Notes:
+
+* The max deploy percentage control only applies
+to auto-update for existing users.
+New users always get the latest version of your app.
+* If you don’t see the max deploy percentage control,
+it may be because of the following:
+You have less than 10,000 users. Currently the “controlled rollout” feature
+is only available for items with at least 10,000 users.
+
+You need to upload a newer (higher) version of a package
+to use the “controlled rollout” feature.
+We can’t apply a controlled rollout to an already published package,
+because it may have already reached 100% of users.
+
 {{/partials.standard_store_article}}
