@@ -74,242 +74,145 @@ For details, see the documentation for the type of app you're writing:
 
 **Tips:**
 
-* Set the
-initial [version number](https://developer.chrome.com/extensions/manifest.html#version)
-in the manifest to a low value, such as 0.0.0.1.
-That way, you have room to increase the version number
-when you upload new versions of your app.
-* If your packaged app or extension
-uses
-[Native Client](https://developers.google.com/native-client/),
-you can structure your application directory hierarchy and ZIP file
-in a way that reduces the size of the user download package.
-For details,
-see [Reducing the size of the user download package](https://developer.chrome.com/native-client/devguide/distributing#reducing-the-size-of-the-user-download-package).
+* Set the initial [version number](https://developer.chrome.com/extensions/manifest.html#version) in the manifest to a low value, such as 0.0.0.1. That way, you have room to increase the version number when you upload new versions of your app.
+* If your packaged app or extension uses [Native Client](https://developers.google.com/native-client/), you can structure your application directory hierarchy and ZIP file in a way that reduces the size of the user download package. For details, see [Reducing the size of the user download package](https://developer.chrome.com/native-client/devguide/distributing#reducing-the-size-of-the-user-download-package).
 
-Before you upload your app,
-you’ll be asked to pick a developer account
-to both own your apps and receive payments.
+Before you upload your app, you’ll be asked to pick a developer account to both own your apps and receive payments.
 Instead of your personal account, we suggest using a dedicated account.
 
 ## Create a developer account
 
-We suggest using a new account just for your app
-instead of your personal account.
+We suggest using a new account just for your app instead of your personal account.
 
-If you want to publish a hosted app,
-you'll need to prove that your developer account owns the URLs
-that comprise the app.
-Visit the Google Webmaster Tools Help Center
-for information on [proving site ownership](http://www.google.com/support/webmasters/bin/answer.py?hl=en&answer=34592).
+If you want to publish a hosted app, you'll need to prove that your developer account owns the URLs that comprise the app.
+Visit the Google Webmaster Tools Help Center for information on [proving site ownership](http://www.google.com/support/webmasters/bin/answer.py?hl=en&answer=34592).
 
-If you already host your app in Google Play and you want
-your Chrome Web Store app listing to show an "Available for Android" link,
-your app must have the same name as your Google Play listing,
-and both apps must be owned by the same developer account.
-To transfer your Chrome Web Store app to a different developer,
-submit this
+If you already host your app in Google Play and you want your Chrome Web Store app listing to show an "Available for Android" link, your app must have the same name as your Google Play listing, and both apps must be owned by the same developer account.
+To transfer your Chrome Web Store app to a different developer, submit this
 [form](https://support.google.com/chrome_webstore/contact/dev_account_transfer).
 
 ## Upload your app
 
 To upload your app, use the Chrome Developer Dashboard.
 
-If you need the app ID or an OAuth access token to complete your app's code,
-then you need to upload the app while you're still writing its code.
-Otherwise, you can wait until the app is finished.
-You can upload your app many times before publishing it.
+If you need the app ID or an OAuth access token to complete your app's code, then you need to upload the app while you're still writing its code. Otherwise, you can wait until the app is finished. You can upload your app many times before publishing it.
 
-When your app, its Chrome Web Store listing,
-and all the sites it relies on are ready, you can publish your app.
-You can publish up to 20 applications on Chrome Web Store.
+When your app, its Chrome Web Store listing, and all the sites it relies on are ready, you can publish your app. You can publish up to 20 applications on Chrome Web Store.
 
-Here's how you upload your app:
+Here's how to upload your app:
 
-1. Go to the
-[Chrome Developer Dashboard](https://chrome.google.com/webstore/developer/dashboard).
+1. Go to the [Chrome Developer Dashboard](https://chrome.google.com/webstore/developer/dashboard).
 
 2. Sign into the developer account you chose in Step 1.
 
 3. Click the **Add new item** button. 
 
-4. If you've never uploaded an item before,
-you need to accept the developer agreement before going to the next step.
+4. If you've never uploaded an item before, you need to accept the developer agreement before going to the next step.
 
-5. Click **Choose file** > your zip file > **Upload**.
-If your app's manifest and ZIP file are valid,
+5. Click **Choose file** > your zip file > **Upload**. If your app's manifest and ZIP file are valid,
 you can edit your app on the next page.
 
 ## Pick a payment system
 
-If you aren't going to use Chrome Web Store Payments,
-you can delay or (for free apps) omit this step.
+If you aren't going to use Chrome Web Store Payments, you can delay or (for free apps) omit this step.
 
-If you want to charge for your app,
-set its price and payment system
-through the dashboard's edit page for your app.
+If you want to charge for your app, set its price and payment system through the dashboard's edit page for your app.
 
-To use Chrome Web Store Payments,
-you also need to signup your developer account as a Google Checkout merchant,
-and you need to associate your merchant account with the store.
-For details, see
+To use Chrome Web Store Payments, you also need to signup your developer account as a Google Checkout merchant, and you need to associate your merchant account with the store. For details, see
 [Register for a Google Checkout Merchant account](https://developer.chrome.com/webstore/money).
 
 ## Provide store content
 
-Add the store listing information for your app that isn't in the ZIP file,
-such as a long description, screenshots, videos, and links to related sites.
-You’ll need the following to finish your app’s store listing:
+Add the store listing information for your app that isn't in the ZIP file, such as a long description, screenshots, videos, and links to related sites. You’ll need the following to finish your app’s store listing:
 
-* A **detailed description** of your application.
-Write your description to entice users to download your app.
-* A 128x128 **icon** to display in the store.
-You may re-use your app icon here.
-* At least one 1280x800 or 640x400 **screenshot** or YouTube **video**
-to show off what your app does.
-* A 440x280 **small tile icon** that will be displayed
-on the Chrome Web Store wall.
+* A **detailed description** of your application. Write your description to entice users to download your app.
+* A 128x128 **icon** to display in the store. You may re-use your app icon here.
+* At least one 1280x800 or 640x400 **screenshot** or YouTube **video** to show off what your app does.
+* A 440x280 **small tile icon** that will be displayed on the Chrome Web Store wall.
 * The **primary category** where your app should be listed.
 * Your app's **language** to help users find it.
 
-See
-[Supplying Images](https://developer.chrome.com/webstore/images.html)
-for help on designing the images for your app, and
-[Branding Guidelines](https://developer.chrome.com/webstore/branding.html)
+See [Supplying Images](https://developer.chrome.com/webstore/images.html) for help on designing the images for your app, and [Branding Guidelines](https://developer.chrome.com/webstore/branding.html)
 for information on how you can use Google brands.
 
 ## Pay the developer signup fee
 
-Before you publish your first app,
-you must pay a one-time $5 developer signup fee.
-A reminder in the dashboard will appear until you pay the fee.
+Before you publish your first app, you must pay a one-time $5 developer signup fee. A reminder in the dashboard will appear until you pay the fee.
 
-For more information, including troubleshooting tips, see the
-[Registration article](http://www.google.com/support/chrome_webstore/bin/answer.py?answer=187591).
+For more information, including troubleshooting tips, see the [Registration article](http://www.google.com/support/chrome_webstore/bin/answer.py?answer=187591).
 
 ## Get app constraints and finish your app’s code
 
-When you publish your app, you’ll get an app ID.
-If you make requests to Google APIs, you’ll need this information.
-For example, if you need the
-[licensing API](https://developer.chrome.com/webstore/get_started),
-you’ll need the app ID.
+When you publish your app, you’ll get an app ID. If you make requests to Google APIs, you’ll need this information. For example, if you need the [licensing API](https://developer.chrome.com/webstore/get_started), you’ll need the app ID.
 
 To get the app ID or OAuth token for your app’s code, follow the steps below:
 
 ### Get the app ID
 
-The app ID appears in the URL of any dashboard or store page for your app.
-You’ll need the app ID if you want to use the Licensing API.
+The app ID appears in the URL of any dashboard or store page for your app. You’ll need the app ID if you want to use the Licensing API.
 
-For example, the URL
-"https://chrome.google.com/extensions/detail/aaaaaaaaaabbbbbbbbbbcccccccccc?hl=en" has the app ID “aaaaaaaaaabbbbbbbbbbcccccccccc.”
+For example, the URL "https://chrome.google.com/extensions/detail/aaaaaaaaaabbbbbbbbbbcccccccccc?hl=en" has the app ID “aaaaaaaaaabbbbbbbbbbcccccccccc.”
 
 ### Get the OAuth token
 
-If you want to use Chrome Web Store Payments, you’ll need an
-[OAuth access token and access token secret](https://developer.chrome.com/webstore/check_for_payment.html#token).
+If you want to use Chrome Web Store Payments, you’ll need an [OAuth access token and access token secret](https://developer.chrome.com/webstore/check_for_payment.html#token).
 
 ### Finish the app
 
-Now you can add any code that refers to the app ID or OAuth access token
-to complete your app.
+Now you can add any code that refers to the app ID or OAuth access token to complete your app.
 
-You can update your app as many times as you want,
-just remember to increase the version number each time.
+You can update your app as many times as you want, just remember to increase the version number each time.
 
 Before you publish your app, verify that everything is working properly:
 
-1. On the edit page, click **Preview changes** and
-check that the listing looks great and has all the info that it should.
+1. On the edit page, click **Preview changes** and check that the listing looks great and has all the info that it should.
 
 2. Check that the app and any websites and supporting pages all work.
 
 3. Publish any new websites and supporting pages that your app needs to work.
 
-4. Publish your app.
-You can choose the audience for your app using the information below:
+4. Publish your app. You can choose the audience for your app using the information below:
 
 ## Publishing to test accounts
 
-When you publish to test accounts,
-your app’s store listing only appears to you and any users
-who are logged into these test accounts that you specify.
-Your app won’t appear in search results,
-so you’ll need to give testers a direct link to your app’s listing.
-Testing also gives you a chance to see how the license server integrates
+When you publish to test accounts, your app’s store listing only appears to you and any users who are logged into these test accounts that you specify. Your app won’t appear in search results, so you’ll need to give testers a direct link to your app’s listing. Testing also gives you a chance to see how the license server integrates
 with your app if you plan to charge your it using Chrome Web Store Payments.
 
-To edit your list of accounts, click **Edit your tester accounts**.
-You can enter single accounts, or
+To edit your list of accounts, click **Edit your tester accounts**. You can enter single accounts, or
 create a Google Group so that this set of users can test your app.
 
-Once you’re ready to publish,
-click **Publish to test accounts**.
+Once you’re ready to publish, click **Publish to test accounts**.
 
 You’ll need to unpublish the app if you want to publish to the world later.
 
 ## Publishing to the world
 
-When you publish to the world,
-it’ll be immediately visible to the world,
-and it’ll be visible in the store’s search results.
+When you publish to the world, it’ll be immediately visible to the world, and it’ll be visible in the store’s search results.
 
-You can select the regions that you want to support,
-[pick your app’s price in each region](https://developer.chrome.com/webstore/pricing#matrix)
-(if you use Chrome Web Store Payments), and
-[internationalize your app](https://developer.chrome.com/webstore/i18n).
+You can select the regions that you want to support, [pick your app’s price in each region](https://developer.chrome.com/webstore/pricing#matrix) (if you use Chrome Web Store Payments), and [internationalize your app](https://developer.chrome.com/webstore/i18n).
 
-To publish to the world, click **Publish** next to your app.
-You can also visit the dashboard’s edit page and click **Publish changes**.
+To publish to the world, click **Publish** next to your app. You can also visit the dashboard’s edit page and click **Publish changes**.
 
 ## Publishing on Google Play for Education
 
-If you build an app for K-12 education,
-you can opt in to Google Play for Education.
+If you build an app for K-12 education, you can opt in to Google Play for Education.
 
-Google Play for Education is a separate store
-that lets educators find, buy, and deploy apps to their students with just a few clicks.
-Learn more about publishing in
-[Google Play for Education](http://developer.android.com/distribute/googleplay/edu/start.html).
+Google Play for Education is a separate store that lets educators find, buy, and deploy apps to their students with just a few clicks. Learn more about publishing in [Google Play for Education](http://developer.android.com/distribute/googleplay/edu/start.html).
 
 ## Control how fast your app reaches users
 
-You can control how fast a new version of your app
-reaches existing users with Controlled Rollout.
-By using the “max deploy percentage” control,
-you can limit the percentage of existing users
-that are updated to the latest version of the app
-through the Chrome auto-update mechanism.
+You can control how fast a new version of your app reaches existing users with Controlled Rollout. By using the “max deploy percentage” control, you can limit the percentage of existing users that are updated to the latest version of the app through the Chrome auto-update mechanism.
 
 Example:
 
-If your app has 20,000 users and
-the current version of the app is 1.0,
-you may want to test how the new version 2.0
-of your app works for a small portion
-of users before you deploy it to all of them.
-You can set the “max deploy percentage” control
-for the new package to say, 10%, then publish the package.
-This way, a maximum of 2,000 users will be updated to version 2.0 of the app.
-If you’re happy with the test, you can gradually increase
-the max deploy percentage and republish the app,
-eventually turning off the max deploy percentage control
-to roll out to all users.
+If your app has 20,000 users and the current version of the app is 1.0, you may want to test how the new version 2.0
+of your app works for a small portion of users before you deploy it to all of them. You can set the “max deploy percentage” control for the new package to say, 10%, then publish the package. This way, a maximum of 2,000 users will be updated to version 2.0 of the app. If you’re happy with the test, you can gradually increase the max deploy percentage and republish the app, eventually turning off the max deploy percentage control to roll out to all users.
 
 Notes:
 
-* The max deploy percentage control only applies
-to auto-update for existing users.
-New users always get the latest version of your app.
-* If you don’t see the max deploy percentage control,
-it may be because of the following:
-You have less than 10,000 users. Currently the “controlled rollout” feature
-is only available for items with at least 10,000 users.
-
-You need to upload a newer (higher) version of a package
-to use the “controlled rollout” feature.
-We can’t apply a controlled rollout to an already published package,
-because it may have already reached 100% of users.
+* The max deploy percentage control only applies to auto-update for existing users. New users always get the latest version of your app.
+* If you don’t see the max deploy percentage control, it may be because of the following:
+** You have less than 10,000 users. Currently the “controlled rollout” feature is only available for items with at least 10,000 users.
+** You need to upload a newer (higher) version of a package to use the “controlled rollout” feature. We can’t apply a controlled rollout to an already published package, because it may have already reached 100% of users.
 
 {{/partials.standard_store_article}}
