@@ -19,28 +19,22 @@ We’ll go into detail about each step below.
 
 ## Create your app’s zip file
 
-To upload your app,
-you need to create a ZIP file that contains
-at least one file: your app's manifest.
+To upload your app, you need to create a ZIP file that contains at least one file: your app's manifest.
 
-Manifest files are .json files that contain important information
-about your app. They contain the following:
+Manifest files are .json files that contain important information about your app. They contain the following:
 
 * App name - Displayed in the Chrome Web Store and in the Chrome launcher
 * Version - The version of the metadata, incremented
 
-It should also contain a few images and any other files that the app requires.
-The contents of the ZIP file and manifest
-depend on the type of app you're writing and its capabilities.
-For details, see the documentation for the type of app you're writing:
+It should also contain a few images and any other files that the app requires. The contents of the ZIP file and manifest depend on the type of app you're writing and its capabilities. For details, see the documentation for the type of app you're writing:
 
 <table>
   <tr>
-    <td>Required item</td>
-    <td>Hosted apps</td>
-    <td>Apps</td>
-    <td>Themes</td>
-    <td>Extensions</td>
+    <td><strong>Required item</strong></td>
+    <td><strong>Hosted apps</strong></td>
+    <td><strong>Apps</strong></td>
+    <td><strong>Themes</strong></td>
+    <td><strong>Extensions</strong></td>
   </tr>
   <tr>
     <td>Manifest file</td>
@@ -77,19 +71,16 @@ For details, see the documentation for the type of app you're writing:
 * Set the initial [version number](https://developer.chrome.com/extensions/manifest.html#version) in the manifest to a low value, such as 0.0.0.1. That way, you have room to increase the version number when you upload new versions of your app.
 * If your packaged app or extension uses [Native Client](https://developers.google.com/native-client/), you can structure your application directory hierarchy and ZIP file in a way that reduces the size of the user download package. For details, see [Reducing the size of the user download package](https://developer.chrome.com/native-client/devguide/distributing#reducing-the-size-of-the-user-download-package).
 
-Before you upload your app, you’ll be asked to pick a developer account to both own your apps and receive payments.
-Instead of your personal account, we suggest using a dedicated account.
+Before you upload your app, you’ll be asked to pick a developer account to both own your apps and receive payments. Instead of your personal account, we suggest using a dedicated account.
 
 ## Create a developer account
 
 We suggest using a new account just for your app instead of your personal account.
 
-If you want to publish a hosted app, you'll need to prove that your developer account owns the URLs that comprise the app.
-Visit the Google Webmaster Tools Help Center for information on [proving site ownership](http://www.google.com/support/webmasters/bin/answer.py?hl=en&answer=34592).
+If you want to publish a hosted app, you'll need to prove that your developer account owns the URLs that comprise the app. Visit the Google Webmaster Tools Help Center for information on [proving site ownership](http://www.google.com/support/webmasters/bin/answer.py?hl=en&answer=34592).
 
 If you already host your app in Google Play and you want your Chrome Web Store app listing to show an "Available for Android" link, your app must have the same name as your Google Play listing, and both apps must be owned by the same developer account.
-To transfer your Chrome Web Store app to a different developer, submit this
-[form](https://support.google.com/chrome_webstore/contact/dev_account_transfer).
+To transfer your Chrome Web Store app to a different developer, submit this [form](https://support.google.com/chrome_webstore/contact/dev_account_transfer).
 
 ## Upload your app
 
@@ -109,8 +100,7 @@ Here's how to upload your app:
 
 4. If you've never uploaded an item before, you need to accept the developer agreement before going to the next step.
 
-5. Click **Choose file** > your zip file > **Upload**. If your app's manifest and ZIP file are valid,
-you can edit your app on the next page.
+5. Click **Choose file** > your zip file > **Upload**. If your app's manifest and ZIP file are valid, you can edit your app on the next page.
 
 ## Pick a payment system
 
@@ -118,8 +108,7 @@ If you aren't going to use Chrome Web Store Payments, you can delay or (for free
 
 If you want to charge for your app, set its price and payment system through the dashboard's edit page for your app.
 
-To use Chrome Web Store Payments, you also need to signup your developer account as a Google Checkout merchant, and you need to associate your merchant account with the store. For details, see
-[Register for a Google Checkout Merchant account](https://developer.chrome.com/webstore/money).
+To use Chrome Web Store Payments, you also need to signup your developer account as a Google Checkout merchant, and you need to associate your merchant account with the store. For details, see [Register for a Google Checkout Merchant account](https://developer.chrome.com/webstore/money).
 
 ## Provide store content
 
@@ -132,8 +121,7 @@ Add the store listing information for your app that isn't in the ZIP file, such 
 * The **primary category** where your app should be listed.
 * Your app's **language** to help users find it.
 
-See [Supplying Images](https://developer.chrome.com/webstore/images.html) for help on designing the images for your app, and [Branding Guidelines](https://developer.chrome.com/webstore/branding.html)
-for information on how you can use Google brands.
+See [Supplying Images](https://developer.chrome.com/webstore/images.html) for help on designing the images for your app, and [Branding Guidelines](https://developer.chrome.com/webstore/branding.html) for information on how you can use Google brands.
 
 ## Pay the developer signup fee
 
@@ -205,8 +193,7 @@ You can control how fast a new version of your app reaches existing users with C
 
 Example:
 
-If your app has 20,000 users and the current version of the app is 1.0, you may want to test how the new version 2.0
-of your app works for a small portion of users before you deploy it to all of them. You can set the “max deploy percentage” control for the new package to say, 10%, then publish the package. This way, a maximum of 2,000 users will be updated to version 2.0 of the app. If you’re happy with the test, you can gradually increase the max deploy percentage and republish the app, eventually turning off the max deploy percentage control to roll out to all users.
+If your app has 20,000 users and the current version of the app is 1.0, you may want to test how the new version 2.0 of your app works for a small portion of users before you deploy it to all of them. You can set the “max deploy percentage” control for the new package to say, 10%, then publish the package. This way, a maximum of 2,000 users will be updated to version 2.0 of the app. If you’re happy with the test, you can gradually increase the max deploy percentage and republish the app, eventually turning off the max deploy percentage control to roll out to all users.
 
 Notes:
 
