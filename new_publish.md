@@ -212,7 +212,7 @@ Notes:
 
 * The max deploy percentage control only applies to auto-update for existing users. New users always get the latest version of your app.
 * If you don’t see the max deploy percentage control, it may be because of the following:
-** You have less than 10,000 users. Currently the “controlled rollout” feature is only available for items with at least 10,000 users.
-** You need to upload a newer (higher) version of a package to use the “controlled rollout” feature. We can’t apply a controlled rollout to an already published package, because it may have already reached 100% of users.
+    * You have less than 10,000 users. Currently the “controlled rollout” feature is only available for items with at least 10,000 users.
+    * You need to upload a newer (higher) version of a package to use the “controlled rollout” feature. We can’t apply a controlled rollout to an already published package, because it may have already reached 100% of users.
 
 {{/partials.standard_store_article}}
