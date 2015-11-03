@@ -1,5 +1,4 @@
 {{+bindTo:partials.standard_store_article}}
-
 # Publish in the Chrome Web Store
 
 To publish your app to the Chrome Web Store, follow these steps:
