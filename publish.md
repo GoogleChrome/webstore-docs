@@ -160,8 +160,7 @@ Before you publish your app, verify that everything is working properly:
 
 ## Publishing to test accounts
 
-When you publish to test accounts, your app’s store listing only appears to you and any users who are logged into these test accounts that you specify. Your app won’t appear in search results, so you’ll need to give testers a direct link to your app’s listing. Testing also gives you a chance to see how the license server integrates
-with your app if you plan to charge your it using Chrome Web Store Payments.
+When you publish to test accounts, your app’s store listing only appears to you and any users who are logged into these test accounts that you specify. Your app won’t appear in search results, so you’ll need to give testers a direct link to your app’s listing. Testing also gives you a chance to see how the license server integrates with your app if you plan to charge your it using Chrome Web Store Payments.
 
 To edit your list of accounts, click **Edit your tester accounts**. You can enter single accounts, or create a Google Group so that this set of users can test your app. See the section below to learn how to set up Group Publishing.
 
@@ -192,22 +191,14 @@ To set up group publishing, follow these steps:
     * **Google Group publishing: Choose existing group or create new group** This link shows up if you're the owner of one or more Google Groups, and those groups haven't already been linked to a publisher account.
     * **Google Group publishing: Create new group** You'll see this link if you aren't an owner of any Google Groups, or if all the groups that you are an owner of have already been linked to other publisher accounts.
 5. You can do one of the following:
-    * Create a new Google group and link to this new group.
-    1. Click **Create new group**. You'll see the Google Groups page in a new tab.
-    2. Create your new group.
-    3. Reload the Chrome Web Store dashboard page in your browser, then follow the steps below under "Link to an existing Google Group."
-    * Link to an existing Google group.
-    1. Click **Choose existing group**.
-    2. Select a group from the drop-down. (We recommend linking to a group that you're using only for group publishing of your items.)
-    3. Click **OK** in the confirmation box.
-    4. Click **Save Changes** at the bottom of dashboard page.
+    * Create a new Google group and link to this new group: 1. Click **Create new group**. You'll see the Google Groups page in a new tab. 2. Create your new group. 3. Reload the Chrome Web Store dashboard page in your browser, then follow the steps below under "Link to an existing Google Group."
+    * Link to an existing Google group: 1. Click **Choose existing group**. 2. Select a group from the drop-down. (We recommend linking to a group that you're using only for group publishing of your items.) 3. Click **OK** in the confirmation box. 4. Click **Save Changes** at the bottom of dashboard page.
 
 After you complete the steps above, a new Group Publisher account is created. The Google Group you selected or created is linked to this new publisher account, and the group email is the new publisher account's email.
 
 ### After you set up group publishing
 
-Your dashboard page will show the new Group Publisher account and the linked Google Group. You can [add or remove developers](https://groups.google.com/).
-**All members of the linked group can act on behalf of the new publisher account**. For example, they can edit items, publish items, edit the publisher's display name, etc.
+Your dashboard page will show the new Group Publisher account and the linked Google Group. You can [add or remove developers](https://groups.google.com/). **All members of the linked group can act on behalf of the new publisher account**. For example, they can edit items, publish items, edit the publisher's display name, etc.
 
 ### Things to note
 
@@ -227,6 +218,7 @@ Once you set up a Group Publisher account (or once you're added as a member of a
 Remember that once you move items to a Group Publisher account, you won't be able to move them back to your personal publishing account.
 
 To transfer items to a Group Publisher account:
+
 1. Sign into your [Chrome Web Store dashboard page](https://chrome.google.com/webstore/developer/dashboard).
 2. From the publisher selection drop-down at the top of the dashboard, select the Group Publisher you want to transfer your items to. It will load the dashboard page for the selected Group Publisher.
 3. Select **Transfer existing item(s)**, next to the **Add new item** button. You'll see a page with a list of items you own personally.
