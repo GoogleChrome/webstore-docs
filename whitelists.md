@@ -21,9 +21,9 @@ A sample manifest file is shown below.
     // Required.
     "sites": "site_list.json"
   },
-  “icons”: {
+  "icons": {
     // Required.
-    “128”: “128icon.png”
+    "128": "128icon.png"
   }
 }
 ```
