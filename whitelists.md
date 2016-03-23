@@ -35,7 +35,8 @@ A sample sitelist file is shown below.
 {
   // Version of the whitelist format.
  "sitelist_version": 1,
-  // This URL will be featured on the Child’s new tab page. This URL too has to be manually whitelisted in order to be accessible.
+  // This URL will be featured on the Child’s new tab page. 
+  // This URL too has to be manually whitelisted in order to be accessible.
   // Optional.
  "entry_point_url": "http://some-ngo.com",
   // The list of URL patterns that define which URLs are whitelisted.
@@ -54,7 +55,7 @@ A sample sitelist file is shown below.
 ```
 URLs may be defined either in plain text or as SHA-1 hashed host names, which allows membership tests without exposing host names in plain text.
 
->**Note:** The landing page specified by the `entry_point_url` key is automatically whitelisted. It is your responsibility as the developer to ensure that the entry point is properly scoped to avoid over-whitelisting content.
+>**Note:** The landing page specified by the `entry_point_url` key is not automatically whitelisted. It is your responsibility as the developer to ensure that the entry point is properly scoped to avoid over-whitelisting content.
 
 ## Publish
 Whitelists are uploaded and maintained in much the same way as other CWS items using the publishing UI in the Developer Dashboard. Adding or removing whitelisted content is done by uploading a new CRX (with an item’s version number incremented) containing an edited site list file. 
