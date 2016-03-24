@@ -58,7 +58,7 @@ URLs may be defined either in plain text or as [SHA-1](https://en.wikipedia.org/
 >**Note:** The landing page specified by the `entry_point_url` key is not automatically whitelisted. It is your responsibility as the developer to ensure that the entry point is properly scoped to avoid over-whitelisting content.
 
 ## Publish
-Whitelists are uploaded and maintained in much the same way as other CWS items using the publishing UI in the Developer Dashboard. Adding or removing whitelisted content is done by uploading a new CRX (with an item’s version number incremented) containing an edited site list file. 
+Whitelists are uploaded and maintained in much the same way as other CWS items using the publishing UI in the [Developer Dashboard](https://chrome.google.com/webstore/developer/dashboard). Adding or removing whitelisted content is done by uploading a new CRX (with an item's version number incremented) containing an edited site list file. 
 
 For more information see the [Publish in the Chrome Web Store](https://developer.chrome.com/webstore/publish) documentation.
 
