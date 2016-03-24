@@ -53,7 +53,7 @@ A sample sitelist file is shown below.
 
 }
 ```
-URLs may be defined either in plain text or as SHA-1 hashed host names, which allows membership tests without exposing host names in plain text.
+URLs may be defined either in plain text or as [SHA-1](https://en.wikipedia.org/wiki/SHA-1) hashed host names, which allows membership tests without exposing host names in plain text.
 
 >**Note:** The landing page specified by the `entry_point_url` key is not automatically whitelisted. It is your responsibility as the developer to ensure that the entry point is properly scoped to avoid over-whitelisting content.
 
