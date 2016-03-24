@@ -3,7 +3,7 @@
 ## Introduction
 Whitelists are a Chrome Web Store (CWS) item type, similar to Chrome Apps and Chrome Extensions. They are collections of "safe" content in the context of Chrome Supervised Users, enabling custodians to allow their supervised users access to a trusted list of websites.
 
-Whitelists are lists of URL patterns and/or hashed hostnames provided by third parties. A whitelist contains, at a minimum, an *icon*, a *name*, and a landing page *URL*. The name and icon are used to visually represent the whitelist  the CWS or in Chrome. The landing page URL is used as a starting point into the whitelisted content.
+Whitelists are lists of URL patterns and/or hashed hostnames provided by third parties. A whitelist contains, at a minimum, an *icon*, a *name*, and a *landing page URL*. The name and icon are used to visually represent the whitelist  the CWS or in Chrome. The landing page URL is used as a starting point into the whitelisted content.
 
 ## Requirements
 A Whitelist is uploaded to CWS as a `zip` file containing a manifest file and a list of URLs to be whitelisted, both in JSON format. 
