@@ -207,7 +207,7 @@ Inline installation is a powerful distribution mechanism that offers users a
 smoother experience installing Chrome extensions and helps developers reach more 
 users.  While the vast majority of developers have used this feature as intended, 
 we have seen instances where an inline installation has been paired with ads and 
-landing pages designed to confuse and mislead users into installing extensions 
+landing pages that confuse and mislead users into installing extensions 
 they may not want.  In response to this, we 
 <a href="http://blog.chromium.org/2015/08/protecting-users-from-deceptive-inline.html">launched</a> 
 our inline installation enforcement effort in September 2015, which we updated 
@@ -218,7 +218,7 @@ in March 2016.
 <b>What happens when inline installation is disabled?</b><br/>
 When an extension's inline installation is disabled, all attempts to trigger 
 inline installation for your extension will result in a redirect to your item's 
-Chrome Web Store listing.  Inline installation disablement does not result in 
+Chrome Web Store listing.  Inline installation enforcement does not result in 
 removal of your extension from the Chrome Web Store.  Users will still be able 
 to access and install your extension through the Chrome Web Store.  Repeated 
 abuse of inline installation, however, may lead to further enforcement actions.
@@ -255,7 +255,7 @@ in any way, we may apply further enforcement actions.
 <p>
 <b>How can I have inline installation reenabled for my extension?</b><br/>
 Once an extension's inline installation has been disabled by our automated enforcement 
-system, we closely track the extension's installation patterns following disablement.  
+system, we closely track the extension's installation patterns. 
 If our system determines that user intent remains strong after a redirect to the 
 extension's Chrome Web Store listing, the system will automatically reenable inline 
 installation.  This process takes at least 30 days.  If our system finds that user 
@@ -271,8 +271,8 @@ review process, there is no path to reenable that particular extension's inline 
 <b>How can I ensure inline installation remains enabled for my extension?</b><br/>
 In general, we urge Chrome Web Store developers to ensure their inline installation 
 landing pages prominently feature their extensions' core features and deliver 
-extension experiences that align with the expectations users build from the ads 
-and landing pages that resulted in the installation.  For more guidance on how to 
+experiences that align with the expectations conveyed by the ads 
+and landing pages associated with the installation flow.  For more guidance on how to 
 build clear and transparent landing pages, please refer to our 
 <a href="https://www.google.com/about/company/unwanted-software-policy.html">Unwanted Software Policy</a> 
 as well as our AdWords policies on 
