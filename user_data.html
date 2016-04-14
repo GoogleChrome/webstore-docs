@@ -1,4 +1,4 @@
-{{+bindTo:partials.standard_store_article}}
+{{+bindTo:partials.standard_store_article removeToc:true/}}
 
 <h1>User Data FAQ</h1>
 
@@ -10,19 +10,19 @@
 <a href="terms.html">Terms of Service</a>
 </p>
 
-<h4 id="ques_1">1. My Product doesn’t handle personal or sensitive user data, how do I disclose my privacy practices?</h4>
+<h3 id="ques_1">1. My Product doesn’t handle personal or sensitive user data, how do I disclose my privacy practices?</h3>
 
 <p>
 You can describe how you collect, use, and share user data in any way users could easily find when installing or using your Product.  For example, you could describe them in the Chrome Web Store description or via your Product’s interface.  You could also choose to include a link to a privacy policy on your Product’s listing. 
 </p>
 
-<h4 id="ques_2">2. What are some examples of “personally identifiable information”? </h4>
+<h3 id="ques_2">2. What are some examples of “personally identifiable information”? </h3>
 
 <p>
 Examples of personally identifiable information include: a person’s name, address, telephone number, email address, and username.  It also includes any type of identification number, such as a government issued number, driver’s license number, or account number.
 </p>
 
-<h4 id="ques_3">3. What are some common ways a Product handles sensitive or personal user data? </h4>
+<h3 id="ques_3">3. What are some common ways a Product handles sensitive or personal user data? </h3>
 
 <p>
 Generally, by “handle” we mean collecting, transmitting, using, or sharing user data. Here are some examples of functionality that handle sensitive or personal user data:
@@ -36,25 +36,25 @@ Generally, by “handle” we mean collecting, transmitting, using, or sharing u
   <li>Collecting web browsing activity and any information about the website content or resources a user requests or interacts with, including the domains or URLs the browser interacts with, the content of the HTTP requests and responses, and data in a website’s browser storage (like cookies)</li>
 </ul>
 
-<h4 id="ques_4">4. What does “web browsing activity” mean? </h4>
+<h3 id="ques_4">4. What does “web browsing activity” mean? </h3>
 
 <p>
 Web browsing activity means any information about the websites or other web resources a user requests or interacts with, including the domains or URLs the browser interacts with.
 </p>
 
-<h4 id="ques_5">5. Does all user data need to be encrypted? </h4>
+<h3 id="ques_5">5. Does all user data need to be encrypted? </h3>
 
 <p>
 While we strongly recommend you encrypt all transmissions facilitated by your Product (see our <a href="https://www.youtube.com/watch?v=cBhZ6S0PFCY">Google I/O 2014 talk on HTTPS Everywhere</a>, this policy establishes a minimum requirement of encrypting transmissions of all personal or sensitive user data.
 </p>
 
-<h4 id="ques_6">6. What type of encryption does the User Data Policy require? </h4>
+<h3 id="ques_6">6. What type of encryption does the User Data Policy require? </h3>
 
 <p>
 Your Product may use any type of modern cryptography, such as free and commercially available TLS implementations and ciphers, but you should not use any cipher suite <a href="https://tools.ietf.org/html/rfc7540#appendix-A">blacklisted</a> by IETF. Our requirements may change over time.
 </p>
 
-<h4 id="ques_7">7. When does the prominent disclosure requirement apply? </h4>
+<h3 id="ques_7">7. When does the prominent disclosure requirement apply? </h3>
 
 <p>
 The prominent disclosure applies when both:
@@ -91,19 +91,19 @@ AND</li>
   </tr>
 </table>
 
-<h4 id="ques_8">8. How do I satisfy the prominent disclosure requirement? </h4>
+<h3 id="ques_8">8. How do I satisfy the prominent disclosure requirement? </h3>
 
 <p>
 The disclosure must describe the types of sensitive or personal user data to be collected and how they will be used. You must present the disclosure in a prominent way, so that the user sees it prior to agreeing. The disclosure, however, must not be located only in a privacy policy, terms of service, or similar document.
 </p>
 
-<h4 id="ques_9">9. Can an extension collect web browsing activity for ad targeting or other monetization purposes? </h4>
+<h3 id="ques_9">9. Can an extension collect web browsing activity for ad targeting or other monetization purposes? </h3>
 
 <p>
 No. The Other Requirements section states that an extension can only collect and transmit web browsing activity to the extent required for a user-facing feature that is prominently described in the Chrome Web Store page and user interface.  Ad targeting or other monetization of this data isn’t for a user-facing feature.  And, even if a user-facing feature required collection of this data, its use for ad targeting or any other monetization of the data wouldn’t be permitted because the Product is only permitted to use the data for the user-facing feature. 
 </p>
 
-<h4 id="ques_10">10. My extension or app handles personal or sensitive user data, but only stores information locally (or only uses Chrome Storage Sync API), do I still need to post a privacy policy? </h4>
+<h3 id="ques_10">10. My extension or app handles personal or sensitive user data, but only stores information locally (or only uses Chrome Storage Sync API), do I still need to post a privacy policy? </h3>
 
 <p>
 Yes: this policy requires all items that handle sensitive user information to post a privacy policy. Users may not be easily able to tell which apps or extensions save information locally or transmit it back to their servers. Your privacy policy, however, may not need to be long or complicated.  It just needs to describe how the Product collects, uses and shares user data.
