@@ -10,103 +10,197 @@
 <a href="terms.html">Terms of Service</a>
 </p>
 
-<h5 id="ques_1">1. My Product doesn’t handle personal or sensitive user data, how do I disclose my privacy practices?</h5>
+<h5 id="ques_1">1. How do I determine if my Product is compliant with the User Data Policy or if I need to make any changes?</h5>
 
 <p>
-You can describe how you collect, use, and share user data in any way users could easily find when installing or using your Product.  For example, you could describe them in the Chrome Web Store description or via your Product’s interface.  You could also choose to include a link to a privacy policy on your Product’s listing. 
+Read these frequently asked questions in order (from top to bottom) and they will lead you through a series of steps to help determine whether any changes are needed. The first question is: Does your Product handle personal or sensitive user data? 
 </p>
 
-<h5 id="ques_2">2. What are some examples of “personally identifiable information”? </h5>
-
-<p>
-Examples of personally identifiable information include: a person’s name, address, telephone number, email address, and username.  It also includes any type of identification number, such as a government issued number, driver’s license number, or account number.
-</p>
-
-<h5 id="ques_3">3. What are some common ways a Product handles sensitive or personal user data? </h5>
+<h5 id="ques_2">2. What does “handle” mean in the User Data Policy? What are some common ways a Product handles sensitive or personal user data?</h5>
 
 <p>
 Generally, by “handle” we mean collecting, transmitting, using, or sharing user data. Here are some examples of functionality that handle sensitive or personal user data:
 </p>
 
 <ul>
-  <li>Having login functionality (even if you use a third-party system, like Google authentication)</li>
-  <li>Having a form that collects any type of personally identifiable information (see the answer to question #2 for more information)</li>
-  <li>Clipping or scraping content from a website that the user visits, such as taking screenshots or capturing data from a web page</li>
-  <li>Collecting data obtained from web requests, such as a background activity that accesses contacts, emails, files or other data from a user’s cloud service</li>
-  <li>Collecting web browsing activity and any information about the website content or resources a user requests or interacts with, including the domains or URLs the browser interacts with, the content of the HTTP requests and responses, and data in a website’s browser storage (like cookies)</li>
+	<li>Having login functionality (even if you use a third-party system, like Google authentication)</li>
+	<li>Having a form that collects any type of personally identifiable information (see the answer to question #3 for more information)</li>
+	<li>Clipping or scraping content from a website that the user visits, such as taking screenshots or capturing data from a web page</li>
+	</li>Collecting data obtained from web requests, such as a background activity that accesses contacts, emails, files, or other data from a user’s cloud service</li>
+	<li>Collecting web browsing activity and any information about the website content or resources a user requests or interacts with, including the domains or URLs the browser interacts with, the content of the HTTP requests and responses, and data in a website’s browser storage (like cookies)</li>
 </ul>
 
-<h5 id="ques_4">4. What does “web browsing activity” mean? </h5>
+<h5 id="ques_3">3. What are examples of sensitive or personal user data?</h5>
 
 <p>
-Web browsing activity means any information about the websites or other web resources a user requests or interacts with, including the domains or URLs the browser interacts with.
-</p>
-
-<h5 id="ques_5">5. Does all user data need to be encrypted? </h5>
-
-<p>
-While we strongly recommend you encrypt all transmissions facilitated by your Product (see our <a href="https://www.youtube.com/watch?v=cBhZ6S0PFCY">Google I/O 2014 talk on HTTPS Everywhere</a>, this policy establishes a minimum requirement of encrypting transmissions of all personal or sensitive user data.
-</p>
-
-<h5 id="ques_6">6. What type of encryption does the User Data Policy require? </h5>
-
-<p>
-Your Product may use any type of modern cryptography, such as free and commercially available TLS implementations and ciphers, but you should not use any cipher suite <a href="https://tools.ietf.org/html/rfc7540#appendix-A">blacklisted</a> by IETF. Our requirements may change over time.
-</p>
-
-<h5 id="ques_7">7. When does the prominent disclosure requirement apply? </h5>
-
-<p>
-The prominent disclosure applies when both:
+Sensitive or personal user data may include:
 </p>
 
 <ul>
-  <li>the Product handles personal or sensitive user data
-AND</li>
-<li>the handling of that personal or sensitive user data is not closely related to functionality described prominently in the Product’s Chrome Web Store page and user interface.</li>
+  <li>Personally identifiable information (including a person’s name, address, telephone number, email address, and username. It also includes any type of identification number, such as a government issued number, driver’s license number, or account number),</li>
+  <li>Financial and payment information,</li>
+  <li>Health information, Authentication information (such as logins, password, and authentication cookies),</li>
+  <li>Website content and resources,</li>
+  <li>Form data, and</li>
+  <li>Web browsing activity (which is any information about the websites or other web resources a user requests or interacts with, including the domains or URLs the browser interacts with).</li>
 </ul>
 
-<p>Here are a few examples:</p>
+<h5 id="ques_4">4. My Product DOES NOT handle sensitive or personal data. What do I need to do?</h5>
+
+<p>
+You have no special or new obligations under the User Data Policy. Consistent with the prior policy and the <a href="https://developer.chrome.com/webstore/terms" target="_blank">Developer Terms of Service</a>, Products must disclose their collection, use, and sharing of user data. You can describe your privacy practices in any way users could easily find when installing or using your Product. For example, you could describe them in the Chrome Web Store description or via your Product’s interface. You could also choose to include a link to a privacy policy on your Product’s listing.
+</p>
+
+<p>
+Because your Product doesn’t handle personal or sensitive user data, you do not need to review the remaining questions in this FAQ.
+</p>
+
+<h5 id="ques_5">5. My Product DOES handle sensitive or personal data. What do I need to do?</h5>
+
+<p>
+Products that handle personal or sensitive user data must, at a minimum:
+</p>
+
+<ul>
+  <li>Post a privacy policy in the Chrome Web Store Developer Dashboard and in your Product’s inline installation page (if applicable), and</li>
+  <li>Handle the user data securely, including transmitting it via modern cryptography.</li>
+</ul>
+
+<p>
+Read the policy and the answers to the other FAQs because certain uses of personal or sensitive user data are subject to additional requirements or are prohibited.
+</p>
+
+<h5 id="ques_6">6. What does my Product's privacy policy need to say?</h5>
+
+<p>
+Your privacy policy needs to describe how the Product collects, uses, and shares user data, but doesn’t need to be long or complicated.
+</p>
+
+<h5 id="ques_7">7. Does all user data need to be encrypted?</h5>
+
+<p>
+While we strongly recommend that you encrypt all transmissions facilitated by your Product (see our <a href="https://www.youtube.com/watch?v=cBhZ6S0PFCY" target="_blank">Google I/O 2014 talk on HTTPS Everywhere)</a>, this policy establishes a minimum requirement of encrypting transmissions of all personal or sensitive user data.
+</p>
+
+<h5 id="ques_8">8. What type of encryption does the User Data Policy require?</h5>
+
+<p>
+Your Product may use any type of modern cryptography, such as free and commercially available TLS implementations and ciphers, but you should not use any cipher suite that is <a href="https://tools.ietf.org/html/rfc7540#appendix-A" target="_blank">blacklisted</a> by IETF. Our requirements may change over time.
+</p>
+
+<h5 id="ques_9">9. Does my Product’s handling of personal or sensitive user data require a prominent disclosure and affirmative consent?</h5>
+
+<p>
+These requirements only apply when both:
+</p>
+
+<ul>
+  <li>The Product handles personal or sensitive user data AND</li>
+  <li>The handling of that personal or sensitive user data is not closely related to functionality described prominently in the Product’s Chrome Web Store page and user interface.</li>
+</ul>
+
+<p>
+Here are a few examples:
+</p>
 
 <table>
   <tr>
-    <td><strong>Description</strong></td>
-    <td><strong>Prominent Disclosure Required?</strong></td>
+    <th>Description</th>
+    <th>Prominent Disclosure Required?</th>
   </tr>
   <tr>
     <td>An extension whose sole marketed purpose is to sync a user’s browser history to a central service.</td>
-    <td><strong>Prominent Disclosure not Required</strong> </br> (a) Sensitive Data? Sensitive (web browsing activity) </br> (b) Relation to Described Functionality? Related (the marketed purpose was to sync the history)</td>
+    <td><strong>Prominent Disclosure not Required</strong> <br/>(a) Sensitive Data? Sensitive (web browsing activity) <br/> (b) Relation to Described Functionality? Related (the marketed purpose was to sync the history)</td>
   </tr>
   <tr>
     <td>An extension, app, or hosted app collects and transmits anonymous usage information about how frequently users click on or see various user interface elements of the Product.</td>
-    <td><strong>Prominent Disclosure not Required</strong> </br> (a) Sensitive Data? Not Sensitive (this type of anonymous usage data is not personal or sensitive) </br> (b) Relation to Described Functionality? Unrelated (usage collection statistics aren’t usually disclosed so prominently and aren’t closely related to user functionality)</td>
+    <td><strong>Prominent Disclosure not Required</strong> <br/> (a) Sensitive Data? Not Sensitive (this type of anonymous usage data is not personal or sensitive) <br/> (b) Relation to Described Functionality? Unrelated (usage collection statistics aren’t usually disclosed so prominently and aren’t closely related to user functionality)</td>
   </tr>
   <tr>
-    <td>An extension whose sole marketed purpose is add themes to popular social media sites, but also scrapes the number of friends a user has, on anonymous basis, for sale or research purposes.</td>
-    <td><strong>Prominent Disclosure Required</strong> </br> (a) Sensitive Data? Sensitive (website content or resources) </br> (b) Relation to Described Functionality? Unrelated (not closely related to a described functionality)</td>
+    <td>An extension whose sole marketed purpose is add themes to popular social media sites, but also anonymously scrapes the number of friends a user has, for sale or research purposes.</td>
+    <td><strong>Prominent Disclosure Required</strong> <br/> (a) Sensitive Data? Sensitive (website content or resources) <br/> (b) Relation to Described Functionality? Unrelated (not closely related to a described functionality)</td>
   </tr>
   <tr>
-    <td>An extension, app, or hosted app that handles an email address for login purposes and also provides that email address to others for the other’s marketing purposes.</td>
-    <td><strong>Prominent Disclosure Required</strong> </br> (a) Sensitive Data? Sensitive (personally identifiable information)</br> (b) Relation to Described Functionality? Unrelated (while the use for authentication is closely related to the user functionality, the transfer to others for marketing purposes is not)</td>
+    <td>An extension, app, or hosted app that handles an email address for login purposes and also provides that email address to others for the others' marketing purposes.</td>
+    <td><strong>Prominent Disclosure Required</strong> <br/> (a) Sensitive Data? Sensitive (personally identifiable information) <br/> (b) Relation to Described Functionality? Unrelated (while the use for authentication is closely related to the user functionality, the transfer to others for marketing purposes is not)</td>
   </tr>
 </table>
 
-<h5 id="ques_8">8. How do I satisfy the prominent disclosure requirement? </h5>
+<h5 id="ques_10">10. How do I satisfy the prominent disclosure requirement?</h5>
 
 <p>
-The disclosure must describe the types of sensitive or personal user data to be collected and how they will be used. You must present the disclosure in a prominent way, so that the user sees it prior to agreeing. The disclosure, however, must not be located only in a privacy policy, terms of service, or similar document.
+You must describe the types of sensitive or personal user data to be collected and how they will be used, and obtain the user’s consent to that collection and use. You must present the disclosure in a prominent way, so that the user sees it prior to agreeing. The disclosure, however, must not be located only in a privacy policy, terms of service, or similar document.
 </p>
 
-<h5 id="ques_9">9. Can an extension collect web browsing activity for ad targeting or other monetization purposes? </h5>
-
 <p>
-No. The Other Requirements section states that an extension can only collect and transmit web browsing activity to the extent required for a user-facing feature that is prominently described in the Chrome Web Store page and user interface.  Ad targeting or other monetization of this data isn’t for a user-facing feature.  And, even if a user-facing feature required collection of this data, its use for ad targeting or any other monetization of the data wouldn’t be permitted because the Product is only permitted to use the data for the user-facing feature. 
+To obtain consent, the Product must ask the user to agree to the prominent disclosure in a manner that requires them to take a specific action clearly agreeing to the disclosure before collecting or using the personal or sensitive user data.
 </p>
 
-<h5 id="ques_10">10. My extension or app handles personal or sensitive user data, but only stores information locally (or only uses Chrome Storage Sync API), do I still need to post a privacy policy? </h5>
+<p>
+The prominent disclosure and consent must occur within the Product’s user interface. Disclosures in the Chrome Web Store description or inline installation page do not satisfy this requirement.
+</p>
+
+<h5 id="ques_11">11. Can my Product publicly disclose authentication, payment or financial Information?</h5>
 
 <p>
-Yes: this policy requires all items that handle sensitive user information to post a privacy policy. Users may not be easily able to tell which apps or extensions save information locally or transmit it back to their servers. Your privacy policy, however, may not need to be long or complicated.  It just needs to describe how the Product collects, uses and shares user data.
+No. The Other Requirements section prohibits publicly disclosing authentication, payment, or financial information; therefore this product would be in violation of our policies.
+</p>
+
+<h5 id="ques_12">12. Can my extension collect web browsing activity not necessary for a user-facing feature, such as collecting behavioral ad-targeting data or other monetization purposes?</h5>
+
+<p>
+No. The Other Requirements section states that an extension can only collect and transmit web browsing activity to the extent required for a user-facing feature that is prominently described in the Chrome Web Store page and user interface. Ad targeting or other monetization of this data isn’t for a user-facing feature. And, even if a user-facing feature required collection of this data, its use for ad targeting or any other monetization of the data wouldn’t be permitted because the Product is only permitted to use the data for the user-facing feature.
+</p>
+
+<h5 id="ques_13">13. What are examples of “user-facing features” for the purposes of the restriction on collecting and using web browsing activity in the Other Requirements section? (See <a href="https://developer.chrome.com/webstore/program_policies#userdata_psud" target="_blank>Other Requirements</a>.</h5>
+
+<p>
+A “user-facing feature” means functionality provided by the extension via a user interface element (including interactive buttons, text, forms, and images). Compliance with the policy requires that the extension have some type of user interface element and that the element provide some type of functionality needing the web browsing data.
+</p>
+
+<p>
+Examples of user-facing features include:
+</p>
+
+<ul>
+  <li>A browser action button whose popup shows the WHOIS information for the current domain</li>
+  <li>A dialog box added to websites by content script that allows users to view others’ and add their own annotations to any web page</li>
+  <li>A new tab page that includes a list of recently browsed websites</li>
+</ul>
+
+<p>
+Examples of features that aren't user-facing include:
+</p>
+
+<ul>
+  <li>A dialog box disclosing the collection of web browsing history</li>
+  <li>An extension that has no interactive UI elements exposed to the user, but collects web browsing activity in the background for another purpose, including providing rewards to the user</li>
+</ul>
+
+<h5 id="ques_14">14. My extension or app handles personal or sensitive user data, but only stores information locally (or only uses Chrome Storage Sync API). Do I still need to post a privacy policy?</h5>
+
+<p>
+Yes. This policy requires all Products that handle sensitive user information to post a privacy policy. Users may not easily be able to tell which apps or extensions save information locally or transmit it back to their servers. Your privacy policy, however, may not need to be long or complicated. It just needs to describe how the Product collects, uses, and shares user data.
+</p>
+
+<h5 id="ques_15">15. How does the User Data Policy apply to client applications, such as FTP or IRC clients?</h5>
+
+<p>
+When the Product is a client for an internet protocol with user-specified servers, like an FTP or IRC client, the <a href="https://developer.chrome.com/webstore/program_policies#userdata_psud" target="_blank">Personal or Sensitive User Data section</a> does not apply to the Product’s collection of data for, or transmission of data with, the user-specified server. 
+</p>
+
+<p>
+For example, if an FTP client only connects to user-specified servers and does not send any data to servers specified by the developer, the policy would not require the developer to post a privacy policy or transmit the data securely (which would be impossible for FTP, because it’s an unencrypted protocol).
+</p>
+
+<p>
+The User Data Policy still applies, however, to user data handled for other purposes. For example, if the Product required users to enter an email address for registration, then the Product would need to comply with the <a href="https://developer.chrome.com/webstore/program_policies#userdata_psud" target="_blank">Personal or Sensitive User Data section</a> of the policy. 
+</p>
+
+<h5 id="ques_16">16. Does data transmitted between a Chrome app or extension and native programs on the same computer need to be encrypted?</h5>
+
+<p>
+No. The requirement to handle the user data securely (under the <a href="https://developer.chrome.com/webstore/program_policies#userdata_psud" target="_blank">Posting a Privacy Policy &amp; Secure Transmission section</a> does not apply to transmissions between a Chrome extension or app and a native program on the same computer.
 </p>
 
 {{/partials.standard_store_article}}
