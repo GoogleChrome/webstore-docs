@@ -35,11 +35,9 @@ It should also contain a few images and any other files that the app requires. T
     <td><strong>Apps</strong></td>
     <td><strong>Themes</strong></td>
     <td><strong>Extensions</strong></td>
-    <td><strong>Whitelists</strong></td>
   </tr>
   <tr>
     <td>Manifest file</td>
-    <td>Yes</td>
     <td>Yes</td>
     <td>Yes</td>
     <td>Yes</td>
@@ -51,13 +49,11 @@ It should also contain a few images and any other files that the app requires. T
     <td>Yes</td>
     <td></td>
     <td></td>
-    <td></td>
   </tr>
   <tr>
     <td>Window page</td>
     <td></td>
     <td>Yes</td>
-    <td></td>
     <td></td>
     <td></td>
   </tr>
@@ -67,15 +63,6 @@ It should also contain a few images and any other files that the app requires. T
     <td>Yes</td>
     <td></td>
     <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Sitelist file</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>Yes</td>
   </tr>
 </table>
 
