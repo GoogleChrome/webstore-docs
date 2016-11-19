@@ -4,7 +4,7 @@
 
 <p>
 Sometimes it's hard to decide whether you need to publish a
-<a href="https://developers.google.com/chrome/apps/docs/developers_guide">hosted app</a> or a
+<a href="hosted_apps">hosted app</a> or a
 <a href="/apps/">Chrome App</a>&mdash;or
 maybe even an
 <a href="/extensions/">Chrome Extension</a>.
@@ -31,10 +31,8 @@ you have more options.
 
 <p class="note">
 <b>Note</b>:
-<b>2GB</b> is the current size limit for packaged apps.
-If your app (with all its essential assets)
-can't fit into a 2GB ZIP file,
-then your app is too big to be a packaged app.
+<a href="https://developer.chrome.com/extensions/apps">Packaged apps</a> are no
+longer supported. It is not possible to upload or use legacy packaged apps.
 </p>
 
 
@@ -55,22 +53,10 @@ Here's some additional information to help you choose:
     On the other hand,
     because only Chrome supports the Chrome Web Store,
     you have the option of tailoring your app to Chrome.
-  <li> A <b>packaged</b> app will work only in Chrome.
-    However, you can reuse the app's code for ordinary web apps. </li>
   <li> Only an <b>extension</b> can present an icon in the toolbar,
     using a
     <a href="http://code.google.com/chrome/extensions/browserAction.html">page action</a> or
     <a href="http://code.google.com/chrome/extensions/browserAction.html">browser action</a>. </li>
-  <li> If you're not sure whether you need
-    a <b>packaged</b> app or an <b>extension</b>,
-    it should probably be an extension.
-    <p class="note">
-    <b> Note:</b>
-    As a rule of thumb, a packaged app should feel like a hosted app, not like
-        an
-        extension.
-    </p>
-    </li>
   <li>
     Although an <b>extension</b> has little to no UI of its own,
     it can sometimes have a big effect on the UI of other pages and web apps.
@@ -89,7 +75,7 @@ Here's some additional information to help you choose:
     <a href="faq.html#faq-app-02">could be modified</a>
     to circumvent the API call. </li>
   <li> The <a href="http://code.google.com/chrome/extensions/api_index.html">chrome.* APIs</a>
-    let your <b>packaged</b> app or <b>extension</b>
+    let your <b>extension</b>
     be tightly integrated with Chrome.
     They take advantage of Chrome support for functionality such as
     <a href="http://code.google.com/chrome/extensions/idle.html">idle state</a>,

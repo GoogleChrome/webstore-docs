@@ -34,25 +34,15 @@ you can publish three kinds of items:
   <dt> Apps </dt>
   <dd>
     <p>
-    Contains <b>installable web apps</b>.
-    An installable web app
-    can be a normal website with a bit of extra metadata;
-    this type of app is called a <b>hosted app</b>.
-    Alternatively, an installable web app can bundle all its content
-    into an archive that users download when they install the app;
-    this is a <b>packaged app</b>.
-    Both hosted and packaged apps
-    have icons in Chrome's New Tab page,
-    and most users shouldn't be able to tell the difference between them
-    without looking at the address bar.
+    Contains <b>installable web apps</b> (also called <a>hosted app</a>)
+    and <a href="https://developer.chrome.com/apps/about_apps">Chrome apps</a>.
+    An installable web app is a normal website with a bit of extra metadata.
+    Both hosted and Chrome apps have icons in Chrome's New Tab page.
     </p>
 
     <p>
     Before publishing a hosted app in the store,
     you must verify that you own the website that hosts the app's content.
-    Packaged apps might have some association with a website,
-    but you have the option of designing them
-    so that they don't rely on the web at all.
     </p>
   </dd>
   
@@ -67,15 +57,6 @@ you can publish three kinds of items:
     Contains <b>extensions for Chrome</b>,
     which change how the browser behaves
     and, in a limited way, how it looks.
-   
-    <p>
-    If your extension seems more like a website
-    than a small browser add-on,
-    consider making it a packaged app.
-    Packaged apps are implemented as extensions
-    that have the additional ability
-    to present an app-like interface.
-    </p>
   </dd>
 </dl>
 
@@ -162,7 +143,7 @@ you can choose from any of the following payment options:
 
 <p class="caution">
 <b>Note</b>:
-Although packaged apps and extensions
+Although extensions
 can use Chrome Web Store Payments,
 it's difficult for them to use the Licensing API securely.
 Themes have no executable code,

@@ -8,14 +8,6 @@ a <strong>hosted app</strong>&mdash;a
 regular web app, plus some metadata.
 </p>
 
-<p>
-If you're interested in creating a <strong>packaged app</strong>&mdash;a
-web app that's bundled up as an extension,
-so that the user downloads all of its content&mdash;see
-<a href="/web/20150125031438/http://code.google.com/chrome/extensions/apps.html">Packaged Apps</a>
-in the <a href="/web/20150125031438/http://code.google.com/chrome/extensions/index.html">extensions documentation</a>.
-</p>
-
 <h2 id="creating">Creating hosted apps</h2>
 
 <p>
@@ -38,7 +30,8 @@ and a manifest that has details about how the app should function.
 
 <p class="note">
 <b>Note:</b>
-Unlike extensions and packaged apps,
+Unlike <a href="/extensions">extensions</a> and
+<a href="/apps/about_apps">Chrome apps</a>,
 a hosted app has no access to the files inside its <code>.crx</code> file.
 </p>
 
@@ -150,7 +143,7 @@ that can have the following fields:
   you must prove that you control
   each domain specified in this field.
   For help in proving your ownership,
-  see the <a href="/web/20150125031438/https://chrome.google.com/extensions/developer/dashboard">Chrome Developer Dashboard</a>.
+  see the <a href="https://chrome.google.com/extensions/developer/dashboard">Chrome Developer Dashboard</a>.
     </p>
 
   <dl>
@@ -218,7 +211,7 @@ that can have the following fields:
     that serves the <code>.crx</code> file.
     For more information on hosting options,
     see the extensions documentation for
-    <a href="/web/20150125031438/http://code.google.com/chrome/extensions/hosting.html">Hosting</a>.
+    <a href="/extensions/hosting">Hosting</a>.
     </p>
     </dd>
 
@@ -263,6 +256,7 @@ that can have the following fields:
   </dd>
   </dl>
 
+  <!-- TODO: Is this still supported? I don't think so... Just use Service workers!
 <dt>background_page:</dt>
   <dd>
   Specifies an HTTPS URL to load in a background window.
@@ -271,6 +265,7 @@ that can have the following fields:
   <a href="/web/20150125031438/https://developers.google.com/chrome/apps/docs/background">Background: Extending Your App's Life</a>.
   </dd>
 </dt>
+  -->
 
 <dt>icons:</dt>
   <dd><em>Recommended.</em>
@@ -281,7 +276,7 @@ that can have the following fields:
           Only about a 96x96 area should be visible;
           the rest should be transparent.
           For details, see the Chrome Web Store
-          <a href="/web/20150125031438/https://developers.google.com/chrome/web-store/docs/images">image guidelines</a>.
+          <a href="/webstore/images">image guidelines</a>.
         </dd>
     </dl>
    </dd>
@@ -293,9 +288,9 @@ that can have the following fields:
   it's set automatically when the <code>.crx</code> file is created,
   such as when you upload your app to the Chrome Web Store.
   For more information, see
-  <a href="/web/20150125031438/http://code.google.com/chrome/extensions/packaging.html">Packaging</a>
+  <a href="/extensions/packaging">Packaging</a>
   and
-  <a href="/web/20150125031438/http://code.google.com/chrome/extensions/manifest.html#key">key field details</a>
+  <a href="/extensions/manifest/key">key field details</a>
   in the extensions documentation.
   </dd>
 
@@ -311,7 +306,7 @@ that can have the following fields:
   When Chrome detects that it is offline,
   apps with this field set to true are highlighted on the New Tab page.
   For help on enabling offline access for your app, see
-  <a href="/web/20150125031438/http://www.html5rocks.com/en/tutorials/#offline">these
+  <a href="http://www.html5rocks.com/en/features/offline">these
   articles</a>.
 
   <p class="note">
@@ -321,7 +316,7 @@ that can have the following fields:
   </dd>
 
 <dt>permissions:</dt>
-  <dd>Any combination of "<a href="/web/20150125031438/https://developers.google.com/chrome/apps/docs/background">background</a>",
+  <dd>Any combination of
   "clipboardRead", "clipboardWrite",
   "geolocation", "notifications",
   and "unlimitedStorage".
@@ -334,7 +329,7 @@ that can have the following fields:
   Don't specify this field
   unless you host your own autoupdates.
   See
-  <a href="/web/20150125031438/http://code.google.com/chrome/extensions/autoupdate.html">Autoupdating</a>
+  <a href="/extensions/autoupdate">Autoupdating</a>
   for details.
   </dd>
 </dl>
@@ -345,7 +340,7 @@ is based on the manifest files for Chrome extensions,
 and most of the fields are the same.
 For more details on manifest files and their fields,
 see the
-<a href="/web/20150125031438/http://code.google.com/chrome/extensions/manifest.html">extension
+<a href="/extensions/manifest">extension
 manifest documentation</a>.
 </p>
 
@@ -367,8 +362,8 @@ handy technique while you're working on an app.
   and put the following files into it:
   </p>
     <ul>
-      <li> <a href="/web/20150125031438/http://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/extensions/maps_app/manifest.json?content-type=text/plain" target="_blank">manifest.json</a> </li>
-      <li> <a href="/web/20150125031438/http://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/extensions/maps_app/128.png" target="_blank">128.png</a> </li>
+      <li> <a href="https://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/extensions/maps_app/manifest.json?content-type=text/plain" target="_blank">manifest.json</a> </li>
+      <li> <a href="https://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/extensions/maps_app/128.png" target="_blank">128.png</a> </li>
     </ul>
 
   <p>
@@ -439,7 +434,7 @@ into a hosted app (and publishing it), see the Chrome Web Store
 <h2 id="webstore">Hosted apps and the Chrome Web Store</h2>
 
 <p>
-The <a href="/web/20150125031438/http://chrome.google.com/webstore">Chrome Web Store</a>
+The <a href="https://chrome.google.com/webstore">Chrome Web Store</a>
 is an open marketplace for web apps
 that enables you to reach millions of users with your apps.
 The store is integrated with Chrome,
