@@ -302,21 +302,21 @@ per <a href="https://support.google.com/adsense/bin/answer.py?hl=en&answer=48182
 An extension must have a single purpose that is narrow and easy-to-understand.
 Do not create an extension that requires users to accept bundles of unrelated functionality,
 such as an email notifier and a news headline aggregator, or downloads a local executable.
-If two pieces of functionality are clearly separate,
-they should be put into two different extensions,
+If two pieces of functionality are clearly separate, they should be put into two different extensions,
 and users should have the ability to install and uninstall them separately.
-For example, functionality that displays product ratings and reviews,
-but also injects ads into web pages, should not be bundled into a single extension.
+For example, functionality that displays product ratings and reviews, but also injects ads into web pages,
+should not be bundled into a single extension.
 Similarly, toolbars that provide a broad array of functionality or entry points into services
-are better delivered as separate extensions, so that users can select the services they want.
+are better delivered as separate extensions, so that users can select the services they want. 
 Please see this
 <a href="https://developer.chrome.com/extensions/single_purpose">FAQ</a> for more information.
 </p>
 
 <p>
-Starting with Chrome Release 36,
-extensions that change Chrome settings on Windows must do so
-via the Settings Override API. 
+Starting July 1, 2017, extensions must use the designated Chrome API
+for any changes to a user setting for which an API exists, including the Settings Overrides API
+(that has APIs for the default homepage, search provider, and startup page)
+and the URL Overrides (that has APIs for the Bookmark Manager, History Page, and New Tab Page).
 </p>
 
 <h2 id="chrome_apps">Chrome Apps Quality Guidelines</h2>
