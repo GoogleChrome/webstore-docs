@@ -216,12 +216,31 @@ in March 2016.
 
 <p>
 <b>What happens when inline installation is disabled?</b><br/>
-When an extension's inline installation is disabled, all attempts to trigger 
+When an extension's inline installation is disabled, attempts to trigger 
 inline installation for your extension will result in a redirect to your item's 
 Chrome Web Store listing.  Inline installation enforcement does not result in 
 removal of your extension from the Chrome Web Store.  Users will still be able 
 to access and install your extension through the Chrome Web Store.  Repeated 
 abuse of inline installation, however, may lead to further enforcement actions.
+</p>
+
+<p>
+Starting in July 2017,
+inline installation may also be selectively disabled
+for malicious or deceptive webpage leading to your extension,
+on a per-install basis.
+When inline installation is disabled in this way,
+it will not affect other inline installations of the same extension
+originating from non-deceptive sources.
+</p>
+
+<p>
+<b>Will I know if my inline installation has been disabled?</b><br/>
+If inline installation has been disabled at the extension level,
+you will receive an alert to developer email account.
+If inline installation is disabled at the installation level,
+due to a deceptive or malicious installation context and not the extension itself,
+the developer will receive not receive an alert.
 </p>
 
 <p>
