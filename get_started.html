@@ -1,4 +1,15 @@
 {{+bindTo:partials.standard_store_article}}
+<p class="caution">
+  <b>Important:</b>
+  Chrome will be removing support for Chrome Apps on Windows, Mac, and
+  Linux.  Chrome OS will continue to support Chrome Apps.  Additionally,
+  Chrome and the Web Store will continue to support extensions on all
+  platforms.
+  <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">
+  Read the announcement</a> and learn more about
+  <a href="https://developers.chrome.com/apps/migration">
+  migrating your app</a>.
+</p>
 
 <h1>Tutorial: Licensing API</h1>
 
@@ -38,7 +49,7 @@ and learn how to find the Chrome Developer Dashboard.
   <li>
     <p>
     Subscribe to the Dev channel by
-    following the instructions in 
+    following the instructions in
     <a href="http://www.chromium.org/getting-involved/dev-channel">Early Access Release Channels</a>.
     </p>
   </li>
@@ -353,7 +364,7 @@ using the Eclipse IDE as your development environment.
     Get the following two JAR files,
     which are required by
     <a href="http://code.google.com/p/oauth-signpost/">OAuth Signpost</a>,
-    the OAuth library that this example uses 
+    the OAuth library that this example uses
     to sign requests to the license server.
     </p>
 
@@ -453,7 +464,7 @@ private static final String TOKEN_SECRET = "t8KgYCxRv+0jNVY7DdrBQvto";
         you need to use an OpenID library
         and the Google OpenID endpoint.
         </p>
-        
+
 <pre>
 UserService userService = UserServiceFactory.getUserService();
 ...
@@ -569,7 +580,7 @@ and you'll deploy it to the web.
     <p>
       Sign in as text@example.com. <br />
       If you get an error page,
-      then make sure you entered the app ID, OAuth access token, 
+      then make sure you entered the app ID, OAuth access token,
       and access token secret correctly.
     </p>
 
@@ -660,14 +671,14 @@ to the manifest and ZIP file,
 so that your app can be installed.
 Once you install this app,
 the large icon appears in the New Tab page.
-Clicking the icon takes you to 
+Clicking the icon takes you to
 http://hellolicense.appspot.com/hellolicense.
 </p>
 
 <p>
 For details on manifest contents
 and on installing an app that isn't yet packaged in a <code>.crx</code> file,
-see 
+see
 <a href="https://developers.google.com/chrome/apps/docs/developers_guide">Hosted Apps</a>.
 </p>
 

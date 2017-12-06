@@ -1,4 +1,15 @@
 {{+bindTo:partials.standard_store_article}}
+<p class="caution">
+  <b>Important:</b>
+  Chrome will be removing support for Chrome Apps on Windows, Mac, and
+  Linux.  Chrome OS will continue to support Chrome Apps.  Additionally,
+  Chrome and the Web Store will continue to support extensions on all
+  platforms.
+  <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">
+  Read the announcement</a> and learn more about
+  <a href="https://developers.chrome.com/apps/migration">
+  migrating your app</a>.
+</p>
 
 <h1>Frequently Asked Questions</h1>
 
@@ -96,7 +107,7 @@
         What does this mean?</a></li>
     <li><a href ="faq#faq-listing-09">Why isn’t my app showing up on search?</a>
     </li>
-    <li><a href ="faq#faq-listing-10">My app has been removed from the Chrome Web Store. 
+    <li><a href ="faq#faq-listing-10">My app has been removed from the Chrome Web Store.
         What should I do?</a></li>
     <li><a href="faq#faq-listing-11">How do I link my Play and Chrome Web Store item so that
     the "Available for Android" link appears on my item detail page?</a></li>
@@ -666,7 +677,7 @@
         </li>
     </ul>
     </p>
-    
+
     </p>
     Note that both new item submissions as well as updates to existing items are subject
     to automated system checks and may be flagged for manual review.
@@ -675,82 +686,82 @@
     For specific questions or concerns, please fill out our developer support
     <a href="https://support.google.com/chrome_webstore/contact/developer_support/?hl=en">contact form</a>.
     <p>
-        
+
     <p>
     For more information about the unwanted software policy, see:
     <a href="https://www.google.com/about/company/unwanted-software-policy.html">https://www.google.com/about/company/unwanted-software-policy.html</a>.
     </p>
-    
+
     <p>
     For more information about the developer program policies, see:
-    <a href="https://developer.chrome.com/webstore/program_policies">https://developer.chrome.com/webstore/program_policies</a>. 
+    <a href="https://developer.chrome.com/webstore/program_policies">https://developer.chrome.com/webstore/program_policies</a>.
     </p>
 
     <h5 id="faq-listing-09">Why isn’t my app showing up on search?</h5>
 
-    <p>It depends. There are several reasons why your item may not be showing 
+    <p>It depends. There are several reasons why your item may not be showing
         up in search.
     <ul>
-        <li>You just published your app. It might take a few hours before 
+        <li>You just published your app. It might take a few hours before
             we index it.
         </li>
-        <li>Your app manifest is version 1.  We have upgraded to manifest version 
-            2, therefore all manifest v1 apps are unlisted.  Please upgrade your 
+        <li>Your app manifest is version 1.  We have upgraded to manifest version
+            2, therefore all manifest v1 apps are unlisted.  Please upgrade your
             item to manifest v2. See more details <a
             href="https://developer.chrome.com/extensions/manifestVersion">here</a>.
         </li>
-        <li>Your app contains an NPAPI. All apps containing NPAPI are now unlisted. 
+        <li>Your app contains an NPAPI. All apps containing NPAPI are now unlisted.
         For more details around our NPAPI deprecation timelines, see our blog post
         <a href="http://blog.chromium.org/2013/09/saying-goodbye-to-our-old-friend-npapi.html">here</a>.
         </li>
-        <li>Your app is a Google Application Marketplace app. All Google Application 
-            Marketplace apps will only be visible on the corresponding management page 
+        <li>Your app is a Google Application Marketplace app. All Google Application
+            Marketplace apps will only be visible on the corresponding management page
             for Google Application Marketplace, not on chrome.google.com/webstore.
         </li>
-        <li>Your app is not listed in the region you are searching in. 
+        <li>Your app is not listed in the region you are searching in.
             See more details <a
             href="https://support.google.com/chrome_webstore/answer/1254182?hl=en&ref_topic=1734051">here</a>.
         </li>
     </ul>
     </p>
 
-    <h5 id="faq-listing-10">My app has been removed from the Chrome Web Store. What 
+    <h5 id="faq-listing-10">My app has been removed from the Chrome Web Store. What
         should I do?</h5>
-    
-    <p>Application removals count as strikes against the good standing of your 
-        developer account. Multiple or egregious policy violations may result in 
+
+    <p>Application removals count as strikes against the good standing of your
+        developer account. Multiple or egregious policy violations may result in
         termination of your developer account.
     <ul>
-        <li>For all policy violation app removals, you will receive a removal 
-            notification email with more details in the developer account listed as 
-            the owner of the app.  Please make the appropriate changes so your app 
+        <li>For all policy violation app removals, you will receive a removal
+            notification email with more details in the developer account listed as
+            the owner of the app.  Please make the appropriate changes so your app
             complies with all <a
-            href="https://developer.chrome.com/webstore/program_policies">Developer 
-            Program Policies</a>, 
-            <a href="https://developer.chrome.com/webstore/branding">Branding Guidelines</a> and 
-            <a href="https://developer.chrome.com/webstore/terms">Terms of Services</a>.  
+            href="https://developer.chrome.com/webstore/program_policies">Developer
+            Program Policies</a>,
+            <a href="https://developer.chrome.com/webstore/branding">Branding Guidelines</a> and
+            <a href="https://developer.chrome.com/webstore/terms">Terms of Services</a>.
             Once you have remedied the violation you can resubmit via your developer dashboard.
         </li>
-        <li>Please do not re-publish a removed application until the policy violation 
-            has been remedied. If you have additional questions or feel your item was wrongly 
+        <li>Please do not re-publish a removed application until the policy violation
+            has been remedied. If you have additional questions or feel your item was wrongly
             removed, you can reply directly to the removal email and appeal.
         </li>
-        <li>If you believe your developer account was wrongly terminated, you can appeal 
-            <a href="https://support.google.com/chrome_webstore/contact/cws_dev_appeals">here</a>. 
-            We will only reinstate accounts if an error was made, and a re-review finds that your 
+        <li>If you believe your developer account was wrongly terminated, you can appeal
+            <a href="https://support.google.com/chrome_webstore/contact/cws_dev_appeals">here</a>.
+            We will only reinstate accounts if an error was made, and a re-review finds that your
             account does not violate the developer terms.
         </li>
     </ul>
     </p>
-    
-    <h5 id="faq-listing-11">How do I link my Play and Chrome Web Store item so that the "Available for 
+
+    <h5 id="faq-listing-11">How do I link my Play and Chrome Web Store item so that the "Available for
     Android" link appears on my item detail page?</h5>
-        
-    <p>We regularly run a script that looks for exact matches between the item name and the developer email address 
-    in Play and CWS. If there is an exact match, the "Available for Android" link will automatically show up on your 
+
+    <p>We regularly run a script that looks for exact matches between the item name and the developer email address
+    in Play and CWS. If there is an exact match, the "Available for Android" link will automatically show up on your
     item detail page the next time the script runs. At this point, there is no way to enter the information into your
     listing.</p>
-    
+
 </dl>
 
 <p class="backtotop"><a href="#top">Back to top</a></p>
@@ -1218,11 +1229,11 @@ if (window.chrome.app.isInstalled) {
 
 <dl>
 
-<p>If you’ve fixed all errors produced by the tools and continue experiencing issues, please 
+<p>If you’ve fixed all errors produced by the tools and continue experiencing issues, please
    <a href="https://support.google.com/chrome_webstore/contact/developer_support/?hl=en">
     contact us</a> with any additional details regarding the problem. Please send us a screenshot
-    of the problem and include your .crx file.</p>    
-    
+    of the problem and include your .crx file.</p>
+
 </dl>
 
 <p class="backtotop"><a href="#top">Back to top</a></p>
