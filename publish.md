@@ -1,4 +1,16 @@
 {{+bindTo:partials.standard_store_article}}
+<p class="caution">
+  <b>Important:</b>
+  Chrome will be removing support for Chrome Apps on Windows, Mac, and
+  Linux.  Chrome OS will continue to support Chrome Apps.  Additionally,
+  Chrome and the Web Store will continue to support extensions on all
+  platforms.
+  <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">
+  Read the announcement</a> and learn more about
+  <a href="https://developers.chrome.com/apps/migration">
+  migrating your app</a>.
+</p>
+
 # Publish in the Chrome Web Store
 
 To publish your app to the Chrome Web Store, follow these steps:
@@ -96,7 +108,7 @@ Here's how to upload your app:
 
 2. Sign into the developer account you chose in Step 1.
 
-3. Click the **Add new item** button. 
+3. Click the **Add new item** button.
 
 4. If you've never uploaded an item before, you need to accept the developer agreement before going to the next step.
 
