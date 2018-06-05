@@ -1,15 +1,4 @@
 {{+bindTo:partials.standard_store_article}}
-<p class="caution">
-  <b>Important:</b>
-  Chrome will be removing support for Chrome Apps on Windows, Mac, and
-  Linux.  Chrome OS will continue to support Chrome Apps.  Additionally,
-  Chrome and the Web Store will continue to support extensions on all
-  platforms.
-  <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">
-  Read the announcement</a> and learn more about
-  <a href="https://developers.chrome.com/apps/migration">
-  migrating your app</a>.
-</p>
 
 <h1 class="page-title">Distributing Products Built for Chrome</h1>
 
@@ -21,12 +10,22 @@
         <td>With just an extra bit of metadata, you can integrate your website into the Chrome browser, making your content more accessible to users.</td>
     </tr>
     <tr>
-        <th>Chrome Apps</th>
-        <td><a href="https://developer.chrome.com/apps/about_apps">Chrome apps</a> are designed specifically for Chrome and only work in the Chrome browser. They allow you to take advantage of cutting-edge technology that is not available to traditional websites.</td>
-    </tr>
-    <tr>
         <th>Extensions</th>
         <td><a href="https://developer.chrome.com/extensions/overview">Extensions</a> are small browser add-ons that add new and useful features to Chrome.</td>
+    </tr>
+    <tr>
+        <th>Chrome Apps</th>
+        <td><a href="https://developer.chrome.com/apps/about_apps">Chrome apps</a> are designed specifically for Chrome and only work in the Chrome browser. They allow you to take advantage of cutting-edge technology that is not available to traditional websites.
+          <p class="caution">
+            <b>Important:</b>
+            Chrome will be removing support for Chrome Apps on Windows, Mac, and
+            Linux.  Chrome OS will continue to support Chrome Apps.
+            <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">
+            Read the announcement</a> and learn more about
+            <a href="https://developers.chrome.com/apps/migration">
+            migrating your app</a>.
+          </p>
+        </td>
     </tr>
     <tr>
         <th>Themes</th>
@@ -44,10 +43,6 @@
         <td>The <a href="https://chrome.google.com/webstore">Chrome Web Store</a> is an online marketplace where users can browse for Chrome-integrated websites, Chrome apps, extensions, and themes. The store helps users find, purchase, and install your content in the Chrome browser.
         <p class="note"><b>Note</b>: Chrome supports <a href="https://developer.chrome.com/native-client/devguide/distributing">Native Client (NaCl) and Portable Native Client (PNaCl)</a> technologies. Products using NaCl must be distributed through the Chrome Web Store.</p>
         </td>
-    </tr>
-    <tr>
-        <th>Inline Installation</th>
-        <td><a href="https://developer.chrome.com/webstore/inline_installation">Inline installation</a> is a way for users to install your product directly from your website. Your product is still hosted in the Chrome Web Store, but users don’t have to leave your site to install it.</td>
     </tr>
     <tr>
         <th>External Installation</th>
