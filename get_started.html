@@ -1,17 +1,17 @@
 {{+bindTo:partials.standard_store_article}}
-<p class="caution">
-  <b>Important:</b>
-  Chrome will be removing support for Chrome Apps on Windows, Mac, and
-  Linux.  Chrome OS will continue to support Chrome Apps.  Additionally,
-  Chrome and the Web Store will continue to support extensions on all
-  platforms.
-  <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">
-  Read the announcement</a> and learn more about
-  <a href="https://developers.chrome.com/apps/migration">
-  migrating your app</a>.
-</p>
 
 <h1>Tutorial: Licensing API</h1>
+
+<p class="caution">
+  <b>Important:</b>
+  Hosted Apps are no longer supported.
+  For payment information please refer to
+  <a href="webstore/one_time_payments">One-Time Payments</a>,
+  <a href="webstore/payments-iap">
+    In-App Payments with Payments Merchant Account and the Chrome Web Store API
+  </a> and
+  <a href="webstore/money">Monetizing Your Chrome Web Store Item</a>.
+</p>
 
 <p>
 This tutorial walks you through
@@ -206,44 +206,77 @@ https://chrome.google.com/extensions/developer/edit/abcdefghijklmnopqrstuvwxyzab
 </ol>
 
 <p class="backtotop"><a href="#top">Back to top</a></p>
-<h2 id="oauth"> Step 3: Get the OAuth Client ID </h2>
+<h2 id="oauth"> Step 3: Get the OAuth token </h2>
 
 <p>
-In this step, you get the OAuth Client ID
+In this step, you get the OAuth access token and access token secret
 that allow you to use the Licensing API.
+To get these, you first need to tell the store
+that your app will use Chrome Web Store Payments.
 </p>
 
-<p>
-  Navigate to the
-  <a href="https://console.developers.google.com/apis">
-    Google API console
-  </a>
-  and create a new project.
-  Once ready,
-  select <strong>Credentials</strong> in the sidebar,
-  click <strong>Create credentials</strong>
-  and choose <strong>OAuth client ID</strong>.
-</p>
-<img src="images/create_credentials.png"
-  height="400"
-  alt="Create credentials for App OAuth" />
+<ol>
+  <li>
+    In the edit page for your app,
+    click the <b>Change pricing</b> button.
+  </li>
 
-<p>
-  On the Create client ID page,
-  select <strong>Chrome App</strong>.
-  Fill out the name of the app
-  and place the app ID at the end of the URL in the
-  Application ID field.
+  <li>
+    Choose <b>This application uses Chrome Web Store Payments</b>,
+    and save.
+  </li>
+
+  <li>
+    Return to the Chrome Developer Dashboard,
+    and click the <b>OAuth setup</b> link
+    for your app.
+
+    <p class="note">
+    <b>Note</b>:
+    The OAuth setup link appears
+    <em>only</em> if you've set the pricing of your app
+    to use Chrome Web Store Payments.
+    </p>
+
+    A page comes up with information about the Licensing API
+    and its use of OAuth.
+  </li>
+
+  <li>
+    Click the <b>Generate new token</b> button
+    at the bottom of the OAuth page.
+
+    <p>
+    <img src="images/oauthBoxBefore-gs.png"
+      width="456" height="66"
+      style="border:1px solid;"
+      alt="A screenshot showing the bottom of the OAuth page before generating the new token" />
+    </p>
+  </li>
+
+  <li>
+    Save the values that appear next to
+    <b>oauth_token_secret</b> and
+    <b>oauth_token</b>. <br />
+</pre>
+
+    <p>
+    <img src="images/oauthBoxAfter-gs.png"
+      width="456" height="58"
+      style="border:1px solid;"
+      alt="A screenshot showing the generated token and secret at bottom of the OAuth page" />
+    </p>
+  </li>
+</ol>
+
+<p class="warning">
+<b>Important:</b>
+Keep your access token and token secret safe and private.
+(The screenshot shows sample values that won't work.)
+If you lose the token or secret,
+you'll need to generate them again.
 </p>
 
-<img src="images/register_app.png"
-  height="350"
-  alt="Create credentials for App OAuth" />
-
-<p>
-  Finish by clicking create.
-  The console will provide an OAuth client ID.
-</p>
 
 <p class="backtotop"><a href="#top">Back to top</a></p>
 <h2 id="prepare"> Step 4: Set up your development environment </h2>
